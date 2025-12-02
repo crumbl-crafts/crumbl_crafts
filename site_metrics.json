@@ -18,46 +18,19 @@
       "completed_projects": 0,
       "average_rating": 0.0,
       "thread_id": 1445447294122987632,
-      "avatar_url": null,
+      "avatar_url": "https://cdn.discordapp.com/avatars/1188381798925873172/701188d5cb6b52a4bef2890e211d4843.png?size=1024",
       "server_id": 1301988304279048275
     }
   ],
   "activityLog": [
     {
-      "type": "new_request_thread",
-      "shop_name": "Build-Request-Board",
-      "message": "tobolchi posted a new request: TEST2",
-      "timestamp": 1764692616,
-      "thread_id": 1445450342320836790,
-      "server_id": 1301988304279048275,
-      "url": "https://discord.com/channels/1301988304279048275/1445450342320836790"
-    },
-    {
-      "type": "rejected",
-      "shop_name": "test1",
-      "message": "Request from tobolchi rejected",
-      "timestamp": 1764692074,
-      "thread_id": 1445447294122987632,
-      "server_id": 1301988304279048275,
-      "url": "https://discord.com/channels/1301988304279048275/1445447294122987632"
-    },
-    {
       "type": "sent",
-      "shop_name": "test1",
       "message": "Request sent by tobolchi",
+      "shop_name": "test1",
       "timestamp": 1764691963,
       "thread_id": 1445447294122987632,
       "server_id": 1301988304279048275,
       "url": "https://discord.com/channels/1301988304279048275/1445447294122987632"
-    },
-    {
-      "type": "new_request_thread",
-      "shop_name": "Build-Request-Board",
-      "message": "tobolchi posted a new request: test1",
-      "timestamp": 1764691835,
-      "thread_id": 1445447063239266428,
-      "server_id": 1301988304279048275,
-      "url": "https://discord.com/channels/1301988304279048275/1445447063239266428"
     }
   ],
   "pipeline": [
