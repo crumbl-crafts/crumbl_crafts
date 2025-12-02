@@ -3,364 +3,653 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Crumbl Crafts · Live Dashboard</title>
+    <title>Crumbl Crafts · Builder Intelligence HUD</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <style>
         :root {
             color-scheme: dark;
-            --bg: #1a1408;
-            --bg-gradient: linear-gradient(135deg, #1a1408 0%, #2d2010 50%, #1a1408 100%);
-            --panel: rgba(45, 35, 20, 0.9);
-            --card: rgba(60, 45, 25, 0.85);
-            --card-hover: rgba(75, 55, 30, 0.95);
-            --cookie-gold: #f5a623;
-            --cookie-amber: #e8952d;
-            --cookie-cream: #ffeaa7;
-            --cookie-caramel: #d4a03a;
-            --cookie-brown: #8b6914;
-            --cookie-dark: #5c4813;
-            --cookie-light: #fff8dc;
-            --accent: var(--cookie-gold);
-            --accent-soft: rgba(245, 166, 35, 0.2);
-            --accent-glow: rgba(245, 166, 35, 0.4);
-            --text: #fff8dc;
-            --text-bright: #ffffff;
-            --muted: #c9b896;
-            --success: #7cb342;
-            --warning: #ffb300;
-            --danger: #ef5350;
-            --glass-border: rgba(245, 166, 35, 0.15);
-            --glass-shine: rgba(255, 255, 255, 0.05);
+            --bg: #050607;
+            --bg-alt: #0d0e12;
+            --accent: #f6ad3c;
+            --accent-soft: rgba(246, 173, 60, 0.14);
+            --accent-strong: rgba(246, 173, 60, 0.24);
+            --lime: #9ef28a;
+            --rose: #ff7d7d;
+            --cyan: #5fd5ff;
+            --violet: #a07bff;
+            --text: #fef8ef;
+            --muted: #b7b3c3;
+            --glass: rgba(255, 255, 255, 0.04);
+            --glass-strong: rgba(255, 255, 255, 0.08);
+            --border: rgba(255, 255, 255, 0.08);
+            --border-strong: rgba(255, 255, 255, 0.16);
+            --shadow: 0 30px 60px rgba(0, 0, 0, 0.55);
         }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        html { scroll-behavior: smooth; }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
-            font-family: 'Poppins', system-ui, sans-serif;
-            background: var(--bg);
-            background-image: 
-                radial-gradient(ellipse at top left, rgba(245, 166, 35, 0.15), transparent 50%),
-                radial-gradient(ellipse at bottom right, rgba(212, 160, 58, 0.1), transparent 50%),
-                radial-gradient(ellipse at center, rgba(139, 105, 20, 0.08), transparent 70%);
-            color: var(--text);
             min-height: 100vh;
-            padding: 32px 16px 60px;
+            font-family: 'Space Grotesk', 'Outfit', system-ui, sans-serif;
+            background: radial-gradient(circle at top, rgba(246, 173, 60, 0.08), transparent 45%),
+                        radial-gradient(circle at 20% 40%, rgba(159, 93, 255, 0.06), transparent 55%),
+                        linear-gradient(135deg, var(--bg), var(--bg-alt));
+            color: var(--text);
+            padding: 32px clamp(12px, 3vw, 48px) 64px;
             overflow-x: hidden;
         }
-        body::before {
-            content: '';
+
+        .stars {
             position: fixed;
             inset: 0;
-            background-image: 
-                radial-gradient(2px 2px at 20% 30%, rgba(245, 166, 35, 0.3), transparent),
-                radial-gradient(2px 2px at 40% 70%, rgba(255, 234, 167, 0.2), transparent),
-                radial-gradient(1px 1px at 60% 20%, rgba(245, 166, 35, 0.4), transparent),
-                radial-gradient(2px 2px at 80% 50%, rgba(212, 160, 58, 0.3), transparent);
-            animation: floatParticles 20s ease-in-out infinite;
             pointer-events: none;
             z-index: 0;
+            background-image:
+                radial-gradient(1px 1px at 20% 30%, rgba(255, 255, 255, 0.4), transparent),
+                radial-gradient(1px 1px at 70% 20%, rgba(246, 173, 60, 0.5), transparent),
+                radial-gradient(1px 1px at 40% 80%, rgba(159, 93, 255, 0.35), transparent);
+            animation: shimmer 16s linear infinite;
         }
-        @keyframes floatParticles {
-            0%, 100% { transform: translateY(0); opacity: 0.6; }
-            50% { transform: translateY(-20px); opacity: 1; }
+
+        @keyframes shimmer {
+            from { transform: translateY(0); }
+            to { transform: translateY(-80px); }
         }
-        .wrapper { position: relative; z-index: 1; max-width: 1400px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px; }
+
+        .shell {
+            position: relative;
+            z-index: 1;
+            max-width: 1500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+
         .glass {
-            background: var(--panel);
-            border: 1px solid var(--glass-border);
-            border-radius: 24px;
+            background: var(--glass);
+            border: 1px solid var(--border);
+            border-radius: 22px;
             padding: 28px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), inset 0 1px 0 var(--glass-shine);
             backdrop-filter: blur(20px);
+            box-shadow: var(--shadow);
             position: relative;
             overflow: hidden;
         }
+
         .glass::before {
             content: '';
             position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--cookie-gold), transparent);
-            opacity: 0.3;
+            inset: 1px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            pointer-events: none;
         }
-        header.hero { text-align: center; padding: 40px 32px; }
-        .logo-container { display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 20px; }
-        .cookie-icon {
-            width: 56px; height: 56px;
-            background: linear-gradient(135deg, var(--cookie-gold), var(--cookie-caramel));
-            border-radius: 50%;
-            display: grid; place-items: center;
-            font-size: 28px;
-            box-shadow: 0 8px 24px rgba(245, 166, 35, 0.4);
-            animation: cookieBounce 3s ease-in-out infinite;
+
+        header.hero {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 24px;
+            align-items: center;
         }
-        @keyframes cookieBounce {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-6px) rotate(5deg); }
+
+        @media (max-width: 900px) {
+            header.hero { grid-template-columns: 1fr; }
         }
+
         .hero h1 {
-            font-size: clamp(2.2rem, 5vw, 3.4rem);
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--cookie-cream), var(--cookie-gold), var(--cookie-amber));
+            font-size: clamp(2.4rem, 6vw, 3.6rem);
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            background: linear-gradient(120deg, var(--text), var(--accent), var(--lime));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
-            letter-spacing: -0.02em;
             margin-bottom: 12px;
         }
-        .hero .tagline { color: var(--muted); font-size: 1.1rem; max-width: 55ch; margin: 0 auto 24px; line-height: 1.6; }
-        .status-chip {
-            display: inline-flex; align-items: center; gap: 10px;
-            padding: 12px 22px; border-radius: 999px;
-            background: rgba(245, 166, 35, 0.12);
-            border: 1px solid var(--glass-border);
-            font-size: 0.9rem; font-weight: 500; color: var(--cookie-cream);
-            animation: pulseGlow 3s ease-in-out infinite;
+
+        .tagline {
+            color: var(--muted);
+            font-size: 1.1rem;
+            max-width: 60ch;
+            line-height: 1.6;
         }
-        @keyframes pulseGlow {
-            0%, 100% { box-shadow: 0 0 20px rgba(245, 166, 35, 0.2); }
-            50% { box-shadow: 0 0 35px rgba(245, 166, 35, 0.4); }
+
+        .hero-stats {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
         }
-        .status-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--success); animation: blink 2s ease-in-out infinite; }
-        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
-        .server-stats-bar {
-            display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;
-            padding: 20px 28px;
-            background: linear-gradient(90deg, rgba(245, 166, 35, 0.08), rgba(212, 160, 58, 0.12), rgba(245, 166, 35, 0.08));
+
+        .hero-chip {
+            padding: 14px 20px;
+            border-radius: 999px;
+            border: 1px solid var(--border);
+            background: var(--glass-strong);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
         }
-        .server-stat { display: flex; align-items: center; gap: 12px; }
-        .server-stat-icon { width: 44px; height: 44px; border-radius: 12px; background: var(--accent-soft); display: grid; place-items: center; font-size: 20px; }
-        .server-stat-info { text-align: left; }
-        .server-stat-value { font-size: 1.5rem; font-weight: 700; color: var(--cookie-cream); line-height: 1.2; }
-        .server-stat-label { font-size: 0.8rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
-        .metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; padding: 24px; }
-        .metric-card {
-            background: var(--card);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            padding: 24px;
-            position: relative; overflow: hidden;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            cursor: default;
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 420px;
+            gap: 28px;
         }
-        .metric-card:hover { transform: translateY(-4px); background: var(--card-hover); border-color: var(--cookie-gold); box-shadow: 0 16px 48px rgba(245, 166, 35, 0.2); }
-        .metric-card .icon { width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; font-size: 20px; margin-bottom: 16px; }
-        .metric-card .label { color: var(--muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 500; }
-        .metric-card .value { display: block; font-size: 2.4rem; font-weight: 700; color: var(--cookie-cream); margin-top: 8px; letter-spacing: -0.02em; }
-        .metric-card .delta { display: inline-flex; align-items: center; gap: 6px; margin-top: 10px; font-size: 0.85rem; font-weight: 500; padding: 4px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--cookie-gold); }
-        .count-up { animation: countFade 0.6s ease-out; }
-        @keyframes countFade { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        .main-grid { display: grid; grid-template-columns: 1fr 380px; gap: 24px; }
-        @media (max-width: 1024px) { .main-grid { grid-template-columns: 1fr; } }
-        .builders-section h2 { font-size: 1.5rem; font-weight: 700; color: var(--cookie-cream); display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
-        .builders-section .subtitle { color: var(--muted); font-size: 0.9rem; margin-bottom: 24px; }
-        .builders-podium { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 24px; }
-        .builder-card {
-            background: var(--card);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            padding: 24px 16px;
-            text-align: center;
+
+        @media (max-width: 1200px) {
+            .grid-layout { grid-template-columns: 1fr; }
+        }
+
+        .primary-column {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 18px;
+        }
+
+        .stat-card {
+            padding: 22px;
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            background: linear-gradient(160deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
             position: relative;
-            transition: all 0.4s ease;
-            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .stat-card .label { color: var(--muted); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; }
+        .stat-card .value { font-size: 2.4rem; font-weight: 600; margin: 8px 0; }
+        .stat-card .meta { font-size: 0.9rem; color: var(--accent); display: flex; align-items: center; gap: 6px; }
+
+        .server-panel {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+        }
+
+        .server-block {
+            padding: 18px;
+            border-radius: 16px;
+            background: var(--glass-strong);
+            border: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .server-block span:first-child { font-size: 0.85rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; }
+        .server-block span:last-child { font-size: 1.8rem; font-weight: 600; }
+
+        .section-heading {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+
+        .section-heading h2 { font-size: 1.3rem; letter-spacing: 0.05em; text-transform: uppercase; }
+        .section-heading p { color: var(--muted); font-size: 0.9rem; }
+
+        .builders-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+        }
+
+        .builder-card {
+            padding: 20px;
+            border-radius: 18px;
+            border: 1px solid var(--border);
+            background: radial-gradient(circle at top, rgba(246, 173, 60, 0.18), rgba(255, 255, 255, 0.01));
+            transition: transform 0.35s ease;
             text-decoration: none;
-            display: block;
+            color: inherit;
         }
-        .builder-card:hover { transform: translateY(-6px) scale(1.02); border-color: var(--cookie-gold); box-shadow: 0 20px 50px rgba(245, 166, 35, 0.25); }
-        .builder-card.gold { background: linear-gradient(135deg, rgba(245, 166, 35, 0.2), rgba(60, 45, 25, 0.9)); border-color: var(--cookie-gold); }
-        .builder-card.silver { background: linear-gradient(135deg, rgba(192, 192, 192, 0.15), rgba(60, 45, 25, 0.9)); }
-        .builder-card.bronze { background: linear-gradient(135deg, rgba(205, 127, 50, 0.15), rgba(60, 45, 25, 0.9)); }
-        .rank-badge { position: absolute; top: -10px; left: 50%; transform: translateX(-50%); width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; font-weight: 700; font-size: 0.9rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); }
-        .builder-card.gold .rank-badge { background: linear-gradient(135deg, #ffd700, #ffb300); color: #1a1408; }
-        .builder-card.silver .rank-badge { background: linear-gradient(135deg, #e0e0e0, #9e9e9e); color: #1a1408; }
-        .builder-card.bronze .rank-badge { background: linear-gradient(135deg, #cd7f32, #8b4513); color: #fff; }
-        .builder-avatar { width: 72px; height: 72px; border-radius: 50%; margin: 16px auto 14px; background: var(--accent-soft); border: 3px solid var(--glass-border); display: grid; place-items: center; font-size: 28px; overflow: hidden; transition: transform 0.3s ease; }
-        .builder-card:hover .builder-avatar { transform: scale(1.1); }
-        .builder-avatar img { width: 100%; height: 100%; object-fit: cover; }
-        .builder-name { font-size: 1rem; font-weight: 600; color: var(--text-bright); margin-bottom: 6px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .builder-stats { font-size: 0.85rem; color: var(--muted); }
-        .builder-stats .rating { color: var(--cookie-gold); font-weight: 600; }
-        .activity-log { max-height: 500px; display: flex; flex-direction: column; }
-        .activity-log h2 { font-size: 1.3rem; font-weight: 700; color: var(--cookie-cream); display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
-        .activity-log .subtitle { color: var(--muted); font-size: 0.85rem; margin-bottom: 20px; }
-        .log-list { flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; padding-right: 8px; }
-        .log-list::-webkit-scrollbar { width: 6px; }
-        .log-list::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.05); border-radius: 10px; }
-        .log-list::-webkit-scrollbar-thumb { background: var(--cookie-brown); border-radius: 10px; }
-        .log-entry { display: flex; align-items: flex-start; gap: 12px; padding: 14px; background: rgba(255, 255, 255, 0.03); border-radius: 14px; border: 1px solid transparent; transition: all 0.3s ease; animation: slideIn 0.4s ease-out; }
-        @keyframes slideIn { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }
-        .log-entry:hover { background: rgba(255, 255, 255, 0.06); border-color: var(--glass-border); }
-        .log-icon { width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center; font-size: 16px; flex-shrink: 0; }
-        .log-icon.sent { background: rgba(245, 166, 35, 0.2); }
-        .log-icon.accepted { background: rgba(124, 179, 66, 0.2); }
-        .log-icon.rejected { background: rgba(239, 83, 80, 0.2); }
-        .log-icon.completed { background: rgba(100, 181, 246, 0.2); }
-        .log-content { flex: 1; min-width: 0; }
-        .log-message { font-size: 0.9rem; color: var(--text); line-height: 1.4; }
-        .log-message a { color: var(--cookie-gold); text-decoration: none; font-weight: 500; }
-        .log-message a:hover { text-decoration: underline; }
-        .log-time { font-size: 0.75rem; color: var(--muted); margin-top: 4px; }
-        .bottom-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px; }
-        .section-header { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
-        .section-header h2 { font-size: 1.3rem; font-weight: 700; color: var(--cookie-cream); }
-        .section-header p { color: var(--muted); font-size: 0.85rem; margin-top: 4px; }
-        .pipeline-list { display: flex; flex-direction: column; gap: 16px; }
-        .pipeline-item { display: flex; justify-content: space-between; align-items: center; padding: 16px 18px; background: rgba(255, 255, 255, 0.03); border-radius: 14px; border: 1px solid transparent; transition: all 0.3s ease; }
-        .pipeline-item:hover { background: rgba(255, 255, 255, 0.06); border-color: var(--glass-border); }
-        .pipeline-label { font-weight: 500; color: var(--text); }
-        .pipeline-value { font-size: 1.3rem; font-weight: 700; color: var(--cookie-gold); }
-        .pipeline-trend { font-size: 0.8rem; color: var(--muted); margin-top: 2px; }
-        .progress-bar { width: 100%; height: 6px; border-radius: 999px; background: rgba(255, 255, 255, 0.08); overflow: hidden; margin-top: 10px; }
-        .progress-fill { height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--cookie-brown), var(--cookie-gold), var(--cookie-cream)); transform-origin: left; transform: scaleX(0); transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1); }
-        .insights-grid { display: grid; gap: 14px; }
-        .insight-card { padding: 18px; background: rgba(255, 255, 255, 0.03); border-radius: 14px; border: 1px solid transparent; transition: all 0.3s ease; }
-        .insight-card:hover { background: rgba(255, 255, 255, 0.06); border-color: var(--glass-border); }
-        .insight-title { font-weight: 600; color: var(--text); margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
-        .insight-detail { font-size: 0.9rem; color: var(--muted); margin-bottom: 10px; }
-        .insight-score { display: inline-flex; padding: 6px 14px; border-radius: 999px; font-size: 0.8rem; font-weight: 600; border: 1px solid; }
-        .insight-score.good { background: rgba(124, 179, 66, 0.15); border-color: rgba(124, 179, 66, 0.3); color: var(--success); }
-        .insight-score.warning { background: rgba(255, 179, 0, 0.15); border-color: rgba(255, 179, 0, 0.3); color: var(--warning); }
-        .insight-score.critical { background: rgba(239, 83, 80, 0.15); border-color: rgba(239, 83, 80, 0.3); color: var(--danger); }
-        footer { text-align: center; padding: 24px; color: var(--muted); font-size: 0.85rem; }
-        footer a { color: var(--cookie-gold); text-decoration: none; }
-        footer a:hover { text-decoration: underline; }
-        @media (max-width: 768px) {
-            .server-stats-bar { gap: 24px; }
-            .builders-podium { grid-template-columns: 1fr; }
-            .builder-card { display: grid; grid-template-columns: auto 1fr; text-align: left; padding: 16px; gap: 16px; }
-            .rank-badge { position: static; transform: none; }
-            .builder-avatar { margin: 0; width: 56px; height: 56px; }
-            .metrics-grid { grid-template-columns: repeat(2, 1fr); }
-            .metric-card .value { font-size: 1.8rem; }
+
+        .builder-card:hover { transform: translateY(-6px); border-color: var(--accent); }
+        .builder-card .rank { font-size: 0.85rem; color: var(--muted); letter-spacing: 0.2em; }
+        .builder-card .name { font-size: 1.2rem; font-weight: 600; margin: 6px 0; }
+        .builder-card .stats { color: var(--muted); font-size: 0.92rem; }
+
+        .intel-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
         }
-        @media (max-width: 480px) { .metrics-grid { grid-template-columns: 1fr; } .bottom-grid { grid-template-columns: 1fr; } }
-        .skeleton { background: linear-gradient(90deg, rgba(255,255,255,0.05) 25%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.05) 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; border-radius: 8px; }
-        @keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+
+        .pipeline-list, .insights-grid { display: flex; flex-direction: column; gap: 14px; }
+
+        .pipeline-item {
+            padding: 18px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            background: var(--glass-strong);
+        }
+
+        .pipeline-item header { display: flex; justify-content: space-between; align-items: baseline; }
+        .pipeline-item .value { font-size: 1.9rem; font-weight: 600; }
+        .pipeline-item .trend { color: var(--muted); font-size: 0.9rem; }
+        .pipeline-progress { margin-top: 10px; height: 6px; border-radius: 999px; background: rgba(255, 255, 255, 0.08); overflow: hidden; }
+        .pipeline-progress span { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--cyan), var(--accent)); transform-origin: left; }
+
+        .insight-card {
+            padding: 18px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            background: linear-gradient(160deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.08));
+        }
+
+        .insight-card h3 { font-size: 1rem; margin-bottom: 6px; }
+        .insight-card p { color: var(--muted); font-size: 0.92rem; margin-bottom: 10px; }
+        .insight-status { display: inline-flex; padding: 5px 12px; border-radius: 999px; font-size: 0.82rem; border: 1px solid transparent; }
+        .insight-status.good { border-color: rgba(158, 242, 138, 0.4); color: var(--lime); }
+        .insight-status.warning { border-color: rgba(255, 179, 0, 0.4); color: var(--accent); }
+        .insight-status.critical { border-color: rgba(255, 125, 125, 0.4); color: var(--rose); }
+
+        .activity-column {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            height: fit-content;
+        }
+
+        .activity-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            padding: 26px;
+            border-radius: 22px;
+            border: 1px solid var(--border-strong);
+            background: linear-gradient(160deg, rgba(17, 18, 26, 0.96), rgba(12, 12, 18, 0.9));
+        }
+
+        .activity-panel header {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .activity-panel header h2 { font-size: 1.2rem; letter-spacing: 0.08em; text-transform: uppercase; }
+        .activity-panel header span { color: var(--muted); font-size: 0.9rem; }
+
+        .filter-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .chip {
+            padding: 6px 14px;
+            border-radius: 999px;
+            border: 1px solid var(--border);
+            background: rgba(255, 255, 255, 0.03);
+            font-size: 0.8rem;
+            letter-spacing: 0.08em;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            user-select: none;
+        }
+
+        .chip.active { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); }
+
+        .activity-feed {
+            max-height: 680px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            padding-right: 6px;
+        }
+
+        .activity-feed::-webkit-scrollbar { width: 6px; }
+        .activity-feed::-webkit-scrollbar-thumb { background: var(--accent-soft); border-radius: 999px; }
+
+        .activity-item {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 12px;
+            padding: 16px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .activity-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            display: grid;
+            place-items: center;
+            font-size: 1.2rem;
+        }
+
+        .activity-content { display: flex; flex-direction: column; gap: 6px; }
+        .activity-message { font-size: 0.95rem; line-height: 1.4; }
+        .activity-message a { color: var(--accent); text-decoration: none; }
+        .activity-meta { font-size: 0.78rem; color: var(--muted); display: flex; gap: 10px; }
+
+        .empty-state { text-align: center; color: var(--muted); padding: 40px 0; }
+
+        footer {
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.9rem;
+            margin-top: 24px;
+        }
+
+        footer a { color: var(--accent); text-decoration: none; }
     </style>
 </head>
 <body>
-    <div class="wrapper">
+    <div class="stars"></div>
+    <div class="shell">
         <header class="glass hero">
-            <div class="logo-container">
-                <div class="cookie-icon">🍪</div>
-                <h1>Crumbl Crafts</h1>
+            <div>
+                <h1>Crumbl Crafts Command Center</h1>
+                <p class="tagline">Live Bloxburg builder intelligence with server telemetry, response tracking, and an ultra-detailed activity stream that keeps players inspired.</p>
+                <div class="hero-stats">
+                    <span class="hero-chip">LIVE DATA SYNC</span>
+                    <span class="hero-chip">7-DAY MEMORY</span>
+                    <span class="hero-chip">DISCORD + WEB</span>
+                </div>
             </div>
-            <p class="tagline">Your premium Bloxburg building community. Real-time stats, live activity feed, and top builder rankings — all synced with Discord.</p>
-            <div class="status-chip"><span class="status-dot"></span><span>LIVE · Syncing with Discord</span></div>
+            <div class="glass" style="min-width: 260px; text-align: right;">
+                <p style="text-transform: uppercase; color: var(--muted); letter-spacing: 0.12em; font-size: 0.8rem;">Avg response</p>
+                <p style="font-size: 3rem; font-weight: 600;" id="heroAvgResponse">—</p>
+                <p style="color: var(--accent); font-size: 0.9rem;">private request turnaround</p>
+            </div>
         </header>
-        <section class="glass server-stats-bar" id="serverStats">
-            <div class="server-stat"><div class="server-stat-icon">👥</div><div class="server-stat-info"><div class="server-stat-value" id="totalMembers">—</div><div class="server-stat-label">Total Members</div></div></div>
-            <div class="server-stat"><div class="server-stat-icon">✨</div><div class="server-stat-info"><div class="server-stat-value" id="joinedToday">—</div><div class="server-stat-label">Joined Today</div></div></div>
-            <div class="server-stat"><div class="server-stat-icon">🏪</div><div class="server-stat-info"><div class="server-stat-value" id="activeShops">—</div><div class="server-stat-label">Active Shops</div></div></div>
-            <div class="server-stat"><div class="server-stat-icon">⏱️</div><div class="server-stat-info"><div class="server-stat-value" id="avgResponseTime">—</div><div class="server-stat-label">Avg Response</div></div></div>
-        </section>
-        <section class="glass metrics-grid" id="summaryMetrics"></section>
-        <div class="main-grid">
-            <section class="glass builders-section"><h2>🏆 Top Builders</h2><p class="subtitle">Our highest-rated builders this month. Click to visit their shop.</p><div class="builders-podium" id="buildersPodium"></div></section>
-            <section class="glass activity-log"><h2>📋 Activity Feed</h2><p class="subtitle">Live request updates</p><div class="log-list" id="activityLog"></div></section>
-        </div>
-        <div class="bottom-grid">
-            <section class="glass"><div class="section-header"><div><h2>📊 Pipeline Pulse</h2><p>Request flow overview</p></div></div><div class="pipeline-list" id="pipelineList"></div></section>
-            <section class="glass"><div class="section-header"><div><h2>🧠 System Insights</h2><p>Operational health metrics</p></div></div><div class="insights-grid" id="insightsGrid"></div></section>
-        </div>
-        <footer><p>🍪 Powered by <strong>Crumbl Crafts</strong> · Synced via Discord Bot</p></footer>
+
+        <main class="grid-layout">
+            <section class="primary-column">
+                <section class="glass stat-grid" id="summaryGrid"></section>
+                <section class="glass">
+                    <div class="section-heading"><h2>Server Pulse</h2><p>Community health at a glance</p></div>
+                    <div class="server-panel" id="serverPanel"></div>
+                </section>
+                <section class="glass">
+                    <div class="section-heading"><h2>Top Builder Flight Deck</h2><p>Tap any card to jump into their thread</p></div>
+                    <div class="builders-grid" id="buildersGrid"></div>
+                </section>
+                <section class="glass intel-grid">
+                    <div>
+                        <div class="section-heading"><h2>Pipeline Monitor</h2><p>Request flow + shop throughput</p></div>
+                        <div class="pipeline-list" id="pipelineList"></div>
+                    </div>
+                    <div>
+                        <div class="section-heading"><h2>Strategy Insights</h2><p>Auto-scouted tips & warnings</p></div>
+                        <div class="insights-grid" id="insightsGrid"></div>
+                    </div>
+                </section>
+            </section>
+
+            <aside class="activity-column">
+                <section class="activity-panel">
+                    <header>
+                        <h2>Realtime Activity Feed</h2>
+                        <span>Auto-pruned after 7 days. Freshest events float to the top.</span>
+                    </header>
+                    <div class="filter-chips" id="feedFilters"></div>
+                    <div class="activity-feed" id="activityFeed"></div>
+                </section>
+            </aside>
+        </main>
+
+        <footer>🍪 Crafted for the Crumbl Crafts Bloxburg collective · <a href="https://discord.com/">Synced from Discord</a></footer>
     </div>
+
     <script>
-        const REMOTE_METRICS_ENDPOINT = window.METRICS_ENDPOINT || 'https://your-bot-host.example.com/api/metrics';
-        const LOCAL_METRICS_FALLBACK = 'site_metrics.json';
-        const FORUM_CHANNEL_BASE = 'https://discord.com/channels/';
-        const formatNumber = (v) => Intl.NumberFormat('en-US').format(v ?? 0);
-        const formatTime = (s) => { if (!s || s < 60) return `${Math.round(s||0)}s`; if (s < 3600) return `${Math.round(s/60)}m`; return `${(s/3600).toFixed(1)}h`; };
-        const timeAgo = (ts) => { if (!ts) return 'Just now'; const d = Date.now()/1000 - ts; if (d < 60) return 'Just now'; if (d < 3600) return `${Math.floor(d/60)}m ago`; if (d < 86400) return `${Math.floor(d/3600)}h ago`; return `${Math.floor(d/86400)}d ago`; };
-        const metricsConfig = [
-            { key: 'builder_count', label: 'Builders', icon: '👷', color: '#f5a623' },
-            { key: 'total_completed', label: 'Completed', icon: '✅', color: '#7cb342' },
-            { key: 'total_requests', label: 'Requests', icon: '📨', color: '#64b5f6' },
-            { key: 'total_ratings', label: 'Ratings', icon: '⭐', color: '#ffb300' },
+        const API_ENDPOINT = window.METRICS_ENDPOINT || 'http://localhost:8080/api/metrics';
+        const LOCAL_FALLBACK = 'site_metrics.json';
+        const MAX_FEED_DAYS = 7;
+        const FEED_TYPES = [
+            'sent',
+            'accepted',
+            'rejected',
+            'completed',
+            'member_join',
+            'member_leave',
+            'rating',
+            'new_request_thread'
         ];
-        const placeholderData = {
-            summary: { builder_count: 24, total_completed: 156, total_requests: 312, total_ratings: 89, request_completion_ratio: 0.5 },
-            server: { total_members: 1250, joined_today: 8, active_shops: 12, avg_response_time: 420 },
-            topBuilders: [
-                { shop_name: 'Cookie Castle', completed_projects: 48, average_rating: 4.9, avatar_url: null, thread_id: null },
-                { shop_name: 'Sugar Studios', completed_projects: 41, average_rating: 4.8, avatar_url: null, thread_id: null },
-                { shop_name: 'Frosting Factory', completed_projects: 35, average_rating: 4.7, avatar_url: null, thread_id: null },
-            ],
-            activityLog: [
-                { type: 'sent', message: 'New request sent to Cookie Castle', shop_name: 'Cookie Castle', timestamp: Date.now()/1000 - 120 },
-                { type: 'accepted', message: 'Request accepted by Sugar Studios', shop_name: 'Sugar Studios', timestamp: Date.now()/1000 - 300 },
-                { type: 'completed', message: 'Build completed by Frosting Factory', shop_name: 'Frosting Factory', timestamp: Date.now()/1000 - 600 },
-            ],
-            pipeline: [
-                { label: 'Queued Requests', value: 24, trend: '6 new today', max: 50 },
-                { label: 'Active Builds', value: 12, trend: '3 shops working', max: 30 },
-                { label: 'Completed (7d)', value: 31, trend: '+12% vs last week', max: 50 },
-            ],
-            insights: [
-                { title: 'Completion Rate', detail: '50% of requests fulfilled', score: 'On track', status: 'good' },
-                { title: 'Request Velocity', detail: '6 new requests today', score: 'Stable', status: 'good' },
-                { title: 'Builder Availability', detail: '12 shops accepting work', score: 'Healthy', status: 'good' },
-                { title: 'Queue Health', detail: '24 requests pending', score: 'Monitor', status: 'warning' },
-            ],
+
+        const FEED_META = {
+            sent: { label: 'Request Sent', icon: '📤', color: 'rgba(246,173,60,0.18)' },
+            accepted: { label: 'Request Accepted', icon: '🤝', color: 'rgba(158,242,138,0.15)' },
+            rejected: { label: 'Request Rejected', icon: '⛔', color: 'rgba(255,125,125,0.2)' },
+            completed: { label: 'Build Complete', icon: '🏁', color: 'rgba(95,213,255,0.18)' },
+            member_join: { label: 'Member Joined', icon: '✨', color: 'rgba(160,123,255,0.18)' },
+            member_leave: { label: 'Member Left', icon: '👋', color: 'rgba(255,125,125,0.18)' },
+            rating: { label: 'Builder Rated', icon: '⭐', color: 'rgba(246,173,60,0.22)' },
+            new_request_thread: { label: 'Thread Opened', icon: '💬', color: 'rgba(95,213,255,0.22)' },
         };
-        const withCacheBust = (url) => url.includes('?') ? `${url}&v=${Date.now()}` : `${url}?v=${Date.now()}`;
-        async function fetchFrom(url) { const r = await fetch(withCacheBust(url), { cache: 'no-store' }); if (!r.ok) throw new Error(`(${r.status})`); const p = await r.json(); if (!p.summary) throw new Error('Incomplete'); return p; }
+
+        const placeholder = {
+            summary: {
+                builder_count: 24,
+                total_completed: 156,
+                total_requests: 312,
+                total_ratings: 89,
+                request_completion_ratio: 0.52
+            },
+            server: {
+                total_members: 1204,
+                joined_today: 9,
+                active_shops: 14,
+                avg_response_time: 420
+            },
+            topBuilders: [],
+            pipeline: [],
+            insights: [],
+            activityLog: []
+        };
+
+        const activeFilters = new Set(FEED_TYPES);
+
+        const formatNumber = (n) => Intl.NumberFormat('en-US').format(n ?? 0);
+        const formatPercent = (p) => `${(p * 100).toFixed(1)}%`;
+        const formatDuration = (secs) => {
+            if (!secs && secs !== 0) return '—';
+            if (secs < 60) return `${Math.round(secs)}s`;
+            if (secs < 3600) return `${Math.round(secs / 60)}m`;
+            return `${(secs / 3600).toFixed(1)}h`;
+        };
+        const timeAgo = (ts) => {
+            if (!ts) return 'just now';
+            const delta = Date.now() / 1000 - ts;
+            if (delta < 60) return 'just now';
+            if (delta < 3600) return `${Math.floor(delta / 60)}m ago`;
+            if (delta < 86400) return `${Math.floor(delta / 3600)}h ago`;
+            return `${Math.floor(delta / 86400)}d ago`;
+        };
+
         async function fetchMetrics() {
-            try { return await fetchFrom(REMOTE_METRICS_ENDPOINT); } catch (e) {
-                console.warn('Remote failed:', e.message);
-                try { return await fetchFrom(LOCAL_METRICS_FALLBACK); } catch (e2) { console.warn('Local failed:', e2.message); return placeholderData; }
+            try {
+                const res = await fetch(`${API_ENDPOINT}?t=${Date.now()}`, { cache: 'no-store' });
+                if (!res.ok) throw new Error('remote fail');
+                return res.json();
+            } catch (err) {
+                console.warn('Primary metrics endpoint unavailable, falling back…');
+                try {
+                    const res = await fetch(`${LOCAL_FALLBACK}?t=${Date.now()}`, { cache: 'no-store' });
+                    if (!res.ok) throw new Error('fallback fail');
+                    return res.json();
+                } catch {
+                    return placeholder;
+                }
             }
         }
-        function renderServerStats(s) {
-            document.getElementById('totalMembers').textContent = formatNumber(s?.total_members);
-            document.getElementById('joinedToday').textContent = formatNumber(s?.joined_today);
-            document.getElementById('activeShops').textContent = formatNumber(s?.active_shops);
-            document.getElementById('avgResponseTime').textContent = formatTime(s?.avg_response_time);
+
+        function buildFeedFilters() {
+            const container = document.getElementById('feedFilters');
+            container.innerHTML = '';
+            FEED_TYPES.forEach((type) => {
+                const meta = FEED_META[type];
+                const chip = document.createElement('button');
+                chip.className = `chip ${activeFilters.has(type) ? 'active' : ''}`;
+                chip.textContent = meta ? meta.label : type;
+                chip.addEventListener('click', () => {
+                    if (activeFilters.has(type)) {
+                        activeFilters.delete(type);
+                        if (activeFilters.size === 0) FEED_TYPES.forEach((t) => activeFilters.add(t));
+                    } else {
+                        activeFilters.add(type);
+                    }
+                    buildFeedFilters();
+                    hydrateDashboard();
+                });
+                container.appendChild(chip);
+            });
         }
-        function renderSummary(s) {
-            document.getElementById('summaryMetrics').innerHTML = metricsConfig.map((m, i) => `
-                <article class="metric-card" style="animation-delay:${i*100}ms"><div class="icon" style="background:${m.color}22;">${m.icon}</div><span class="label">${m.label}</span><span class="value count-up">${formatNumber(s[m.key])}</span><span class="delta">Live</span></article>`).join('');
+
+        function renderSummary(summary) {
+            const grid = document.getElementById('summaryGrid');
+            const cards = [
+                { label: 'Active Builders', value: summary.builder_count, meta: 'Roster' },
+                { label: 'Projects Completed', value: summary.total_completed, meta: 'Lifetime' },
+                { label: 'Total Requests', value: summary.total_requests, meta: 'All time' },
+                { label: 'Completion Ratio', value: formatPercent(summary.request_completion_ratio ?? 0), meta: 'Fulfilment' },
+                { label: 'Ratings Logged', value: summary.total_ratings, meta: 'Community feedback' }
+            ];
+            grid.innerHTML = cards.map((card) => `
+                <article class="stat-card">
+                    <p class="label">${card.label}</p>
+                    <p class="value">${typeof card.value === 'number' ? formatNumber(card.value) : card.value}</p>
+                    <p class="meta">${card.meta}</p>
+                </article>
+            `).join('');
         }
-        function renderBuilders(b) {
-            const ranks = ['gold','silver','bronze'];
-            document.getElementById('buildersPodium').innerHTML = (b||[]).slice(0,3).map((x,i) => {
-                const url = x.thread_id ? `${FORUM_CHANNEL_BASE}${x.server_id||''}/${x.thread_id}` : '#';
-                const av = x.avatar_url ? `<img src="${x.avatar_url}" alt="${x.shop_name}"/>` : '🍪';
-                return `<a href="${url}" target="_blank" class="builder-card ${ranks[i]}" title="Visit ${x.shop_name}"><div class="rank-badge">${i+1}</div><div class="builder-avatar">${av}</div><div class="builder-name">${x.shop_name}</div><div class="builder-stats">${x.completed_projects} builds · <span class="rating">${(x.average_rating||0).toFixed(1)} ★</span></div></a>`;
+
+        function renderServer(server) {
+            const panel = document.getElementById('serverPanel');
+            const blocks = [
+                { label: 'Members', value: server.total_members },
+                { label: 'Joined Today', value: server.joined_today },
+                { label: 'Active Shops', value: server.active_shops },
+                { label: 'Avg Response', value: formatDuration(server.avg_response_time) }
+            ];
+            document.getElementById('heroAvgResponse').textContent = formatDuration(server.avg_response_time);
+            panel.innerHTML = blocks.map((b) => `
+                <div class="server-block">
+                    <span>${b.label}</span>
+                    <span>${typeof b.value === 'number' ? formatNumber(b.value) : b.value}</span>
+                </div>
+            `).join('');
+        }
+
+        function renderBuilders(builders) {
+            const grid = document.getElementById('buildersGrid');
+            if (!builders || builders.length === 0) {
+                grid.innerHTML = '<p class="empty-state">No builder telemetry yet.</p>';
+                return;
+            }
+            grid.innerHTML = builders.slice(0, 6).map((b, idx) => {
+                const link = b.thread_id ? `https://discord.com/channels/${b.server_id || ''}/${b.thread_id}` : '#';
+                return `
+                    <a class="builder-card" href="${link}" target="_blank" rel="noopener">
+                        <span class="rank">#${idx + 1}</span>
+                        <div class="name">${b.shop_name}</div>
+                        <div class="stats">${formatNumber(b.completed_projects)} builds · ⭐ ${Number(b.average_rating || 0).toFixed(1)}</div>
+                    </a>`;
             }).join('');
         }
-        function renderActivityLog(l) {
-            const el = document.getElementById('activityLog');
-            const logs = (l||[]).slice(0,15);
-            if (!logs.length) { el.innerHTML = '<p style="color:var(--muted);text-align:center;padding:40px 0;">No recent activity</p>'; return; }
-            const icons = { sent: { icon: '📤', cls: 'sent' }, accepted: { icon: '✅', cls: 'accepted' }, rejected: { icon: '❌', cls: 'rejected' }, completed: { icon: '🎉', cls: 'completed' } };
-            el.innerHTML = logs.map(x => {
-                const ic = icons[x.type] || icons.sent;
-                const link = x.thread_id ? `<a href="${FORUM_CHANNEL_BASE}${x.server_id||''}/${x.thread_id}" target="_blank">${x.shop_name}</a>` : `<strong>${x.shop_name||'Unknown'}</strong>`;
-                return `<div class="log-entry"><div class="log-icon ${ic.cls}">${ic.icon}</div><div class="log-content"><div class="log-message">${x.message||`Activity at ${link}`}</div><div class="log-time">${timeAgo(x.timestamp)}</div></div></div>`;
+
+        function renderPipeline(pipeline) {
+            const list = document.getElementById('pipelineList');
+            if (!pipeline || pipeline.length === 0) {
+                list.innerHTML = '<p class="empty-state">No live pipeline data.</p>';
+                return;
+            }
+            list.innerHTML = pipeline.map((item) => {
+                const ratio = Math.min(1, (item.value || 0) / (item.max || 100));
+                return `
+                    <article class="pipeline-item">
+                        <header>
+                            <div>
+                                <p style="font-size:0.85rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted);">${item.label}</p>
+                                <p class="trend">${item.trend || ''}</p>
+                            </div>
+                            <p class="value">${formatNumber(item.value)}</p>
+                        </header>
+                        <div class="pipeline-progress"><span style="transform:scaleX(${ratio});"></span></div>
+                    </article>`;
             }).join('');
         }
-        function renderPipeline(p) {
-            document.getElementById('pipelineList').innerHTML = (p||[]).map(x => {
-                const r = Math.min(1, (x.value||0)/(x.max||100));
-                return `<div class="pipeline-item"><div><div class="pipeline-label">${x.label}</div><div class="pipeline-trend">${x.trend}</div><div class="progress-bar"><div class="progress-fill" style="transform:scaleX(${r});"></div></div></div><div class="pipeline-value">${formatNumber(x.value)}</div></div>`;
+
+        function renderInsights(insights) {
+            const list = document.getElementById('insightsGrid');
+            if (!insights || insights.length === 0) {
+                list.innerHTML = '<p class="empty-state">Insights will populate as activity flows in.</p>';
+                return;
+            }
+            list.innerHTML = insights.map((ins) => {
+                const status = (ins.status || '').toLowerCase().includes('warn') ? 'warning' : (ins.status || '').toLowerCase().includes('good') ? 'good' : ins.status || 'good';
+                return `
+                    <article class="insight-card">
+                        <h3>${ins.title}</h3>
+                        <p>${ins.detail}</p>
+                        <span class="insight-status ${status}">${ins.score}</span>
+                    </article>`;
             }).join('');
         }
-        function renderInsights(ins) {
-            const st = (x) => { if (x.status) return x.status; const s = (x.score||'').toLowerCase(); if (s.includes('healthy')||s.includes('on track')||s.includes('stable')||s.includes('good')||s.includes('✅')) return 'good'; if (s.includes('monitor')||s.includes('attention')||s.includes('warning')||s.includes('⚠')) return 'warning'; if (s.includes('critical')||s.includes('alert')||s.includes('❌')) return 'critical'; return 'good'; };
-            document.getElementById('insightsGrid').innerHTML = (ins||[]).map(x => `<div class="insight-card"><div class="insight-title">${x.title}</div><div class="insight-detail">${x.detail}</div><span class="insight-score ${st(x)}">${x.score}</span></div>`).join('');
+
+        function pruneFeed(entries) {
+            if (!entries) return [];
+            const cutoff = Date.now() / 1000 - MAX_FEED_DAYS * 86400;
+            return entries.filter((entry) => (entry.timestamp || 0) >= cutoff);
         }
+
+        function renderActivity(entries) {
+            const feed = document.getElementById('activityFeed');
+            const filtered = pruneFeed(entries).filter((entry) => activeFilters.has(entry.type));
+            if (filtered.length === 0) {
+                feed.innerHTML = '<p class="empty-state">No activity for the selected filters.</p>';
+                return;
+            }
+            feed.innerHTML = filtered.map((entry) => {
+                const meta = FEED_META[entry.type] || { icon: '🌀', label: entry.type, color: 'rgba(255,255,255,0.08)' };
+                const link = entry.url || (entry.thread_id ? `https://discord.com/channels/${entry.server_id || ''}/${entry.thread_id}` : null);
+                const shop = entry.shop_name ? `<strong>${entry.shop_name}</strong>` : '';
+                return `
+                    <article class="activity-item">
+                        <div class="activity-icon" style="background:${meta.color}">${meta.icon}</div>
+                        <div class="activity-content">
+                            <div class="activity-message">${entry.message || shop}
+                                ${link ? `<a href="${link}" target="_blank" rel="noopener">jump →</a>` : ''}
+                            </div>
+                            <div class="activity-meta">
+                                <span>${meta.label}</span>
+                                <span>${timeAgo(entry.timestamp)}</span>
+                            </div>
+                        </div>
+                    </article>`;
+            }).join('');
+        }
+
         async function hydrateDashboard() {
-            const d = await fetchMetrics();
-            renderServerStats(d.server ?? placeholderData.server);
-            renderSummary(d.summary ?? placeholderData.summary);
-            renderBuilders(d.topBuilders ?? placeholderData.topBuilders);
-            renderActivityLog(d.activityLog ?? placeholderData.activityLog);
-            renderPipeline(d.pipeline ?? placeholderData.pipeline);
-            renderInsights(d.insights ?? placeholderData.insights);
+            const data = await fetchMetrics();
+            renderSummary(data.summary || placeholder.summary);
+            renderServer(data.server || placeholder.server);
+            renderBuilders(data.topBuilders || placeholder.topBuilders);
+            renderPipeline(data.pipeline || placeholder.pipeline);
+            renderInsights(data.insights || placeholder.insights);
+            renderActivity(data.activityLog || placeholder.activityLog);
         }
+
+        buildFeedFilters();
         hydrateDashboard();
         setInterval(hydrateDashboard, 60_000);
     </script>
