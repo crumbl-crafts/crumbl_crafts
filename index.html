@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rakka Builders · Live Stats</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+        :root {
+            color-scheme: dark;
+            --bg: #05060d;
+            --panel: rgba(12, 14, 24, 0.85);
+            --card: rgba(21, 24, 42, 0.8);
+            --accent: #7c3aed;
+            --accent-soft: rgba(124, 58, 237, 0.18);
+            --accent-2: #38bdf8;
+            --text: #f4f4fb;
+            --muted: #9ba1c0;
+            --success: #34d399;
+            --warning: #fbbf24;
+            --danger: #fb7185;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Space Grotesk', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: radial-gradient(circle at top, rgba(124, 58, 237, 0.18), transparent 45%),
+                        radial-gradient(circle at bottom, rgba(56, 189, 248, 0.15), transparent 50%),
+                        var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            padding: 40px 16px 80px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .wrapper {
+            width: min(1200px, 100%);
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .glass {
+            background: var(--panel);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 28px;
+            padding: 32px;
+            box-shadow: 0 30px 80px rgba(4, 5, 12, 0.85);
+            backdrop-filter: blur(22px);
+        }
+
+        header.hero {
+            display: grid;
+            gap: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.6rem);
+            letter-spacing: -0.04em;
+            font-weight: 700;
+        }
+
+        .hero p {
+            max-width: 60ch;
+            color: var(--muted);
+            font-size: 1.1rem;
+            line-height: 1.65;
+        }
+
+        .pill-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .pill {
+            padding: 10px 18px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--muted);
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .metric-card {
+            background: var(--card);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 22px;
+            padding: 22px;
+            position: relative;
+            overflow: hidden;
+            min-height: 160px;
+        }
+
+        .metric-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: radial-gradient(circle at top, rgba(255, 255, 255, 0.08), transparent 60%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .metric-card:hover::after {
+            opacity: 1;
+        }
+
+        .metric-card span.label {
+            color: var(--muted);
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.22em;
+        }
+
+        .metric-card span.value {
+            display: block;
+            margin-top: 18px;
+            font-size: 3rem;
+            font-weight: 600;
+            letter-spacing: -0.04em;
+        }
+
+        .metric-card small.delta {
+            margin-top: 8px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 500;
+        }
+
+        .sparkline {
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+            width: 120px;
+            height: 52px;
+            opacity: 0.8;
+        }
+
+        .leaderboard {
+            display: grid;
+            gap: 20px;
+        }
+
+        .leaderboard h2 {
+            font-size: 1.6rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .leaderboard-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .leader-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 18px;
+            padding: 18px 20px;
+            display: grid;
+            grid-template-columns: 60px 1fr auto;
+            gap: 18px;
+            align-items: center;
+            transition: transform 0.35s ease;
+        }
+
+        .leader-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .leader-card .rank {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            background: var(--accent-soft);
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 1.4rem;
+            display: grid;
+            place-items: center;
+        }
+
+        .leader-card .info h3 {
+            font-size: 1.2rem;
+        }
+
+        .leader-card .info p {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .leader-card .score {
+            text-align: right;
+        }
+
+        .leader-card .score span {
+            display: block;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        .leader-card .score small {
+            color: var(--muted);
+        }
+
+        .gradient-border {
+            position: relative;
+            border-radius: inherit;
+            padding: 1px;
+            background: linear-gradient(135deg, rgba(124, 58, 237, 0.8), rgba(56, 189, 248, 0.7));
+        }
+
+        .gradient-border > .glass {
+            background: rgba(2, 6, 23, 0.85);
+        }
+
+        .grid-two {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+        }
+
+        .request-history {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .request-history li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.95rem;
+            color: var(--muted);
+        }
+
+        .request-history strong {
+            color: var(--text);
+            font-size: 1.05rem;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.08);
+            overflow: hidden;
+            margin-top: 8px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            border-radius: inherit;
+            background: linear-gradient(90deg, var(--accent), var(--accent-2));
+            transform-origin: left;
+            transform: scaleX(0);
+            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        footer {
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 640px) {
+            .glass {
+                padding: 24px;
+            }
+
+            .leader-card {
+                grid-template-columns: 40px 1fr;
+            }
+
+            .leader-card .score {
+                grid-column: span 2;
+                text-align: left;
+            }
+        }
+
+        @keyframes glowPulse {
+            0%, 100% { box-shadow: 0 0 20px rgba(124, 58, 237, 0.25); }
+            50% { box-shadow: 0 0 35px rgba(56, 189, 248, 0.35); }
+        }
+
+        .status-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 16px;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.03);
+            animation: glowPulse 4s ease infinite;
+        }
+
+        .status-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 999px;
+            background: var(--success);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="glass hero">
+            <div class="status-chip">
+                <span class="status-dot"></span>
+                LIVE SYNC · Discord Builder Network
+            </div>
+            <h1>Builder Intelligence Reimagined</h1>
+            <p>
+                A real-time command center that keeps your Discord network, commissions, and website perfectly in sync. Track every builder, request, and rating with cinema-grade visuals and buttery smooth performance.
+            </p>
+            <div class="pill-row">
+                <span class="pill">⚡ Serverless API</span>
+                <span class="pill">🛡️ MySQL on Bot-Hosting.net</span>
+                <span class="pill">🌐 Vercel Edge Ready</span>
+            </div>
+        </header>
+
+        <section class="glass metrics-grid" id="summaryMetrics">
+            <!-- Cards injected by JS -->
+        </section>
+
+        <section class="leaderboard glass">
+            <div class="leaderboard-head">
+                <h2>🏆 Builder Leaderboard</h2>
+                <p style="color: var(--muted);">Sorted by completed projects, then rating. Updated live from your bot.</p>
+            </div>
+            <div class="leaderboard-list" id="leaderList"></div>
+        </section>
+
+        <section class="grid-two">
+            <div class="glass">
+                <h2>📈 Pipeline Pulse</h2>
+                <p style="color: var(--muted); margin-top: 6px;">Where requests become delivery. Watch inflow vs completion in near-real-time.</p>
+                <ul class="request-history" id="pipelineList"></ul>
+            </div>
+            <div class="glass gradient-card">
+                <h2>🧠 System Insights</h2>
+                <p style="color: var(--muted); margin-top: 6px;">Operational health and snapshots ready for your staff hub.</p>
+                <div style="display: grid; gap: 18px; margin-top: 18px;" id="insights"></div>
+            </div>
+        </section>
+
+        <footer>
+            Synced by Rakka · Powered by Discord + MySQL + Vercel
+        </footer>
+    </div>
+
+    <script>
+        const summaryEl = document.getElementById('summaryMetrics');
+        const leaderListEl = document.getElementById('leaderList');
+        const pipelineListEl = document.getElementById('pipelineList');
+        const insightsEl = document.getElementById('insights');
+
+        const formatNumber = (value) => Intl.NumberFormat('en-US').format(value);
+        const metricsConfig = [
+            { key: 'builder_count', label: 'Builders Live', accent: 'var(--accent)' },
+            { key: 'total_completed', label: 'Completed Builds', accent: 'var(--success)' },
+            { key: 'total_requests', label: 'Requests Logged', accent: 'var(--accent-2)' },
+            { key: 'total_ratings', label: 'Ratings Submitted', accent: 'var(--warning)' },
+        ];
+
+        const placeholderData = {
+            summary: {
+                builder_count: 58,
+                total_completed: 342,
+                total_requests: 1275,
+                total_ratings: 812,
+                request_completion_ratio: 0.72,
+            },
+            topBuilders: [
+                { shop_name: 'Aurora Atelier', completed_projects: 128, average_rating: 4.9 },
+                { shop_name: 'Neon Forge', completed_projects: 111, average_rating: 4.8 },
+                { shop_name: 'Zenith Studio', completed_projects: 102, average_rating: 4.7 },
+                { shop_name: 'Horizon Homes', completed_projects: 94, average_rating: 4.6 },
+            ],
+            pipeline: [
+                { label: 'Queued Requests', value: 83, trend: '+14% vs last week' },
+                { label: 'Active Builds', value: 41, trend: '+8% vs last week' },
+                { label: 'Delivered Last 7d', value: 29, trend: '+5% vs last week' },
+            ],
+            insights: [
+                { title: 'Customer Response', detail: 'Average pickup time 11m', score: 'Green' },
+                { title: 'Builder Utilization', detail: '82% · Balanced', score: 'Optimal' },
+                { title: 'Queue Health', detail: '0 escalations', score: '✅ Stable' },
+            ],
+        };
+
+        async function fetchMetrics() {
+            try {
+                const res = await fetch('/api/metrics');
+                if (!res.ok) throw new Error('API unavailable');
+                return await res.json();
+            } catch (error) {
+                console.warn('Falling back to placeholder data:', error.message);
+                return placeholderData;
+            }
+        }
+
+        function renderSummary(summary) {
+            summaryEl.innerHTML = metricsConfig.map((metric, index) => {
+                const value = summary[metric.key] ?? 0;
+                const delay = index * 80;
+                return `
+                    <article class="metric-card" style="--accent-this:${metric.accent}; animation-delay:${delay}ms;">
+                        <span class="label">${metric.label}</span>
+                        <span class="value">${formatNumber(value)}</span>
+                        <small class="delta" style="color:${metric.accent};">Live</small>
+                    </article>
+                `;
+            }).join('');
+        }
+
+        function renderLeaderboard(topBuilders) {
+            leaderListEl.innerHTML = topBuilders.map((entry, idx) => {
+                const ratio = Math.min(1, entry.average_rating / 5);
+                return `
+                    <div class="leader-card">
+                        <div class="rank">${idx + 1}</div>
+                        <div class="info">
+                            <h3>${entry.shop_name}</h3>
+                            <p>${entry.completed_projects} completed · ${entry.average_rating.toFixed(2)} ★</p>
+                        </div>
+                        <div class="score">
+                            <span>${entry.average_rating.toFixed(2)} ★</span>
+                            <small>Rating quality</small>
+                            <div class="progress-bar"><div class="progress-fill" style="transform:scaleX(${ratio});"></div></div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function renderPipeline(pipeline) {
+            pipelineListEl.innerHTML = pipeline.map(item => `
+                <li>
+                    <div>
+                        <strong>${item.label}</strong>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="transform:scaleX(${Math.min(1, item.value / 100)});"></div>
+                        </div>
+                    </div>
+                    <span style="color: var(--muted);">${item.value} · ${item.trend}</span>
+                </li>
+            `).join('');
+        }
+
+        function renderInsights(insights) {
+            insightsEl.innerHTML = insights.map(insight => `
+                <article style="background: rgba(255,255,255,0.03); padding:18px 20px; border-radius:16px; border:1px solid rgba(255,255,255,0.06);">
+                    <strong style="display:block; font-size:1.05rem;">${insight.title}</strong>
+                    <p style="color: var(--muted); margin-top:4px;">${insight.detail}</p>
+                    <span style="margin-top:8px; display:inline-flex; padding:6px 12px; border-radius:999px; border:1px solid rgba(255,255,255,0.08); color:var(--accent);">${insight.score}</span>
+                </article>
+            `).join('');
+        }
+
+        async function hydrateDashboard() {
+            const data = await fetchMetrics();
+            renderSummary(data.summary);
+            renderLeaderboard(data.topBuilders);
+            renderPipeline(data.pipeline);
+            renderInsights(data.insights);
+        }
+
+        hydrateDashboard();
+        setInterval(hydrateDashboard, 60_000);
+    </script>
+</body>
+</html>
