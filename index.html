@@ -189,11 +189,23 @@
             height: 8px; 
             border-radius: 50%; 
             background: var(--success); 
-            animation: blink 1.5s ease-in-out infinite; 
+            animation: blink 1.5s ease-in-out infinite;
+            box-shadow: 0 0 8px currentColor;
         }
         @keyframes blink { 
             0%, 100% { opacity: 1; transform: scale(1); } 
-            50% { opacity: 0.4; transform: scale(0.9); } 
+            50% { opacity: 0.6; transform: scale(0.85); } 
+        }
+        .status-dot.offline {
+            background: var(--danger);
+            animation: none;
+        }
+        .status-dot.syncing {
+            animation: rotate 1s linear infinite;
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
         .stats-grid {
             display: grid; 
@@ -495,7 +507,6 @@
             border-radius: 12px; 
             border: 1px solid transparent; 
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
-            animation: slideInRight 0.4s ease-out;
             position: relative;
             overflow: hidden;
         }
@@ -512,10 +523,6 @@
         }
         .activity-item:hover::before {
             transform: scaleY(1);
-        }
-        @keyframes slideInRight { 
-            from { opacity: 0; transform: translateX(30px); } 
-            to { opacity: 1; transform: translateX(0); } 
         }
         .activity-item:hover { 
             background: rgba(255, 255, 255, 0.05); 
@@ -807,9 +814,14 @@
                         <p class="tagline">Premium Bloxburg Builder Network</p>
                     </div>
                 </div>
-                <div class="status-badge">
-                    <span class="status-dot"></span>
-                    <span id="statusText">LIVE</span>
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <div class="status-badge" id="statusBadge">
+                        <span class="status-dot" id="statusDot"></span>
+                        <span id="statusText">LIVE</span>
+                    </div>
+                    <div style="font-size: 0.75rem; color: var(--text-muted); font-weight: 500;">
+                        <span id="latencyDisplay">—</span>
+                    </div>
                 </div>
             </header>
 
@@ -878,6 +890,8 @@
         const FORUM_CHANNEL_BASE = 'https://discord.com/channels/';
         const ACTIVITY_RETENTION_DAYS = 7;
         const MAX_ACTIVITY_ITEMS = 100;
+        const REFRESH_INTERVAL = 2000; // 2 seconds for ultra-low latency
+        const FETCH_TIMEOUT = 3000; // 3 second timeout
         
         const formatNumber = (v) => new Intl.NumberFormat('en-US').format(v ?? 0);
         const formatTime = (s) => { 
@@ -926,9 +940,28 @@
         let lastActivityCount = 0;
         
         // Audio notification for new activity
+        let audioContext = null;
+        let audioUnlocked = false;
+        
+        const unlockAudio = () => {
+            if (!audioUnlocked && !audioContext) {
+                audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                audioUnlocked = true;
+                console.log('✓ Audio unlocked for notifications');
+            }
+        };
+        
         const playNotificationSound = () => {
             try {
-                const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                if (!audioContext) {
+                    audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                }
+                
+                // Resume context if suspended (browser autoplay policy)
+                if (audioContext.state === 'suspended') {
+                    audioContext.resume();
+                }
+                
                 const oscillator = audioContext.createOscillator();
                 const gainNode = audioContext.createGain();
                 
@@ -943,6 +976,8 @@
                 
                 oscillator.start(audioContext.currentTime);
                 oscillator.stop(audioContext.currentTime + 0.3);
+                
+                console.log('🔔 Notification sound played');
             } catch (e) {
                 console.warn('Could not play notification sound:', e);
             }
@@ -1048,25 +1083,86 @@
         };
         const withCacheBust = (url) => url.includes('?') ? `${url}&v=${Date.now()}` : `${url}?v=${Date.now()}`;
         
+        // Fetch with timeout
+        async function fetchWithTimeout(url, timeout = FETCH_TIMEOUT) {
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), timeout);
+            
+            try {
+                const response = await fetch(url, {
+                    signal: controller.signal,
+                    cache: 'no-store',
+                    keepalive: true,
+                    headers: {
+                        'Cache-Control': 'no-cache',
+                        'Pragma': 'no-cache'
+                    }
+                });
+                clearTimeout(timeoutId);
+                return response;
+            } catch (error) {
+                clearTimeout(timeoutId);
+                throw error;
+            }
+        }
+        
         async function fetchFrom(url) { 
-            const r = await fetch(withCacheBust(url), { cache: 'no-store' }); 
+            const r = await fetchWithTimeout(withCacheBust(url));
             if (!r.ok) throw new Error(`HTTP ${r.status}`); 
             const p = await r.json(); 
             return p; 
         }
         
+        let isOnline = true;
+        let consecutiveFailures = 0;
+        let lastSuccessfulFetch = Date.now();
+        let pendingFetch = null; // Prevent duplicate simultaneous requests
+        
         async function fetchMetrics() {
-            try { 
-                return await fetchFrom(REMOTE_METRICS_ENDPOINT); 
-            } catch (e) {
-                console.warn('Remote endpoint failed:', e.message);
-                try { 
-                    return await fetchFrom(LOCAL_METRICS_FALLBACK); 
-                } catch (e2) { 
-                    console.warn('Local fallback failed:', e2.message); 
-                    return placeholderData; 
-                }
+            // Deduplicate - return existing pending request if one is in flight
+            if (pendingFetch) {
+                return pendingFetch;
             }
+            
+            const startTime = performance.now();
+            
+            pendingFetch = (async () => {
+                try { 
+                    const data = await fetchFrom(REMOTE_METRICS_ENDPOINT);
+                    
+                    // Success - reset failure counter
+                    consecutiveFailures = 0;
+                    lastSuccessfulFetch = Date.now();
+                    isOnline = true;
+                    
+                    const latency = Math.round(performance.now() - startTime);
+                    console.log(`✓ Fetched in ${latency}ms`);
+                    
+                    return data;
+                } catch (e) {
+                    consecutiveFailures++;
+                    
+                    if (consecutiveFailures > 2) {
+                        isOnline = false;
+                    }
+                    
+                    console.warn(`✗ Remote failed (attempt ${consecutiveFailures}):`, e.message);
+                    
+                    // Try local fallback
+                    try { 
+                        const data = await fetchFrom(LOCAL_METRICS_FALLBACK);
+                        console.log('✓ Using local fallback');
+                        return data;
+                    } catch (e2) { 
+                        console.warn('✗ Local fallback failed:', e2.message); 
+                        return placeholderData; 
+                    }
+                } finally {
+                    pendingFetch = null;
+                }
+            })();
+            
+            return pendingFetch;
         }
         
         function renderStats(data) {
@@ -1086,7 +1182,6 @@
                     card = document.createElement('div');
                     card.className = 'stat-card';
                     card.setAttribute('data-stat', stat.key);
-                    card.style.animationDelay = `${i * 50}ms`;
                     card.innerHTML = `
                         <div class="icon-wrapper" style="color: ${stat.color}">
                             <i class="fas ${stat.icon}"></i>
@@ -1124,12 +1219,28 @@
             const topBuilders = (builders || []).slice(0, 6);
             
             if (!topBuilders.length) {
-                grid.innerHTML = '<p style="color: var(--text-muted); text-align: center; padding: 40px 0;">No builders data available</p>';
+                if (!grid.querySelector('p')) {
+                    grid.innerHTML = '<p style="color: var(--text-muted); text-align: center; padding: 40px 0;">No builders data available</p>';
+                }
                 return;
             }
             
+            // Use document fragment for better performance
+            const fragment = document.createDocumentFragment();
+            const existingCards = grid.querySelectorAll('.builder-card');
+            
+            // Check if we need to rebuild
+            if (existingCards.length !== topBuilders.length) {
+                grid.innerHTML = '';
+            } else {
+                return; // Data hasn't changed, skip re-render
+            }
+            
             grid.innerHTML = topBuilders.map((builder, i) => {
-                const url = builder.thread_id ? `${FORUM_CHANNEL_BASE}${builder.server_id || ''}/${builder.thread_id}` : '#';
+                // Use proper Discord channel URL with server_id and thread_id
+                const url = (builder.thread_id && builder.server_id) 
+                    ? `${FORUM_CHANNEL_BASE}${builder.server_id}/${builder.thread_id}` 
+                    : '#';
                 const avatar = builder.avatar_url 
                     ? `<img src="${builder.avatar_url}" alt="${builder.shop_name}" />` 
                     : `<i class="fas fa-home" style="font-size: 28px; color: var(--primary);"></i>`;
@@ -1176,12 +1287,14 @@
             list.innerHTML = activityCache.map((item, index) => {
                 const icon = activityIcons[item.type] || activityIcons.sent;
                 const typeClass = `type-${item.type}`;
-                const link = item.thread_id && item.server_id
-                    ? `<a href="${FORUM_CHANNEL_BASE}${item.server_id}/${item.thread_id}" target="_blank">${item.shop_name || 'Unknown'}</a>`
+                // Use the URL from backend if available, otherwise construct from thread_id/server_id
+                const activityUrl = item.url || (item.thread_id && item.server_id ? `${FORUM_CHANNEL_BASE}${item.server_id}/${item.thread_id}` : null);
+                const link = activityUrl
+                    ? `<a href="${activityUrl}" target="_blank">${item.shop_name || 'Unknown'}</a>`
                     : `<strong>${item.shop_name || 'Unknown'}</strong>`;
                 
                 return `
-                    <div class="activity-item" style="animation-delay: ${index * 30}ms">
+                    <div class="activity-item">
                         <div class="activity-icon ${typeClass}">
                             <i class="fas ${icon}"></i>
                         </div>
@@ -1210,7 +1323,7 @@
                 const ratio = Math.min(1, (item.value || 0) / (item.max || 100));
                 
                 return `
-                    <div class="pipeline-item" style="animation-delay: ${i * 50}ms">
+                    <div class="pipeline-item">
                         <div class="pipeline-info">
                             <div class="pipeline-label">${item.label}</div>
                             <div class="pipeline-trend">${item.trend || ''}</div>
@@ -1238,7 +1351,7 @@
             };
             
             list.innerHTML = items.map((item, i) => `
-                <div class="insight-card" style="animation-delay: ${i * 50}ms">
+                <div class="insight-card">
                     <div class="insight-header">
                         <div class="insight-title">
                             <i class="fas fa-info-circle"></i>
@@ -1252,51 +1365,114 @@
         }
         
         async function updateDashboard() {
+            const statusText = document.getElementById('statusText');
+            const statusBadge = document.getElementById('statusBadge');
+            const statusDot = document.getElementById('statusDot');
+            const latencyDisplay = document.getElementById('latencyDisplay');
+            const startTime = performance.now();
+            
             try {
-                const statusText = document.getElementById('statusText');
-                if (statusText) statusText.textContent = 'SYNCING...';
+                if (statusText) statusText.textContent = '⟳';
                 
                 const data = await fetchMetrics();
+                const totalTime = Math.round(performance.now() - startTime);
                 
-                // Log the data source for debugging
-                console.log('Data source:', data.meta?.mode || 'unknown', 'Generated:', new Date((data.meta?.generated_at || 0) * 1000).toLocaleString());
+                // Update latency display
+                if (latencyDisplay) {
+                    latencyDisplay.textContent = `${totalTime}ms`;
+                    latencyDisplay.style.color = totalTime < 100 ? 'var(--success)' : 
+                                                 totalTime < 500 ? 'var(--warning)' : 'var(--danger)';
+                }
                 
-                renderStats(data);
-                renderBuilders(data.topBuilders);
-                renderActivityFeed(data.activityLog);
-                renderPipeline(data.pipeline);
-                renderInsights(data.insights);
+                // Batch DOM updates using requestAnimationFrame
+                requestAnimationFrame(() => {
+                    renderStats(data);
+                    renderBuilders(data.topBuilders);
+                    renderActivityFeed(data.activityLog);
+                    renderPipeline(data.pipeline);
+                    renderInsights(data.insights);
+                });
                 
                 if (statusText) statusText.textContent = 'LIVE';
+                if (statusBadge) {
+                    statusBadge.style.background = 'rgba(16, 185, 129, 0.1)';
+                    statusBadge.style.borderColor = 'rgba(16, 185, 129, 0.3)';
+                }
+                if (statusDot) statusDot.style.background = 'var(--success)';
+                
             } catch (error) {
                 console.error('Dashboard update failed:', error);
-                const statusText = document.getElementById('statusText');
-                if (statusText) statusText.textContent = 'ERROR';
+                
+                if (statusText) statusText.textContent = isOnline ? 'RETRY' : 'OFFLINE';
+                if (statusBadge) {
+                    statusBadge.style.background = 'rgba(239, 68, 68, 0.1)';
+                    statusBadge.style.borderColor = 'rgba(239, 68, 68, 0.3)';
+                }
+                if (statusDot) statusDot.style.background = 'var(--danger)';
+                if (latencyDisplay) latencyDisplay.textContent = '—';
             }
         }
         
         // Initialize
         loadActivityCache();
-        lastActivityCount = activityCache.length; // Set initial count to prevent sound on first load
-        cleanOldActivities(); // Clean on startup
+        lastActivityCount = activityCache.length;
+        cleanOldActivities();
+        
+        // Preload initial data
         updateDashboard();
         
-        // Auto-refresh every 5 seconds
-        setInterval(updateDashboard, 5000);
+        // Aggressive refresh - every 2 seconds
+        let refreshInterval = setInterval(updateDashboard, REFRESH_INTERVAL);
         
-        // Clean old activity data every hour (more frequent than daily)
+        // Clean old activity data every hour
         setInterval(() => {
             console.log('Running scheduled activity cache cleanup...');
             cleanOldActivities();
-        }, 3600000); // 1 hour
+        }, 3600000);
         
-        // Also clean when page becomes visible again
+        // Pause updates when page is hidden, resume immediately when visible
         document.addEventListener('visibilitychange', () => {
-            if (!document.hidden) {
+            if (document.hidden) {
+                // Stop polling when hidden
+                clearInterval(refreshInterval);
+                console.log('⏸ Paused updates (page hidden)');
+            } else {
+                // Resume polling when visible
+                console.log('▶ Resumed updates (page visible)');
                 cleanOldActivities();
-                updateDashboard();
+                updateDashboard(); // Immediate update
+                refreshInterval = setInterval(updateDashboard, REFRESH_INTERVAL);
             }
         });
+        
+        // Network status monitoring
+        window.addEventListener('online', () => {
+            console.log('🌐 Network online - resuming updates');
+            isOnline = true;
+            consecutiveFailures = 0;
+            updateDashboard();
+        });
+        
+        window.addEventListener('offline', () => {
+            console.log('📡 Network offline');
+            isOnline = false;
+        });
+        
+        // Unlock audio on first user interaction (required for browser autoplay policies)
+        document.addEventListener('click', unlockAudio, { once: true });
+        document.addEventListener('keydown', unlockAudio, { once: true });
+        document.addEventListener('touchstart', unlockAudio, { once: true });
+        
+        // Preload and cache critical resources
+        if ('requestIdleCallback' in window) {
+            requestIdleCallback(() => {
+                // Preconnect to API endpoint
+                const link = document.createElement('link');
+                link.rel = 'preconnect';
+                link.href = new URL(REMOTE_METRICS_ENDPOINT).origin;
+                document.head.appendChild(link);
+            });
+        }
     </script>
 </body>
 </html>
