@@ -1,368 +1,476 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Crumbl Crafts · Live Dashboard</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crumbl Crafts | Builder Dashboard</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            color-scheme: dark;
-            --bg: #1a1408;
-            --bg-gradient: linear-gradient(135deg, #1a1408 0%, #2d2010 50%, #1a1408 100%);
-            --panel: rgba(45, 35, 20, 0.9);
-            --card: rgba(60, 45, 25, 0.85);
-            --card-hover: rgba(75, 55, 30, 0.95);
-            --cookie-gold: #f5a623;
-            --cookie-amber: #e8952d;
-            --cookie-cream: #ffeaa7;
-            --cookie-caramel: #d4a03a;
-            --cookie-brown: #8b6914;
-            --cookie-dark: #5c4813;
-            --cookie-light: #fff8dc;
-            --accent: var(--cookie-gold);
-            --accent-soft: rgba(245, 166, 35, 0.2);
-            --accent-glow: rgba(245, 166, 35, 0.4);
-            --text: #fff8dc;
-            --text-bright: #ffffff;
-            --muted: #c9b896;
-            --success: #7cb342;
-            --warning: #ffb300;
-            --danger: #ef5350;
-            --glass-border: rgba(245, 166, 35, 0.15);
-            --glass-shine: rgba(255, 255, 255, 0.05);
+            --primary-gold: #D4AF37;
+            --secondary-gold: #C5A028;
+            --dark-bg: #121212;
+            --card-bg: #1E1E1E;
+            --text-main: #E0E0E0;
+            --text-muted: #A0A0A0;
+            --shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
         }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        html { scroll-behavior: smooth; }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
-            font-family: 'Poppins', system-ui, sans-serif;
-            background: var(--bg);
-            background-image: 
-                radial-gradient(ellipse at top left, rgba(245, 166, 35, 0.15), transparent 50%),
-                radial-gradient(ellipse at bottom right, rgba(212, 160, 58, 0.1), transparent 50%),
-                radial-gradient(ellipse at center, rgba(139, 105, 20, 0.08), transparent 70%);
-            color: var(--text);
+            background-color: var(--dark-bg);
+            color: var(--text-main);
+            font-family: 'Montserrat', sans-serif;
             min-height: 100vh;
-            padding: 32px 16px 60px;
             overflow-x: hidden;
         }
-        body::before {
-            content: '';
-            position: fixed;
-            inset: 0;
-            background-image: 
-                radial-gradient(2px 2px at 20% 30%, rgba(245, 166, 35, 0.3), transparent),
-                radial-gradient(2px 2px at 40% 70%, rgba(255, 234, 167, 0.2), transparent),
-                radial-gradient(1px 1px at 60% 20%, rgba(245, 166, 35, 0.4), transparent),
-                radial-gradient(2px 2px at 80% 50%, rgba(212, 160, 58, 0.3), transparent);
-            animation: floatParticles 20s ease-in-out infinite;
-            pointer-events: none;
-            z-index: 0;
+
+        h1, h2, h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--primary-gold);
         }
-        @keyframes floatParticles {
-            0%, 100% { transform: translateY(0); opacity: 0.6; }
-            50% { transform: translateY(-20px); opacity: 1; }
-        }
-        .wrapper { position: relative; z-index: 1; max-width: 1400px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px; }
-        .glass {
-            background: var(--panel);
-            border: 1px solid var(--glass-border);
-            border-radius: 24px;
-            padding: 28px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), inset 0 1px 0 var(--glass-shine);
-            backdrop-filter: blur(20px);
-            position: relative;
-            overflow: hidden;
-        }
-        .glass::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--cookie-gold), transparent);
-            opacity: 0.3;
-        }
-        header.hero { text-align: center; padding: 40px 32px; }
-        .logo-container { display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 20px; }
-        .cookie-icon {
-            width: 56px; height: 56px;
-            background: linear-gradient(135deg, var(--cookie-gold), var(--cookie-caramel));
-            border-radius: 50%;
-            display: grid; place-items: center;
-            font-size: 28px;
-            box-shadow: 0 8px 24px rgba(245, 166, 35, 0.4);
-            animation: cookieBounce 3s ease-in-out infinite;
-        }
-        @keyframes cookieBounce {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-6px) rotate(5deg); }
-        }
-        .hero h1 {
-            font-size: clamp(2.2rem, 5vw, 3.4rem);
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--cookie-cream), var(--cookie-gold), var(--cookie-amber));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            letter-spacing: -0.02em;
-            margin-bottom: 12px;
-        }
-        .hero .tagline { color: var(--muted); font-size: 1.1rem; max-width: 55ch; margin: 0 auto 24px; line-height: 1.6; }
-        .status-chip {
-            display: inline-flex; align-items: center; gap: 10px;
-            padding: 12px 22px; border-radius: 999px;
-            background: rgba(245, 166, 35, 0.12);
-            border: 1px solid var(--glass-border);
-            font-size: 0.9rem; font-weight: 500; color: var(--cookie-cream);
-            animation: pulseGlow 3s ease-in-out infinite;
-        }
-        @keyframes pulseGlow {
-            0%, 100% { box-shadow: 0 0 20px rgba(245, 166, 35, 0.2); }
-            50% { box-shadow: 0 0 35px rgba(245, 166, 35, 0.4); }
-        }
-        .status-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--success); animation: blink 2s ease-in-out infinite; }
-        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
-        .server-stats-bar {
-            display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;
-            padding: 20px 28px;
-            background: linear-gradient(90deg, rgba(245, 166, 35, 0.08), rgba(212, 160, 58, 0.12), rgba(245, 166, 35, 0.08));
-        }
-        .server-stat { display: flex; align-items: center; gap: 12px; }
-        .server-stat-icon { width: 44px; height: 44px; border-radius: 12px; background: var(--accent-soft); display: grid; place-items: center; font-size: 20px; }
-        .server-stat-info { text-align: left; }
-        .server-stat-value { font-size: 1.5rem; font-weight: 700; color: var(--cookie-cream); line-height: 1.2; }
-        .server-stat-label { font-size: 0.8rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
-        .metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; padding: 24px; }
-        .metric-card {
-            background: var(--card);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            padding: 24px;
-            position: relative; overflow: hidden;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            cursor: default;
-        }
-        .metric-card:hover { transform: translateY(-4px); background: var(--card-hover); border-color: var(--cookie-gold); box-shadow: 0 16px 48px rgba(245, 166, 35, 0.2); }
-        .metric-card .icon { width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; font-size: 20px; margin-bottom: 16px; }
-        .metric-card .label { color: var(--muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 500; }
-        .metric-card .value { display: block; font-size: 2.4rem; font-weight: 700; color: var(--cookie-cream); margin-top: 8px; letter-spacing: -0.02em; }
-        .metric-card .delta { display: inline-flex; align-items: center; gap: 6px; margin-top: 10px; font-size: 0.85rem; font-weight: 500; padding: 4px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--cookie-gold); }
-        .count-up { animation: countFade 0.6s ease-out; }
-        @keyframes countFade { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        .main-grid { display: grid; grid-template-columns: 1fr 380px; gap: 24px; }
-        @media (max-width: 1024px) { .main-grid { grid-template-columns: 1fr; } }
-        .builders-section h2 { font-size: 1.5rem; font-weight: 700; color: var(--cookie-cream); display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
-        .builders-section .subtitle { color: var(--muted); font-size: 0.9rem; margin-bottom: 24px; }
-        .builders-podium { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 24px; }
-        .builder-card {
-            background: var(--card);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            padding: 24px 16px;
+
+        /* Header */
+        header {
+            padding: 2rem;
             text-align: center;
-            position: relative;
-            transition: all 0.4s ease;
-            cursor: pointer;
+            background: linear-gradient(to bottom, #000000, transparent);
+            margin-bottom: 2rem;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+            letter-spacing: 2px;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 2rem;
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            text-align: center;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-gold);
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #fff;
+            margin: 0.5rem 0;
+        }
+
+        .stat-label {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .stat-icon {
+            font-size: 1.5rem;
+            color: var(--primary-gold);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Top Builders */
+        .builders-section {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 2rem;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            box-shadow: var(--shadow);
+        }
+
+        .builders-list {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .builder-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            transition: background 0.2s;
+        }
+
+        .builder-item:last-child {
+            border-bottom: none;
+        }
+
+        .builder-item:hover {
+            background: rgba(212, 175, 55, 0.05);
+        }
+
+        .builder-rank {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            color: var(--primary-gold);
+            width: 40px;
+        }
+
+        .builder-info {
+            flex-grow: 1;
+        }
+
+        .builder-name {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .builder-stats {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* Floating Activity Feed */
+        .activity-feed-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 350px;
+            max-height: 80vh;
+            background: rgba(30, 30, 30, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            border: 1px solid var(--primary-gold);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            z-index: 1000;
+            overflow: hidden;
+            animation: slideIn 0.5s ease-out;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        .feed-header {
+            padding: 1rem;
+            background: linear-gradient(90deg, rgba(212, 175, 55, 0.2), transparent);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .feed-header h3 {
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        .feed-content {
+            overflow-y: auto;
+            padding: 0;
+            flex-grow: 1;
+        }
+
+        .feed-content::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .feed-content::-webkit-scrollbar-thumb {
+            background: var(--primary-gold);
+            border-radius: 3px;
+        }
+
+        .activity-item {
+            padding: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+            transition: background 0.2s;
             text-decoration: none;
-            display: block;
+            color: inherit;
+            display: flex; /* Ensure flex layout for link */
         }
-        .builder-card:hover { transform: translateY(-6px) scale(1.02); border-color: var(--cookie-gold); box-shadow: 0 20px 50px rgba(245, 166, 35, 0.25); }
-        .builder-card.gold { background: linear-gradient(135deg, rgba(245, 166, 35, 0.2), rgba(60, 45, 25, 0.9)); border-color: var(--cookie-gold); }
-        .builder-card.silver { background: linear-gradient(135deg, rgba(192, 192, 192, 0.15), rgba(60, 45, 25, 0.9)); }
-        .builder-card.bronze { background: linear-gradient(135deg, rgba(205, 127, 50, 0.15), rgba(60, 45, 25, 0.9)); }
-        .rank-badge { position: absolute; top: -10px; left: 50%; transform: translateX(-50%); width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; font-weight: 700; font-size: 0.9rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); }
-        .builder-card.gold .rank-badge { background: linear-gradient(135deg, #ffd700, #ffb300); color: #1a1408; }
-        .builder-card.silver .rank-badge { background: linear-gradient(135deg, #e0e0e0, #9e9e9e); color: #1a1408; }
-        .builder-card.bronze .rank-badge { background: linear-gradient(135deg, #cd7f32, #8b4513); color: #fff; }
-        .builder-avatar { width: 72px; height: 72px; border-radius: 50%; margin: 16px auto 14px; background: var(--accent-soft); border: 3px solid var(--glass-border); display: grid; place-items: center; font-size: 28px; overflow: hidden; transition: transform 0.3s ease; }
-        .builder-card:hover .builder-avatar { transform: scale(1.1); }
-        .builder-avatar img { width: 100%; height: 100%; object-fit: cover; }
-        .builder-name { font-size: 1rem; font-weight: 600; color: var(--text-bright); margin-bottom: 6px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .builder-stats { font-size: 0.85rem; color: var(--muted); }
-        .builder-stats .rating { color: var(--cookie-gold); font-weight: 600; }
-        .activity-log { max-height: 500px; display: flex; flex-direction: column; }
-        .activity-log h2 { font-size: 1.3rem; font-weight: 700; color: var(--cookie-cream); display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
-        .activity-log .subtitle { color: var(--muted); font-size: 0.85rem; margin-bottom: 20px; }
-        .log-list { flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; padding-right: 8px; }
-        .log-list::-webkit-scrollbar { width: 6px; }
-        .log-list::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.05); border-radius: 10px; }
-        .log-list::-webkit-scrollbar-thumb { background: var(--cookie-brown); border-radius: 10px; }
-        .log-entry { display: flex; align-items: flex-start; gap: 12px; padding: 14px; background: rgba(255, 255, 255, 0.03); border-radius: 14px; border: 1px solid transparent; transition: all 0.3s ease; animation: slideIn 0.4s ease-out; }
-        @keyframes slideIn { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }
-        .log-entry:hover { background: rgba(255, 255, 255, 0.06); border-color: var(--glass-border); }
-        .log-icon { width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center; font-size: 16px; flex-shrink: 0; }
-        .log-icon.sent { background: rgba(245, 166, 35, 0.2); }
-        .log-icon.accepted { background: rgba(124, 179, 66, 0.2); }
-        .log-icon.rejected { background: rgba(239, 83, 80, 0.2); }
-        .log-icon.completed { background: rgba(100, 181, 246, 0.2); }
-        .log-content { flex: 1; min-width: 0; }
-        .log-message { font-size: 0.9rem; color: var(--text); line-height: 1.4; }
-        .log-message a { color: var(--cookie-gold); text-decoration: none; font-weight: 500; }
-        .log-message a:hover { text-decoration: underline; }
-        .log-time { font-size: 0.75rem; color: var(--muted); margin-top: 4px; }
-        .bottom-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px; }
-        .section-header { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
-        .section-header h2 { font-size: 1.3rem; font-weight: 700; color: var(--cookie-cream); }
-        .section-header p { color: var(--muted); font-size: 0.85rem; margin-top: 4px; }
-        .pipeline-list { display: flex; flex-direction: column; gap: 16px; }
-        .pipeline-item { display: flex; justify-content: space-between; align-items: center; padding: 16px 18px; background: rgba(255, 255, 255, 0.03); border-radius: 14px; border: 1px solid transparent; transition: all 0.3s ease; }
-        .pipeline-item:hover { background: rgba(255, 255, 255, 0.06); border-color: var(--glass-border); }
-        .pipeline-label { font-weight: 500; color: var(--text); }
-        .pipeline-value { font-size: 1.3rem; font-weight: 700; color: var(--cookie-gold); }
-        .pipeline-trend { font-size: 0.8rem; color: var(--muted); margin-top: 2px; }
-        .progress-bar { width: 100%; height: 6px; border-radius: 999px; background: rgba(255, 255, 255, 0.08); overflow: hidden; margin-top: 10px; }
-        .progress-fill { height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--cookie-brown), var(--cookie-gold), var(--cookie-cream)); transform-origin: left; transform: scaleX(0); transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1); }
-        .insights-grid { display: grid; gap: 14px; }
-        .insight-card { padding: 18px; background: rgba(255, 255, 255, 0.03); border-radius: 14px; border: 1px solid transparent; transition: all 0.3s ease; }
-        .insight-card:hover { background: rgba(255, 255, 255, 0.06); border-color: var(--glass-border); }
-        .insight-title { font-weight: 600; color: var(--text); margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
-        .insight-detail { font-size: 0.9rem; color: var(--muted); margin-bottom: 10px; }
-        .insight-score { display: inline-flex; padding: 6px 14px; border-radius: 999px; font-size: 0.8rem; font-weight: 600; border: 1px solid; }
-        .insight-score.good { background: rgba(124, 179, 66, 0.15); border-color: rgba(124, 179, 66, 0.3); color: var(--success); }
-        .insight-score.warning { background: rgba(255, 179, 0, 0.15); border-color: rgba(255, 179, 0, 0.3); color: var(--warning); }
-        .insight-score.critical { background: rgba(239, 83, 80, 0.15); border-color: rgba(239, 83, 80, 0.3); color: var(--danger); }
-        footer { text-align: center; padding: 24px; color: var(--muted); font-size: 0.85rem; }
-        footer a { color: var(--cookie-gold); text-decoration: none; }
-        footer a:hover { text-decoration: underline; }
-        @media (max-width: 768px) {
-            .server-stats-bar { gap: 24px; }
-            .builders-podium { grid-template-columns: 1fr; }
-            .builder-card { display: grid; grid-template-columns: auto 1fr; text-align: left; padding: 16px; gap: 16px; }
-            .rank-badge { position: static; transform: none; }
-            .builder-avatar { margin: 0; width: 56px; height: 56px; }
-            .metrics-grid { grid-template-columns: repeat(2, 1fr); }
-            .metric-card .value { font-size: 1.8rem; }
+
+        .activity-item:hover {
+            background: rgba(255, 255, 255, 0.05);
         }
-        @media (max-width: 480px) { .metrics-grid { grid-template-columns: 1fr; } .bottom-grid { grid-template-columns: 1fr; } }
-        .skeleton { background: linear-gradient(90deg, rgba(255,255,255,0.05) 25%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.05) 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; border-radius: 8px; }
-        @keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+
+        .activity-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .activity-details {
+            flex-grow: 1;
+        }
+
+        .activity-msg {
+            font-size: 0.9rem;
+            line-height: 1.4;
+            margin-bottom: 0.2rem;
+        }
+
+        .activity-time {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        /* Event Type Colors */
+        .type-sent .activity-icon { color: #3498db; background: rgba(52, 152, 219, 0.1); }
+        .type-accepted .activity-icon { color: #f1c40f; background: rgba(241, 196, 15, 0.1); }
+        .type-rejected .activity-icon { color: #e74c3c; background: rgba(231, 76, 60, 0.1); }
+        .type-completed .activity-icon { color: #2ecc71; background: rgba(46, 204, 113, 0.1); }
+        .type-member_join .activity-icon { color: #9b59b6; background: rgba(155, 89, 182, 0.1); }
+        .type-member_leave .activity-icon { color: #95a5a6; background: rgba(149, 165, 166, 0.1); }
+        .type-rating .activity-icon { color: #f39c12; background: rgba(243, 156, 18, 0.1); }
+        .type-new_request_thread .activity-icon { color: #e056fd; background: rgba(224, 86, 253, 0.1); }
+
+        /* Loading State */
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            .activity-feed-container {
+                position: static;
+                width: 100%;
+                max-height: 400px;
+                margin-top: 2rem;
+                box-shadow: var(--shadow);
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="wrapper">
-        <header class="glass hero">
-            <div class="logo-container">
-                <div class="cookie-icon">🍪</div>
-                <h1>Crumbl Crafts</h1>
+
+    <header>
+        <h1><i class="fas fa-cookie-bite"></i> Crumbl Crafts</h1>
+        <p>Premium Builder Services & Analytics</p>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <!-- Stats Row -->
+            <div class="stats-grid" id="statsGrid">
+                <!-- Populated by JS -->
+                <div class="stat-card"><div class="loading">Loading Stats...</div></div>
             </div>
-            <p class="tagline">Your premium Bloxburg building community. Real-time stats, live activity feed, and top builder rankings — all synced with Discord.</p>
-            <div class="status-chip"><span class="status-dot"></span><span>LIVE · Syncing with Discord</span></div>
-        </header>
-        <section class="glass server-stats-bar" id="serverStats">
-            <div class="server-stat"><div class="server-stat-icon">👥</div><div class="server-stat-info"><div class="server-stat-value" id="totalMembers">—</div><div class="server-stat-label">Total Members</div></div></div>
-            <div class="server-stat"><div class="server-stat-icon">✨</div><div class="server-stat-info"><div class="server-stat-value" id="joinedToday">—</div><div class="server-stat-label">Joined Today</div></div></div>
-            <div class="server-stat"><div class="server-stat-icon">🏪</div><div class="server-stat-info"><div class="server-stat-value" id="activeShops">—</div><div class="server-stat-label">Active Shops</div></div></div>
-            <div class="server-stat"><div class="server-stat-icon">⏱️</div><div class="server-stat-info"><div class="server-stat-value" id="avgResponseTime">—</div><div class="server-stat-label">Avg Response</div></div></div>
-        </section>
-        <section class="glass metrics-grid" id="summaryMetrics"></section>
-        <div class="main-grid">
-            <section class="glass builders-section"><h2>🏆 Top Builders</h2><p class="subtitle">Our highest-rated builders this month. Click to visit their shop.</p><div class="builders-podium" id="buildersPodium"></div></section>
-            <section class="glass activity-log"><h2>📋 Activity Feed</h2><p class="subtitle">Live request updates</p><div class="log-list" id="activityLog"></div></section>
+
+            <!-- Top Builders -->
+            <div class="builders-section">
+                <h2><i class="fas fa-trophy"></i> Top Builders</h2>
+                <ul class="builders-list" id="buildersList">
+                    <li class="loading">Loading Builders...</li>
+                </ul>
+            </div>
+            
+            <!-- Pipeline / Insights could go here -->
         </div>
-        <div class="bottom-grid">
-            <section class="glass"><div class="section-header"><div><h2>📊 Pipeline Pulse</h2><p>Request flow overview</p></div></div><div class="pipeline-list" id="pipelineList"></div></section>
-            <section class="glass"><div class="section-header"><div><h2>🧠 System Insights</h2><p>Operational health metrics</p></div></div><div class="insights-grid" id="insightsGrid"></div></section>
+
+        <!-- Floating Activity Feed (Moved via CSS to fixed position on desktop) -->
+        <div class="activity-feed-container">
+            <div class="feed-header">
+                <i class="fas fa-history"></i>
+                <h3>Live Activity</h3>
+            </div>
+            <div class="feed-content" id="activityFeed">
+                <div class="loading">Connecting to feed...</div>
+            </div>
         </div>
-        <footer><p>🍪 Powered by <strong>Crumbl Crafts</strong> · Synced via Discord Bot</p></footer>
     </div>
+
     <script>
-        const REMOTE_METRICS_ENDPOINT = window.METRICS_ENDPOINT || 'https://your-bot-host.example.com/api/metrics';
-        const LOCAL_METRICS_FALLBACK = 'site_metrics.json';
-        const FORUM_CHANNEL_BASE = 'https://discord.com/channels/';
-        const formatNumber = (v) => Intl.NumberFormat('en-US').format(v ?? 0);
-        const formatTime = (s) => { if (!s || s < 60) return `${Math.round(s||0)}s`; if (s < 3600) return `${Math.round(s/60)}m`; return `${(s/3600).toFixed(1)}h`; };
-        const timeAgo = (ts) => { if (!ts) return 'Just now'; const d = Date.now()/1000 - ts; if (d < 60) return 'Just now'; if (d < 3600) return `${Math.floor(d/60)}m ago`; if (d < 86400) return `${Math.floor(d/3600)}h ago`; return `${Math.floor(d/86400)}d ago`; };
-        const metricsConfig = [
-            { key: 'builder_count', label: 'Builders', icon: '👷', color: '#f5a623' },
-            { key: 'total_completed', label: 'Completed', icon: '✅', color: '#7cb342' },
-            { key: 'total_requests', label: 'Requests', icon: '📨', color: '#64b5f6' },
-            { key: 'total_ratings', label: 'Ratings', icon: '⭐', color: '#ffb300' },
-        ];
-        const placeholderData = {
-            summary: { builder_count: 24, total_completed: 156, total_requests: 312, total_ratings: 89, request_completion_ratio: 0.5 },
-            server: { total_members: 1250, joined_today: 8, active_shops: 12, avg_response_time: 420 },
-            topBuilders: [
-                { shop_name: 'Cookie Castle', completed_projects: 48, average_rating: 4.9, avatar_url: null, thread_id: null },
-                { shop_name: 'Sugar Studios', completed_projects: 41, average_rating: 4.8, avatar_url: null, thread_id: null },
-                { shop_name: 'Frosting Factory', completed_projects: 35, average_rating: 4.7, avatar_url: null, thread_id: null },
-            ],
-            activityLog: [
-                { type: 'sent', message: 'New request sent to Cookie Castle', shop_name: 'Cookie Castle', timestamp: Date.now()/1000 - 120 },
-                { type: 'accepted', message: 'Request accepted by Sugar Studios', shop_name: 'Sugar Studios', timestamp: Date.now()/1000 - 300 },
-                { type: 'completed', message: 'Build completed by Frosting Factory', shop_name: 'Frosting Factory', timestamp: Date.now()/1000 - 600 },
-            ],
-            pipeline: [
-                { label: 'Queued Requests', value: 24, trend: '6 new today', max: 50 },
-                { label: 'Active Builds', value: 12, trend: '3 shops working', max: 30 },
-                { label: 'Completed (7d)', value: 31, trend: '+12% vs last week', max: 50 },
-            ],
-            insights: [
-                { title: 'Completion Rate', detail: '50% of requests fulfilled', score: 'On track', status: 'good' },
-                { title: 'Request Velocity', detail: '6 new requests today', score: 'Stable', status: 'good' },
-                { title: 'Builder Availability', detail: '12 shops accepting work', score: 'Healthy', status: 'good' },
-                { title: 'Queue Health', detail: '24 requests pending', score: 'Monitor', status: 'warning' },
-            ],
-        };
-        const withCacheBust = (url) => url.includes('?') ? `${url}&v=${Date.now()}` : `${url}?v=${Date.now()}`;
-        async function fetchFrom(url) { const r = await fetch(withCacheBust(url), { cache: 'no-store' }); if (!r.ok) throw new Error(`(${r.status})`); const p = await r.json(); if (!p.summary) throw new Error('Incomplete'); return p; }
+        const API_URL = 'http://localhost:8080/api/metrics'; // Adjust if needed
+
         async function fetchMetrics() {
-            try { return await fetchFrom(REMOTE_METRICS_ENDPOINT); } catch (e) {
-                console.warn('Remote failed:', e.message);
-                try { return await fetchFrom(LOCAL_METRICS_FALLBACK); } catch (e2) { console.warn('Local failed:', e2.message); return placeholderData; }
+            try {
+                const response = await fetch(API_URL);
+                const data = await response.json();
+                updateDashboard(data);
+            } catch (error) {
+                console.error('Error fetching metrics:', error);
             }
         }
-        function renderServerStats(s) {
-            document.getElementById('totalMembers').textContent = formatNumber(s?.total_members);
-            document.getElementById('joinedToday').textContent = formatNumber(s?.joined_today);
-            document.getElementById('activeShops').textContent = formatNumber(s?.active_shops);
-            document.getElementById('avgResponseTime').textContent = formatTime(s?.avg_response_time);
+
+        function updateDashboard(data) {
+            updateStats(data.summary, data.server);
+            updateBuilders(data.topBuilders);
+            updateActivity(data.activityLog);
         }
-        function renderSummary(s) {
-            document.getElementById('summaryMetrics').innerHTML = metricsConfig.map((m, i) => `
-                <article class="metric-card" style="animation-delay:${i*100}ms"><div class="icon" style="background:${m.color}22;">${m.icon}</div><span class="label">${m.label}</span><span class="value count-up">${formatNumber(s[m.key])}</span><span class="delta">Live</span></article>`).join('');
+
+        function updateStats(summary, server) {
+            const grid = document.getElementById('statsGrid');
+            if (!summary) return;
+
+            grid.innerHTML = `
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-users-cog"></i></div>
+                    <div class="stat-value">${summary.builder_count}</div>
+                    <div class="stat-label">Active Builders</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-check-circle"></i></div>
+                    <div class="stat-value">${summary.total_completed}</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-clipboard-list"></i></div>
+                    <div class="stat-value">${summary.total_requests}</div>
+                    <div class="stat-label">Total Requests</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-star"></i></div>
+                    <div class="stat-value">${(summary.request_completion_ratio * 100).toFixed(1)}%</div>
+                    <div class="stat-label">Completion Rate</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-clock"></i></div>
+                    <div class="stat-value">${formatDuration(server ? server.avg_response_time : 0)}</div>
+                    <div class="stat-label">Avg Response</div>
+                </div>
+            `;
         }
-        function renderBuilders(b) {
-            const ranks = ['gold','silver','bronze'];
-            document.getElementById('buildersPodium').innerHTML = (b||[]).slice(0,3).map((x,i) => {
-                const url = x.thread_id ? `${FORUM_CHANNEL_BASE}${x.server_id||''}/${x.thread_id}` : '#';
-                const av = x.avatar_url ? `<img src="${x.avatar_url}" alt="${x.shop_name}"/>` : '🍪';
-                return `<a href="${url}" target="_blank" class="builder-card ${ranks[i]}" title="Visit ${x.shop_name}"><div class="rank-badge">${i+1}</div><div class="builder-avatar">${av}</div><div class="builder-name">${x.shop_name}</div><div class="builder-stats">${x.completed_projects} builds · <span class="rating">${(x.average_rating||0).toFixed(1)} ★</span></div></a>`;
+
+        function formatDuration(seconds) {
+            if (!seconds) return 'N/A';
+            if (seconds < 60) return Math.round(seconds) + 's';
+            const minutes = Math.floor(seconds / 60);
+            if (minutes < 60) return minutes + 'm';
+            const hours = Math.floor(minutes / 60);
+            return hours + 'h';
+        }
+
+        function updateBuilders(builders) {
+            const list = document.getElementById('buildersList');
+            if (!builders || builders.length === 0) {
+                list.innerHTML = '<li class="loading">No builder data available</li>';
+                return;
+            }
+
+            list.innerHTML = builders.map((builder, index) => `
+                <li class="builder-item">
+                    <div class="builder-rank">#${index + 1}</div>
+                    <div class="builder-info">
+                        <div class="builder-name">${builder.shop_name}</div>
+                        <div class="builder-stats">
+                            ${builder.completed_projects} projects • ⭐ ${builder.average_rating.toFixed(1)}
+                        </div>
+                    </div>
+                    <div class="builder-medal">
+                        ${index === 0 ? '<i class="fas fa-medal" style="color: #FFD700;"></i>' : 
+                          index === 1 ? '<i class="fas fa-medal" style="color: #C0C0C0;"></i>' : 
+                          index === 2 ? '<i class="fas fa-medal" style="color: #CD7F32;"></i>' : ''}
+                    </div>
+                </li>
+            `).join('');
+        }
+
+        function updateActivity(logs) {
+            const feed = document.getElementById('activityFeed');
+            if (!logs || logs.length === 0) {
+                feed.innerHTML = '<div class="loading">No recent activity</div>';
+                return;
+            }
+
+            feed.innerHTML = logs.map(log => {
+                const icon = getIconForType(log.type);
+                const timeAgo = getTimeAgo(log.timestamp);
+                const linkAttr = log.url ? `href="${log.url}" target="_blank"` : '';
+                const tag = log.url ? 'a' : 'div';
+                
+                return `
+                <${tag} class="activity-item type-${log.type}" ${linkAttr}>
+                    <div class="activity-icon">
+                        <i class="fas ${icon}"></i>
+                    </div>
+                    <div class="activity-details">
+                        <div class="activity-msg">${log.message}</div>
+                        <div class="activity-time">${timeAgo}</div>
+                    </div>
+                </${tag}>
+                `;
             }).join('');
         }
-        function renderActivityLog(l) {
-            const el = document.getElementById('activityLog');
-            const logs = (l||[]).slice(0,15);
-            if (!logs.length) { el.innerHTML = '<p style="color:var(--muted);text-align:center;padding:40px 0;">No recent activity</p>'; return; }
-            const icons = { sent: { icon: '📤', cls: 'sent' }, accepted: { icon: '✅', cls: 'accepted' }, rejected: { icon: '❌', cls: 'rejected' }, completed: { icon: '🎉', cls: 'completed' } };
-            el.innerHTML = logs.map(x => {
-                const ic = icons[x.type] || icons.sent;
-                const link = x.thread_id ? `<a href="${FORUM_CHANNEL_BASE}${x.server_id||''}/${x.thread_id}" target="_blank">${x.shop_name}</a>` : `<strong>${x.shop_name||'Unknown'}</strong>`;
-                return `<div class="log-entry"><div class="log-icon ${ic.cls}">${ic.icon}</div><div class="log-content"><div class="log-message">${x.message||`Activity at ${link}`}</div><div class="log-time">${timeAgo(x.timestamp)}</div></div></div>`;
-            }).join('');
+
+        function getIconForType(type) {
+            switch(type) {
+                case 'sent': return 'fa-paper-plane';
+                case 'accepted': return 'fa-handshake';
+                case 'rejected': return 'fa-times-circle';
+                case 'completed': return 'fa-check-double';
+                case 'member_join': return 'fa-user-plus';
+                case 'member_leave': return 'fa-user-minus';
+                case 'rating': return 'fa-star';
+                case 'new_request_thread': return 'fa-comment-dots';
+                default: return 'fa-info-circle';
+            }
         }
-        function renderPipeline(p) {
-            document.getElementById('pipelineList').innerHTML = (p||[]).map(x => {
-                const r = Math.min(1, (x.value||0)/(x.max||100));
-                return `<div class="pipeline-item"><div><div class="pipeline-label">${x.label}</div><div class="pipeline-trend">${x.trend}</div><div class="progress-bar"><div class="progress-fill" style="transform:scaleX(${r});"></div></div></div><div class="pipeline-value">${formatNumber(x.value)}</div></div>`;
-            }).join('');
+
+        function getTimeAgo(timestamp) {
+            const seconds = Math.floor((Date.now() / 1000) - timestamp);
+            if (seconds < 60) return 'Just now';
+            const minutes = Math.floor(seconds / 60);
+            if (minutes < 60) return `${minutes}m ago`;
+            const hours = Math.floor(minutes / 60);
+            if (hours < 24) return `${hours}h ago`;
+            return `${Math.floor(hours / 24)}d ago`;
         }
-        function renderInsights(ins) {
-            const st = (x) => { if (x.status) return x.status; const s = (x.score||'').toLowerCase(); if (s.includes('healthy')||s.includes('on track')||s.includes('stable')||s.includes('good')||s.includes('✅')) return 'good'; if (s.includes('monitor')||s.includes('attention')||s.includes('warning')||s.includes('⚠')) return 'warning'; if (s.includes('critical')||s.includes('alert')||s.includes('❌')) return 'critical'; return 'good'; };
-            document.getElementById('insightsGrid').innerHTML = (ins||[]).map(x => `<div class="insight-card"><div class="insight-title">${x.title}</div><div class="insight-detail">${x.detail}</div><span class="insight-score ${st(x)}">${x.score}</span></div>`).join('');
-        }
-        async function hydrateDashboard() {
-            const d = await fetchMetrics();
-            renderServerStats(d.server ?? placeholderData.server);
-            renderSummary(d.summary ?? placeholderData.summary);
-            renderBuilders(d.topBuilders ?? placeholderData.topBuilders);
-            renderActivityLog(d.activityLog ?? placeholderData.activityLog);
-            renderPipeline(d.pipeline ?? placeholderData.pipeline);
-            renderInsights(d.insights ?? placeholderData.insights);
-        }
-        hydrateDashboard();
-        setInterval(hydrateDashboard, 60_000);
+
+        // Initial load and poll
+        fetchMetrics();
+        setInterval(fetchMetrics, 5000); // Poll every 5 seconds
     </script>
 </body>
 </html>
