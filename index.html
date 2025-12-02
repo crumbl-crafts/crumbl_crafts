@@ -17,10 +17,10 @@
             --bg-primary: #0a0f1a;
             --bg-secondary: #1a2030;
             --bg-tertiary: #2a3040;
-            --panel: rgba(20, 30, 45, 0.35);
-            --panel-hover: rgba(35, 45, 65, 0.55);
-            --card: rgba(30, 40, 60, 0.35);
-            --card-hover: rgba(45, 55, 75, 0.5);
+            --panel: rgba(30, 40, 60, 0.5);
+            --panel-hover: rgba(40, 50, 70, 0.7);
+            --card: rgba(40, 50, 70, 0.4);
+            --card-hover: rgba(50, 60, 80, 0.6);
             --primary: #ff1744;
             --primary-glow: rgba(255, 23, 68, 0.6);
             --secondary: #2979ff;
@@ -32,7 +32,7 @@
             --text-bright: #ffffff;
             --text-muted: #b0b8d0;
             --border: rgba(255, 255, 255, 0.15);
-            --glow: rgba(255, 23, 68, 0.2);
+            --glow: rgba(255, 23, 68, 0.3);
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; }
@@ -91,21 +91,15 @@
             gap: 24px;
         }
         .glass {
-            background: 
-                radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-                radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-                radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.03) 0.8px, transparent 0.8px),
-                var(--panel);
-            background-size: 10px 10px, 10px 10px, 5px 5px, 100% 100%;
-            background-position: 0 0, 4px 4px, 2px 2px, 0 0;
+            background: var(--panel);
             border: 3px solid var(--border);
             border-radius: 24px;
             padding: 24px;
-            box-shadow: 0 12px 32px rgba(255, 23, 68, 0.25), 
-                        0 0 0 1px rgba(41, 121, 255, 0.4),
-                        inset 0 0 30px rgba(255, 215, 0, 0.08);
-            backdrop-filter: blur(20px) saturate(110%);
-            -webkit-backdrop-filter: blur(20px) saturate(110%);
+            box-shadow: 0 12px 40px rgba(255, 23, 68, 0.3), 
+                        0 0 0 1px rgba(41, 121, 255, 0.5),
+                        inset 0 0 40px rgba(255, 215, 0, 0.1);
+            backdrop-filter: blur(20px) saturate(250%);
+            -webkit-backdrop-filter: blur(20px) saturate(250%);
             position: relative;
             overflow: hidden;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -156,12 +150,7 @@
             box-shadow: 0 20px 60px rgba(255, 23, 68, 0.5), 
                         0 0 100px rgba(41, 121, 255, 0.4),
                         inset 0 0 60px rgba(255, 215, 0, 0.2);
-            background: 
-                repeating-linear-gradient(90deg, transparent 0px, transparent 2px, rgba(255, 255, 255, 0.02) 2px, rgba(255, 255, 255, 0.02) 4px),
-                radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.08) 1.5px, transparent 1.5px),
-                radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.08) 1.5px, transparent 1.5px),
-                rgba(50, 60, 80, 0.6);
-            background-size: 10px 10px, 8px 8px, 8px 8px, 100% 100%;
+            background: rgba(50, 60, 80, 0.7);
             transform: translateY(-2px) scale(1.01);
         }
         header.hero { 
@@ -265,15 +254,15 @@
         }
         .stat-card {
             background: 
-                radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-                radial-gradient(circle at 60% 70%, rgba(255, 255, 255, 0.07) 1px, transparent 1px),
-                radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.06) 1.5px, transparent 1.5px),
-                radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.06) 1.5px, transparent 1.5px),
+                radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                radial-gradient(circle at 60% 70%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.08) 1.5px, transparent 1.5px),
+                radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.08) 1.5px, transparent 1.5px),
                 linear-gradient(135deg, 
-                    rgba(255, 23, 68, 0.12) 0%,
-                    rgba(40, 50, 70, 0.5) 50%,
-                    rgba(41, 121, 255, 0.12) 100%);
-            background-size: 5px 5px, 6px 6px, 8px 8px, 7px 7px, 100% 100%;
+                    rgba(255, 23, 68, 0.15) 0%,
+                    rgba(40, 50, 70, 0.6) 50%,
+                    rgba(41, 121, 255, 0.15) 100%);
+            background-size: 4px 4px, 6px 6px, 8px 8px, 7px 7px, 100% 100%;
             background-position: 0 0, 3px 3px, 5px 5px, 2px 6px, 0 0;
             border: 4px solid transparent;
             border-image: linear-gradient(135deg, 
@@ -282,20 +271,20 @@
                 #ffffff 50%,
                 #2979ff 75%,
                 #ff1744 100%) 1;
-            border-radius: 24px;
+            border-radius: 30px;
             padding: 24px;
             position: relative; 
             overflow: visible;
-            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), 
+            transition: transform 0.4s ease-out, 
                         background 0.3s cubic-bezier(0.4, 0, 0.2, 1),
                         border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
                         box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             cursor: default;
-            backdrop-filter: blur(15px) saturate(110%);
-            box-shadow: 0 8px 30px rgba(255, 23, 68, 0.25),
-                        0 4px 12px rgba(41, 121, 255, 0.18),
-                        inset 0 2px 0 rgba(255, 255, 255, 0.15),
-                        inset 0 -2px 0 rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(20px) saturate(250%);
+            box-shadow: 0 10px 40px rgba(255, 23, 68, 0.3),
+                        0 5px 15px rgba(41, 121, 255, 0.2),
+                        inset 0 2px 0 rgba(255, 255, 255, 0.2),
+                        inset 0 -2px 0 rgba(0, 0, 0, 0.3);
             animation: gentleFloat 6s ease-in-out infinite;
             clip-path: polygon(0 8px, 8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%);
         }
@@ -349,11 +338,22 @@
             transform: scaleX(1);
         }
         .stat-card:hover { 
-            transform: translateY(-5px); 
+            transform: translateY(-8px) scale(1.03) !important; 
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.12) 1.5px, transparent 1.5px),
+                radial-gradient(circle at 60% 70%, rgba(255, 255, 255, 0.12) 1.5px, transparent 1.5px),
+                radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+                rgba(50, 60, 80, 0.7);
+            background-size: 6px 6px, 6px 6px, 4px 4px, 100% 100%;
             border-color: var(--primary); 
-            box-shadow: 0 15px 40px rgba(255, 23, 68, 0.25), 
-                        0 0 60px rgba(41, 121, 255, 0.2),
-                        inset 0 0 20px rgba(255, 215, 0, 0.1); 
+            box-shadow: 0 20px 60px rgba(255, 23, 68, 0.6), 
+                        0 0 100px rgba(41, 121, 255, 0.5),
+                        inset 0 0 40px rgba(255, 215, 0, 0.2); 
+        }
+        @keyframes wiggleBounce {
+            0%, 100% { transform: translateY(-8px) scale(1.03) rotate(0deg); }
+            25% { transform: translateY(-10px) scale(1.04) rotate(1deg); }
+            75% { transform: translateY(-10px) scale(1.04) rotate(-1deg); }
         }
         .stat-card .icon-wrapper { 
             width: 48px; 
@@ -454,15 +454,15 @@
         }
         .podium-card {
             background: 
-                radial-gradient(circle at 30% 40%, rgba(255, 215, 0, 0.16) 2px, transparent 2px),
-                radial-gradient(circle at 70% 60%, rgba(255, 215, 0, 0.16) 2px, transparent 2px),
-                radial-gradient(circle at 50% 80%, rgba(255, 255, 255, 0.08) 1.5px, transparent 1.5px),
-                radial-gradient(circle at 20% 70%, rgba(255, 255, 255, 0.08) 1.5px, transparent 1.5px),
+                radial-gradient(circle at 30% 40%, rgba(255, 215, 0, 0.2) 2px, transparent 2px),
+                radial-gradient(circle at 70% 60%, rgba(255, 215, 0, 0.2) 2px, transparent 2px),
+                radial-gradient(circle at 50% 80%, rgba(255, 255, 255, 0.1) 1.5px, transparent 1.5px),
+                radial-gradient(circle at 20% 70%, rgba(255, 255, 255, 0.1) 1.5px, transparent 1.5px),
                 linear-gradient(135deg, 
-                    rgba(255, 215, 0, 0.2) 0%, 
-                    rgba(40, 50, 70, 0.7) 50%,
-                    rgba(255, 237, 78, 0.15) 100%);
-            background-size: 14px 14px, 14px 14px, 7px 7px, 9px 9px, 100% 100%;
+                    rgba(255, 215, 0, 0.25) 0%, 
+                    rgba(40, 50, 70, 0.8) 50%,
+                    rgba(255, 237, 78, 0.2) 100%);
+            background-size: 12px 12px, 12px 12px, 6px 6px, 8px 8px, 100% 100%;
             background-position: 0 0, 6px 6px, 3px 3px, 4px 7px, 0 0;
             border: 6px ridge transparent;
             border-image: linear-gradient(135deg, 
@@ -471,10 +471,10 @@
                 #ffffff 50%,
                 #ffed4e 75%,
                 #ffd700 100%) 1;
-            border-radius: 24px;
+            border-radius: 32px;
             padding: 24px;
             position: relative;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.4s ease-out;
             cursor: pointer;
             text-decoration: none;
             display: flex;
@@ -482,11 +482,11 @@
             align-items: center;
             gap: 12px;
             width: 200px;
-            backdrop-filter: blur(20px) saturate(180%);
-            box-shadow: 0 10px 32px rgba(255, 215, 0, 0.45),
-                        0 5px 16px rgba(255, 237, 78, 0.3),
-                        inset 0 2px 0 rgba(255, 255, 255, 0.35),
-                        inset 0 -2px 0 rgba(255, 215, 0, 0.5);
+            backdrop-filter: blur(20px) saturate(250%);
+            box-shadow: 0 12px 40px rgba(255, 215, 0, 0.5),
+                        0 6px 20px rgba(255, 237, 78, 0.4),
+                        inset 0 2px 0 rgba(255, 255, 255, 0.4),
+                        inset 0 -2px 0 rgba(255, 215, 0, 0.6);
             transform: perspective(1000px) rotateX(0deg);
         }
         .podium-card.rank-1 {
@@ -531,14 +531,14 @@
         }
         .builder-card {
             background: 
-                radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 1.5px, transparent 1.5px),
-                radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.1) 1.5px, transparent 1.5px),
-                radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+                radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.12) 1.5px, transparent 1.5px),
+                radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.12) 1.5px, transparent 1.5px),
+                radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
                 linear-gradient(145deg, 
-                    rgba(255, 23, 68, 0.16) 0%,
-                    rgba(40, 50, 70, 0.6) 30%,
-                    rgba(41, 121, 255, 0.16) 100%);
-            background-size: 12px 12px, 12px 12px, 6px 6px, 100% 100%;
+                    rgba(255, 23, 68, 0.2) 0%,
+                    rgba(40, 50, 70, 0.7) 30%,
+                    rgba(41, 121, 255, 0.2) 100%);
+            background-size: 10px 10px, 10px 10px, 5px 5px, 100% 100%;
             background-position: 0 0, 5px 5px, 2px 2px, 0 0;
             border: 5px double transparent;
             border-image: linear-gradient(45deg, 
@@ -547,20 +547,20 @@
                 #2979ff 50%,
                 #ffd700 75%,
                 #ff1744 100%) 1;
-            border-radius: 20px;
+            border-radius: 28px;
             padding: 16px 20px;
             position: relative;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.4s ease-out;
             cursor: pointer;
             text-decoration: none;
             display: flex;
             align-items: center;
             gap: 12px;
-            backdrop-filter: blur(12px) saturate(110%);
-            box-shadow: 0 8px 28px rgba(255, 23, 68, 0.3),
-                        0 4px 14px rgba(41, 121, 255, 0.25),
-                        inset 0 2px 4px rgba(255, 255, 255, 0.18),
-                        inset 0 -2px 4px rgba(0, 0, 0, 0.35);
+            backdrop-filter: blur(18px) saturate(220%);
+            box-shadow: 0 8px 32px rgba(255, 23, 68, 0.4),
+                        0 4px 16px rgba(41, 121, 255, 0.3),
+                        inset 0 2px 4px rgba(255, 255, 255, 0.2),
+                        inset 0 -2px 4px rgba(0, 0, 0, 0.4);
             transform: perspective(1000px) rotateX(0deg);
         }
         .builder-card::before, .podium-card::before {
@@ -593,12 +593,23 @@
             opacity: 1; 
         }
         .builder-card:hover, .podium-card:hover { 
-            transform: translateY(-4px);
-            background: rgba(50, 60, 80, 0.6); 
-            box-shadow: 0 12px 40px rgba(255, 23, 68, 0.3), 
-                        0 0 60px rgba(41, 121, 255, 0.2),
-                        0 0 40px rgba(255, 215, 0, 0.15); 
-            border-color: rgba(255, 23, 68, 0.4);
+            transform: translateY(-6px) scale(1.02) !important;
+            background: 
+                radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.15) 2px, transparent 2px),
+                radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.15) 2px, transparent 2px),
+                rgba(50, 60, 80, 0.8);
+            background-size: 12px 12px, 12px 12px, 100% 100%;
+            box-shadow: 0 20px 60px rgba(255, 23, 68, 0.6), 
+                        0 0 120px rgba(41, 121, 255, 0.5),
+                        0 0 80px rgba(255, 215, 0, 0.4); 
+            border-color: rgba(255, 23, 68, 0.8);
+        }
+        @keyframes bouncyPop {
+            0% { transform: translateY(0) scale(1); }
+            40% { transform: translateY(-12px) scale(1.08); }
+            60% { transform: translateY(-6px) scale(1.04); }
+            80% { transform: translateY(-10px) scale(1.06); }
+            100% { transform: translateY(-8px) scale(1.05); }
         }
         .podium-card.rank-1 .rank-badge { background: linear-gradient(135deg, #ffd700, #ffa500); color: #000; }
         .podium-card.rank-2 .rank-badge { background: linear-gradient(135deg, #c0c0c0, #a0a0a0); color: #000; }
@@ -782,19 +793,13 @@
             align-items: flex-start; 
             gap: 12px; 
             padding: 12px; 
-            background: 
-                radial-gradient(circle at 90% 50%, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-                radial-gradient(circle at 10% 50%, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-                radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 0.5px, transparent 0.5px),
-            rgba(40, 50, 70, 0.35);
-            background-size: 6px 6px, 6px 6px, 3px 3px, 100% 100%;
-            background-position: 0 0, 3px 3px, 1px 1px, 0 0;
+            background: rgba(40, 50, 70, 0.4);
             border-radius: 14px; 
             border: 2px solid rgba(255, 255, 255, 0.1); 
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
             position: relative;
             overflow: hidden;
-            backdrop-filter: blur(10px) saturate(110%);
+            backdrop-filter: blur(12px) saturate(180%);
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
         }
         .activity-item::before {
@@ -821,11 +826,16 @@
             transform: scaleY(1);
         }
         .activity-item:hover { 
-            background: rgba(50, 60, 80, 0.5);
-            border-color: rgba(255, 23, 68, 0.3);
-            box-shadow: 0 6px 24px rgba(255, 23, 68, 0.2),
-                        0 0 30px rgba(41, 121, 255, 0.15);
-            transform: translateX(3px);
+            background: rgba(50, 60, 80, 0.6);
+            border-color: rgba(255, 23, 68, 0.6);
+            transform: translateX(4px);
+            box-shadow: 0 8px 32px rgba(255, 23, 68, 0.4),
+                        0 0 40px rgba(41, 121, 255, 0.3);
+        }
+        @keyframes slideInBounce {
+            0% { transform: translateX(0) scale(1); }
+            50% { transform: translateX(6px) scale(1.03); }
+            100% { transform: translateX(4px) scale(1.02); }
         }
         .activity-icon { 
             width: 40px; 
@@ -1033,18 +1043,18 @@
             gap: 16px;
             padding: 18px;
             background: 
-                radial-gradient(circle at 15% 50%, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-                radial-gradient(circle at 45% 50%, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-                radial-gradient(circle at 75% 50%, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-                radial-gradient(circle at 30% 70%, rgba(255, 255, 255, 0.06) 1.5px, transparent 1.5px),
+                radial-gradient(circle at 15% 50%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                radial-gradient(circle at 45% 50%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                radial-gradient(circle at 75% 50%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                radial-gradient(circle at 30% 70%, rgba(255, 255, 255, 0.08) 1.5px, transparent 1.5px),
                 linear-gradient(90deg, 
-                    rgba(255, 23, 68, 0.18) 0%,
-                    rgba(40, 50, 70, 0.6) 20%,
-                    rgba(40, 50, 70, 0.6) 80%,
-                    rgba(41, 121, 255, 0.18) 100%);
-            background-size: 6px 6px, 6px 6px, 6px 6px, 8px 8px, 100% 100%;
+                    rgba(255, 23, 68, 0.25) 0%,
+                    rgba(40, 50, 70, 0.7) 20%,
+                    rgba(40, 50, 70, 0.7) 80%,
+                    rgba(41, 121, 255, 0.25) 100%);
+            background-size: 5px 5px, 5px 5px, 5px 5px, 7px 7px, 100% 100%;
             background-position: 0 0, 2px 2px, 4px 4px, 3px 5px, 0 0;
-            border-radius: 18px;
+            border-radius: 26px;
             border: 4px solid transparent;
             border-image: linear-gradient(90deg, 
                 #ff1744 0%, 
@@ -1053,13 +1063,13 @@
             transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
             text-decoration: none;
             color: inherit;
-            backdrop-filter: blur(12px) saturate(110%);
+            backdrop-filter: blur(15px) saturate(200%);
             cursor: pointer;
             position: relative;
             overflow: visible;
-            box-shadow: 0 6px 24px rgba(255, 23, 68, 0.35),
-                        0 3px 12px rgba(41, 121, 255, 0.25),
-                        inset 0 1px 0 rgba(255, 255, 255, 0.18);
+            box-shadow: 0 6px 24px rgba(255, 23, 68, 0.4),
+                        0 3px 12px rgba(41, 121, 255, 0.3),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.2);
             clip-path: polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px);
         }
         .news-card::before {
@@ -1082,12 +1092,23 @@
             50% { transform: scale(1.05); box-shadow: 0 6px 20px rgba(255, 23, 68, 1); }
         }
         .news-card:hover {
-            background: rgba(50, 60, 80, 0.6);
-            border-color: rgba(255, 23, 68, 0.4);
-            box-shadow: 0 10px 40px rgba(255, 23, 68, 0.25), 
-                        0 0 60px rgba(41, 121, 255, 0.2),
-                        0 0 30px rgba(255, 215, 0, 0.15);
-            transform: translateX(5px);
+            background: 
+                radial-gradient(circle at 15% 50%, rgba(255, 255, 255, 0.12) 1.5px, transparent 1.5px),
+                radial-gradient(circle at 45% 50%, rgba(255, 255, 255, 0.12) 1.5px, transparent 1.5px),
+                radial-gradient(circle at 75% 50%, rgba(255, 255, 255, 0.12) 1.5px, transparent 1.5px),
+                rgba(50, 60, 80, 0.8);
+            background-size: 6px 6px, 6px 6px, 6px 6px, 100% 100%;
+            transform: translateX(6px) scale(1.01);
+            border-color: rgba(255, 23, 68, 0.8);
+            box-shadow: 0 12px 48px rgba(255, 23, 68, 0.5), 
+                        0 0 80px rgba(41, 121, 255, 0.4),
+                        0 0 40px rgba(255, 215, 0, 0.3);
+        }
+        @keyframes newsSlideIn {
+            0% { transform: translateX(0) scale(1); }
+            40% { transform: translateX(12px) scale(1.04) rotate(1deg); }
+            70% { transform: translateX(6px) scale(1.02) rotate(-0.5deg); }
+            100% { transform: translateX(8px) scale(1.03) rotate(0deg); }
         }
         .news-icon {
             width: 48px;
@@ -1155,6 +1176,113 @@
             display: flex;
             align-items: center;
             gap: 4px;
+        }
+        .youtube-section {
+            margin-bottom: 16px;
+        }
+        .youtube-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px;
+            background: linear-gradient(135deg, rgba(255, 0, 0, 0.15), rgba(40, 50, 70, 0.6));
+            border: 3px solid transparent;
+            border-image: linear-gradient(90deg, #ff0000, #ff1744) 1;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 12px;
+        }
+        .youtube-toggle:hover {
+            background: linear-gradient(135deg, rgba(255, 0, 0, 0.25), rgba(50, 60, 80, 0.7));
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(255, 0, 0, 0.4);
+        }
+        .youtube-toggle-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .youtube-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 0, 0, 0.2);
+            border-radius: 10px;
+            display: grid;
+            place-items: center;
+            font-size: 20px;
+            color: #ff0000;
+        }
+        .youtube-toggle-text h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-bright);
+            margin-bottom: 2px;
+        }
+        .youtube-toggle-text p {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+        .youtube-expand-icon {
+            transition: transform 0.3s ease;
+            color: var(--text-muted);
+        }
+        .youtube-expand-icon.expanded {
+            transform: rotate(180deg);
+        }
+        .youtube-videos {
+            display: grid;
+            gap: 12px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+        .youtube-videos.expanded {
+            max-height: 2000px;
+        }
+        .youtube-video-item {
+            background: rgba(40, 50, 70, 0.6);
+            border: 2px solid rgba(255, 0, 0, 0.2);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .youtube-video-item:hover {
+            border-color: rgba(255, 0, 0, 0.5);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 0, 0, 0.3);
+        }
+        .youtube-embed-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+        .youtube-embed-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .youtube-video-info {
+            padding: 12px;
+        }
+        .youtube-video-title {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-bright);
+            margin-bottom: 4px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .youtube-video-channel {
+            font-size: 0.75rem;
+            color: var(--text-muted);
         }
         footer { 
             text-align: center; 
@@ -1304,16 +1432,31 @@
             </section>
 
             <div class="content-grid">
-                <section class="glass">
-                    <h2 class="section-title">
-                        <i class="fas fa-newspaper"></i>
-                        Bloxburg News & Trends
-                    </h2>
-                    <p class="section-subtitle">Latest updates, trends & community highlights</p>
-                    <div class="news-list" id="newsList"></div>
-                </section>
-
-                <section class="glass">
+            <section class="glass">
+                <h2 class="section-title">
+                    <i class="fas fa-newspaper"></i>
+                    Bloxburg News & Trends
+                </h2>
+                <p class="section-subtitle">Latest updates, trends & community highlights</p>
+                
+                <div class="youtube-section">
+                    <div class="youtube-toggle" onclick="toggleYouTube()">
+                        <div class="youtube-toggle-header">
+                            <div class="youtube-icon">
+                                <i class="fab fa-youtube"></i>
+                            </div>
+                            <div class="youtube-toggle-text">
+                                <h3>Trending Bloxburg Videos</h3>
+                                <p>Top 5 YouTube videos</p>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-down youtube-expand-icon" id="youtubeExpandIcon"></i>
+                    </div>
+                    <div class="youtube-videos" id="youtubeVideos"></div>
+                </div>
+                
+                <div class="news-list" id="newsList"></div>
+            </section>                <section class="glass">
                     <h2 class="section-title">
                         <i class="fas fa-chart-line"></i>
                         Pipeline Overview
@@ -1841,12 +1984,103 @@
             list.scrollTop = 0;
         }
         let lastNewsHash = '';
+        let youtubeExpanded = false;
+        
+        function toggleYouTube() {
+            youtubeExpanded = !youtubeExpanded;
+            const videos = document.getElementById('youtubeVideos');
+            const icon = document.getElementById('youtubeExpandIcon');
+            
+            if (youtubeExpanded) {
+                videos.classList.add('expanded');
+                icon.classList.add('expanded');
+                // Lazy load videos when expanded
+                if (videos.children.length === 0) {
+                    loadYouTubeVideos();
+                }
+            } else {
+                videos.classList.remove('expanded');
+                icon.classList.remove('expanded');
+            }
+        }
+        
+        function extractVideoId(url) {
+            const match = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\s]+)/);
+            return match ? match[1] : null;
+        }
+        
+        function updateYouTubeVideos(videos) {
+            if (!youtubeExpanded) return; // Don't update if collapsed
+            
+            const container = document.getElementById('youtubeVideos');
+            container.innerHTML = videos.map(video => {
+                const videoId = extractVideoId(video.url);
+                if (!videoId) return '';
+                
+                return `
+                    <div class="youtube-video-item">
+                        <div class="youtube-embed-container">
+                            <iframe 
+                                src="https://www.youtube.com/embed/${videoId}?modestbranding=1&rel=0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen
+                                loading="lazy">
+                            </iframe>
+                        </div>
+                        <div class="youtube-video-info">
+                            <div class="youtube-video-title">${video.title}</div>
+                            <div class="youtube-video-channel"><i class="fas fa-user-circle"></i> ${video.source || 'YouTube'}</div>
+                        </div>
+                    </div>
+                `;
+            }).filter(html => html).join('');
+        }
+        
+        function loadYouTubeVideos() {
+            const container = document.getElementById('youtubeVideos');
+            
+            // Placeholder while loading
+            container.innerHTML = '<p style="color: var(--text-muted); text-align: center; padding: 20px;">Loading videos...</p>';
+            
+            // The actual videos will be populated by renderNews when data is fetched
+            // If no data after a moment, show fallback
+            setTimeout(() => {
+                if (container.innerHTML.includes('Loading')) {
+                    container.innerHTML = `
+                        <div class="youtube-video-item">
+                            <div class="youtube-embed-container">
+                                <iframe 
+                                    src="https://www.youtube.com/embed/videoseries?list=PLu5lBs9j79fjy3_QQPjfOIjPZjO1qDGe8&modestbranding=1&rel=0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen
+                                    loading="lazy">
+                                </iframe>
+                            </div>
+                            <div class="youtube-video-info">
+                                <div class="youtube-video-title">Bloxburg Builds Playlist</div>
+                                <div class="youtube-video-channel"><i class="fas fa-user-circle"></i> Community Builds</div>
+                            </div>
+                        </div>
+                    `;
+                }
+            }, 1000);
+        }
         
         function renderNews(news) {
             const list = document.getElementById('newsList');
             console.log('[DEBUG] renderNews called with:', news);
             
             let items = news || [];
+            
+            // Extract YouTube videos for the video section if available
+            if (Array.isArray(items) && items.length > 0) {
+                const youtubeVideos = items.filter(item => item.type === 'trend' && item.url && item.url.includes('youtube.com'));
+                if (youtubeVideos.length > 0) {
+                    updateYouTubeVideos(youtubeVideos.slice(0, 5));
+                }
+                // Filter out YouTube videos from news list since they're in the video section
+                items = items.filter(item => !(item.type === 'trend' && item.url && item.url.includes('youtube.com')));
+            }
             
             // Use sample data if no news available
             if (!items || !Array.isArray(items) || items.length === 0) {
