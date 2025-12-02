@@ -84,6 +84,7 @@ def _empty_payload() -> Dict[str, Any]:
         "activityLog": [],
         "pipeline": [],
         "insights": [],
+        "news": [],
         "meta": {"generated_at": time.time(), "mode": "memory"},
     }
 
