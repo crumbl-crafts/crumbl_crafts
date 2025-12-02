@@ -1,4 +1,8 @@
-"""Lightweight HTTP API that exposes builder metrics from MySQL.
+"""Lightweight HTTP API that exposes builder metrics.
+
+Can operate in two modes:
+  1. MySQL mode: Fetches data from database (requires MySQL access)
+  2. In-memory mode: Uses bot's in-memory data (when MySQL unavailable)
 
 Run alongside the Discord bot so GitHub Pages can fetch live JSON data:
     $ python metrics_api.py
@@ -8,16 +12,16 @@ Environment variables (all optional, see .env.example):
     MYSQL_POOL_MIN, MYSQL_POOL_MAX
     API_HOST, API_PORT
     CORS_ALLOW_ORIGIN
-    REQ_STATUS_QUEUED, REQ_STATUS_ACTIVE, SHOP_ACCEPTING_STATUSES
+    METRICS_MODE: "mysql" or "memory" (default: "memory")
 """
 from __future__ import annotations
 
 import asyncio
 import logging
 import os
-from typing import Any, Dict, Iterable, List, Optional, Sequence
+import time
+from typing import Any, Callable, Dict, Iterable, List, Optional, Sequence
 
-import aiomysql
 from aiohttp import web
 from dotenv import load_dotenv
 
@@ -25,6 +29,25 @@ load_dotenv()
 
 LOGGER = logging.getLogger("MetricsAPI")
 logging.basicConfig(level=logging.INFO, format="[%(asctime)s] %(levelname)s | %(message)s")
+
+# Optional MySQL import - only needed if using MySQL mode
+try:
+    import aiomysql
+    HAS_AIOMYSQL = True
+except ImportError:
+    aiomysql = None  # type: ignore
+    HAS_AIOMYSQL = False
+
+# Callback to get metrics from bot's in-memory data
+# This gets set by the bot when integrating the API
+_metrics_payload_callback: Optional[Callable[[], Dict[str, Any]]] = None
+
+
+def set_metrics_payload_callback(callback: Callable[[], Dict[str, Any]]) -> None:
+    """Set the callback function that returns the metrics payload from bot memory."""
+    global _metrics_payload_callback
+    _metrics_payload_callback = callback
+    LOGGER.info("Metrics payload callback registered")
 
 
 def _parse_csv_env(key: str, default: Sequence[str]) -> List[str]:
@@ -36,28 +59,37 @@ def _parse_csv_env(key: str, default: Sequence[str]) -> List[str]:
 
 class MetricsService:
     def __init__(self) -> None:
-        self.pool: Optional[aiomysql.Pool] = None
+        self.pool: Optional[Any] = None  # aiomysql.Pool when using MySQL
+        self.mode = os.getenv("METRICS_MODE", "memory").lower()
         self.queue_statuses = _parse_csv_env("REQ_STATUS_QUEUED", ["queued", "pending", "waiting"])
         self.active_statuses = _parse_csv_env("REQ_STATUS_ACTIVE", ["active", "building", "in_progress"])
         self.accepting_statuses = _parse_csv_env("SHOP_ACCEPTING_STATUSES", ["Open", "Limited"])
         self.top_builder_limit = int(os.getenv("TOP_BUILDERS_LIMIT", "4"))
 
     async def startup(self, app: web.Application) -> None:
-        if self.pool:
-            return
-        self.pool = await aiomysql.create_pool(
-            host=os.getenv("MYSQL_HOST", "127.0.0.1"),
-            port=int(os.getenv("MYSQL_PORT", "3306")),
-            db=os.getenv("MYSQL_DATABASE", "builders"),
-            user=os.getenv("MYSQL_USER", "root"),
-            password=os.getenv("MYSQL_PASSWORD", ""),
-            minsize=int(os.getenv("MYSQL_POOL_MIN", "1")),
-            maxsize=int(os.getenv("MYSQL_POOL_MAX", "5")),
-            autocommit=True,
-            charset="utf8mb4",
-            cursorclass=aiomysql.DictCursor,
-        )
-        LOGGER.info("MySQL pool ready (max=%s)", self.pool.maxsize)
+        if self.mode == "mysql" and HAS_AIOMYSQL:
+            if self.pool:
+                return
+            try:
+                self.pool = await aiomysql.create_pool(
+                    host=os.getenv("MYSQL_HOST", "127.0.0.1"),
+                    port=int(os.getenv("MYSQL_PORT", "3306")),
+                    db=os.getenv("MYSQL_DATABASE", "builders"),
+                    user=os.getenv("MYSQL_USER", "root"),
+                    password=os.getenv("MYSQL_PASSWORD", ""),
+                    minsize=int(os.getenv("MYSQL_POOL_MIN", "1")),
+                    maxsize=int(os.getenv("MYSQL_POOL_MAX", "5")),
+                    autocommit=True,
+                    charset="utf8mb4",
+                    cursorclass=aiomysql.DictCursor,
+                )
+                LOGGER.info("MySQL pool ready (max=%s)", self.pool.maxsize)
+            except Exception as exc:
+                LOGGER.warning("MySQL connection failed, falling back to memory mode: %s", exc)
+                self.mode = "memory"
+        else:
+            self.mode = "memory"
+            LOGGER.info("Using in-memory metrics mode")
 
     async def cleanup(self, app: web.Application) -> None:
         if not self.pool:
@@ -67,17 +99,55 @@ class MetricsService:
         LOGGER.info("MySQL pool closed")
 
     async def handle_metrics(self, request: web.Request) -> web.Response:
-        if not self.pool:
-            raise web.HTTPServiceUnavailable(text="database pool unavailable")
         try:
-            async with self.pool.acquire() as conn:
-                payload = await self._collect_snapshot(conn)
-        except Exception as exc:  # pylint: disable=broad-except
+            if self.mode == "memory":
+                payload = self._get_memory_payload()
+            else:
+                if not self.pool:
+                    raise web.HTTPServiceUnavailable(text="database pool unavailable")
+                async with self.pool.acquire() as conn:
+                    payload = await self._collect_snapshot(conn)
+        except web.HTTPException:
+            raise
+        except Exception as exc:
             LOGGER.exception("Failed to build metrics payload: %s", exc)
             raise web.HTTPInternalServerError(text="failed to collect metrics") from exc
         return web.json_response(payload)
 
-    async def _collect_snapshot(self, conn: aiomysql.Connection) -> Dict[str, Any]:
+    def _get_memory_payload(self) -> Dict[str, Any]:
+        """Get metrics from the bot's in-memory data via callback."""
+        if _metrics_payload_callback is None:
+            LOGGER.warning("No metrics callback registered, returning empty payload")
+            return {
+                "summary": {
+                    "builder_count": 0,
+                    "total_completed": 0,
+                    "total_requests": 0,
+                    "total_ratings": 0,
+                    "request_completion_ratio": 0,
+                },
+                "server": {
+                    "total_members": 0,
+                    "joined_today": 0,
+                    "active_shops": 0,
+                    "avg_response_time": 0,
+                },
+                "topBuilders": [],
+                "activityLog": [],
+                "pipeline": [],
+                "insights": [],
+                "meta": {"generated_at": time.time(), "mode": "memory"},
+            }
+        
+        try:
+            payload = _metrics_payload_callback()
+            payload["meta"] = {"generated_at": time.time(), "mode": "memory"}
+            return payload
+        except Exception as exc:
+            LOGGER.error("Error calling metrics callback: %s", exc)
+            raise
+
+    async def _collect_snapshot(self, conn: Any) -> Dict[str, Any]:
         builder_count = await self._fetch_scalar(conn, "SELECT COUNT(*) AS total FROM builders", fallback=0)
         total_completed = await self._fetch_scalar(
             conn,
@@ -151,13 +221,20 @@ class MetricsService:
 
         return {
             "summary": summary,
+            "server": {
+                "total_members": 0,
+                "joined_today": 0,
+                "active_shops": acceptance_count,
+                "avg_response_time": 0,
+            },
             "topBuilders": top_builders,
+            "activityLog": [],
             "pipeline": pipeline,
             "insights": insights,
             "meta": {"generated_at": asyncio.get_event_loop().time()},
         }
 
-    async def _fetch_top_builders(self, conn: aiomysql.Connection) -> List[Dict[str, Any]]:
+    async def _fetch_top_builders(self, conn: Any) -> List[Dict[str, Any]]:
         query = (
             "SELECT b.shop_name, "
             "       COALESCE(b.completed_projects, 0) AS completed_projects, "
@@ -180,14 +257,14 @@ class MetricsService:
             )
         return results
 
-    async def _count_requests_by_status(self, conn: aiomysql.Connection, statuses: Sequence[str]) -> int:
+    async def _count_requests_by_status(self, conn: Any, statuses: Sequence[str]) -> int:
         if not statuses:
             return 0
         placeholders = ", ".join(["%s"] * len(statuses))
         query = f"SELECT COUNT(*) AS total FROM shop_requests WHERE status IN ({placeholders})"
         return await self._fetch_scalar(conn, query, tuple(statuses), fallback=0)
 
-    async def _fetch_shop_activity(self, conn: aiomysql.Connection) -> Dict[str, int]:
+    async def _fetch_shop_activity(self, conn: Any) -> Dict[str, int]:
         if not self.accepting_statuses:
             return {"open": 0, "limited": 0, "accepting": 0}
         placeholders = ", ".join(["%s"] * len(self.accepting_statuses))
@@ -208,7 +285,7 @@ class MetricsService:
 
     async def _fetch_scalar(
         self,
-        conn: aiomysql.Connection,
+        conn: Any,
         query: str,
         params: Optional[Sequence[Any]] = None,
         fallback: int | float = 0,
@@ -223,7 +300,7 @@ class MetricsService:
 
     async def _fetch_row(
         self,
-        conn: aiomysql.Connection,
+        conn: Any,
         query: str,
         params: Optional[Sequence[Any]] = None,
     ) -> Optional[Dict[str, Any]]:
@@ -237,7 +314,7 @@ class MetricsService:
 
     async def _fetch_all(
         self,
-        conn: aiomysql.Connection,
+        conn: Any,
         query: str,
         params: Optional[Sequence[Any]] = None,
     ) -> List[Dict[str, Any]]:
