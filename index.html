@@ -3,655 +3,1188 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Crumbl Crafts · Builder Intelligence HUD</title>
+    <title>Crumbl Crafts · Live Dashboard</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <style>
         :root {
             color-scheme: dark;
-            --bg: #050607;
-            --bg-alt: #0d0e12;
-            --accent: #f6ad3c;
-            --accent-soft: rgba(246, 173, 60, 0.14);
-            --accent-strong: rgba(246, 173, 60, 0.24);
-            --lime: #9ef28a;
-            --rose: #ff7d7d;
-            --cyan: #5fd5ff;
-            --violet: #a07bff;
-            --text: #fef8ef;
-            --muted: #b7b3c3;
-            --glass: rgba(255, 255, 255, 0.04);
-            --glass-strong: rgba(255, 255, 255, 0.08);
-            --border: rgba(255, 255, 255, 0.08);
-            --border-strong: rgba(255, 255, 255, 0.16);
-            --shadow: 0 30px 60px rgba(0, 0, 0, 0.55);
+            --bg-primary: #0a0e27;
+            --bg-secondary: #111628;
+            --bg-tertiary: #1a1f3a;
+            --panel: rgba(20, 25, 45, 0.75);
+            --panel-hover: rgba(25, 30, 55, 0.85);
+            --card: rgba(26, 31, 58, 0.6);
+            --card-hover: rgba(30, 37, 68, 0.8);
+            --primary: #00d4ff;
+            --primary-glow: rgba(0, 212, 255, 0.3);
+            --secondary: #7c3aed;
+            --accent: #ff6b35;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --text: #e2e8f0;
+            --text-bright: #ffffff;
+            --text-muted: #94a3b8;
+            --border: rgba(148, 163, 184, 0.1);
+            --glow: rgba(124, 58, 237, 0.15);
         }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
         body {
-            min-height: 100vh;
-            font-family: 'Space Grotesk', 'Outfit', system-ui, sans-serif;
-            background: radial-gradient(circle at top, rgba(246, 173, 60, 0.08), transparent 45%),
-                        radial-gradient(circle at 20% 40%, rgba(159, 93, 255, 0.06), transparent 55%),
-                        linear-gradient(135deg, var(--bg), var(--bg-alt));
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            background-image: 
+                radial-gradient(ellipse at top left, rgba(124, 58, 237, 0.15), transparent 50%),
+                radial-gradient(ellipse at top right, rgba(0, 212, 255, 0.1), transparent 50%),
+                radial-gradient(ellipse at bottom center, rgba(255, 107, 53, 0.08), transparent 60%);
             color: var(--text);
-            padding: 32px clamp(12px, 3vw, 48px) 64px;
+            min-height: 100vh;
+            padding: 0;
             overflow-x: hidden;
+            position: relative;
         }
-
-        .stars {
+        body::before {
+            content: '';
             position: fixed;
             inset: 0;
+            background-image: 
+                repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(124, 58, 237, 0.03) 2px, rgba(124, 58, 237, 0.03) 4px),
+                repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(0, 212, 255, 0.03) 2px, rgba(0, 212, 255, 0.03) 4px);
             pointer-events: none;
             z-index: 0;
-            background-image:
-                radial-gradient(1px 1px at 20% 30%, rgba(255, 255, 255, 0.4), transparent),
-                radial-gradient(1px 1px at 70% 20%, rgba(246, 173, 60, 0.5), transparent),
-                radial-gradient(1px 1px at 40% 80%, rgba(159, 93, 255, 0.35), transparent);
-            animation: shimmer 16s linear infinite;
+            opacity: 0.4;
         }
-
-        @keyframes shimmer {
-            from { transform: translateY(0); }
-            to { transform: translateY(-80px); }
+        body::after {
+            content: '';
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--primary-glow), transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+            animation: floatingOrb 20s ease-in-out infinite;
+            top: -250px;
+            right: -250px;
         }
-
-        .shell {
-            position: relative;
-            z-index: 1;
-            max-width: 1500px;
-            margin: 0 auto;
+        @keyframes floatingOrb {
+            0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.3; }
+            50% { transform: translate(-100px, 100px) scale(1.2); opacity: 0.5; }
+        }
+        .wrapper { 
+            position: relative; 
+            z-index: 1; 
+            max-width: 1920px; 
+            margin: 0 auto; 
+            padding: 24px;
+            display: grid;
+            grid-template-columns: 1fr 420px;
+            gap: 24px;
+            min-height: 100vh;
+        }
+        .main-content {
             display: flex;
             flex-direction: column;
-            gap: 28px;
+            gap: 24px;
         }
-
         .glass {
-            background: var(--glass);
+            background: var(--panel);
             border: 1px solid var(--border);
-            border-radius: 22px;
-            padding: 28px;
-            backdrop-filter: blur(20px);
-            box-shadow: var(--shadow);
+            border-radius: 20px;
+            padding: 24px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(16px) saturate(180%);
             position: relative;
             overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-
         .glass::before {
             content: '';
             position: absolute;
-            inset: 1px;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.04);
-            pointer-events: none;
+            top: 0; left: 0; right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+            opacity: 0.6;
         }
-
-        header.hero {
-            display: grid;
-            grid-template-columns: 1fr auto;
-            gap: 24px;
+        .glass:hover {
+            border-color: rgba(148, 163, 184, 0.2);
+            box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4);
+        }
+        header.hero { 
+            padding: 32px;
+            display: flex;
             align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
         }
-
-        @media (max-width: 900px) {
-            header.hero { grid-template-columns: 1fr; }
+        .logo-container { 
+            display: flex; 
+            align-items: center; 
+            gap: 16px;
         }
-
-        .hero h1 {
-            font-size: clamp(2.4rem, 6vw, 3.6rem);
-            font-weight: 700;
-            letter-spacing: -0.03em;
-            background: linear-gradient(120deg, var(--text), var(--accent), var(--lime));
+        .logo-icon {
+            width: 64px; 
+            height: 64px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 16px;
+            display: grid; 
+            place-items: center;
+            font-size: 32px;
+            box-shadow: 0 8px 32px var(--primary-glow);
+            animation: logoFloat 3s ease-in-out infinite;
+            position: relative;
+        }
+        .logo-icon::after {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 16px;
+            z-index: -1;
+            filter: blur(12px);
+            opacity: 0.5;
+        }
+        @keyframes logoFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        .logo-text h1 {
+            font-size: 2rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--primary), var(--text-bright));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 12px;
+            background-clip: text;
+            letter-spacing: -0.03em;
+            margin-bottom: 4px;
         }
-
-        .tagline {
-            color: var(--muted);
-            font-size: 1.1rem;
-            max-width: 60ch;
-            line-height: 1.6;
+        .logo-text .tagline { 
+            color: var(--text-muted); 
+            font-size: 0.9rem;
+            font-weight: 500;
         }
-
-        .hero-stats {
-            display: flex;
+        .status-badge {
+            display: inline-flex; 
+            align-items: center; 
+            gap: 10px;
+            padding: 10px 20px; 
+            border-radius: 50px;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            font-size: 0.85rem; 
+            font-weight: 600; 
+            color: var(--success);
+            animation: pulseGlow 2s ease-in-out infinite;
+        }
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 20px rgba(16, 185, 129, 0.2); }
+            50% { box-shadow: 0 0 30px rgba(16, 185, 129, 0.4); }
+        }
+        .status-dot { 
+            width: 8px; 
+            height: 8px; 
+            border-radius: 50%; 
+            background: var(--success); 
+            animation: blink 1.5s ease-in-out infinite; 
+        }
+        @keyframes blink { 
+            0%, 100% { opacity: 1; transform: scale(1); } 
+            50% { opacity: 0.4; transform: scale(0.9); } 
+        }
+        .stats-grid {
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
             gap: 16px;
-            flex-wrap: wrap;
         }
-
-        .hero-chip {
-            padding: 14px 20px;
-            border-radius: 999px;
+        .stat-card {
+            background: var(--card);
             border: 1px solid var(--border);
-            background: var(--glass-strong);
-            display: inline-flex;
+            border-radius: 16px;
+            padding: 20px;
+            position: relative; 
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: default;
+        }
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+        .stat-card:hover::before {
+            transform: scaleX(1);
+        }
+        .stat-card:hover { 
+            transform: translateY(-4px); 
+            background: var(--card-hover); 
+            border-color: rgba(0, 212, 255, 0.3); 
+            box-shadow: 0 12px 40px rgba(0, 212, 255, 0.15); 
+        }
+        .stat-card .icon-wrapper { 
+            width: 48px; 
+            height: 48px; 
+            border-radius: 12px; 
+            display: grid; 
+            place-items: center; 
+            font-size: 24px; 
+            margin-bottom: 16px;
+            background: var(--glow);
+            position: relative;
+        }
+        .stat-card .icon-wrapper i {
+            position: relative;
+            z-index: 1;
+        }
+        .stat-card .label { 
+            color: var(--text-muted); 
+            font-size: 0.75rem; 
+            text-transform: uppercase; 
+            letter-spacing: 0.1em; 
+            font-weight: 600; 
+        }
+        .stat-card .value { 
+            display: block; 
+            font-size: 2.25rem; 
+            font-weight: 800; 
+            color: var(--text-bright); 
+            margin-top: 8px; 
+            letter-spacing: -0.03em;
+            background: linear-gradient(135deg, var(--text-bright), var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .stat-card .trend { 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 6px; 
+            margin-top: 12px; 
+            font-size: 0.8rem; 
+            font-weight: 600; 
+            padding: 4px 12px; 
+            border-radius: 50px; 
+            background: rgba(16, 185, 129, 0.1); 
+            color: var(--success); 
+        }
+        .count-up { 
+            animation: countFade 0.5s ease-out; 
+        }
+        @keyframes countFade { 
+            from { opacity: 0; transform: translateY(8px); } 
+            to { opacity: 1; transform: translateY(0); } 
+        }
+        .sidebar-panel {
+            position: sticky;
+            top: 24px;
+            height: calc(100vh - 48px);
+            display: flex;
+            flex-direction: column;
+        }
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-bright);
+            margin-bottom: 6px;
+            display: flex;
             align-items: center;
             gap: 10px;
-            font-size: 0.95rem;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
         }
-
-        .grid-layout {
-            display: grid;
-            grid-template-columns: minmax(0, 1fr) 420px;
-            gap: 28px;
+        .section-subtitle {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-bottom: 20px;
         }
-
-        @media (max-width: 1200px) {
-            .grid-layout { grid-template-columns: 1fr; }
+        .builders-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 16px; 
         }
-
-        .primary-column {
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-        }
-
-        .stat-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 18px;
-        }
-
-        .stat-card {
-            padding: 22px;
+        .builder-card {
+            background: var(--card);
             border: 1px solid var(--border);
-            border-radius: 18px;
-            background: linear-gradient(160deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+            border-radius: 16px;
+            padding: 20px;
             position: relative;
-            overflow: hidden;
-        }
-
-        .stat-card .label { color: var(--muted); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; }
-        .stat-card .value { font-size: 2.4rem; font-weight: 600; margin: 8px 0; }
-        .stat-card .meta { font-size: 0.9rem; color: var(--accent); display: flex; align-items: center; gap: 6px; }
-
-        .server-panel {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
             gap: 16px;
         }
-
-        .server-block {
-            padding: 18px;
+        .builder-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
             border-radius: 16px;
-            background: var(--glass-strong);
-            border: 1px solid var(--border);
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
+            padding: 1px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
-
-        .server-block span:first-child { font-size: 0.85rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; }
-        .server-block span:last-child { font-size: 1.8rem; font-weight: 600; }
-
-        .section-heading {
+        .builder-card:hover::before { 
+            opacity: 1; 
+        }
+        .builder-card:hover { 
+            transform: translateY(-4px); 
+            background: var(--card-hover); 
+            box-shadow: 0 12px 40px rgba(0, 212, 255, 0.15); 
+        }
+        .builder-card.rank-1 .rank-badge { background: linear-gradient(135deg, #ffd700, #ffa500); color: #000; }
+        .builder-card.rank-2 .rank-badge { background: linear-gradient(135deg, #c0c0c0, #a0a0a0); color: #000; }
+        .builder-card.rank-3 .rank-badge { background: linear-gradient(135deg, #cd7f32, #8b4513); color: #fff; }
+        .rank-badge { 
+            position: absolute; 
+            top: -8px; 
+            left: -8px; 
+            width: 32px; 
+            height: 32px; 
+            border-radius: 50%; 
+            display: grid; 
+            place-items: center; 
+            font-weight: 800; 
+            font-size: 0.85rem; 
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); 
+            z-index: 2;
+        }
+        .builder-avatar { 
+            width: 64px; 
+            height: 64px; 
+            border-radius: 12px; 
+            background: var(--glow); 
+            border: 2px solid var(--border); 
+            display: grid; 
+            place-items: center; 
+            font-size: 28px; 
+            overflow: hidden; 
+            transition: transform 0.3s ease; 
+            flex-shrink: 0;
+        }
+        .builder-card:hover .builder-avatar { 
+            transform: scale(1.05); 
+            border-color: var(--primary);
+        }
+        .builder-avatar img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+        }
+        .builder-info {
+            flex: 1;
+            min-width: 0;
+        }
+        .builder-name { 
+            font-size: 1.05rem; 
+            font-weight: 700; 
+            color: var(--text-bright); 
+            margin-bottom: 6px; 
+            white-space: nowrap; 
+            overflow: hidden; 
+            text-overflow: ellipsis; 
+        }
+        .builder-meta { 
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.8rem; 
+            color: var(--text-muted); 
+        }
+        .builder-meta .stat {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .builder-meta .rating { 
+            color: var(--warning); 
+            font-weight: 600; 
+        }
+        .activity-feed-container { 
+            flex: 1;
+            display: flex; 
+            flex-direction: column;
+            min-height: 0;
+        }
+        .feed-header {
             display: flex;
             align-items: center;
             justify-content: space-between;
             margin-bottom: 16px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border);
         }
-
-        .section-heading h2 { font-size: 1.3rem; letter-spacing: 0.05em; text-transform: uppercase; }
-        .section-heading p { color: var(--muted); font-size: 0.9rem; }
-
-        .builders-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 16px;
-        }
-
-        .builder-card {
-            padding: 20px;
-            border-radius: 18px;
-            border: 1px solid var(--border);
-            background: radial-gradient(circle at top, rgba(246, 173, 60, 0.18), rgba(255, 255, 255, 0.01));
-            transition: transform 0.35s ease;
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .builder-card:hover { transform: translateY(-6px); border-color: var(--accent); }
-        .builder-card .rank { font-size: 0.85rem; color: var(--muted); letter-spacing: 0.2em; }
-        .builder-card .name { font-size: 1.2rem; font-weight: 600; margin: 6px 0; }
-        .builder-card .stats { color: var(--muted); font-size: 0.92rem; }
-
-        .intel-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
-        }
-
-        .pipeline-list, .insights-grid { display: flex; flex-direction: column; gap: 14px; }
-
-        .pipeline-item {
-            padding: 18px;
-            border-radius: 16px;
-            border: 1px solid var(--border);
-            background: var(--glass-strong);
-        }
-
-        .pipeline-item header { display: flex; justify-content: space-between; align-items: baseline; }
-        .pipeline-item .value { font-size: 1.9rem; font-weight: 600; }
-        .pipeline-item .trend { color: var(--muted); font-size: 0.9rem; }
-        .pipeline-progress { margin-top: 10px; height: 6px; border-radius: 999px; background: rgba(255, 255, 255, 0.08); overflow: hidden; }
-        .pipeline-progress span { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--cyan), var(--accent)); transform-origin: left; }
-
-        .insight-card {
-            padding: 18px;
-            border-radius: 16px;
-            border: 1px solid var(--border);
-            background: linear-gradient(160deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.08));
-        }
-
-        .insight-card h3 { font-size: 1rem; margin-bottom: 6px; }
-        .insight-card p { color: var(--muted); font-size: 0.92rem; margin-bottom: 10px; }
-        .insight-status { display: inline-flex; padding: 5px 12px; border-radius: 999px; font-size: 0.82rem; border: 1px solid transparent; }
-        .insight-status.good { border-color: rgba(158, 242, 138, 0.4); color: var(--lime); }
-        .insight-status.warning { border-color: rgba(255, 179, 0, 0.4); color: var(--accent); }
-        .insight-status.critical { border-color: rgba(255, 125, 125, 0.4); color: var(--rose); }
-
-        .activity-column {
+        .feed-stats {
             display: flex;
-            flex-direction: column;
-            gap: 18px;
-            height: fit-content;
-        }
-
-        .activity-panel {
-            display: flex;
-            flex-direction: column;
-            gap: 18px;
-            padding: 26px;
-            border-radius: 22px;
-            border: 1px solid var(--border-strong);
-            background: linear-gradient(160deg, rgba(17, 18, 26, 0.96), rgba(12, 12, 18, 0.9));
-        }
-
-        .activity-panel header {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-        }
-
-        .activity-panel header h2 { font-size: 1.2rem; letter-spacing: 0.08em; text-transform: uppercase; }
-        .activity-panel header span { color: var(--muted); font-size: 0.9rem; }
-
-        .filter-chips {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .chip {
-            padding: 6px 14px;
-            border-radius: 999px;
-            border: 1px solid var(--border);
-            background: rgba(255, 255, 255, 0.03);
-            font-size: 0.8rem;
-            letter-spacing: 0.08em;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            user-select: none;
-        }
-
-        .chip.active { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); }
-
-        .activity-feed {
-            max-height: 680px;
-            overflow-y: auto;
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-            padding-right: 6px;
-        }
-
-        .activity-feed::-webkit-scrollbar { width: 6px; }
-        .activity-feed::-webkit-scrollbar-thumb { background: var(--accent-soft); border-radius: 999px; }
-
-        .activity-item {
-            display: grid;
-            grid-template-columns: auto 1fr;
             gap: 12px;
-            padding: 16px;
-            border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            background: rgba(255, 255, 255, 0.02);
+            font-size: 0.75rem;
+            color: var(--text-muted);
         }
-
-        .activity-icon {
-            width: 42px;
-            height: 42px;
-            border-radius: 12px;
-            display: grid;
-            place-items: center;
-            font-size: 1.2rem;
+        .feed-stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 10px;
+            background: var(--glow);
+            border-radius: 50px;
         }
-
-        .activity-content { display: flex; flex-direction: column; gap: 6px; }
-        .activity-message { font-size: 0.95rem; line-height: 1.4; }
-        .activity-message a { color: var(--accent); text-decoration: none; }
-        .activity-meta { font-size: 0.78rem; color: var(--muted); display: flex; gap: 10px; }
-
-        .empty-state { text-align: center; color: var(--muted); padding: 40px 0; }
-
-        footer {
-            text-align: center;
-            color: var(--muted);
-            font-size: 0.9rem;
-            margin-top: 24px;
+        .feed-stat .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--primary);
+            animation: pulse 2s ease-in-out infinite;
         }
-
-        footer a { color: var(--accent); text-decoration: none; }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.8); }
+        }
+        .activity-list { 
+            flex: 1;
+            overflow-y: auto; 
+            display: flex; 
+            flex-direction: column; 
+            gap: 10px; 
+            padding-right: 4px;
+        }
+        .activity-list::-webkit-scrollbar { 
+            width: 6px; 
+        }
+        .activity-list::-webkit-scrollbar-track { 
+            background: transparent; 
+        }
+        .activity-list::-webkit-scrollbar-thumb { 
+            background: var(--border); 
+            border-radius: 10px;
+            transition: background 0.2s ease;
+        }
+        .activity-list::-webkit-scrollbar-thumb:hover { 
+            background: var(--text-muted); 
+        }
+        .activity-item { 
+            display: flex; 
+            align-items: flex-start; 
+            gap: 12px; 
+            padding: 12px; 
+            background: rgba(255, 255, 255, 0.02); 
+            border-radius: 12px; 
+            border: 1px solid transparent; 
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+            animation: slideInRight 0.4s ease-out;
+            position: relative;
+            overflow: hidden;
+        }
+        .activity-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--primary);
+            transform: scaleY(0);
+            transition: transform 0.3s ease;
+        }
+        .activity-item:hover::before {
+            transform: scaleY(1);
+        }
+        @keyframes slideInRight { 
+            from { opacity: 0; transform: translateX(30px); } 
+            to { opacity: 1; transform: translateX(0); } 
+        }
+        .activity-item:hover { 
+            background: rgba(255, 255, 255, 0.05); 
+            border-color: var(--border);
+            transform: translateX(-4px);
+        }
+        .activity-icon { 
+            width: 40px; 
+            height: 40px; 
+            border-radius: 10px; 
+            display: grid; 
+            place-items: center; 
+            font-size: 18px; 
+            flex-shrink: 0;
+            position: relative;
+        }
+        .activity-icon::after {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border-radius: 10px;
+            background: inherit;
+            filter: blur(8px);
+            opacity: 0.4;
+            z-index: -1;
+        }
+        .activity-icon.type-sent { background: rgba(0, 212, 255, 0.15); color: var(--primary); }
+        .activity-icon.type-accepted { background: rgba(16, 185, 129, 0.15); color: var(--success); }
+        .activity-icon.type-rejected { background: rgba(239, 68, 68, 0.15); color: var(--danger); }
+        .activity-icon.type-completed { background: rgba(124, 58, 237, 0.15); color: var(--secondary); }
+        .activity-icon.type-rating { background: rgba(245, 158, 11, 0.15); color: var(--warning); }
+        .activity-icon.type-new_request_thread { background: rgba(255, 107, 53, 0.15); color: var(--accent); }
+        .activity-icon.type-member_join { background: rgba(16, 185, 129, 0.15); color: var(--success); }
+        .activity-icon.type-member_leave { background: rgba(148, 163, 184, 0.15); color: var(--text-muted); }
+        .activity-content { 
+            flex: 1; 
+            min-width: 0; 
+        }
+        .activity-message { 
+            font-size: 0.875rem; 
+            color: var(--text); 
+            line-height: 1.5; 
+            margin-bottom: 6px;
+        }
+        .activity-message a { 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+        .activity-message a:hover { 
+            color: var(--text-bright);
+            text-decoration: underline;
+        }
+        .activity-meta {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.7rem;
+            color: var(--text-muted);
+        }
+        .activity-time {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .activity-type-badge {
+            padding: 2px 8px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 4px;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+        .content-grid { 
+            display: grid; 
+            gap: 24px; 
+        }
+        .pipeline-list { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 12px; 
+        }
+        .pipeline-item { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 16px; 
+            background: rgba(255, 255, 255, 0.02); 
+            border-radius: 12px; 
+            border: 1px solid transparent; 
+            transition: all 0.3s ease; 
+        }
+        .pipeline-item:hover { 
+            background: rgba(255, 255, 255, 0.04); 
+            border-color: var(--border); 
+        }
+        .pipeline-info {
+            flex: 1;
+        }
+        .pipeline-label { 
+            font-weight: 600; 
+            color: var(--text); 
+            margin-bottom: 4px;
+        }
+        .pipeline-trend { 
+            font-size: 0.75rem; 
+            color: var(--text-muted); 
+        }
+        .pipeline-value { 
+            font-size: 1.5rem; 
+            font-weight: 800; 
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .progress-bar { 
+            width: 100%; 
+            height: 6px; 
+            border-radius: 50px; 
+            background: rgba(255, 255, 255, 0.05); 
+            overflow: hidden; 
+            margin-top: 10px; 
+        }
+        .progress-fill { 
+            height: 100%; 
+            border-radius: inherit; 
+            background: linear-gradient(90deg, var(--primary), var(--secondary)); 
+            transform-origin: left; 
+            transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1); 
+            position: relative;
+        }
+        .progress-fill::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            animation: shimmer 2s infinite;
+        }
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        .insights-list { 
+            display: grid; 
+            gap: 12px; 
+        }
+        .insight-card { 
+            padding: 16px; 
+            background: rgba(255, 255, 255, 0.02); 
+            border-radius: 12px; 
+            border: 1px solid transparent; 
+            transition: all 0.3s ease; 
+        }
+        .insight-card:hover { 
+            background: rgba(255, 255, 255, 0.04); 
+            border-color: var(--border); 
+        }
+        .insight-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        .insight-title { 
+            font-weight: 600; 
+            color: var(--text); 
+            display: flex; 
+            align-items: center; 
+            gap: 8px; 
+        }
+        .insight-detail { 
+            font-size: 0.85rem; 
+            color: var(--text-muted); 
+            margin-bottom: 10px; 
+        }
+        .insight-badge { 
+            display: inline-flex; 
+            padding: 4px 12px; 
+            border-radius: 50px; 
+            font-size: 0.75rem; 
+            font-weight: 700; 
+            border: 1px solid; 
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .insight-badge.good { 
+            background: rgba(16, 185, 129, 0.1); 
+            border-color: rgba(16, 185, 129, 0.3); 
+            color: var(--success); 
+        }
+        .insight-badge.warning { 
+            background: rgba(245, 158, 11, 0.1); 
+            border-color: rgba(245, 158, 11, 0.3); 
+            color: var(--warning); 
+        }
+        .insight-badge.critical { 
+            background: rgba(239, 68, 68, 0.1); 
+            border-color: rgba(239, 68, 68, 0.3); 
+            color: var(--danger); 
+        }
+        footer { 
+            text-align: center; 
+            padding: 32px 24px 24px; 
+            color: var(--text-muted); 
+            font-size: 0.85rem; 
+            border-top: 1px solid var(--border);
+        }
+        footer a { 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-weight: 600;
+        }
+        footer a:hover { 
+            color: var(--text-bright);
+        }
+        @media (max-width: 1400px) {
+            .wrapper { 
+                grid-template-columns: 1fr; 
+            }
+            .sidebar-panel {
+                position: relative;
+                height: auto;
+                max-height: 600px;
+            }
+        }
+        @media (max-width: 768px) {
+            .stats-grid { 
+                grid-template-columns: repeat(2, 1fr); 
+            }
+            .builders-grid { 
+                grid-template-columns: 1fr; 
+            }
+            .stat-card .value { 
+                font-size: 1.75rem; 
+            }
+            header.hero {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+        @media (max-width: 480px) { 
+            .stats-grid { 
+                grid-template-columns: 1fr; 
+            } 
+            .wrapper {
+                padding: 16px;
+                gap: 16px;
+            }
+            .glass {
+                padding: 16px;
+            }
+        }
+        .skeleton { 
+            background: linear-gradient(90deg, rgba(255,255,255,0.03) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.03) 75%); 
+            background-size: 200% 100%; 
+            animation: skeletonShimmer 1.5s infinite; 
+            border-radius: 8px; 
+        }
+        @keyframes skeletonShimmer { 
+            0% { background-position: 200% 0; } 
+            100% { background-position: -200% 0; } 
+        }
+        .loading-spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255, 255, 255, 0.1);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
     </style>
 </head>
 <body>
-    <div class="stars"></div>
-    <div class="shell">
-        <header class="glass hero">
-            <div>
-                <h1>Crumbl Crafts Command Center</h1>
-                <p class="tagline">Live Bloxburg builder intelligence with server telemetry, response tracking, and an ultra-detailed activity stream that keeps players inspired.</p>
-                <div class="hero-stats">
-                    <span class="hero-chip">LIVE DATA SYNC</span>
-                    <span class="hero-chip">7-DAY MEMORY</span>
-                    <span class="hero-chip">DISCORD + WEB</span>
+    <div class="wrapper">
+        <div class="main-content">
+            <header class="glass hero">
+                <div class="logo-container">
+                    <div class="logo-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>Crumbl Crafts</h1>
+                        <p class="tagline">Premium Bloxburg Builder Network</p>
+                    </div>
                 </div>
-            </div>
-            <div class="glass" style="min-width: 260px; text-align: right;">
-                <p style="text-transform: uppercase; color: var(--muted); letter-spacing: 0.12em; font-size: 0.8rem;">Avg response</p>
-                <p style="font-size: 3rem; font-weight: 600;" id="heroAvgResponse">—</p>
-                <p style="color: var(--accent); font-size: 0.9rem;">private request turnaround</p>
-            </div>
-        </header>
+                <div class="status-badge">
+                    <span class="status-dot"></span>
+                    <span>LIVE</span>
+                </div>
+            </header>
 
-        <main class="grid-layout">
-            <section class="primary-column">
-                <section class="glass stat-grid" id="summaryGrid"></section>
-                <section class="glass">
-                    <div class="section-heading"><h2>Server Pulse</h2><p>Community health at a glance</p></div>
-                    <div class="server-panel" id="serverPanel"></div>
-                </section>
-                <section class="glass">
-                    <div class="section-heading"><h2>Top Builder Flight Deck</h2><p>Tap any card to jump into their thread</p></div>
-                    <div class="builders-grid" id="buildersGrid"></div>
-                </section>
-                <section class="glass intel-grid">
-                    <div>
-                        <div class="section-heading"><h2>Pipeline Monitor</h2><p>Request flow + shop throughput</p></div>
-                        <div class="pipeline-list" id="pipelineList"></div>
-                    </div>
-                    <div>
-                        <div class="section-heading"><h2>Strategy Insights</h2><p>Auto-scouted tips & warnings</p></div>
-                        <div class="insights-grid" id="insightsGrid"></div>
-                    </div>
-                </section>
+            <section class="glass">
+                <div class="stats-grid" id="statsGrid"></div>
             </section>
 
-            <aside class="activity-column">
-                <section class="activity-panel">
-                    <header>
-                        <h2>Realtime Activity Feed</h2>
-                        <span>Auto-pruned after 7 days. Freshest events float to the top.</span>
-                    </header>
-                    <div class="filter-chips" id="feedFilters"></div>
-                    <div class="activity-feed" id="activityFeed"></div>
+            <section class="glass">
+                <h2 class="section-title">
+                    <i class="fas fa-trophy"></i>
+                    Top Builders
+                </h2>
+                <p class="section-subtitle">Our highest-rated builders this month</p>
+                <div class="builders-grid" id="buildersGrid"></div>
+            </section>
+
+            <div class="content-grid">
+                <section class="glass">
+                    <h2 class="section-title">
+                        <i class="fas fa-chart-line"></i>
+                        Pipeline Overview
+                    </h2>
+                    <p class="section-subtitle">Request flow metrics</p>
+                    <div class="pipeline-list" id="pipelineList"></div>
                 </section>
-            </aside>
-        </main>
 
-        <footer>🍪 Crafted for the Crumbl Crafts Bloxburg collective · <a href="https://discord.com/">Synced from Discord</a></footer>
+                <section class="glass">
+                    <h2 class="section-title">
+                        <i class="fas fa-lightbulb"></i>
+                        System Health
+                    </h2>
+                    <p class="section-subtitle">Operational insights</p>
+                    <div class="insights-list" id="insightsList"></div>
+                </section>
+            </div>
+
+            <footer>
+                <p><i class="fas fa-home"></i> Powered by <strong>Crumbl Crafts</strong> · Synced with Discord</p>
+            </footer>
+        </div>
+
+        <aside class="sidebar-panel glass">
+            <div class="activity-feed-container">
+                <div class="feed-header">
+                    <div>
+                        <h2 class="section-title">
+                            <i class="fas fa-rss"></i>
+                            Activity Feed
+                        </h2>
+                        <p class="section-subtitle">Live updates · 7 day history</p>
+                    </div>
+                    <div class="feed-stats">
+                        <div class="feed-stat">
+                            <span class="dot"></span>
+                            <span id="feedCount">0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="activity-list" id="activityList"></div>
+            </div>
+        </aside>
     </div>
-
     <script>
-        const API_ENDPOINT = window.METRICS_ENDPOINT || 'http://localhost:8080/api/metrics';
-        const LOCAL_FALLBACK = 'site_metrics.json';
-        const MAX_FEED_DAYS = 7;
-        const FEED_TYPES = [
-            'sent',
-            'accepted',
-            'rejected',
-            'completed',
-            'member_join',
-            'member_leave',
-            'rating',
-            'new_request_thread'
+        const REMOTE_METRICS_ENDPOINT = window.METRICS_ENDPOINT || 'http://localhost:8080/api/metrics';
+        const LOCAL_METRICS_FALLBACK = 'site_metrics.json';
+        const FORUM_CHANNEL_BASE = 'https://discord.com/channels/';
+        const ACTIVITY_RETENTION_DAYS = 7;
+        const MAX_ACTIVITY_ITEMS = 100;
+        
+        const formatNumber = (v) => new Intl.NumberFormat('en-US').format(v ?? 0);
+        const formatTime = (s) => { 
+            if (!s || s < 60) return `${Math.round(s||0)}s`; 
+            if (s < 3600) return `${Math.round(s/60)}m`; 
+            return `${(s/3600).toFixed(1)}h`; 
+        };
+        const formatDuration = (seconds) => {
+            if (!seconds || seconds === 0) return 'N/A';
+            const h = Math.floor(seconds / 3600);
+            const m = Math.floor((seconds % 3600) / 60);
+            if (h > 0) return `${h}h ${m}m`;
+            if (m > 0) return `${m}m`;
+            return `${Math.round(seconds)}s`;
+        };
+        const timeAgo = (ts) => { 
+            if (!ts) return 'Just now'; 
+            const d = Date.now()/1000 - ts; 
+            if (d < 60) return 'Just now'; 
+            if (d < 3600) return `${Math.floor(d/60)}m ago`; 
+            if (d < 86400) return `${Math.floor(d/3600)}h ago`; 
+            return `${Math.floor(d/86400)}d ago`; 
+        };
+        
+        const statsConfig = [
+            { key: 'builder_count', label: 'Builders', icon: 'fa-users', color: '#00d4ff' },
+            { key: 'total_completed', label: 'Completed', icon: 'fa-check-circle', color: '#10b981' },
+            { key: 'total_requests', label: 'Requests', icon: 'fa-paper-plane', color: '#7c3aed' },
+            { key: 'total_ratings', label: 'Ratings', icon: 'fa-star', color: '#f59e0b' },
+            { key: 'active_shops', label: 'Active Shops', icon: 'fa-store', color: '#ff6b35' },
+            { key: 'avg_response_time', label: 'Avg Response', icon: 'fa-clock', color: '#00d4ff', format: 'duration' }
         ];
-
-        const FEED_META = {
-            sent: { label: 'Request Sent', icon: '📤', color: 'rgba(246,173,60,0.18)' },
-            accepted: { label: 'Request Accepted', icon: '🤝', color: 'rgba(158,242,138,0.15)' },
-            rejected: { label: 'Request Rejected', icon: '⛔', color: 'rgba(255,125,125,0.2)' },
-            completed: { label: 'Build Complete', icon: '🏁', color: 'rgba(95,213,255,0.18)' },
-            member_join: { label: 'Member Joined', icon: '✨', color: 'rgba(160,123,255,0.18)' },
-            member_leave: { label: 'Member Left', icon: '👋', color: 'rgba(255,125,125,0.18)' },
-            rating: { label: 'Builder Rated', icon: '⭐', color: 'rgba(246,173,60,0.22)' },
-            new_request_thread: { label: 'Thread Opened', icon: '💬', color: 'rgba(95,213,255,0.22)' },
+        
+        const activityIcons = {
+            sent: 'fa-paper-plane',
+            accepted: 'fa-check',
+            rejected: 'fa-times',
+            completed: 'fa-flag-checkered',
+            rating: 'fa-star',
+            new_request_thread: 'fa-comments',
+            member_join: 'fa-user-plus',
+            member_leave: 'fa-user-minus'
         };
-
-        const placeholder = {
-            summary: {
-                builder_count: 24,
-                total_completed: 156,
-                total_requests: 312,
-                total_ratings: 89,
-                request_completion_ratio: 0.52
-            },
-            server: {
-                total_members: 1204,
-                joined_today: 9,
-                active_shops: 14,
-                avg_response_time: 420
-            },
-            topBuilders: [],
-            pipeline: [],
-            insights: [],
-            activityLog: []
-        };
-
-        const activeFilters = new Set(FEED_TYPES);
-
-        const formatNumber = (n) => Intl.NumberFormat('en-US').format(n ?? 0);
-        const formatPercent = (p) => `${(p * 100).toFixed(1)}%`;
-        const formatDuration = (secs) => {
-            if (!secs && secs !== 0) return '—';
-            if (secs < 60) return `${Math.round(secs)}s`;
-            if (secs < 3600) return `${Math.round(secs / 60)}m`;
-            return `${(secs / 3600).toFixed(1)}h`;
-        };
-        const timeAgo = (ts) => {
-            if (!ts) return 'just now';
-            const delta = Date.now() / 1000 - ts;
-            if (delta < 60) return 'just now';
-            if (delta < 3600) return `${Math.floor(delta / 60)}m ago`;
-            if (delta < 86400) return `${Math.floor(delta / 3600)}h ago`;
-            return `${Math.floor(delta / 86400)}d ago`;
-        };
-
-        async function fetchMetrics() {
+        // Local storage for activity feed persistence
+        let activityCache = [];
+        
+        const loadActivityCache = () => {
             try {
-                const res = await fetch(`${API_ENDPOINT}?t=${Date.now()}`, { cache: 'no-store' });
-                if (!res.ok) throw new Error('remote fail');
-                return res.json();
-            } catch (err) {
-                console.warn('Primary metrics endpoint unavailable, falling back…');
-                try {
-                    const res = await fetch(`${LOCAL_FALLBACK}?t=${Date.now()}`, { cache: 'no-store' });
-                    if (!res.ok) throw new Error('fallback fail');
-                    return res.json();
-                } catch {
-                    return placeholder;
+                const cached = localStorage.getItem('crumbl_activity_feed');
+                if (cached) {
+                    activityCache = JSON.parse(cached);
+                    // Remove entries older than 7 days
+                    const cutoff = Date.now() / 1000 - (ACTIVITY_RETENTION_DAYS * 86400);
+                    activityCache = activityCache.filter(item => item.timestamp > cutoff);
+                }
+            } catch (e) {
+                console.warn('Failed to load activity cache:', e);
+                activityCache = [];
+            }
+        };
+        
+        const saveActivityCache = () => {
+            try {
+                localStorage.setItem('crumbl_activity_feed', JSON.stringify(activityCache));
+            } catch (e) {
+                console.warn('Failed to save activity cache:', e);
+            }
+        };
+        
+        const mergeActivities = (newActivities) => {
+            if (!Array.isArray(newActivities)) return;
+            
+            // Add new activities that don't exist in cache
+            newActivities.forEach(item => {
+                if (!activityCache.some(cached => 
+                    cached.timestamp === item.timestamp && 
+                    cached.message === item.message
+                )) {
+                    activityCache.unshift(item);
+                }
+            });
+            
+            // Limit to MAX_ACTIVITY_ITEMS
+            activityCache = activityCache.slice(0, MAX_ACTIVITY_ITEMS);
+            
+            // Remove old items
+            const cutoff = Date.now() / 1000 - (ACTIVITY_RETENTION_DAYS * 86400);
+            activityCache = activityCache.filter(item => item.timestamp > cutoff);
+            
+            saveActivityCache();
+        };
+        
+        const placeholderData = {
+            summary: { 
+                builder_count: 24, 
+                total_completed: 156, 
+                total_requests: 312, 
+                total_ratings: 89, 
+                active_shops: 12,
+                avg_response_time: 7200,
+                request_completion_ratio: 0.5 
+            },
+            topBuilders: [
+                { shop_name: 'Sunset Builds', completed_projects: 48, average_rating: 4.9, avatar_url: null, thread_id: null },
+                { shop_name: 'Crystal Designs', completed_projects: 41, average_rating: 4.8, avatar_url: null, thread_id: null },
+                { shop_name: 'Urban Studios', completed_projects: 35, average_rating: 4.7, avatar_url: null, thread_id: null },
+            ],
+            activityLog: [],
+            pipeline: [
+                { label: 'Queued Requests', value: 24, trend: '6 new today', max: 50 },
+                { label: 'Active Builds', value: 12, trend: '3 shops working', max: 30 },
+                { label: 'Completed (7d)', value: 31, trend: '+12% vs last week', max: 50 },
+            ],
+            insights: [
+                { title: 'Completion Rate', detail: '50% of requests fulfilled', score: 'On track', status: 'good' },
+                { title: 'Request Velocity', detail: '6 new requests today', score: 'Stable', status: 'good' },
+                { title: 'Builder Availability', detail: '12 shops accepting work', score: 'Healthy', status: 'good' },
+                { title: 'Queue Health', detail: '24 requests pending', score: 'Monitor', status: 'warning' },
+            ],
+        };
+        const withCacheBust = (url) => url.includes('?') ? `${url}&v=${Date.now()}` : `${url}?v=${Date.now()}`;
+        
+        async function fetchFrom(url) { 
+            const r = await fetch(withCacheBust(url), { cache: 'no-store' }); 
+            if (!r.ok) throw new Error(`HTTP ${r.status}`); 
+            const p = await r.json(); 
+            return p; 
+        }
+        
+        async function fetchMetrics() {
+            try { 
+                return await fetchFrom(REMOTE_METRICS_ENDPOINT); 
+            } catch (e) {
+                console.warn('Remote endpoint failed:', e.message);
+                try { 
+                    return await fetchFrom(LOCAL_METRICS_FALLBACK); 
+                } catch (e2) { 
+                    console.warn('Local fallback failed:', e2.message); 
+                    return placeholderData; 
                 }
             }
         }
-
-        function buildFeedFilters() {
-            const container = document.getElementById('feedFilters');
-            container.innerHTML = '';
-            FEED_TYPES.forEach((type) => {
-                const meta = FEED_META[type];
-                const chip = document.createElement('button');
-                chip.className = `chip ${activeFilters.has(type) ? 'active' : ''}`;
-                chip.textContent = meta ? meta.label : type;
-                chip.addEventListener('click', () => {
-                    if (activeFilters.has(type)) {
-                        activeFilters.delete(type);
-                        if (activeFilters.size === 0) FEED_TYPES.forEach((t) => activeFilters.add(t));
-                    } else {
-                        activeFilters.add(type);
-                    }
-                    buildFeedFilters();
-                    hydrateDashboard();
-                });
-                container.appendChild(chip);
-            });
+        
+        function renderStats(data) {
+            const summary = { ...(data.summary || {}), ...(data.server || {}) };
+            const grid = document.getElementById('statsGrid');
+            
+            grid.innerHTML = statsConfig.map((stat, i) => {
+                const value = summary[stat.key] ?? 0;
+                const displayValue = stat.format === 'duration' ? formatDuration(value) : formatNumber(value);
+                
+                return `
+                    <div class="stat-card" style="animation-delay: ${i * 50}ms">
+                        <div class="icon-wrapper" style="color: ${stat.color}">
+                            <i class="fas ${stat.icon}"></i>
+                        </div>
+                        <span class="label">${stat.label}</span>
+                        <span class="value count-up">${displayValue}</span>
+                        <span class="trend"><i class="fas fa-circle" style="font-size: 6px;"></i> Live</span>
+                    </div>
+                `;
+            }).join('');
         }
-
-        function renderSummary(summary) {
-            const grid = document.getElementById('summaryGrid');
-            const cards = [
-                { label: 'Active Builders', value: summary.builder_count, meta: 'Roster' },
-                { label: 'Projects Completed', value: summary.total_completed, meta: 'Lifetime' },
-                { label: 'Total Requests', value: summary.total_requests, meta: 'All time' },
-                { label: 'Completion Ratio', value: formatPercent(summary.request_completion_ratio ?? 0), meta: 'Fulfilment' },
-                { label: 'Ratings Logged', value: summary.total_ratings, meta: 'Community feedback' }
-            ];
-            grid.innerHTML = cards.map((card) => `
-                <article class="stat-card">
-                    <p class="label">${card.label}</p>
-                    <p class="value">${typeof card.value === 'number' ? formatNumber(card.value) : card.value}</p>
-                    <p class="meta">${card.meta}</p>
-                </article>
-            `).join('');
+        function renderBuilders(builders) {
+            const grid = document.getElementById('buildersGrid');
+            const topBuilders = (builders || []).slice(0, 6);
+            
+            if (!topBuilders.length) {
+                grid.innerHTML = '<p style="color: var(--text-muted); text-align: center; padding: 40px 0;">No builders data available</p>';
+                return;
+            }
+            
+            grid.innerHTML = topBuilders.map((builder, i) => {
+                const url = builder.thread_id ? `${FORUM_CHANNEL_BASE}${builder.server_id || ''}/${builder.thread_id}` : '#';
+                const avatar = builder.avatar_url 
+                    ? `<img src="${builder.avatar_url}" alt="${builder.shop_name}" />` 
+                    : `<i class="fas fa-home" style="font-size: 28px; color: var(--primary);"></i>`;
+                const rankBadge = i < 3 ? `<div class="rank-badge">#${i + 1}</div>` : '';
+                
+                return `
+                    <a href="${url}" target="_blank" class="builder-card rank-${i + 1}" title="Visit ${builder.shop_name}">
+                        ${rankBadge}
+                        <div class="builder-avatar">${avatar}</div>
+                        <div class="builder-info">
+                            <div class="builder-name">${builder.shop_name}</div>
+                            <div class="builder-meta">
+                                <span class="stat">
+                                    <i class="fas fa-check-circle"></i>
+                                    ${builder.completed_projects || 0}
+                                </span>
+                                <span class="stat rating">
+                                    <i class="fas fa-star"></i>
+                                    ${(builder.average_rating || 0).toFixed(1)}
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                `;
+            }).join('');
         }
-
-        function renderServer(server) {
-            const panel = document.getElementById('serverPanel');
-            const blocks = [
-                { label: 'Members', value: server.total_members },
-                { label: 'Joined Today', value: server.joined_today },
-                { label: 'Active Shops', value: server.active_shops },
-                { label: 'Avg Response', value: formatDuration(server.avg_response_time) }
-            ];
-            document.getElementById('heroAvgResponse').textContent = formatDuration(server.avg_response_time);
-            panel.innerHTML = blocks.map((b) => `
-                <div class="server-block">
-                    <span>${b.label}</span>
-                    <span>${typeof b.value === 'number' ? formatNumber(b.value) : b.value}</span>
+        
+        function renderActivityFeed(activities) {
+            const list = document.getElementById('activityList');
+            const count = document.getElementById('feedCount');
+            
+            // Merge with cache
+            mergeActivities(activities);
+            
+            count.textContent = activityCache.length;
+            
+            if (!activityCache.length) {
+                list.innerHTML = '<p style="color: var(--text-muted); text-align: center; padding: 60px 20px;">No recent activity</p>';
+                return;
+            }
+            
+            list.innerHTML = activityCache.map((item, index) => {
+                const icon = activityIcons[item.type] || activityIcons.sent;
+                const typeClass = `type-${item.type}`;
+                const link = item.thread_id && item.server_id
+                    ? `<a href="${FORUM_CHANNEL_BASE}${item.server_id}/${item.thread_id}" target="_blank">${item.shop_name || 'Unknown'}</a>`
+                    : `<strong>${item.shop_name || 'Unknown'}</strong>`;
+                
+                return `
+                    <div class="activity-item" style="animation-delay: ${index * 30}ms">
+                        <div class="activity-icon ${typeClass}">
+                            <i class="fas ${icon}"></i>
+                        </div>
+                        <div class="activity-content">
+                            <div class="activity-message">${item.message || `Activity at ${link}`}</div>
+                            <div class="activity-meta">
+                                <span class="activity-time">
+                                    <i class="far fa-clock"></i>
+                                    ${timeAgo(item.timestamp)}
+                                </span>
+                                <span class="activity-type-badge">${item.type || 'event'}</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+            
+            // Auto-scroll to top on new items
+            list.scrollTop = 0;
+        }
+        function renderPipeline(pipeline) {
+            const list = document.getElementById('pipelineList');
+            const items = pipeline || placeholderData.pipeline;
+            
+            list.innerHTML = items.map((item, i) => {
+                const ratio = Math.min(1, (item.value || 0) / (item.max || 100));
+                
+                return `
+                    <div class="pipeline-item" style="animation-delay: ${i * 50}ms">
+                        <div class="pipeline-info">
+                            <div class="pipeline-label">${item.label}</div>
+                            <div class="pipeline-trend">${item.trend || ''}</div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="transform: scaleX(${ratio})"></div>
+                            </div>
+                        </div>
+                        <div class="pipeline-value">${formatNumber(item.value)}</div>
+                    </div>
+                `;
+            }).join('');
+        }
+        
+        function renderInsights(insights) {
+            const list = document.getElementById('insightsList');
+            const items = insights || placeholderData.insights;
+            
+            const getStatus = (item) => {
+                if (item.status) return item.status;
+                const score = (item.score || '').toLowerCase();
+                if (score.includes('healthy') || score.includes('on track') || score.includes('stable') || score.includes('good')) return 'good';
+                if (score.includes('monitor') || score.includes('attention') || score.includes('warning')) return 'warning';
+                if (score.includes('critical') || score.includes('alert')) return 'critical';
+                return 'good';
+            };
+            
+            list.innerHTML = items.map((item, i) => `
+                <div class="insight-card" style="animation-delay: ${i * 50}ms">
+                    <div class="insight-header">
+                        <div class="insight-title">
+                            <i class="fas fa-info-circle"></i>
+                            ${item.title}
+                        </div>
+                        <span class="insight-badge ${getStatus(item)}">${item.score}</span>
+                    </div>
+                    <div class="insight-detail">${item.detail}</div>
                 </div>
             `).join('');
         }
-
-        function renderBuilders(builders) {
-            const grid = document.getElementById('buildersGrid');
-            if (!builders || builders.length === 0) {
-                grid.innerHTML = '<p class="empty-state">No builder telemetry yet.</p>';
-                return;
+        
+        async function updateDashboard() {
+            try {
+                const data = await fetchMetrics();
+                
+                renderStats(data);
+                renderBuilders(data.topBuilders);
+                renderActivityFeed(data.activityLog);
+                renderPipeline(data.pipeline);
+                renderInsights(data.insights);
+            } catch (error) {
+                console.error('Dashboard update failed:', error);
             }
-            grid.innerHTML = builders.slice(0, 6).map((b, idx) => {
-                const link = b.thread_id ? `https://discord.com/channels/${b.server_id || ''}/${b.thread_id}` : '#';
-                return `
-                    <a class="builder-card" href="${link}" target="_blank" rel="noopener">
-                        <span class="rank">#${idx + 1}</span>
-                        <div class="name">${b.shop_name}</div>
-                        <div class="stats">${formatNumber(b.completed_projects)} builds · ⭐ ${Number(b.average_rating || 0).toFixed(1)}</div>
-                    </a>`;
-            }).join('');
         }
-
-        function renderPipeline(pipeline) {
-            const list = document.getElementById('pipelineList');
-            if (!pipeline || pipeline.length === 0) {
-                list.innerHTML = '<p class="empty-state">No live pipeline data.</p>';
-                return;
-            }
-            list.innerHTML = pipeline.map((item) => {
-                const ratio = Math.min(1, (item.value || 0) / (item.max || 100));
-                return `
-                    <article class="pipeline-item">
-                        <header>
-                            <div>
-                                <p style="font-size:0.85rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted);">${item.label}</p>
-                                <p class="trend">${item.trend || ''}</p>
-                            </div>
-                            <p class="value">${formatNumber(item.value)}</p>
-                        </header>
-                        <div class="pipeline-progress"><span style="transform:scaleX(${ratio});"></span></div>
-                    </article>`;
-            }).join('');
-        }
-
-        function renderInsights(insights) {
-            const list = document.getElementById('insightsGrid');
-            if (!insights || insights.length === 0) {
-                list.innerHTML = '<p class="empty-state">Insights will populate as activity flows in.</p>';
-                return;
-            }
-            list.innerHTML = insights.map((ins) => {
-                const status = (ins.status || '').toLowerCase().includes('warn') ? 'warning' : (ins.status || '').toLowerCase().includes('good') ? 'good' : ins.status || 'good';
-                return `
-                    <article class="insight-card">
-                        <h3>${ins.title}</h3>
-                        <p>${ins.detail}</p>
-                        <span class="insight-status ${status}">${ins.score}</span>
-                    </article>`;
-            }).join('');
-        }
-
-        function pruneFeed(entries) {
-            if (!entries) return [];
-            const cutoff = Date.now() / 1000 - MAX_FEED_DAYS * 86400;
-            return entries.filter((entry) => (entry.timestamp || 0) >= cutoff);
-        }
-
-        function renderActivity(entries) {
-            const feed = document.getElementById('activityFeed');
-            const filtered = pruneFeed(entries).filter((entry) => activeFilters.has(entry.type));
-            if (filtered.length === 0) {
-                feed.innerHTML = '<p class="empty-state">No activity for the selected filters.</p>';
-                return;
-            }
-            feed.innerHTML = filtered.map((entry) => {
-                const meta = FEED_META[entry.type] || { icon: '🌀', label: entry.type, color: 'rgba(255,255,255,0.08)' };
-                const link = entry.url || (entry.thread_id ? `https://discord.com/channels/${entry.server_id || ''}/${entry.thread_id}` : null);
-                const shop = entry.shop_name ? `<strong>${entry.shop_name}</strong>` : '';
-                return `
-                    <article class="activity-item">
-                        <div class="activity-icon" style="background:${meta.color}">${meta.icon}</div>
-                        <div class="activity-content">
-                            <div class="activity-message">${entry.message || shop}
-                                ${link ? `<a href="${link}" target="_blank" rel="noopener">jump →</a>` : ''}
-                            </div>
-                            <div class="activity-meta">
-                                <span>${meta.label}</span>
-                                <span>${timeAgo(entry.timestamp)}</span>
-                            </div>
-                        </div>
-                    </article>`;
-            }).join('');
-        }
-
-        async function hydrateDashboard() {
-            const data = await fetchMetrics();
-            renderSummary(data.summary || placeholder.summary);
-            renderServer(data.server || placeholder.server);
-            renderBuilders(data.topBuilders || placeholder.topBuilders);
-            renderPipeline(data.pipeline || placeholder.pipeline);
-            renderInsights(data.insights || placeholder.insights);
-            renderActivity(data.activityLog || placeholder.activityLog);
-        }
-
-        buildFeedFilters();
-        hydrateDashboard();
-        setInterval(hydrateDashboard, 60_000);
+        
+        // Initialize
+        loadActivityCache();
+        updateDashboard();
+        
+        // Auto-refresh every 5 seconds
+        setInterval(updateDashboard, 5000);
+        
+        // Clean old activity data daily
+        setInterval(() => {
+            const cutoff = Date.now() / 1000 - (ACTIVITY_RETENTION_DAYS * 86400);
+            activityCache = activityCache.filter(item => item.timestamp > cutoff);
+            saveActivityCache();
+        }, 86400000); // 24 hours
     </script>
 </body>
 </html>
