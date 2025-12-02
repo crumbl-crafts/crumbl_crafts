@@ -10,7 +10,7 @@
     "total_members": 324,
     "joined_today": 0,
     "active_shops": 5,
-    "avg_response_time": 0
+    "avg_response_time": 111.0
   },
   "topBuilders": [
     {
@@ -23,6 +23,15 @@
     }
   ],
   "activityLog": [
+    {
+      "type": "rejected",
+      "shop_name": "test1",
+      "message": "Request from tobolchi rejected",
+      "timestamp": 1764692074,
+      "thread_id": 1445447294122987632,
+      "server_id": 1301988304279048275,
+      "url": "https://discord.com/channels/1301988304279048275/1445447294122987632"
+    },
     {
       "type": "sent",
       "shop_name": "test1",
