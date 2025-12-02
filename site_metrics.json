@@ -2,15 +2,15 @@
   "summary": {
     "builder_count": 0,
     "total_completed": 0,
-    "total_requests": 2,
+    "total_requests": 0,
     "total_ratings": 0,
-    "request_completion_ratio": 0.0
+    "request_completion_ratio": 0
   },
   "topBuilders": [],
   "pipeline": [
     {
       "label": "Queued Requests",
-      "value": 2,
+      "value": 0,
       "trend": "0 new today"
     },
     {
