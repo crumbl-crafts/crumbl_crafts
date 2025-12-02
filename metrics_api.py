@@ -49,7 +49,7 @@ _metrics_payload_callback: Optional[Callable[[], Dict[str, Any]]] = None
 
 _metrics_cache: Optional[Dict[str, Any]] = None
 _metrics_cache_time: float = 0
-_CACHE_TTL = 1.0  # Cache for 1 second to reduce callback overhead
+_CACHE_TTL = 0.5  # Cache for 500ms for faster updates while reducing overhead
 
 def set_metrics_payload_callback(callback: Callable[[], Dict[str, Any]]) -> None:
     """Set the callback function that returns the metrics payload from bot memory."""
