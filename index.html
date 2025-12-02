@@ -378,6 +378,7 @@
         const pipelineListEl = document.getElementById('pipelineList');
         const insightsEl = document.getElementById('insights');
 
+        const METRICS_ENDPOINT = 'site_metrics.json';
         const formatNumber = (value) => Intl.NumberFormat('en-US').format(value);
         const metricsConfig = [
             { key: 'builder_count', label: 'Builders Live', accent: 'var(--accent)' },
@@ -414,9 +415,12 @@
 
         async function fetchMetrics() {
             try {
-                const res = await fetch('/api/metrics');
-                if (!res.ok) throw new Error('API unavailable');
-                return await res.json();
+                const url = `${METRICS_ENDPOINT}?v=${Date.now()}`;
+                const res = await fetch(url, { cache: 'no-store' });
+                if (!res.ok) throw new Error(`Endpoint unavailable (${res.status})`);
+                const payload = await res.json();
+                if (!payload.summary) throw new Error('Incomplete metrics payload');
+                return payload;
             } catch (error) {
                 console.warn('Falling back to placeholder data:', error.message);
                 return placeholderData;
@@ -483,10 +487,10 @@
 
         async function hydrateDashboard() {
             const data = await fetchMetrics();
-            renderSummary(data.summary);
-            renderLeaderboard(data.topBuilders);
-            renderPipeline(data.pipeline);
-            renderInsights(data.insights);
+            renderSummary(data.summary ?? placeholderData.summary);
+            renderLeaderboard(data.topBuilders ?? placeholderData.topBuilders);
+            renderPipeline(data.pipeline ?? placeholderData.pipeline);
+            renderInsights(data.insights ?? placeholderData.insights);
         }
 
         hydrateDashboard();
