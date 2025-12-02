@@ -207,7 +207,10 @@
             padding: 20px;
             position: relative; 
             overflow: hidden;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                        background 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                        border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                        box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             cursor: default;
         }
         .stat-card::before {
@@ -278,11 +281,21 @@
             color: var(--success); 
         }
         .count-up { 
-            animation: countFade 0.5s ease-out; 
+            animation: countFade 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
         }
         @keyframes countFade { 
-            from { opacity: 0; transform: translateY(8px); } 
-            to { opacity: 1; transform: translateY(0); } 
+            0% { 
+                opacity: 0; 
+                transform: translateY(10px) scale(0.95); 
+            }
+            50% {
+                opacity: 1;
+                transform: translateY(-2px) scale(1.05);
+            }
+            100% { 
+                opacity: 1; 
+                transform: translateY(0) scale(1); 
+            } 
         }
         .sidebar-panel {
             position: sticky;
@@ -794,24 +807,9 @@
                         <p class="tagline">Premium Bloxburg Builder Network</p>
                     </div>
                 </div>
-                <div style="display: flex; align-items: center; gap: 12px;">
-                    <div class="status-badge">
-                        <span class="status-dot"></span>
-                        <span id="statusText">LIVE</span>
-                    </div>
-                    <button id="refreshBtn" style="
-                        padding: 10px 20px;
-                        background: rgba(0, 212, 255, 0.1);
-                        border: 1px solid rgba(0, 212, 255, 0.3);
-                        border-radius: 50px;
-                        color: var(--primary);
-                        font-weight: 600;
-                        font-size: 0.85rem;
-                        cursor: pointer;
-                        transition: all 0.3s ease;
-                    " onmouseover="this.style.background='rgba(0, 212, 255, 0.2)'" onmouseout="this.style.background='rgba(0, 212, 255, 0.1)'">
-                        <i class="fas fa-sync-alt"></i> Refresh
-                    </button>
+                <div class="status-badge">
+                    <span class="status-dot"></span>
+                    <span id="statusText">LIVE</span>
                 </div>
             </header>
 
@@ -909,7 +907,6 @@
             { key: 'total_completed', label: 'Completed', icon: 'fa-check-circle', color: '#10b981' },
             { key: 'total_requests', label: 'Requests', icon: 'fa-paper-plane', color: '#7c3aed' },
             { key: 'total_ratings', label: 'Ratings', icon: 'fa-star', color: '#f59e0b' },
-            { key: 'active_shops', label: 'Active Shops', icon: 'fa-store', color: '#ff6b35' },
             { key: 'avg_response_time', label: 'Avg Response', icon: 'fa-clock', color: '#00d4ff', format: 'duration' }
         ];
         
@@ -925,6 +922,31 @@
         };
         // Local storage for activity feed persistence
         let activityCache = [];
+        let previousStats = {};
+        let lastActivityCount = 0;
+        
+        // Audio notification for new activity
+        const playNotificationSound = () => {
+            try {
+                const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                const oscillator = audioContext.createOscillator();
+                const gainNode = audioContext.createGain();
+                
+                oscillator.connect(gainNode);
+                gainNode.connect(audioContext.destination);
+                
+                oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
+                oscillator.type = 'sine';
+                
+                gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
+                
+                oscillator.start(audioContext.currentTime);
+                oscillator.stop(audioContext.currentTime + 0.3);
+            } catch (e) {
+                console.warn('Could not play notification sound:', e);
+            }
+        };
         
         const loadActivityCache = () => {
             try {
@@ -984,6 +1006,11 @@
             if (addedCount > 0) {
                 console.log(`Added ${addedCount} new activity entries`);
                 
+                // Play notification sound for new activities
+                if (lastActivityCount > 0) { // Don't play on initial load
+                    playNotificationSound();
+                }
+                
                 // Limit to MAX_ACTIVITY_ITEMS
                 if (activityCache.length > MAX_ACTIVITY_ITEMS) {
                     activityCache = activityCache.slice(0, MAX_ACTIVITY_ITEMS);
@@ -1002,7 +1029,6 @@
                 total_completed: 0, 
                 total_requests: 0, 
                 total_ratings: 0, 
-                active_shops: 0,
                 avg_response_time: 0,
                 request_completion_ratio: 0 
             },
@@ -1047,21 +1073,51 @@
             const summary = { ...(data.summary || {}), ...(data.server || {}) };
             const grid = document.getElementById('statsGrid');
             
-            grid.innerHTML = statsConfig.map((stat, i) => {
+            statsConfig.forEach((stat, i) => {
                 const value = summary[stat.key] ?? 0;
                 const displayValue = stat.format === 'duration' ? formatDuration(value) : formatNumber(value);
+                const previousValue = previousStats[stat.key];
+                const hasChanged = previousValue !== undefined && previousValue !== value;
                 
-                return `
-                    <div class="stat-card" style="animation-delay: ${i * 50}ms">
+                // Find existing card or create new one
+                let card = grid.querySelector(`[data-stat="${stat.key}"]`);
+                
+                if (!card) {
+                    card = document.createElement('div');
+                    card.className = 'stat-card';
+                    card.setAttribute('data-stat', stat.key);
+                    card.style.animationDelay = `${i * 50}ms`;
+                    card.innerHTML = `
                         <div class="icon-wrapper" style="color: ${stat.color}">
                             <i class="fas ${stat.icon}"></i>
                         </div>
                         <span class="label">${stat.label}</span>
-                        <span class="value count-up">${displayValue}</span>
+                        <span class="value" data-value-container></span>
                         <span class="trend"><i class="fas fa-circle" style="font-size: 6px;"></i> Live</span>
-                    </div>
-                `;
-            }).join('');
+                    `;
+                    grid.appendChild(card);
+                }
+                
+                const valueContainer = card.querySelector('[data-value-container]');
+                if (valueContainer && valueContainer.textContent !== displayValue) {
+                    valueContainer.textContent = displayValue;
+                    
+                    if (hasChanged) {
+                        // Add count-up animation only when value changes
+                        valueContainer.classList.remove('count-up');
+                        void valueContainer.offsetWidth; // Trigger reflow
+                        valueContainer.classList.add('count-up');
+                        
+                        // Add pulse effect to card
+                        card.style.transform = 'scale(1.05)';
+                        setTimeout(() => {
+                            card.style.transform = '';
+                        }, 300);
+                    }
+                }
+                
+                previousStats[stat.key] = value;
+            });
         }
         function renderBuilders(builders) {
             const grid = document.getElementById('buildersGrid');
@@ -1108,6 +1164,8 @@
             // Merge with cache
             mergeActivities(activities);
             
+            // Update activity count
+            lastActivityCount = activityCache.length;
             count.textContent = activityCache.length;
             
             if (!activityCache.length) {
@@ -1202,7 +1260,6 @@
                 
                 // Log the data source for debugging
                 console.log('Data source:', data.meta?.mode || 'unknown', 'Generated:', new Date((data.meta?.generated_at || 0) * 1000).toLocaleString());
-                console.log('Active shops:', data.summary?.active_shops || data.server?.active_shops || 0);
                 
                 renderStats(data);
                 renderBuilders(data.topBuilders);
@@ -1220,14 +1277,9 @@
         
         // Initialize
         loadActivityCache();
+        lastActivityCount = activityCache.length; // Set initial count to prevent sound on first load
         cleanOldActivities(); // Clean on startup
         updateDashboard();
-        
-        // Manual refresh button
-        document.getElementById('refreshBtn')?.addEventListener('click', () => {
-            console.log('Manual refresh triggered');
-            updateDashboard();
-        });
         
         // Auto-refresh every 5 seconds
         setInterval(updateDashboard, 5000);
