@@ -25,15 +25,6 @@
   ],
   "activityLog": [
     {
-      "type": "new_request_thread",
-      "shop_name": "Build-Request-Board",
-      "message": "tobolchi posted a new request: test3",
-      "timestamp": 1764696444,
-      "thread_id": 1445466394832404530,
-      "server_id": 1301988304279048275,
-      "url": "https://discord.com/channels/1301988304279048275/1445466394832404530"
-    },
-    {
       "type": "sent",
       "message": "Request sent by tobolchi",
       "shop_name": "test1",
@@ -88,5 +79,6 @@
       "score": "Manageable",
       "status": "good"
     }
-  ]
+  ],
+  "news": []
 }
