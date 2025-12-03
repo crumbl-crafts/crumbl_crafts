@@ -9,7 +9,7 @@
   "server": {
     "total_members": 326,
     "joined_today": 0,
-    "active_shops": 5,
+    "active_shops": 0,
     "avg_response_time": 0
   },
   "topBuilders": [
@@ -18,7 +18,7 @@
       "completed_projects": 0,
       "average_rating": 0.0,
       "thread_id": 1445854733121097728,
-      "avatar_url": null,
+      "avatar_url": "https://cdn.discordapp.com/avatars/1188381798925873172/701188d5cb6b52a4bef2890e211d4843.png?size=1024",
       "server_id": 1301988304279048275,
       "url": "https://discord.com/channels/1301988304279048275/1445854733121097728"
     }
@@ -33,8 +33,8 @@
     },
     {
       "label": "Active Shops",
-      "value": 5,
-      "trend": "5 open \u00b7 0 limited",
+      "value": 0,
+      "trend": "0 open \u00b7 0 limited \u00b7 0 24/7",
       "max": 20
     },
     {
@@ -59,9 +59,9 @@
     },
     {
       "title": "Live Shops",
-      "detail": "5 shops currently accepting commissions",
-      "score": "Healthy",
-      "status": "good"
+      "detail": "0 shops currently accepting commissions",
+      "score": "All paused",
+      "status": "warning"
     },
     {
       "title": "Queue Health",
@@ -70,91 +70,9 @@
       "status": "good"
     }
   ],
-  "news": [
-    {
-      "type": "trend",
-      "title": "Being Santa in Bloxburg PT1 \ud83c\udf85 #christmas #roblox #bloxburg #shorts",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1764795616.0,
-      "url": "https://www.youtube.com/watch?v=BwCYifBnbxQ",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "\ud83d\udd34I&#39;M DELETING MY BLOXBURG HOUSE...",
-      "description": "Description: \u2661\ufe0e. \u25dd \u2b50\ufe0fUSE STARCODE PEACH when buying robux or premium!\u2b50\ufe0f \ud83c\udf99\ufe0fBe sure to SUBSCRIBE   to ...",
-      "source": "YouTube",
-      "timestamp": 1764794999.0,
-      "url": "https://www.youtube.com/watch?v=6HyPXBpTOiU",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "2 different styles\ud83e\udd20 #roblox #welcometobloxburg #bloxburg #robloxshorts #bloxburgroblox #robloxdti",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1764791141.0,
-      "url": "https://www.youtube.com/watch?v=l3ohj8NJBM0",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "VLOGMAS DAY 3 !!!! come spend a morning with me! #vlogmas #roblox #bloxburg #bloxburgrp #december",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1764790849.0,
-      "url": "https://www.youtube.com/watch?v=Z44kfYlUJG4",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "1 COLOR ONLY BUILD BATTLE in BLOXBURG",
-      "description": "6 Builders and only 1 color what do you think they can come up with? Become A Channel Member by pres...",
-      "source": "YouTube",
-      "timestamp": 1764788468.0,
-      "url": "https://www.youtube.com/watch?v=uJQWfVIGngQ",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "game_update",
-      "title": "New Winter Update Available!",
-      "description": "Explore new winter-themed furniture and decorations",
-      "source": "Bloxburg Official",
-      "timestamp": 1764785041.3872247,
-      "url": "https://twitter.com/BloxburgGame",
-      "icon": "fa-gamepad"
-    },
-    {
-      "type": "trend",
-      "title": "Modern Mansion Builds Trending",
-      "description": "Community showcasing stunning modern architecture",
-      "source": "YouTube",
-      "timestamp": 1764781441.387226,
-      "url": "https://youtube.com/results?search_query=bloxburg+modern+mansion",
-      "icon": "fa-fire"
-    },
-    {
-      "type": "tip",
-      "title": "Money Making Guide 2024",
-      "description": "Best jobs and strategies to earn cash quickly",
-      "source": "Community Guide",
-      "timestamp": 1764777841.3872266,
-      "url": "#",
-      "icon": "fa-lightbulb"
-    },
-    {
-      "type": "community",
-      "title": "Weekly Build Contest",
-      "description": "Submit your best holiday-themed builds to win prizes!",
-      "source": "Crumbl Crafts",
-      "timestamp": 1764774241.387227,
-      "url": "#",
-      "icon": "fa-trophy"
-    }
-  ],
+  "news": [],
   "meta": {
-    "generated_at": 1764798247.5463533,
+    "generated_at": 1764798823.7817636,
     "mode": "memory",
     "refresh_interval": 2000
   }
