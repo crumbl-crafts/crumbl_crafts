@@ -33,13 +33,6 @@
             --text-muted: #b0b8d0;
             --border: rgba(255, 255, 255, 0.15);
             --glow: rgba(255, 23, 68, 0.3);
-            --shine-swipe: linear-gradient(135deg, transparent 40%, rgba(255, 255, 255, 0.25) 50%, transparent 60%);
-            --patriot-border: linear-gradient(135deg, #ff1744 0%, #ffffff 25%, #2979ff 50%, #ffffff 75%, #ff1744 100%);
-            --news-border: linear-gradient(90deg, #ff1744 0%, #ffffff 50%, #2979ff 100%);
-            --halftone-a: radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.12) 1px, transparent 1px);
-            --halftone-b: radial-gradient(circle at 60% 70%, rgba(255, 255, 255, 0.12) 1px, transparent 1px);
-            --halftone-c: radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.09) 1.5px, transparent 1.5px);
-            --scanlines: repeating-linear-gradient(90deg, transparent 0px, transparent 2px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.03) 4px);
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; }
@@ -94,8 +87,8 @@
         }
         .glass {
             background: 
-                var(--halftone-a),
-                var(--halftone-b),
+                radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+                radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
                 radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.04) 0.8px, transparent 0.8px),
                 var(--panel);
             background-size: 8px 8px, 8px 8px, 4px 4px, 100% 100%;
@@ -160,12 +153,13 @@
                         inset 0 1px 0 rgba(255, 255, 255, 0.15),
                         inset 0 0 80px rgba(255, 255, 255, 0.08);
             background: 
-                var(--shine-swipe),
-                var(--scanlines),
+                linear-gradient(135deg, transparent 40%, rgba(255, 255, 255, 0.2) 50%, transparent 60%),
+                repeating-linear-gradient(90deg, transparent 0px, transparent 2px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.03) 4px),
                 radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.1) 1.5px, transparent 1.5px),
                 radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 1.5px, transparent 1.5px),
                 rgba(50, 60, 80, 0.7);
             background-size: 200% 200%, 8px 8px, 8px 8px, 8px 8px, 100% 100%;
+            animation: glassyShine 0.8s ease-out;
             transform: translateY(-2px) scale(1.01);
         }
         header.hero { 
@@ -221,39 +215,30 @@
             font-size: 0.9rem;
             font-weight: 500;
         }
-        .stat-card {
-            background-image: 
-                var(--patriot-border),
-                var(--shine-swipe),
-                var(--halftone-a),
-                var(--halftone-b),
-                linear-gradient(135deg, 
-                    rgba(255, 23, 68, 0.15) 0%,
-                    rgba(40, 50, 70, 0.6) 50%,
-                    rgba(41, 121, 255, 0.15) 100%);
-            background-size: 100% 100%, 220% 220%, 4px 4px, 6px 6px, 100% 100%;
-            background-position: 0 0, -220% 50%, 0 0, 3px 3px, 0 0;
-            background-repeat: no-repeat;
-            background-origin: border-box, padding-box, padding-box, padding-box, padding-box;
-            background-clip: border-box, padding-box, padding-box, padding-box, padding-box;
-            border: 4px solid transparent;
-            border-radius: 24px;
-            padding: 24px;
-            position: relative; 
-            overflow: visible;
-            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), 
-                        background-position 0.6s cubic-bezier(0.4, 0, 0.2, 1),
-                        box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            cursor: default;
-            will-change: transform;
-            contain: layout style;
-            transform: translateZ(0);
-            backdrop-filter: blur(20px);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5),
-                        0 0 0 4px rgba(255, 23, 68, 0.15),
-                        inset 0 2px 0 rgba(255, 255, 255, 0.1),
-                        inset 0 -2px 0 rgba(0, 0, 0, 0.2);
-            clip-path: polygon(0 8px, 8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%);
+        .status-badge {
+            display: inline-flex; 
+            align-items: center; 
+            gap: 10px;
+            padding: 10px 20px; 
+            border-radius: 50px;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            font-size: 0.85rem; 
+            font-weight: 600; 
+            color: var(--success);
+            animation: pulseGlow 2s ease-in-out infinite;
+        }
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 20px rgba(16, 185, 129, 0.2); }
+            50% { box-shadow: 0 0 30px rgba(16, 185, 129, 0.4); }
+        }
+        .status-dot { 
+            width: 8px; 
+            height: 8px; 
+            border-radius: 50%; 
+            background: var(--success); 
+            animation: blink 1.5s ease-in-out infinite;
+            box-shadow: 0 0 8px currentColor;
         }
         @keyframes blink { 
             0%, 100% { opacity: 1; transform: scale(1); } 
@@ -269,6 +254,41 @@
         @keyframes rotate {
             from { transform: rotate(0deg); }
             to { transform: rotate(360deg); }
+        }
+        .stats-grid {
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+            gap: 16px;
+        }
+        .stat-card {
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                radial-gradient(circle at 60% 70%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.08) 1.5px, transparent 1.5px),
+                radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.08) 1.5px, transparent 1.5px),
+                linear-gradient(135deg, 
+                    rgba(255, 23, 68, 0.15) 0%,
+                    rgba(40, 50, 70, 0.6) 50%,
+                    rgba(41, 121, 255, 0.15) 100%);
+            background-size: 4px 4px, 6px 6px, 8px 8px, 7px 7px, 100% 100%;
+            background-position: 0 0, 3px 3px, 5px 5px, 2px 6px, 0 0;
+            border: 4px solid rgba(255, 23, 68, 0.4);
+            border-radius: 24px;
+            padding: 24px;
+            position: relative; 
+            overflow: visible;
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), 
+                        border-color 0.3s ease;
+            cursor: default;
+            will-change: transform;
+            contain: layout style;
+            transform: translateZ(0);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5),
+                        0 0 0 4px rgba(255, 23, 68, 0.15),
+                        inset 0 2px 0 rgba(255, 255, 255, 0.1),
+                        inset 0 -2px 0 rgba(0, 0, 0, 0.2);
+            clip-path: polygon(0 8px, 8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%);
         }
         .stat-card::before {
             content: '';
@@ -309,17 +329,33 @@
         }
         .stat-card:hover { 
             transform: translateY(-8px) scale(1.03); 
-            animation: glassyShine 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+            border-color: rgba(255, 23, 68, 0.8); 
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7), 
                         0 0 0 6px rgba(255, 23, 68, 0.6),
-                        0 0 40px rgba(255, 23, 68, 0.5),
-                        inset 0 2px 0 rgba(255, 255, 255, 0.25),
-                        inset 0 0 40px rgba(255, 255, 255, 0.15); 
+                        inset 0 2px 0 rgba(255, 255, 255, 0.25); 
+        }
+        .stat-card:hover::after {
+            animation: glassyShine 0.6s ease-out;
         }
         @keyframes glassyShine {
-            0% { background-position: 0 0, -220% 50%, 0 0, 3px 3px, 0 0; filter: brightness(1); }
-            50% { background-position: 0 0, 0% 50%, 0 0, 3px 3px, 0 0; filter: brightness(1.3); }
-            100% { background-position: 0 0, 220% 50%, 0 0, 3px 3px, 0 0; filter: brightness(1.1); }
+            0% { background-position: -200% 50%, 0 0, 0 0, 0 0, 0 0, 0 0; }
+            100% { background-position: 200% 50%, 0 0, 0 0, 0 0, 0 0, 0 0; }
+        }
+
+        .stat-card .icon-wrapper { 
+            width: 48px; 
+            height: 48px; 
+            border-radius: 12px; 
+            display: grid; 
+            place-items: center; 
+            font-size: 24px; 
+            margin-bottom: 16px;
+            background: var(--glow);
+            position: relative;
+        }
+        .stat-card .icon-wrapper i {
+            position: relative;
+            z-index: 1;
         }
         .stat-card .label { 
             color: var(--text-muted); 
@@ -512,20 +548,12 @@
         }
 
         .builder-card:hover, .podium-card:hover { 
-            animation: cartoonPop 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+            transform: translateY(-6px) scale(1.03);
             box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7), 
                         0 0 0 6px rgba(255, 23, 68, 0.6),
-                        0 0 50px rgba(255, 23, 68, 0.6),
-                        inset 0 2px 0 rgba(255, 255, 255, 0.25),
-                        inset 0 0 30px rgba(255, 255, 255, 0.1); 
+                        inset 0 2px 0 rgba(255, 255, 255, 0.25); 
             border-color: rgba(255, 23, 68, 0.8);
             filter: brightness(1.15);
-        }
-        @keyframes cartoonPop {
-            0% { transform: translateY(0) scale(1); }
-            40% { transform: translateY(-8px) scale(1.05) rotate(1deg); }
-            70% { transform: translateY(-4px) scale(1.02) rotate(-0.5deg); }
-            100% { transform: translateY(-6px) scale(1.03) rotate(0deg); }
         }
 
         .podium-card.rank-1 .rank-badge { background: linear-gradient(135deg, #ffd700, #ffa500); color: #000; }
@@ -682,15 +710,11 @@
             height: 6px;
             border-radius: 50%;
             background: var(--primary);
-            box-shadow: 0 0 8px rgba(255, 23, 68, 0.6);
+            animation: pulse 2s ease-in-out infinite;
         }
-        .feed-stat:hover .dot {
-            animation: pulsePop 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
-        }
-        @keyframes pulsePop {
-            0% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.4); opacity: 0.8; box-shadow: 0 0 16px rgba(255, 23, 68, 0.8); }
-            100% { transform: scale(1.2); opacity: 1; box-shadow: 0 0 12px rgba(255, 23, 68, 0.7); }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.8); }
         }
         .activity-list { 
             flex: 1;
@@ -764,15 +788,13 @@
             background-size: 20px 100%, 6px 6px, 6px 6px, 100% 100%;
             border-color: rgba(255, 23, 68, 0.6);
             box-shadow: 0 8px 32px rgba(255, 23, 68, 0.4),
-                        0 0 40px rgba(41, 121, 255, 0.3),
-                        inset 0 0 20px rgba(255, 255, 255, 0.08);
-            animation: slideInBounce 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+                        0 0 40px rgba(41, 121, 255, 0.3);
+            animation: slideInBounce 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         }
         @keyframes slideInBounce {
             0% { transform: translateX(0) scale(1); }
-            40% { transform: translateX(8px) scale(1.04); }
-            70% { transform: translateX(3px) scale(1.01); }
-            100% { transform: translateX(5px) scale(1.02); }
+            50% { transform: translateX(6px) scale(1.03); }
+            100% { transform: translateX(4px) scale(1.02); }
         }
         .activity-icon { 
             width: 40px; 
@@ -977,28 +999,23 @@
         .news-card {
             display: flex;
             gap: 16px;
-            align-items: center;
             padding: 18px;
-            background-image: 
-                var(--news-border),
-                var(--shine-swipe),
-                radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.12) 1px, transparent 1px),
-                radial-gradient(circle at 65% 60%, rgba(255, 255, 255, 0.08) 1.5px, transparent 1.5px),
+            background: 
+                radial-gradient(circle at 15% 50%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                radial-gradient(circle at 45% 50%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                radial-gradient(circle at 75% 50%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                radial-gradient(circle at 30% 70%, rgba(255, 255, 255, 0.08) 1.5px, transparent 1.5px),
                 linear-gradient(90deg, 
                     rgba(255, 23, 68, 0.25) 0%,
                     rgba(40, 50, 70, 0.7) 20%,
                     rgba(40, 50, 70, 0.7) 80%,
                     rgba(41, 121, 255, 0.25) 100%);
-            background-size: 100% 100%, 220% 220%, 5px 5px, 7px 7px, 100% 100%;
-            background-position: 0 0, -220% 50%, 0 0, 2px 2px, 0 0;
-            background-repeat: no-repeat;
-            background-origin: border-box, padding-box, padding-box, padding-box, padding-box;
-            background-clip: border-box, padding-box, padding-box, padding-box, padding-box;
+            background-size: 5px 5px, 5px 5px, 5px 5px, 7px 7px, 100% 100%;
+            background-position: 0 0, 2px 2px, 4px 4px, 3px 5px, 0 0;
             border-radius: 18px;
-            border: 4px solid transparent;
+            border: 4px solid rgba(255, 23, 68, 0.5);
             transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55), 
-                        background-position 0.6s cubic-bezier(0.4, 0, 0.2, 1),
-                        box-shadow 0.3s ease;
+                        border-color 0.3s ease;
             text-decoration: none;
             color: inherit;
             will-change: transform;
@@ -1025,24 +1042,18 @@
             box-shadow: 0 4px 12px rgba(255, 23, 68, 0.6);
         }
         .news-card:hover {
-            animation: newsSlideIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards,
-                       newsShine 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+            border-color: rgba(255, 23, 68, 0.8);
             box-shadow: 0 12px 48px rgba(0, 0, 0, 0.7), 
                         0 0 0 4px rgba(255, 23, 68, 0.6),
-                        0 0 40px rgba(255, 23, 68, 0.5),
-                        inset 0 1px 0 rgba(255, 255, 255, 0.2),
-                        inset 0 0 30px rgba(255, 255, 255, 0.1);
+                        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            transform: translateX(8px) scale(1.02);
+            filter: brightness(1.1);
         }
         @keyframes newsSlideIn {
             0% { transform: translateX(0) scale(1); }
             40% { transform: translateX(12px) scale(1.04) rotate(1deg); }
             70% { transform: translateX(6px) scale(1.02) rotate(-0.5deg); }
             100% { transform: translateX(8px) scale(1.03) rotate(0deg); }
-        }
-        @keyframes newsShine {
-            0% { background-position: 0 0, -220% 50%, 0 0, 2px 2px, 0 0; filter: brightness(1); }
-            50% { background-position: 0 0, 0% 50%, 0 0, 2px 2px, 0 0; filter: brightness(1.25); }
-            100% { background-position: 0 0, 220% 50%, 0 0, 2px 2px, 0 0; filter: brightness(1.1); }
         }
         .news-icon {
             width: 48px;
@@ -1199,15 +1210,6 @@
                 font-size: 1rem;
             }
         }
-
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
-        }
-
         .skeleton { 
             background: linear-gradient(90deg, rgba(255,255,255,0.03) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.03) 75%); 
             background-size: 200% 100%; 
@@ -1652,23 +1654,25 @@
                 previousStats[stat.key] = value;
             });
         }
-        let lastBuildersHash = null;
+        let lastBuildersHash = '';
         
         function renderBuilders(builders) {
             const grid = document.getElementById('buildersGrid');
             const topBuilders = (builders || []).slice(0, 6);
             
-            // Hash builder data to detect changes (use special marker for empty)
-            const buildersHash = topBuilders.length ? topBuilders.map(b => `${b.shop_name}-${b.completed_projects}-${b.average_rating}`).join('|') : '__EMPTY__';
+            if (!topBuilders.length) {
+                if (!grid.querySelector('p')) {
+                    grid.innerHTML = '<p style="color: var(--text-muted); text-align: center; padding: 40px 0;">No builders data available</p>';
+                }
+                return;
+            }
+            
+            // Hash builder data to detect changes
+            const buildersHash = topBuilders.map(b => `${b.shop_name}-${b.completed_projects}-${b.average_rating}`).join('|');
             if (buildersHash === lastBuildersHash) {
                 return; // No changes, skip render
             }
             lastBuildersHash = buildersHash;
-            
-            if (!topBuilders.length) {
-                grid.innerHTML = '<p style="color: var(--text-muted); text-align: center; padding: 40px 0;">No builders data available</p>';
-                return;
-            }
             
             // Separate top 3 (podium) from the rest
             const top3 = topBuilders.slice(0, 3);
@@ -1809,7 +1813,7 @@
                 list.scrollTop = 0;
             }
         }
-        let lastNewsHash = null;
+        let lastNewsHash = '';
         
         function renderNews(news) {
             const list = document.getElementById('newsList');
@@ -1901,14 +1905,14 @@
             }
         }
         
-        let lastPipelineHash = null;
+        let lastPipelineHash = '';
         
         function renderPipeline(pipeline) {
             const list = document.getElementById('pipelineList');
             const items = pipeline || placeholderData.pipeline;
             
             // Only re-render if data changed
-            const pipelineHash = items.length ? items.map(i => `${i.label}-${i.value}`).join('|') : '__EMPTY__';
+            const pipelineHash = items.map(i => `${i.label}-${i.value}`).join('|');
             if (pipelineHash === lastPipelineHash) return;
             lastPipelineHash = pipelineHash;
             
@@ -1934,14 +1938,14 @@
             }
         }
         
-        let lastInsightsHash = null;
+        let lastInsightsHash = '';
         
         function renderInsights(insights) {
             const list = document.getElementById('insightsList');
             const items = insights || placeholderData.insights;
             
             // Only re-render if data changed
-            const insightsHash = items.length ? items.map(i => `${i.title}-${i.score}`).join('|') : '__EMPTY__';
+            const insightsHash = items.map(i => `${i.title}-${i.score}`).join('|');
             if (insightsHash === lastInsightsHash) return;
             lastInsightsHash = insightsHash;
             
