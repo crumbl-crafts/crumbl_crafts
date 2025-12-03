@@ -57,11 +57,6 @@
             pointer-events: none;
             z-index: 0;
             mix-blend-mode: screen;
-            animation: gentleBreath 8s ease-in-out infinite;
-        }
-        @keyframes gentleBreath {
-            0%, 100% { opacity: 0.5; transform: scale(1); }
-            50% { opacity: 0.6; transform: scale(1.02); }
         }
         body::before {
             content: '';
@@ -108,7 +103,10 @@
             -webkit-backdrop-filter: blur(20px);
             position: relative;
             overflow: hidden;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                        border-color 0.3s ease;
+            contain: layout style paint;
+            transform: translateZ(0);
         }
         .glass::before {
             content: '';
@@ -123,7 +121,6 @@
                 #ff1744 100%);
             background-size: 200% 100%;
             opacity: 0.9;
-            animation: shimmerBorder 4s ease-in-out infinite;
             box-shadow: 0 0 15px rgba(255, 23, 68, 0.4),
                         0 2px 0 rgba(255, 255, 255, 0.3),
                         0 -2px 0 rgba(0, 0, 0, 0.3);
@@ -139,29 +136,30 @@
                 transparent 30%, 
                 rgba(255, 255, 255, 0.4) 50%, 
                 transparent 70%);
-            animation: shinePass 8s ease-in-out infinite;
+            transform: translate(-100%, -100%) rotate(45deg);
+            opacity: 0;
             pointer-events: none;
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        @keyframes shimmerBorder {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-        @keyframes shinePass {
-            0%, 100% { transform: translate(-100%, -100%) rotate(45deg); opacity: 0; }
-            10% { opacity: 0.6; }
-            20%, 80% { transform: translate(100%, 100%) rotate(45deg); opacity: 0; }
+
+        .glass:hover::after {
+            transform: translate(100%, 100%) rotate(45deg);
+            opacity: 0;
         }
         .glass:hover {
             border-color: rgba(255, 23, 68, 0.6);
             box-shadow: 0 20px 60px rgba(255, 23, 68, 0.4), 
                         0 0 80px rgba(41, 121, 255, 0.3),
-                        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+                        inset 0 1px 0 rgba(255, 255, 255, 0.15),
+                        inset 0 0 80px rgba(255, 255, 255, 0.08);
             background: 
+                linear-gradient(135deg, transparent 40%, rgba(255, 255, 255, 0.2) 50%, transparent 60%),
                 repeating-linear-gradient(90deg, transparent 0px, transparent 2px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.03) 4px),
                 radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.1) 1.5px, transparent 1.5px),
                 radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 1.5px, transparent 1.5px),
                 rgba(50, 60, 80, 0.7);
-            background-size: 8px 8px, 8px 8px, 8px 8px, 100% 100%;
+            background-size: 200% 200%, 8px 8px, 8px 8px, 8px 8px, 100% 100%;
+            animation: glassyShine 0.8s ease-out;
             transform: translateY(-2px) scale(1.01);
         }
         header.hero { 
@@ -186,8 +184,11 @@
             place-items: center;
             font-size: 32px;
             box-shadow: 0 8px 32px var(--primary-glow);
-            animation: logoFloat 3s ease-in-out infinite;
             position: relative;
+            transition: transform 0.3s ease;
+        }
+        .logo-icon:hover {
+            transform: translateY(-8px);
         }
         .logo-icon::after {
             content: '';
@@ -198,10 +199,6 @@
             z-index: -1;
             filter: blur(12px);
             opacity: 0.5;
-        }
-        @keyframes logoFloat {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
         }
         .logo-text h1 {
             font-size: 2rem;
@@ -275,36 +272,23 @@
                     rgba(41, 121, 255, 0.15) 100%);
             background-size: 4px 4px, 6px 6px, 8px 8px, 7px 7px, 100% 100%;
             background-position: 0 0, 3px 3px, 5px 5px, 2px 6px, 0 0;
-            border: 4px solid transparent;
-            border-image: linear-gradient(135deg, 
-                #ff1744 0%, 
-                #ffd700 25%,
-                #ffffff 50%,
-                #2979ff 75%,
-                #ff1744 100%) 1;
+            border: 4px solid rgba(255, 23, 68, 0.4);
             border-radius: 24px;
             padding: 24px;
             position: relative; 
             overflow: visible;
             transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), 
-                        background 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-                        border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-                        box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                        border-color 0.3s ease;
             cursor: default;
+            will-change: transform;
+            contain: layout style;
+            transform: translateZ(0);
             backdrop-filter: blur(20px);
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5),
                         0 0 0 4px rgba(255, 23, 68, 0.15),
                         inset 0 2px 0 rgba(255, 255, 255, 0.1),
                         inset 0 -2px 0 rgba(0, 0, 0, 0.2);
-            animation: gentleFloat 6s ease-in-out infinite;
             clip-path: polygon(0 8px, 8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%);
-        }
-        .stat-card:nth-child(2) { animation-delay: 0.5s; }
-        .stat-card:nth-child(3) { animation-delay: 1s; }
-        .stat-card:nth-child(4) { animation-delay: 1.5s; }
-        @keyframes gentleFloat {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-5px); }
         }
         .stat-card::before {
             content: '';
@@ -317,9 +301,12 @@
             border-right: 15px solid transparent;
             border-bottom: 12px solid var(--primary);
             filter: drop-shadow(0 -4px 8px rgba(255, 23, 68, 0.5));
-            animation: tailWiggle 3s ease-in-out infinite;
+            transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         }
-        @keyframes tailWiggle {
+        .stat-card:hover::before {
+            animation: tailWag 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        @keyframes tailWag {
             0%, 100% { transform: translateX(0) rotate(0deg); }
             25% { transform: translateX(-3px) rotate(-5deg); }
             75% { transform: translateX(3px) rotate(5deg); }
@@ -338,30 +325,21 @@
                 #ffffff 75%, 
                 #ff1744 100%);
             background-size: 200% 100%;
-            animation: sparkleShine 3s ease-in-out infinite;
             box-shadow: 0 0 15px rgba(255, 23, 68, 0.5);
-        }
-        @keyframes sparkleShine {
-            0%, 100% { background-position: 0% 50%; filter: brightness(1); }
-            50% { background-position: 100% 50%; filter: brightness(1.5); }
-        }
-        .stat-card:hover::before {
-            transform: scaleX(1);
         }
         .stat-card:hover { 
             transform: translateY(-8px) scale(1.03); 
-            background: 
-                repeating-linear-gradient(90deg, transparent 0px, transparent 2px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.03) 4px),
-                repeating-linear-gradient(0deg, transparent 0px, transparent 2px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.03) 4px),
-                radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.15) 1px, transparent 1px),
-                radial-gradient(circle at 60% 70%, rgba(255, 255, 255, 0.15) 1px, transparent 1px),
-                rgba(50, 60, 80, 0.7);
-            background-size: 8px 8px, 8px 8px, 4px 4px, 6px 6px, 100% 100%;
-            border-color: var(--primary); 
+            border-color: rgba(255, 23, 68, 0.8); 
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7), 
-                        0 0 0 6px rgba(255, 23, 68, 0.4),
-                        inset 0 2px 0 rgba(255, 255, 255, 0.2); 
-            animation: none;
+                        0 0 0 6px rgba(255, 23, 68, 0.6),
+                        inset 0 2px 0 rgba(255, 255, 255, 0.25); 
+        }
+        .stat-card:hover::after {
+            animation: glassyShine 0.6s ease-out;
+        }
+        @keyframes glassyShine {
+            0% { background-position: -200% 50%, 0 0, 0 0, 0 0, 0 0, 0 0; }
+            100% { background-position: 200% 50%, 0 0, 0 0, 0 0, 0 0, 0 0; }
         }
 
         .stat-card .icon-wrapper { 
@@ -505,12 +483,15 @@
             left: 50%;
             transform: translateX(-50%);
             font-size: 30px;
-            animation: starSpin 4s linear infinite;
             filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.8));
+            transition: transform 0.3s ease;
         }
-        @keyframes starSpin {
-            0%, 100% { transform: translateX(-50%) rotate(0deg) scale(1); }
-            50% { transform: translateX(-50%) rotate(180deg) scale(1.1); }
+        .podium-card.rank-1:hover::after {
+            animation: starSpinOnce 0.6s ease-out;
+        }
+        @keyframes starSpinOnce {
+            0% { transform: translateX(-50%) rotate(0deg) scale(1); }
+            100% { transform: translateX(-50%) rotate(360deg) scale(1.1); }
         }
         .podium-card.rank-1::before {
             content: 'CHAMPION';
@@ -549,13 +530,16 @@
             border-radius: 20px;
             padding: 16px 20px;
             position: relative;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                        border-color 0.3s ease;
             cursor: pointer;
             text-decoration: none;
             display: flex;
             align-items: center;
             gap: 12px;
-            backdrop-filter: blur(16px);
+            will-change: transform;
+            contain: layout style;
+            transform: translateZ(0);
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5),
                         0 0 0 3px rgba(255, 23, 68, 0.2),
                         inset 0 2px 0 rgba(255, 255, 255, 0.12),
@@ -565,17 +549,11 @@
 
         .builder-card:hover, .podium-card:hover { 
             transform: translateY(-6px) scale(1.03);
-            background: 
-                radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.15) 1.5px, transparent 1.5px),
-                radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.15) 1.5px, transparent 1.5px),
-                radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-                repeating-linear-gradient(90deg, transparent 0px, rgba(255, 255, 255, 0.02) 1px, transparent 2px, transparent 4px),
-                rgba(50, 60, 80, 0.9);
-            background-size: 10px 10px, 10px 10px, 5px 5px, 8px 8px, 100% 100%;
             box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7), 
                         0 0 0 6px rgba(255, 23, 68, 0.6),
-                        inset 0 2px 0 rgba(255, 255, 255, 0.2); 
+                        inset 0 2px 0 rgba(255, 255, 255, 0.25); 
             border-color: rgba(255, 23, 68, 0.8);
+            filter: brightness(1.15);
         }
 
         .podium-card.rank-1 .rank-badge { background: linear-gradient(135deg, #ffd700, #ffa500); color: #000; }
@@ -746,6 +724,8 @@
             gap: 10px; 
             padding-right: 4px;
             max-height: 100%;
+            contain: strict;
+            content-visibility: auto;
         }
         .activity-list::-webkit-scrollbar { 
             width: 6px; 
@@ -795,11 +775,6 @@
             background-size: 100% 200%;
             transform: scaleY(0);
             transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            animation: slideUpDown 3s ease-in-out infinite;
-        }
-        @keyframes slideUpDown {
-            0%, 100% { background-position: 0% 0%; }
-            50% { background-position: 0% 100%; }
         }
         .activity-item:hover::before {
             transform: scaleY(1);
@@ -957,11 +932,6 @@
             position: absolute;
             inset: 0;
             background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            animation: shimmer 2s infinite;
-        }
-        @keyframes shimmer {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
         }
         .insights-list { 
             display: grid; 
@@ -1043,15 +1013,12 @@
             background-size: 5px 5px, 5px 5px, 5px 5px, 7px 7px, 100% 100%;
             background-position: 0 0, 2px 2px, 4px 4px, 3px 5px, 0 0;
             border-radius: 18px;
-            border: 4px solid transparent;
-            border-image: linear-gradient(90deg, 
-                #ff1744 0%, 
-                #ffd700 50%,
-                #2979ff 100%) 1;
-            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            border: 4px solid rgba(255, 23, 68, 0.5);
+            transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55), 
+                        border-color 0.3s ease;
             text-decoration: none;
             color: inherit;
-            backdrop-filter: blur(15px);
+            will-change: transform;
             cursor: pointer;
             position: relative;
             overflow: visible;
@@ -1073,25 +1040,14 @@
             letter-spacing: 1.5px;
             border-radius: 6px;
             box-shadow: 0 4px 12px rgba(255, 23, 68, 0.6);
-            animation: breakingPulse 2s ease-in-out infinite;
-        }
-        @keyframes breakingPulse {
-            0%, 100% { transform: scale(1); box-shadow: 0 4px 12px rgba(255, 23, 68, 0.6); }
-            50% { transform: scale(1.05); box-shadow: 0 6px 20px rgba(255, 23, 68, 1); }
         }
         .news-card:hover {
-            background: 
-                repeating-linear-gradient(45deg, transparent 0px, rgba(255, 255, 255, 0.03) 1px, transparent 2px, transparent 8px),
-                repeating-linear-gradient(-45deg, transparent 0px, rgba(255, 255, 255, 0.03) 1px, transparent 2px, transparent 8px),
-                radial-gradient(circle at 15% 50%, rgba(255, 255, 255, 0.15) 1.5px, transparent 1.5px),
-                radial-gradient(circle at 85% 50%, rgba(255, 255, 255, 0.15) 1.5px, transparent 1.5px),
-                rgba(50, 60, 80, 0.8);
-            background-size: 16px 16px, 16px 16px, 5px 5px, 5px 5px, 100% 100%;
-            border-color: rgba(255, 23, 68, 0.6);
-            box-shadow: 0 12px 48px rgba(0, 0, 0, 0.6), 
-                        0 0 0 4px rgba(255, 23, 68, 0.4),
-                        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 23, 68, 0.8);
+            box-shadow: 0 12px 48px rgba(0, 0, 0, 0.7), 
+                        0 0 0 4px rgba(255, 23, 68, 0.6),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.2);
             transform: translateX(8px) scale(1.02);
+            filter: brightness(1.1);
         }
         @keyframes newsSlideIn {
             0% { transform: translateX(0) scale(1); }
@@ -1108,11 +1064,11 @@
             font-size: 20px;
             flex-shrink: 0;
             position: relative;
-            animation: iconTwinkle 4s ease-in-out infinite;
+            filter: brightness(1) drop-shadow(0 0 4px currentColor);
+            transition: filter 0.3s ease;
         }
-        @keyframes iconTwinkle {
-            0%, 100% { filter: brightness(1) drop-shadow(0 0 2px currentColor); }
-            50% { filter: brightness(1.3) drop-shadow(0 0 8px currentColor); }
+        .news-icon:hover {
+            filter: brightness(1.3) drop-shadow(0 0 12px currentColor);
         }
         .news-icon::after {
             content: '';
@@ -1370,7 +1326,7 @@
         const FORUM_CHANNEL_BASE = 'https://discord.com/channels/';
         const ACTIVITY_RETENTION_DAYS = 7;
         const MAX_ACTIVITY_ITEMS = 100;
-        const REFRESH_INTERVAL = 1000; // 1 second for maximum responsiveness
+        const REFRESH_INTERVAL = 2000; // 2 seconds - optimized for performance
         const FETCH_TIMEOUT = 5000; // 5 second timeout for reliability
         
         const formatNumber = (v) => new Intl.NumberFormat('en-US').format(v ?? 0);
@@ -1792,7 +1748,9 @@
                 html += '</div>';
             }
             
-            grid.innerHTML = html;
+            if (grid.innerHTML !== html) {
+                grid.innerHTML = html;
+            }
         }
         
         function renderActivityFeed(activities) {
@@ -1818,7 +1776,7 @@
                 return;
             }
             
-            list.innerHTML = activityCache.map((item, index) => {
+            const activityHTML = activityCache.map((item, index) => {
                 const icon = activityIcons[item.type] || activityIcons.sent;
                 const typeClass = `type-${item.type}`;
                 // Use the URL from backend if available, otherwise construct from thread_id/server_id
@@ -1849,8 +1807,11 @@
                 `;
             }).join('');
             
-            // Auto-scroll to top on new items
-            list.scrollTop = 0;
+            if (list.innerHTML !== activityHTML) {
+                list.innerHTML = activityHTML;
+                // Auto-scroll to top on new items
+                list.scrollTop = 0;
+            }
         }
         let lastNewsHash = '';
         
@@ -1911,7 +1872,7 @@
                 return;
             }
             
-            list.innerHTML = items.map((item, i) => {
+            const newsHTML = items.map((item, i) => {
                 const typeClass = `type-${item.type || 'community'}`;
                 const icon = item.icon || 'fa-bullhorn';
                 
@@ -1938,6 +1899,10 @@
                     </a>
                 `;
             }).join('');
+            
+            if (list.innerHTML !== newsHTML) {
+                list.innerHTML = newsHTML;
+            }
         }
         
         let lastPipelineHash = '';
@@ -1951,7 +1916,7 @@
             if (pipelineHash === lastPipelineHash) return;
             lastPipelineHash = pipelineHash;
             
-            list.innerHTML = items.map((item, i) => {
+            const pipelineHTML = items.map((item, i) => {
                 const ratio = Math.min(1, (item.value || 0) / (item.max || 100));
                 
                 return `
@@ -1967,6 +1932,10 @@
                     </div>
                 `;
             }).join('');
+            
+            if (list.innerHTML !== pipelineHTML) {
+                list.innerHTML = pipelineHTML;
+            }
         }
         
         let lastInsightsHash = '';
@@ -1989,7 +1958,7 @@
                 return 'good';
             };
             
-            list.innerHTML = items.map((item, i) => `
+            const insightsHTML = items.map((item, i) => `
                 <div class="insight-card">
                     <div class="insight-header">
                         <div class="insight-title">
@@ -2001,6 +1970,10 @@
                     <div class="insight-detail">${item.detail}</div>
                 </div>
             `).join('');
+            
+            if (list.innerHTML !== insightsHTML) {
+                list.innerHTML = insightsHTML;
+            }
         }
         
         async function updateDashboard() {
@@ -2025,8 +1998,7 @@
                 
                 // Batch DOM updates using requestAnimationFrame
                 requestAnimationFrame(() => {
-                    console.log('[DEBUG] Full data object:', data);
-                    console.log('[DEBUG] News field:', data.news);
+                    // Render in order of visual priority
                     renderStats(data);
                     renderBuilders(data.topBuilders);
                     renderActivityFeed(data.activityLog);
@@ -2062,7 +2034,7 @@
         // Preload initial data
         updateDashboard();
         
-        // Aggressive refresh - every 2 seconds
+        // Optimized refresh - every 2 seconds for balance of speed and performance
         let refreshInterval = setInterval(updateDashboard, REFRESH_INTERVAL);
         
         // Clean old activity data every 6 hours to reduce overhead
