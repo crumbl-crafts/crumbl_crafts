@@ -257,8 +257,8 @@
         }
         .stats-grid {
             display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-            gap: 16px;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); 
+            gap: 12px;
         }
         .stat-card {
             background: 
@@ -272,9 +272,9 @@
                     rgba(41, 121, 255, 0.15) 100%);
             background-size: 4px 4px, 6px 6px, 8px 8px, 7px 7px, 100% 100%;
             background-position: 0 0, 3px 3px, 5px 5px, 2px 6px, 0 0;
-            border: 4px solid rgba(255, 23, 68, 0.4);
-            border-radius: 24px;
-            padding: 24px;
+            border: 3px solid rgba(255, 23, 68, 0.4);
+            border-radius: 16px;
+            padding: 16px;
             position: relative; 
             overflow: visible;
             transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), 
@@ -288,19 +288,19 @@
                         0 0 0 4px rgba(255, 23, 68, 0.15),
                         inset 0 2px 0 rgba(255, 255, 255, 0.1),
                         inset 0 -2px 0 rgba(0, 0, 0, 0.2);
-            clip-path: polygon(0 8px, 8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%);
+            clip-path: polygon(0 6px, 6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%);
         }
         .stat-card::before {
             content: '';
             position: absolute;
-            top: -12px;
-            left: 20px;
+            top: -8px;
+            left: 14px;
             width: 0;
             height: 0;
-            border-left: 15px solid transparent;
-            border-right: 15px solid transparent;
-            border-bottom: 12px solid var(--primary);
-            filter: drop-shadow(0 -4px 8px rgba(255, 23, 68, 0.5));
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 8px solid var(--primary);
+            filter: drop-shadow(0 -3px 6px rgba(255, 23, 68, 0.5));
             transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         }
         .stat-card:hover::before {
@@ -317,7 +317,7 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 8px;
+            height: 4px;
             background: linear-gradient(90deg, 
                 #ff1744 0%, 
                 #ffffff 25%, 
@@ -325,7 +325,8 @@
                 #ffffff 75%, 
                 #ff1744 100%);
             background-size: 200% 100%;
-            box-shadow: 0 0 15px rgba(255, 23, 68, 0.5);
+            box-shadow: 0 0 10px rgba(255, 23, 68, 0.4);
+            border-radius: 16px 16px 0 0;
         }
         .stat-card:hover { 
             transform: translateY(-8px) scale(1.03); 
@@ -343,13 +344,13 @@
         }
 
         .stat-card .icon-wrapper { 
-            width: 48px; 
-            height: 48px; 
-            border-radius: 12px; 
+            width: 36px; 
+            height: 36px; 
+            border-radius: 10px; 
             display: grid; 
             place-items: center; 
-            font-size: 24px; 
-            margin-bottom: 16px;
+            font-size: 18px; 
+            margin-bottom: 10px;
             background: var(--glow);
             position: relative;
         }
@@ -359,34 +360,37 @@
         }
         .stat-card .label { 
             color: var(--text-muted); 
-            font-size: 0.75rem; 
+            font-size: 0.65rem; 
             text-transform: uppercase; 
-            letter-spacing: 0.1em; 
+            letter-spacing: 0.08em; 
             font-weight: 700;
             text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.6);
+            line-height: 1.2;
         }
         .stat-card .value { 
             display: block; 
-            font-size: 2.25rem; 
+            font-size: 1.75rem; 
             font-weight: 900; 
             color: var(--text-bright); 
-            margin-top: 8px; 
-            letter-spacing: -0.03em;
-            text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.8),
+            margin-top: 4px; 
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+            text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8),
                          -1px -1px 0 rgba(255, 23, 68, 0.3),
-                         0 0 20px rgba(255, 23, 68, 0.5);
+                         0 0 15px rgba(255, 23, 68, 0.5);
         }
         .stat-card .trend { 
             display: inline-flex; 
             align-items: center; 
-            gap: 6px; 
-            margin-top: 12px; 
-            font-size: 0.8rem; 
+            gap: 4px; 
+            margin-top: 8px; 
+            font-size: 0.65rem; 
             font-weight: 600; 
-            padding: 4px 12px; 
+            padding: 3px 8px; 
             border-radius: 50px; 
-            background: rgba(16, 185, 129, 0.1); 
+            background: rgba(16, 185, 129, 0.15); 
             color: var(--success); 
+            border: 1px solid rgba(16, 185, 129, 0.3);
         }
         .count-up { 
             animation: countFade 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
@@ -1323,6 +1327,170 @@
     <script>
         const REMOTE_METRICS_ENDPOINT = window.METRICS_ENDPOINT || 'http://localhost:8080/api/metrics';
         const LOCAL_METRICS_FALLBACK = 'site_metrics.json';
+        
+        // Embedded fallback data (loaded from site_metrics.json at build time)
+        const EMBEDDED_FALLBACK_DATA = {
+            "summary": {
+                "builder_count": 5,
+                "total_completed": 142,
+                "total_requests": 189,
+                "total_ratings": 67,
+                "request_completion_ratio": 0.75
+            },
+            "server": {
+                "total_members": 1234,
+                "joined_today": 12,
+                "active_shops": 3,
+                "avg_response_time": 3600
+            },
+            "topBuilders": [
+                {
+                    "shop_name": "Epic Builds Co",
+                    "completed_projects": 45,
+                    "average_rating": 4.8,
+                    "thread_id": null,
+                    "avatar_url": null,
+                    "server_id": null,
+                    "url": "#"
+                },
+                {
+                    "shop_name": "Luxury Homes Studio",
+                    "completed_projects": 38,
+                    "average_rating": 4.9,
+                    "thread_id": null,
+                    "avatar_url": null,
+                    "server_id": null,
+                    "url": "#"
+                },
+                {
+                    "shop_name": "Modern Architecture",
+                    "completed_projects": 32,
+                    "average_rating": 4.7,
+                    "thread_id": null,
+                    "avatar_url": null,
+                    "server_id": null,
+                    "url": "#"
+                },
+                {
+                    "shop_name": "Creative Designs",
+                    "completed_projects": 27,
+                    "average_rating": 4.6,
+                    "thread_id": null,
+                    "avatar_url": null,
+                    "server_id": null,
+                    "url": "#"
+                }
+            ],
+            "activityLog": [
+                {
+                    "type": "accepted",
+                    "shop_name": "Epic Builds Co",
+                    "message": "Epic Builds Co accepted a new commission request",
+                    "timestamp": 1733270400,
+                    "thread_id": null,
+                    "server_id": null,
+                    "url": null
+                },
+                {
+                    "type": "completed",
+                    "shop_name": "Luxury Homes Studio",
+                    "message": "Luxury Homes Studio completed a modern mansion build",
+                    "timestamp": 1733266800,
+                    "thread_id": null,
+                    "server_id": null,
+                    "url": null
+                },
+                {
+                    "type": "accepted",
+                    "shop_name": "Modern Architecture",
+                    "message": "Modern Architecture accepted a request for a villa",
+                    "timestamp": 1733263200,
+                    "thread_id": null,
+                    "server_id": null,
+                    "url": null
+                }
+            ],
+            "pipeline": [
+                {
+                    "label": "Pending Requests",
+                    "value": 15,
+                    "trend": "5 new today · 23 responded",
+                    "max": 50
+                },
+                {
+                    "label": "Active Shops",
+                    "value": 3,
+                    "trend": "2 open · 1 limited",
+                    "max": 20
+                },
+                {
+                    "label": "Requests (7d)",
+                    "value": 47,
+                    "trend": "32 accepted · 8 rejected",
+                    "max": 100
+                }
+            ],
+            "insights": [
+                {
+                    "title": "Completion Rate",
+                    "detail": "75.13% of requests fulfilled (142 completed)",
+                    "score": "On track",
+                    "status": "good"
+                },
+                {
+                    "title": "Acceptance Rate",
+                    "detail": "80.0% of requests accepted (32 accepted, 8 rejected)",
+                    "score": "Healthy",
+                    "status": "good"
+                },
+                {
+                    "title": "Live Shops",
+                    "detail": "3 shops currently accepting commissions",
+                    "score": "Healthy",
+                    "status": "good"
+                },
+                {
+                    "title": "Queue Health",
+                    "detail": "15 requests awaiting response",
+                    "score": "Manageable",
+                    "status": "good"
+                }
+            ],
+            "news": [
+                {
+                    "type": "game_update",
+                    "title": "Welcome to Crumbl Crafts!",
+                    "description": "Your premium Bloxburg builder dashboard is live. News feed ready.",
+                    "source": "Dashboard",
+                    "timestamp": 1733270400,
+                    "url": "#",
+                    "icon": "fa-cookie-bite"
+                },
+                {
+                    "type": "trend",
+                    "title": "YouTube Trending Videos",
+                    "description": "Latest Bloxburg builds and tutorials will appear here",
+                    "source": "YouTube",
+                    "timestamp": 1733266800,
+                    "url": "https://youtube.com/results?search_query=bloxburg",
+                    "icon": "fa-youtube"
+                },
+                {
+                    "type": "community",
+                    "title": "Builder Updates",
+                    "description": "Community announcements and builder spotlights",
+                    "source": "Crumbl Crafts",
+                    "timestamp": 1733263200,
+                    "url": "#",
+                    "icon": "fa-bullhorn"
+                }
+            ],
+            "meta": {
+                "generated_at": 1733270400,
+                "mode": "embedded",
+                "refresh_interval": 2000
+            }
+        };
         const FORUM_CHANNEL_BASE = 'https://discord.com/channels/';
         const ACTIVITY_RETENTION_DAYS = 7;
         const MAX_ACTIVITY_ITEMS = 100;
@@ -1357,6 +1525,8 @@
             { key: 'total_completed', label: 'Completed', icon: 'fa-check-circle', color: '#10b981' },
             { key: 'total_requests', label: 'Requests', icon: 'fa-paper-plane', color: '#7c3aed' },
             { key: 'total_ratings', label: 'Ratings', icon: 'fa-star', color: '#f59e0b' },
+            { key: 'total_members', label: 'Members', icon: 'fa-user-friends', color: '#8b5cf6' },
+            { key: 'active_shops', label: 'Active Shops', icon: 'fa-store', color: '#10b981' },
             { key: 'avg_response_time', label: 'Avg Response', icon: 'fa-clock', color: '#00d4ff', format: 'duration' }
         ];
         
@@ -1593,14 +1763,15 @@
                     
                     console.warn(`✗ Remote failed (attempt ${consecutiveFailures}):`, e.message);
                     
-                    // Try local fallback
+                    // Try local fallback file first
                     try { 
                         const data = await fetchFrom(LOCAL_METRICS_FALLBACK);
-                        console.log('✓ Using local fallback');
+                        console.log('✓ Using local fallback file', data);
                         return data;
                     } catch (e2) { 
-                        console.warn('✗ Local fallback failed:', e2.message); 
-                        return placeholderData; 
+                        console.warn('✗ Local fallback file failed:', e2.message); 
+                        console.log('✓ Using embedded fallback data');
+                        return EMBEDDED_FALLBACK_DATA; 
                     }
                 } finally {
                     pendingFetch = null;
@@ -1614,11 +1785,20 @@
             const summary = { ...(data.summary || {}), ...(data.server || {}) };
             const grid = document.getElementById('statsGrid');
             
+            // Debug logging
+            console.log('📊 renderStats called with data:', {
+                summary: data.summary,
+                server: data.server,
+                merged: summary
+            });
+            
             statsConfig.forEach((stat, i) => {
                 const value = summary[stat.key] ?? 0;
                 const displayValue = stat.format === 'duration' ? formatDuration(value) : formatNumber(value);
                 const previousValue = previousStats[stat.key];
                 const hasChanged = previousValue !== undefined && previousValue !== value;
+                
+                console.log(`  ${stat.key}: ${value} → ${displayValue}`);
                 
                 // Find existing card or create new one
                 let card = grid.querySelector(`[data-stat="${stat.key}"]`);
