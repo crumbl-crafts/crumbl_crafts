@@ -63,6 +63,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "Weirdest Roblox game.. \ud83d\ude02\ud83d\ude02#bloxburg #lunchly #prime #ksi #loganpaul #horror",
+      "description": "Weirdest Roblox game.. #bloxburg #lunchly #prime #ksi #loganpaul #horror....",
+      "source": "YouTube",
+      "timestamp": 1764754227.0,
+      "url": "https://www.youtube.com/watch?v=hDXwiG-AV3A",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Never making a Lamp-Room again\ud83d\ude2d#roblox #bloxburg #troll #meme #fyp\u30b7 #idk #robloxbloxburg",
       "description": "...",
       "source": "YouTube",
@@ -72,20 +81,20 @@
     },
     {
       "type": "trend",
-      "title": "#superbearadventure #roblox #robloxedit #birdtrend #minecraft #bloxburg #superbear",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1764752186.0,
-      "url": "https://www.youtube.com/watch?v=R-qJpM66xy8",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
       "title": "#roblox #bloxburg #subscribe #games #99nightintheforest #play #robloxgames #playgame #shorts #short",
       "description": "...",
       "source": "YouTube",
       "timestamp": 1764748958.0,
       "url": "https://www.youtube.com/watch?v=g6ucSBju4EQ",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Weirdest Roblox game.. \ud83d\ude02\ud83d\ude02#bloxburg #lunchly #prime #ksi #loganpaul #horror",
+      "description": "roblox #hamoodhabibi #brainrot #cartoon #spongebob #rumi Weirdest Roblox game.. #bloxburg #lunchly #...",
+      "source": "YouTube",
+      "timestamp": 1764745256.0,
+      "url": "https://www.youtube.com/watch?v=vIfuitfCwCM",
       "icon": "fa-youtube"
     },
     {
@@ -132,19 +141,10 @@
       "timestamp": 1764726114.8730736,
       "url": "#",
       "icon": "fa-trophy"
-    },
-    {
-      "type": "trend",
-      "title": "D\u00eda 3 del Calendario de Adviento de Bloxburg \ud83d\udcc5\ud83c\udf84  #shorts #bloxburg #robloxshorts #roblox",
-      "description": "D\u00eda 3 del Calendario de Adviento de Bloxburg ------------------------------------------------- \u2b50 Mis...",
-      "source": "YouTube",
-      "timestamp": 1764722216.0,
-      "url": "https://www.youtube.com/watch?v=Lkx7HPDP10k",
-      "icon": "fa-youtube"
     }
   ],
   "meta": {
-    "generated_at": 1764753720.9398382,
+    "generated_at": 1764754921.2909582,
     "mode": "memory",
     "refresh_interval": 2000
   }
