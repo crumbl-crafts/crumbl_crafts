@@ -2108,8 +2108,8 @@
                 top3.forEach((builder, i) => {
                     const url = builder.url || 
                                (builder.thread_id && builder.server_id ? `${FORUM_CHANNEL_BASE}${builder.server_id}/${builder.thread_id}` : '#');
-                    const avatar = builder.avatar_url 
-                        ? `<img src="${builder.avatar_url}" alt="${builder.shop_name}" loading="lazy" />` 
+                    const avatar = builder.avatar_url && builder.avatar_url !== 'null' && builder.avatar_url !== ''
+                        ? `<img src="${builder.avatar_url}" alt="${builder.shop_name}" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\\'fas fa-home\\' style=\\'font-size: 32px; color: var(--primary);\\' ></i>';" />` 
                         : `<i class="fas fa-home" style="font-size: 32px; color: var(--primary);"></i>`;
                     const rankBadge = `<div class="rank-badge">#${i + 1}</div>`;
                     
@@ -2143,8 +2143,8 @@
                     const rank = i + 4;
                     const url = builder.url || 
                                (builder.thread_id && builder.server_id ? `${FORUM_CHANNEL_BASE}${builder.server_id}/${builder.thread_id}` : '#');
-                    const avatar = builder.avatar_url 
-                        ? `<img src="${builder.avatar_url}" alt="${builder.shop_name}" loading="lazy" />` 
+                    const avatar = builder.avatar_url && builder.avatar_url !== 'null' && builder.avatar_url !== ''
+                        ? `<img src="${builder.avatar_url}" alt="${builder.shop_name}" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\\'fas fa-home\\' style=\\'font-size: 20px; color: var(--primary);\\' ></i>';" />` 
                         : `<i class="fas fa-home" style="font-size: 20px; color: var(--primary);"></i>`;
                     
                     html += `
