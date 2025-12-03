@@ -73,6 +73,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "#roblox #robloxedit #robloxstory #bloxburg #memes #butifyoucloseyoureyes #robloxmemes",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1764756001.0,
+      "url": "https://www.youtube.com/watch?v=yml-ODAuUMw",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "siapa yang udah cobain misinya nih gimana pendapat kalian? #bloxburg #robloxevent #roblox",
       "description": "...",
       "source": "YouTube",
@@ -105,15 +114,6 @@
       "source": "YouTube",
       "timestamp": 1764748958.0,
       "url": "https://www.youtube.com/watch?v=g6ucSBju4EQ",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Weirdest Roblox game.. \ud83d\ude02\ud83d\ude02#bloxburg #lunchly #prime #ksi #loganpaul #horror",
-      "description": "Weirdest Roblox game.. #bloxburg #lunchly #prime #ksi #loganpaul #horror....",
-      "source": "YouTube",
-      "timestamp": 1764742501.0,
-      "url": "https://www.youtube.com/watch?v=J7qfd079EMU",
       "icon": "fa-youtube"
     },
     {
@@ -151,19 +151,10 @@
       "timestamp": 1764726114.8730736,
       "url": "#",
       "icon": "fa-trophy"
-    },
-    {
-      "type": "trend",
-      "title": "D\u00eda 3 del Calendario de Adviento de Bloxburg \ud83d\udcc5\ud83c\udf84  #shorts #bloxburg #robloxshorts #roblox",
-      "description": "D\u00eda 3 del Calendario de Adviento de Bloxburg ------------------------------------------------- \u2b50 Mis...",
-      "source": "YouTube",
-      "timestamp": 1764722216.0,
-      "url": "https://www.youtube.com/watch?v=Lkx7HPDP10k",
-      "icon": "fa-youtube"
     }
   ],
   "meta": {
-    "generated_at": 1764758520.9395666,
+    "generated_at": 1764759720.937879,
     "mode": "memory",
     "refresh_interval": 2000
   }
