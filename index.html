@@ -1654,7 +1654,6 @@
                 previousStats[stat.key] = value;
             });
         }
-        let lastBuildersHash = '';
         
         function renderBuilders(builders) {
             const grid = document.getElementById('buildersGrid');
@@ -1666,13 +1665,6 @@
                 }
                 return;
             }
-            
-            // Hash builder data to detect changes
-            const buildersHash = topBuilders.map(b => `${b.shop_name}-${b.completed_projects}-${b.average_rating}`).join('|');
-            if (buildersHash === lastBuildersHash) {
-                return; // No changes, skip render
-            }
-            lastBuildersHash = buildersHash;
             
             // Separate top 3 (podium) from the rest
             const top3 = topBuilders.slice(0, 3);
@@ -1813,7 +1805,6 @@
                 list.scrollTop = 0;
             }
         }
-        let lastNewsHash = '';
         
         function renderNews(news) {
             const list = document.getElementById('newsList');
@@ -1824,8 +1815,6 @@
             // Use sample data if no news available
             if (!items || !Array.isArray(items) || items.length === 0) {
                 console.log('[DEBUG] No news data from API, using fallback sample data');
-                // Don't cache this - always show fresh fallback
-                lastNewsHash = '';
                 items = [
                     {
                         type: 'game_update',
@@ -1858,14 +1847,6 @@
             }
             
             console.log('[DEBUG] Rendering', items.length, 'news items');
-            
-            // Only re-render if data changed
-            const newsHash = items.map(i => `${i.title}-${i.timestamp}`).join('|');
-            if (newsHash === lastNewsHash) {
-                console.log('[DEBUG] News hash unchanged, skipping render');
-                return;
-            }
-            lastNewsHash = newsHash;
             
             if (!items.length) {
                 list.innerHTML = '<p style="color: var(--text-muted); text-align: center; padding: 40px 0;">No news available</p>';
@@ -1905,16 +1886,9 @@
             }
         }
         
-        let lastPipelineHash = '';
-        
         function renderPipeline(pipeline) {
             const list = document.getElementById('pipelineList');
             const items = pipeline || placeholderData.pipeline;
-            
-            // Only re-render if data changed
-            const pipelineHash = items.map(i => `${i.label}-${i.value}`).join('|');
-            if (pipelineHash === lastPipelineHash) return;
-            lastPipelineHash = pipelineHash;
             
             const pipelineHTML = items.map((item, i) => {
                 const ratio = Math.min(1, (item.value || 0) / (item.max || 100));
@@ -1938,16 +1912,9 @@
             }
         }
         
-        let lastInsightsHash = '';
-        
         function renderInsights(insights) {
             const list = document.getElementById('insightsList');
             const items = insights || placeholderData.insights;
-            
-            // Only re-render if data changed
-            const insightsHash = items.map(i => `${i.title}-${i.score}`).join('|');
-            if (insightsHash === lastInsightsHash) return;
-            lastInsightsHash = insightsHash;
             
             const getStatus = (item) => {
                 if (item.status) return item.status;
