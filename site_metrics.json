@@ -60,9 +60,100 @@
       "status": "good"
     }
   ],
-  "news": [],
+  "news": [
+    {
+      "type": "trend",
+      "title": "ITS TIIIIIIME #rant #roblox #funny #memes #lego #robloxedit #gaming #robloxmemes #bloxburg",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1764788084.0,
+      "url": "https://www.youtube.com/watch?v=X4r24PFpmk0",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "game_update",
+      "title": "New Winter Update Available!",
+      "description": "Explore new winter-themed furniture and decorations",
+      "source": "Bloxburg Official",
+      "timestamp": 1764784596.0819223,
+      "url": "https://twitter.com/BloxburgGame",
+      "icon": "fa-gamepad"
+    },
+    {
+      "type": "trend",
+      "title": "Modern Mansion Builds Trending",
+      "description": "Community showcasing stunning modern architecture",
+      "source": "YouTube",
+      "timestamp": 1764780996.0819237,
+      "url": "https://youtube.com/results?search_query=bloxburg+modern+mansion",
+      "icon": "fa-fire"
+    },
+    {
+      "type": "trend",
+      "title": "WOULD YOU?? #booktok #bloxburg #robloxedit #travel",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1764780253.0,
+      "url": "https://www.youtube.com/watch?v=RgrLxdnaJic",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "day 3 advent calendar #christmas #roblox #bloxburg #fyp\u30b7 #speedbuild #iceskating",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1764779643.0,
+      "url": "https://www.youtube.com/watch?v=buXa0kQ5GTk",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Roblox 99nights in The Forest #roblox #froppy #robloxedit #99nightintheforest #bloxburg #gaming",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1764778845.0,
+      "url": "https://www.youtube.com/watch?v=c0hXNAkIjg4",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Ready or Not Turned EVIL! | Roblox Edits #roblox #bloxburg #funnyroblox #robloxedit",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1764778695.0,
+      "url": "https://www.youtube.com/watch?v=zKAIc4_EDTk",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "tip",
+      "title": "Money Making Guide 2024",
+      "description": "Best jobs and strategies to earn cash quickly",
+      "source": "Community Guide",
+      "timestamp": 1764777396.0819244,
+      "url": "#",
+      "icon": "fa-lightbulb"
+    },
+    {
+      "type": "trend",
+      "title": "Free Roblox Items?! #bloxburg #roblox",
+      "description": "FREE ITEMS ALERT! Redeem These Codes NOW! Don't miss out! Most of these codes expire very fast. Foll...",
+      "source": "YouTube",
+      "timestamp": 1764774698.0,
+      "url": "https://www.youtube.com/watch?v=djv1JzPRiXo",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Event Seluncuran Di Tengah Kota - Clip Roblox Bloxburg Indonesia #RobloxIndonesia",
+      "description": "klik text disamping panah \u25b6\ufe0f untuk full video. Kalian bisa membantu channel gua dengan klik subscrib...",
+      "source": "YouTube",
+      "timestamp": 1764774583.0,
+      "url": "https://www.youtube.com/watch?v=RB9av_FDqMQ",
+      "icon": "fa-youtube"
+    }
+  ],
   "meta": {
-    "generated_at": 1764788199.5933738,
+    "generated_at": 1764788202.541835,
     "mode": "memory",
     "refresh_interval": 2000
   }
