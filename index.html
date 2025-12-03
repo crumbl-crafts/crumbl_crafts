@@ -1269,11 +1269,12 @@
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .header-ad-carousel:hover {
-            box-shadow: 0 12px 48px rgba(255, 23, 68, 0.7), 
-                        0 0 0 3px rgba(255, 255, 255, 0.3),
-                        inset 0 2px 0 rgba(255, 255, 255, 0.3);
-            transform: translateY(-2px);
-            border-color: rgba(255, 23, 68, 1);
+            box-shadow: 0 12px 40px rgba(255, 23, 68, 0.6), 
+                        0 0 0 2px rgba(255, 255, 255, 0.25),
+                        inset 0 3px 0 rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px) scale(1.01);
+            border-color: rgba(255, 23, 68, 0.8);
+            backdrop-filter: blur(16px) saturate(1.3);
         }
         
         .header-ad-dot:hover {
@@ -1296,7 +1297,7 @@
 <body>
     <div class="wrapper">
         <div class="main-content">
-            <header class="glass hero" style="display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 20px 32px; min-height: 140px;">
+            <header class="glass hero" style="display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 28px 32px; min-height: 160px;">
                 <div class="logo-container" style="flex-shrink: 0;">
                     <div class="logo-icon">
                         <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23D2691E'/%3E%3Ccircle cx='30' cy='35' r='6' fill='%23654321'/%3E%3Ccircle cx='65' cy='40' r='5' fill='%23654321'/%3E%3Ccircle cx='45' cy='55' r='7' fill='%23654321'/%3E%3Ccircle cx='70' cy='65' r='5' fill='%23654321'/%3E%3Ccircle cx='30' cy='65' r='4' fill='%23654321'/%3E%3C/svg%3E" alt="Cookie" style="width: 40px; height: 40px;" />
@@ -1308,26 +1309,26 @@
                 </div>
                 
                 <!-- Premium Ad Carousel Integrated -->
-                <div class="header-ad-carousel" id="headerAdCarousel" style="flex: 1; max-width: 650px; height: 100px; position: relative; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 32px rgba(255, 23, 68, 0.5), 0 0 0 2px rgba(255, 255, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.2); border: 3px solid rgba(255, 23, 68, 0.8); background: rgba(20, 25, 35, 0.8); backdrop-filter: blur(10px);">
-                    <div class="header-ad-slide active" style="position: absolute; width: 100%; height: 100%; opacity: 1; transform: translateX(0) scale(1); transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);">
+                <div class="header-ad-carousel" id="headerAdCarousel" style="flex: 1; max-width: 700px; height: 110px; position: relative; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(255, 23, 68, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.15), inset 0 2px 0 rgba(255, 255, 255, 0.25); border: 2px solid rgba(255, 23, 68, 0.6); background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.08) 1px, transparent 1px), radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.08) 1px, transparent 1px), rgba(35, 45, 65, 0.4); background-size: 8px 8px, 8px 8px, 100% 100%; backdrop-filter: blur(12px) saturate(1.1);">
+                    <div class="header-ad-slide active" style="position: absolute; width: 100%; height: 100%; opacity: 1; transform: translate3d(0, 0, 0); transition: opacity 0.4s ease, transform 0.4s ease; will-change: opacity, transform;">
                         <img src="https://raw.githubusercontent.com/crumbl-crafts/crumbl_crafts/main/ad-banner.jpg" 
                              alt="Advertisement 1" 
                              loading="eager"
-                             style="width: 100%; height: 100%; object-fit: cover; image-rendering: crisp-edges;"
+                             style="width: 100%; height: 100%; object-fit: cover; image-rendering: -webkit-optimize-contrast; transform: translateZ(0);"
                              onerror="this.parentElement.innerHTML='<div style=&quot;padding:20px;text-align:center;background:linear-gradient(135deg, rgba(255,23,68,0.15), rgba(41,121,255,0.15));height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;&quot;><i class=&quot;fas fa-ad fa-3x&quot; style=&quot;color:var(--primary);text-shadow: 2px 2px 0 rgba(0,0,0,0.7), -1px -1px 0 rgba(255,255,255,0.1);&quot;></i><p style=&quot;margin-top:12px;font-weight:800;font-size:1rem;color:var(--text-bright);text-shadow: 2px 2px 0 rgba(0,0,0,0.7);&quot;>🎨 PREMIUM AD #1<br><small style=&quot;font-weight:400;font-size:0.75rem;color:var(--text-muted);&quot;>Your ad here</small></p></div>'" />
                     </div>
-                    <div class="header-ad-slide" style="position: absolute; width: 100%; height: 100%; opacity: 0; transform: translateX(100%) scale(0.95); transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);">
+                    <div class="header-ad-slide" style="position: absolute; width: 100%; height: 100%; opacity: 0; transform: translate3d(100%, 0, 0); transition: opacity 0.4s ease, transform 0.4s ease; will-change: opacity, transform;">
                         <img src="https://raw.githubusercontent.com/crumbl-crafts/crumbl_crafts/main/ad-banner-2.jpg" 
                              alt="Advertisement 2" 
                              loading="lazy"
-                             style="width: 100%; height: 100%; object-fit: cover; image-rendering: crisp-edges;"
+                             style="width: 100%; height: 100%; object-fit: cover; image-rendering: -webkit-optimize-contrast; transform: translateZ(0);"
                              onerror="this.parentElement.innerHTML='<div style=&quot;padding:20px;text-align:center;background:linear-gradient(135deg, rgba(41,121,255,0.15), rgba(0,230,118,0.15));height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;&quot;><i class=&quot;fas fa-image fa-3x&quot; style=&quot;color:var(--secondary);text-shadow: 2px 2px 0 rgba(0,0,0,0.7), -1px -1px 0 rgba(255,255,255,0.1);&quot;></i><p style=&quot;margin-top:12px;font-weight:800;font-size:1rem;color:var(--text-bright);text-shadow: 2px 2px 0 rgba(0,0,0,0.7);&quot;>💼 PREMIUM AD #2<br><small style=&quot;font-weight:400;font-size:0.75rem;color:var(--text-muted);&quot;>Your ad here</small></p></div>'" />
                     </div>
-                    <div class="header-ad-slide" style="position: absolute; width: 100%; height: 100%; opacity: 0; transform: translateX(100%) scale(0.95); transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);">
+                    <div class="header-ad-slide" style="position: absolute; width: 100%; height: 100%; opacity: 0; transform: translate3d(100%, 0, 0); transition: opacity 0.4s ease, transform 0.4s ease; will-change: opacity, transform;">
                         <img src="https://raw.githubusercontent.com/crumbl-crafts/crumbl_crafts/main/ad-banner-3.jpg" 
                              alt="Advertisement 3" 
                              loading="lazy"
-                             style="width: 100%; height: 100%; object-fit: cover; image-rendering: crisp-edges;"
+                             style="width: 100%; height: 100%; object-fit: cover; image-rendering: -webkit-optimize-contrast; transform: translateZ(0);"
                              onerror="this.parentElement.innerHTML='<div style=&quot;padding:20px;text-align:center;background:linear-gradient(135deg, rgba(0,230,118,0.15), rgba(255,23,68,0.15));height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;&quot;><i class=&quot;fas fa-bullhorn fa-3x&quot; style=&quot;color:var(--success);text-shadow: 2px 2px 0 rgba(0,0,0,0.7), -1px -1px 0 rgba(255,255,255,0.1);&quot;></i><p style=&quot;margin-top:12px;font-weight:800;font-size:1rem;color:var(--text-bright);text-shadow: 2px 2px 0 rgba(0,0,0,0.7);&quot;>⭐ PREMIUM AD #3<br><small style=&quot;font-weight:400;font-size:0.75rem;color:var(--text-muted);&quot;>Your ad here</small></p></div>'" />
                     </div>
                     <!-- Premium Ad Dots -->
@@ -2382,7 +2383,7 @@
                 
                 // Hide current with smooth fade
                 headerAdSlides[currentHeaderAdIndex].style.opacity = '0';
-                headerAdSlides[currentHeaderAdIndex].style.transform = 'translateX(-50px) scale(0.98)';
+                headerAdSlides[currentHeaderAdIndex].style.transform = 'translate3d(-30px, 0, 0)';
                 headerAdSlides[currentHeaderAdIndex].classList.remove('active');
                 headerAdDots[currentHeaderAdIndex].style.background = 'rgba(255,255,255,0.3)';
                 headerAdDots[currentHeaderAdIndex].style.boxShadow = 'none';
@@ -2392,23 +2393,23 @@
                 // Next index
                 currentHeaderAdIndex = (currentHeaderAdIndex + 1) % headerAdSlides.length;
                 
-                // Show next with smooth entrance
+                // Show next with smooth entrance using RAF for no jank
                 requestAnimationFrame(() => {
-                    setTimeout(() => {
-                        headerAdSlides[currentHeaderAdIndex].style.transform = 'translateX(0) scale(1)';
+                    requestAnimationFrame(() => {
+                        headerAdSlides[currentHeaderAdIndex].style.transform = 'translate3d(0, 0, 0)';
                         headerAdSlides[currentHeaderAdIndex].style.opacity = '1';
                         headerAdSlides[currentHeaderAdIndex].classList.add('active');
                         headerAdDots[currentHeaderAdIndex].style.background = 'var(--primary)';
                         headerAdDots[currentHeaderAdIndex].style.boxShadow = '0 0 12px var(--primary-glow), 0 0 0 2px rgba(255,23,68,0.4)';
                         headerAdDots[currentHeaderAdIndex].style.width = '12px';
                         headerAdDots[currentHeaderAdIndex].classList.add('active');
-                    }, 50);
+                    });
                 });
                 
                 // Reset non-active slides
                 headerAdSlides.forEach((slide, idx) => {
                     if (idx !== currentHeaderAdIndex && !slide.classList.contains('active')) {
-                        slide.style.transform = 'translateX(50px) scale(0.98)';
+                        slide.style.transform = 'translate3d(30px, 0, 0)';
                     }
                 });
             }
@@ -2421,10 +2422,10 @@
                 dot.addEventListener('click', () => {
                     if (idx === currentHeaderAdIndex) return;
                     
-                    const direction = idx > currentHeaderAdIndex ? -1 : 1;
+                    const direction = idx > currentHeaderAdIndex ? -30 : 30;
                     
                     headerAdSlides[currentHeaderAdIndex].style.opacity = '0';
-                    headerAdSlides[currentHeaderAdIndex].style.transform = `translateX(${direction * 50}px) scale(0.98)`;
+                    headerAdSlides[currentHeaderAdIndex].style.transform = `translate3d(${direction}px, 0, 0)`;
                     headerAdSlides[currentHeaderAdIndex].classList.remove('active');
                     headerAdDots[currentHeaderAdIndex].style.background = 'rgba(255,255,255,0.3)';
                     headerAdDots[currentHeaderAdIndex].style.boxShadow = 'none';
@@ -2434,15 +2435,15 @@
                     currentHeaderAdIndex = idx;
                     
                     requestAnimationFrame(() => {
-                        setTimeout(() => {
-                            headerAdSlides[currentHeaderAdIndex].style.transform = 'translateX(0) scale(1)';
+                        requestAnimationFrame(() => {
+                            headerAdSlides[currentHeaderAdIndex].style.transform = 'translate3d(0, 0, 0)';
                             headerAdSlides[currentHeaderAdIndex].style.opacity = '1';
                             headerAdSlides[currentHeaderAdIndex].classList.add('active');
                             headerAdDots[currentHeaderAdIndex].style.background = 'var(--primary)';
                             headerAdDots[currentHeaderAdIndex].style.boxShadow = '0 0 12px var(--primary-glow), 0 0 0 2px rgba(255,23,68,0.4)';
                             headerAdDots[currentHeaderAdIndex].style.width = '12px';
                             headerAdDots[currentHeaderAdIndex].classList.add('active');
-                        }, 50);
+                        });
                     });
                 });
             });
