@@ -8,31 +8,12 @@
   },
   "server": {
     "total_members": 326,
-    "joined_today": 1,
+    "joined_today": 0,
     "active_shops": 5,
     "avg_response_time": 0
   },
   "topBuilders": [],
-  "activityLog": [
-    {
-      "type": "new_request_thread",
-      "shop_name": "Build-Request-Board",
-      "message": "tobolchi posted a new request: test1",
-      "timestamp": 1764786935,
-      "thread_id": 1445845942535327964,
-      "server_id": 1301988304279048275,
-      "url": "https://discord.com/channels/1301988304279048275/1445845942535327964"
-    },
-    {
-      "type": "member_join",
-      "shop_name": "Server",
-      "message": "weirong0119 joined the server",
-      "timestamp": 1764756515,
-      "thread_id": null,
-      "server_id": 1301988304279048275,
-      "url": "https://discord.com/users/1445669115212861440"
-    }
-  ],
+  "activityLog": [],
   "pipeline": [
     {
       "label": "Pending Requests",
@@ -79,100 +60,9 @@
       "status": "good"
     }
   ],
-  "news": [
-    {
-      "type": "trend",
-      "title": "WOULD YOU?? #booktok #bloxburg #robloxedit #travel",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1764780253.0,
-      "url": "https://www.youtube.com/watch?v=RgrLxdnaJic",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Ready or Not Turned EVIL! | Roblox Edits #roblox #bloxburg #funnyroblox #robloxedit",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1764778695.0,
-      "url": "https://www.youtube.com/watch?v=zKAIc4_EDTk",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Free Roblox Items?! #bloxburg #roblox",
-      "description": "FREE ITEMS ALERT! Redeem These Codes NOW! Don't miss out! Most of these codes expire very fast. Foll...",
-      "source": "YouTube",
-      "timestamp": 1764774698.0,
-      "url": "https://www.youtube.com/watch?v=djv1JzPRiXo",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Event Seluncuran Di Tengah Kota - Clip Roblox Bloxburg Indonesia #RobloxIndonesia",
-      "description": "klik text disamping panah \u25b6\ufe0f untuk full video. Kalian bisa membantu channel gua dengan klik subscrib...",
-      "source": "YouTube",
-      "timestamp": 1764774583.0,
-      "url": "https://www.youtube.com/watch?v=RB9av_FDqMQ",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Our Winter Morning Routine in Bloxburg  #bloxburg #roblox #christmas #morningroutine #fyp",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1764763211.0,
-      "url": "https://www.youtube.com/watch?v=4zCngFNJmY0",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "#roblox #robloxedit #robloxstory #bloxburg #memes #butifyoucloseyoureyes #robloxmemes",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1764756001.0,
-      "url": "https://www.youtube.com/watch?v=yml-ODAuUMw",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "siapa yang udah cobain misinya nih gimana pendapat kalian? #bloxburg #robloxevent #roblox",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1764754619.0,
-      "url": "https://www.youtube.com/watch?v=LrW94cyca24",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Weirdest Roblox game.. \ud83d\ude02\ud83d\ude02#bloxburg #lunchly #prime #ksi #loganpaul #horror",
-      "description": "Weirdest Roblox game.. #bloxburg #lunchly #prime #ksi #loganpaul #horror....",
-      "source": "YouTube",
-      "timestamp": 1764754227.0,
-      "url": "https://www.youtube.com/watch?v=hDXwiG-AV3A",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Never making a Lamp-Room again\ud83d\ude2d#roblox #bloxburg #troll #meme #fyp\u30b7 #idk #robloxbloxburg",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1764752584.0,
-      "url": "https://www.youtube.com/watch?v=hBfAeU0jJHo",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "#roblox #bloxburg #subscribe #games #99nightintheforest #play #robloxgames #playgame #shorts #short",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1764748958.0,
-      "url": "https://www.youtube.com/watch?v=g6ucSBju4EQ",
-      "icon": "fa-youtube"
-    }
-  ],
+  "news": [],
   "meta": {
-    "generated_at": 1764787320.9441314,
+    "generated_at": 1764788199.5933738,
     "mode": "memory",
     "refresh_interval": 2000
   }
