@@ -1654,25 +1654,23 @@
                 previousStats[stat.key] = value;
             });
         }
-        let lastBuildersHash = '';
+        let lastBuildersHash = null;
         
         function renderBuilders(builders) {
             const grid = document.getElementById('buildersGrid');
             const topBuilders = (builders || []).slice(0, 6);
             
-            if (!topBuilders.length) {
-                if (!grid.querySelector('p')) {
-                    grid.innerHTML = '<p style="color: var(--text-muted); text-align: center; padding: 40px 0;">No builders data available</p>';
-                }
-                return;
-            }
-            
-            // Hash builder data to detect changes
-            const buildersHash = topBuilders.map(b => `${b.shop_name}-${b.completed_projects}-${b.average_rating}`).join('|');
+            // Hash builder data to detect changes (use special marker for empty)
+            const buildersHash = topBuilders.length ? topBuilders.map(b => `${b.shop_name}-${b.completed_projects}-${b.average_rating}`).join('|') : '__EMPTY__';
             if (buildersHash === lastBuildersHash) {
                 return; // No changes, skip render
             }
             lastBuildersHash = buildersHash;
+            
+            if (!topBuilders.length) {
+                grid.innerHTML = '<p style="color: var(--text-muted); text-align: center; padding: 40px 0;">No builders data available</p>';
+                return;
+            }
             
             // Separate top 3 (podium) from the rest
             const top3 = topBuilders.slice(0, 3);
@@ -1813,7 +1811,7 @@
                 list.scrollTop = 0;
             }
         }
-        let lastNewsHash = '';
+        let lastNewsHash = null;
         
         function renderNews(news) {
             const list = document.getElementById('newsList');
@@ -1905,14 +1903,14 @@
             }
         }
         
-        let lastPipelineHash = '';
+        let lastPipelineHash = null;
         
         function renderPipeline(pipeline) {
             const list = document.getElementById('pipelineList');
             const items = pipeline || placeholderData.pipeline;
             
             // Only re-render if data changed
-            const pipelineHash = items.map(i => `${i.label}-${i.value}`).join('|');
+            const pipelineHash = items.length ? items.map(i => `${i.label}-${i.value}`).join('|') : '__EMPTY__';
             if (pipelineHash === lastPipelineHash) return;
             lastPipelineHash = pipelineHash;
             
@@ -1938,14 +1936,14 @@
             }
         }
         
-        let lastInsightsHash = '';
+        let lastInsightsHash = null;
         
         function renderInsights(insights) {
             const list = document.getElementById('insightsList');
             const items = insights || placeholderData.insights;
             
             // Only re-render if data changed
-            const insightsHash = items.map(i => `${i.title}-${i.score}`).join('|');
+            const insightsHash = items.length ? items.map(i => `${i.title}-${i.score}`).join('|') : '__EMPTY__';
             if (insightsHash === lastInsightsHash) return;
             lastInsightsHash = insightsHash;
             
