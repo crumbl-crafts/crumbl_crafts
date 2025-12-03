@@ -1770,7 +1770,7 @@
                         return data;
                     } catch (e2) { 
                         console.warn('✗ Local fallback file failed:', e2.message); 
-                        console.log('✓ Using embedded fallback data');
+                        console.log('✓ Using embedded fallback data', EMBEDDED_FALLBACK_DATA);
                         return EMBEDDED_FALLBACK_DATA; 
                     }
                 } finally {
@@ -1841,10 +1841,14 @@
         }
         
         function renderBuilders(builders) {
+            console.log('👷 renderBuilders called with:', builders);
             const grid = document.getElementById('buildersGrid');
             const topBuilders = (builders || []).slice(0, 6);
             
+            console.log(`  Found ${topBuilders.length} builders to display`);
+            
             if (!topBuilders.length) {
+                console.warn('  No builders data available!');
                 if (!grid.querySelector('p')) {
                     grid.innerHTML = '<p style="color: var(--text-muted); text-align: center; padding: 40px 0;">No builders data available</p>';
                 }
@@ -2168,37 +2172,52 @@
             }
         }
         
-        // Initialize
-        loadActivityCache();
-        lastActivityCount = activityCache.length;
-        cleanOldActivities();
-        
-        // Preload initial data
-        updateDashboard();
-        
-        // Optimized refresh - every 2 seconds for balance of speed and performance
-        let refreshInterval = setInterval(updateDashboard, REFRESH_INTERVAL);
-        
-        // Clean old activity data every 6 hours to reduce overhead
-        setInterval(() => {
-            console.log('Running scheduled activity cache cleanup...');
+        // Initialize when DOM is ready
+        function initializeDashboard() {
+            console.log('🚀 Initializing dashboard...');
+            loadActivityCache();
+            lastActivityCount = activityCache.length;
             cleanOldActivities();
-        }, 21600000);
+            
+            // Preload initial data immediately
+            updateDashboard().then(() => {
+                console.log('✓ Initial data loaded');
+            }).catch(err => {
+                console.error('✗ Initial load failed:', err);
+            });
+            
+            // Optimized refresh - every 2 seconds for balance of speed and performance
+            let refreshInterval = setInterval(updateDashboard, REFRESH_INTERVAL);
         
-        // Pause updates when page is hidden, resume immediately when visible
-        document.addEventListener('visibilitychange', () => {
-            if (document.hidden) {
-                // Stop polling when hidden
-                clearInterval(refreshInterval);
-                console.log('⏸ Paused updates (page hidden)');
-            } else {
-                // Resume polling when visible
-                console.log('▶ Resumed updates (page visible)');
+            // Clean old activity data every 6 hours to reduce overhead
+            setInterval(() => {
+                console.log('Running scheduled activity cache cleanup...');
                 cleanOldActivities();
-                updateDashboard(); // Immediate update
-                refreshInterval = setInterval(updateDashboard, REFRESH_INTERVAL);
-            }
-        });
+            }, 21600000);
+            
+            // Pause updates when page is hidden, resume immediately when visible
+            document.addEventListener('visibilitychange', () => {
+                if (document.hidden) {
+                    // Stop polling when hidden
+                    clearInterval(refreshInterval);
+                    console.log('⏸ Paused updates (page hidden)');
+                } else {
+                    // Resume polling when visible
+                    console.log('▶ Resumed updates (page visible)');
+                    cleanOldActivities();
+                    updateDashboard(); // Immediate update
+                    refreshInterval = setInterval(updateDashboard, REFRESH_INTERVAL);
+                }
+            });
+        }
+        
+        // Wait for DOM to be ready before initializing
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initializeDashboard);
+        } else {
+            // DOM already loaded
+            initializeDashboard();
+        }
         
         // Network status monitoring
         window.addEventListener('online', () => {
