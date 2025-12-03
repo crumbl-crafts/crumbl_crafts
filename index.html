@@ -1502,8 +1502,13 @@
                 total_completed: 0, 
                 total_requests: 0, 
                 total_ratings: 0, 
-                avg_response_time: 0,
                 request_completion_ratio: 0 
+            },
+            server: {
+                total_members: 0,
+                joined_today: 0,
+                active_shops: 0,
+                avg_response_time: 0
             },
             topBuilders: [],
             activityLog: [],
@@ -1740,9 +1745,7 @@
                 html += '</div>';
             }
             
-            if (grid.innerHTML !== html) {
-                grid.innerHTML = html;
-            }
+            grid.innerHTML = html;
         }
         
         function renderActivityFeed(activities) {
@@ -1799,11 +1802,9 @@
                 `;
             }).join('');
             
-            if (list.innerHTML !== activityHTML) {
-                list.innerHTML = activityHTML;
-                // Auto-scroll to top on new items
-                list.scrollTop = 0;
-            }
+            list.innerHTML = activityHTML;
+            // Auto-scroll to top on new items
+            list.scrollTop = 0;
         }
         
         function renderNews(news) {
@@ -1881,9 +1882,7 @@
                 `;
             }).join('');
             
-            if (list.innerHTML !== newsHTML) {
-                list.innerHTML = newsHTML;
-            }
+            list.innerHTML = newsHTML;
         }
         
         function renderPipeline(pipeline) {
@@ -1907,9 +1906,7 @@
                 `;
             }).join('');
             
-            if (list.innerHTML !== pipelineHTML) {
-                list.innerHTML = pipelineHTML;
-            }
+            list.innerHTML = pipelineHTML;
         }
         
         function renderInsights(insights) {
@@ -1938,9 +1935,7 @@
                 </div>
             `).join('');
             
-            if (list.innerHTML !== insightsHTML) {
-                list.innerHTML = insightsHTML;
-            }
+            list.innerHTML = insightsHTML;
         }
         
         async function updateDashboard() {
