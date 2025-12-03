@@ -60,46 +60,9 @@
       "status": "good"
     }
   ],
-  "news": [
-    {
-      "type": "game_update",
-      "title": "New Winter Update Available!",
-      "description": "Explore new winter-themed furniture and decorations",
-      "source": "Bloxburg Official",
-      "timestamp": 1764785372.976631,
-      "url": "https://twitter.com/BloxburgGame",
-      "icon": "fa-gamepad"
-    },
-    {
-      "type": "trend",
-      "title": "Modern Mansion Builds Trending",
-      "description": "Community showcasing stunning modern architecture",
-      "source": "YouTube",
-      "timestamp": 1764781772.976631,
-      "url": "https://youtube.com/results?search_query=bloxburg+modern+mansion",
-      "icon": "fa-fire"
-    },
-    {
-      "type": "tip",
-      "title": "Money Making Guide 2024",
-      "description": "Best jobs and strategies to earn cash quickly",
-      "source": "Community Guide",
-      "timestamp": 1764778172.976631,
-      "url": "#",
-      "icon": "fa-lightbulb"
-    },
-    {
-      "type": "community",
-      "title": "Weekly Build Contest",
-      "description": "Submit your best holiday-themed builds to win prizes!",
-      "source": "Crumbl Crafts",
-      "timestamp": 1764774572.976631,
-      "url": "#",
-      "icon": "fa-trophy"
-    }
-  ],
+  "news": [],
   "meta": {
-    "generated_at": 1764788981.6706104,
+    "generated_at": 1764789021.375375,
     "mode": "memory",
     "refresh_interval": 2000
   }
