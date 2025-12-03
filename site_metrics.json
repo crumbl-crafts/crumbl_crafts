@@ -73,6 +73,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "2 different styles\ud83e\udd20 #roblox #welcometobloxburg #bloxburg #robloxshorts #bloxburgroblox #robloxdti",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1764791141.0,
+      "url": "https://www.youtube.com/watch?v=l3ohj8NJBM0",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "VLOGMAS DAY 3 !!!! come spend a morning with me! #vlogmas #roblox #bloxburg #bloxburgrp #december",
       "description": "...",
       "source": "YouTube",
@@ -126,15 +135,6 @@
       "icon": "fa-youtube"
     },
     {
-      "type": "trend",
-      "title": "\u203c\ufe0fREAL Bloxburg players remember\ud83d\udc94\u203c\ufe0f #roblox #robloxedit #bloxburg #bloxburgroleplay",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1764780065.0,
-      "url": "https://www.youtube.com/watch?v=Ixdy1BHlgvY",
-      "icon": "fa-youtube"
-    },
-    {
       "type": "tip",
       "title": "Money Making Guide 2024",
       "description": "Best jobs and strategies to earn cash quickly",
@@ -154,7 +154,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1764793447.53961,
+    "generated_at": 1764794047.8885462,
     "mode": "memory",
     "refresh_interval": 2000
   }
