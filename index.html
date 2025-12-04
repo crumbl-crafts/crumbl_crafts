@@ -1388,7 +1388,7 @@
                 gap: 20px;
             }
             .premium-ad-carousel {
-                height: 180px !important;
+                height: 250px !important;
             }
         }
         
@@ -1407,7 +1407,7 @@
                 grid-column: 1;
             }
             .premium-ad-carousel {
-                height: 160px !important;
+                height: 220px !important;
             }
             .premium-ad-carousel button {
                 width: 38px !important;
@@ -1451,10 +1451,20 @@
                 height: 28px !important;
             }
             .premium-ad-carousel {
-                height: 140px !important;
+                height: 180px !important;
             }
             .premium-ad-carousel button {
                 display: none !important;
+            }
+            #adButtonsContainer button,
+            #adButtonsContainer a {
+                padding: 10px 18px !important;
+                font-size: 0.85rem !important;
+            }
+            #adButtonsContainer .ad-mute-button {
+                width: 42px !important;
+                height: 42px !important;
+                font-size: 1rem !important;
             }
             .stats-grid {
                 grid-template-columns: repeat(2, 1fr) !important;
@@ -1475,7 +1485,20 @@
                 gap: 8px !important;
             }
             .premium-ad-carousel {
-                height: 120px !important;
+                height: 150px !important;
+            }
+            #adControlsContainer {
+                flex-wrap: wrap !important;
+            }
+            #adButtonsContainer button,
+            #adButtonsContainer a {
+                padding: 8px 16px !important;
+                font-size: 0.8rem !important;
+            }
+            #adButtonsContainer .ad-mute-button {
+                width: 38px !important;
+                height: 38px !important;
+                font-size: 0.95rem !important;
             }
             .stats-grid {
                 grid-template-columns: 1fr !important;
@@ -1536,8 +1559,8 @@
             </header>
 
             <!-- Premium Ad Showcase - Attached Below Header (Dynamic) -->
-            <section id="adSection" style="padding: 0; overflow: visible; position: relative; margin: -12px 0 8px 0; display: none;">
-                <div class="premium-ad-carousel" id="premiumAdCarousel" style="position: relative; width: 100%; height: 140px; background: linear-gradient(135deg, #0a0f1a 0%, #1a2030 50%, #0a0f1a 100%); border-radius: 20px; overflow: hidden; box-shadow: 0 8px 0 rgba(0,0,0,0.7), 0 0 40px rgba(255,23,68,0.5), inset 0 3px 0 rgba(255,255,255,0.08); border: 4px solid #FF1744; transform: translateZ(0);">
+            <section id="adSection" style="padding: 0; overflow: visible; position: relative; margin: -12px auto 8px auto; display: none; max-width: 1200px;">
+                <div class="premium-ad-carousel" id="premiumAdCarousel" style="position: relative; width: 100%; height: 300px; background: linear-gradient(135deg, #0a0f1a 0%, #1a2030 50%, #0a0f1a 100%); border-radius: 20px; overflow: hidden; box-shadow: 0 8px 0 rgba(0,0,0,0.7), 0 0 40px rgba(255,23,68,0.5), inset 0 3px 0 rgba(255,255,255,0.08); border: 4px solid #FF1744; transform: translateZ(0);">
                     
                     <!-- Subtle Halftone Pattern -->
                     <div style="position: absolute; inset: 0; background-image: radial-gradient(circle, rgba(255,23,68,0.06) 1px, transparent 1px); background-size: 8px 8px; z-index: 2; pointer-events: none; opacity: 0.5;"></div>
@@ -1554,10 +1577,16 @@
                     </button>
                     
                 </div>
-                <!-- Compact Indicator Dots - Below Ad (hidden for single ad) -->
-                <div id="adDotsContainer" style="display: none; justify-content: center; margin-top: 10px;">
-                    <div id="adDotsWrapper" style="display: flex; gap: 8px; background: linear-gradient(135deg, rgba(0,0,0,0.85), rgba(20,20,30,0.9)); padding: 8px 14px; border-radius: 14px; border: 3px solid rgba(255,255,255,0.9); box-shadow: 0 4px 0 rgba(0,0,0,0.8), 0 0 20px rgba(255,23,68,0.5), inset 0 2px 0 rgba(255,255,255,0.1);">
-                        <!-- Dots dynamically populated -->
+                <!-- Compact Indicator Dots & Buttons - Below Ad -->
+                <div id="adControlsContainer" style="display: flex; justify-content: center; align-items: center; margin-top: 10px; gap: 16px;">
+                    <!-- Buttons Container (left side) -->
+                    <div id="adButtonsContainer" style="display: flex; gap: 10px; align-items: center;"></div>
+                    
+                    <!-- Dots Container (center) -->
+                    <div id="adDotsContainer" style="display: none; justify-content: center;">
+                        <div id="adDotsWrapper" style="display: flex; gap: 8px; background: linear-gradient(135deg, rgba(0,0,0,0.85), rgba(20,20,30,0.9)); padding: 8px 14px; border-radius: 14px; border: 3px solid rgba(255,255,255,0.9); box-shadow: 0 4px 0 rgba(0,0,0,0.8), 0 0 20px rgba(255,23,68,0.5), inset 0 2px 0 rgba(255,255,255,0.1);">
+                            <!-- Dots dynamically populated -->
+                        </div>
                     </div>
                 </div>
             </section>
@@ -1744,70 +1773,17 @@
                     }
                     
                     slide.appendChild(mediaElement);
-                    
-                    // Add mute/unmute button for videos
-                    if (isVideo) {
-                        const muteButton = document.createElement('button');
-                        muteButton.className = 'ad-mute-button';
-                        muteButton.innerHTML = '<i class="fas fa-volume-mute"></i>';
-                        muteButton.setAttribute('data-muted', 'true');
-                        muteButton.style.cssText = 'position: absolute; bottom: 16px; left: 16px; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(10px); color: white; width: 48px; height: 48px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 23, 68, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2); border: 2px solid rgba(255, 255, 255, 0.3); transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); z-index: 10; opacity: 0; animation: fadeInButton 0.5s ease 0.8s forwards;';
-                        
-                        muteButton.onclick = function(e) {
-                            e.preventDefault();
-                            e.stopPropagation();
-                            const video = this.closest('.premium-ad-slide').querySelector('video');
-                            if (video) {
-                                const isMuted = this.getAttribute('data-muted') === 'true';
-                                video.muted = !isMuted;
-                                this.setAttribute('data-muted', !isMuted);
-                                this.innerHTML = isMuted ? '<i class="fas fa-volume-up"></i>' : '<i class="fas fa-volume-mute"></i>';
-                                this.style.background = isMuted ? 'rgba(255, 23, 68, 0.9)' : 'rgba(0, 0, 0, 0.7)';
-                                this.style.transform = 'scale(1.2)';
-                                setTimeout(() => { this.style.transform = 'scale(1)'; }, 200);
-                            }
-                        };
-                        
-                        muteButton.onmouseenter = function() {
-                            this.style.transform = 'scale(1.15)';
-                            this.style.boxShadow = '0 6px 16px rgba(0, 0, 0, 0.6), 0 0 30px rgba(255, 23, 68, 0.5), inset 0 2px 0 rgba(255, 255, 255, 0.3)';
-                        };
-                        muteButton.onmouseleave = function() {
-                            this.style.transform = 'scale(1)';
-                            this.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 23, 68, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2)';
-                        };
-                        
-                        slide.appendChild(muteButton);
-                    }
-                    
-                    // Add CTA button if link is provided
-                    if (ad.link && ad.link.trim() !== '') {
-                        const ctaButton = document.createElement('a');
-                        ctaButton.href = ad.link;
-                        ctaButton.target = '_blank';
-                        ctaButton.rel = 'noopener noreferrer';
-                        ctaButton.className = 'ad-cta-button';
-                        ctaButton.innerHTML = `<i class="fas fa-external-link-alt"></i> ${ad.buttonText || 'Learn More'}`;
-                        // Position beside mute button if video, otherwise right side
-                        const leftPosition = isVideo ? '76px' : '16px';
-                        ctaButton.style.cssText = `position: absolute; bottom: 16px; left: ${leftPosition}; background: linear-gradient(135deg, #FF1744, #ff5252); color: white; padding: 12px 24px; border-radius: 50px; font-weight: 800; font-size: 0.9rem; text-decoration: none; display: flex; align-items: center; gap: 8px; box-shadow: 0 8px 24px rgba(255, 23, 68, 0.6), 0 0 40px rgba(255, 23, 68, 0.4), inset 0 2px 0 rgba(255, 255, 255, 0.3); border: 3px solid rgba(255, 255, 255, 0.9); transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); z-index: 10; text-transform: uppercase; letter-spacing: 0.08em; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); animation: ctaPulse 2s ease-in-out infinite; opacity: 0; animation-delay: 0.6s; animation-fill-mode: forwards;`;
-                        
-                        ctaButton.onmouseenter = function() {
-                            this.style.transform = 'scale(1.1) translateY(-2px)';
-                            this.style.boxShadow = '0 12px 32px rgba(255, 23, 68, 0.8), 0 0 60px rgba(255, 23, 68, 0.6), inset 0 3px 0 rgba(255, 255, 255, 0.4)';
-                            this.style.animation = 'none';
-                        };
-                        ctaButton.onmouseleave = function() {
-                            this.style.transform = 'scale(1) translateY(0)';
-                            this.style.boxShadow = '0 8px 24px rgba(255, 23, 68, 0.6), 0 0 40px rgba(255, 23, 68, 0.4), inset 0 2px 0 rgba(255, 255, 255, 0.3)';
-                            this.style.animation = 'ctaPulse 2s ease-in-out infinite';
-                        };
-                        
-                        slide.appendChild(ctaButton);
-                    }
+                    slide.setAttribute('data-video', isVideo);
+                    slide.setAttribute('data-ad-link', ad.link || '');
+                    slide.setAttribute('data-button-text', ad.buttonText || 'Learn More');
                     
                     adSlidesContainer.appendChild(slide);
                 });
+                
+                // Populate buttons for first ad and show container
+                const adButtonsContainer = document.getElementById('adButtonsContainer');
+                updateAdButtons(0);
+                adButtonsContainer.style.display = 'flex';
                 
                 // Only show controls if multiple ads
                 if (totalAds > 1) {
@@ -1841,6 +1817,82 @@
             } catch (error) {
                 console.error('Failed to load ads:', error);
                 adSection.style.display = 'none';
+            }
+        }
+
+        // Update buttons in bottom container based on current ad
+        function updateAdButtons(index) {
+            const adButtonsContainer = document.getElementById('adButtonsContainer');
+            const slides = document.querySelectorAll('.premium-ad-slide');
+            if (!slides[index]) return;
+            
+            const slide = slides[index];
+            const isVideo = slide.getAttribute('data-video') === 'true';
+            const adLink = slide.getAttribute('data-ad-link');
+            const buttonText = slide.getAttribute('data-button-text');
+            
+            adButtonsContainer.innerHTML = '';
+            
+            // Add mute button for videos
+            if (isVideo) {
+                const muteButton = document.createElement('button');
+                muteButton.className = 'ad-mute-button';
+                muteButton.innerHTML = '<i class="fas fa-volume-mute"></i>';
+                muteButton.setAttribute('data-muted', 'true');
+                muteButton.setAttribute('data-slide-index', index);
+                muteButton.style.cssText = 'background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(10px); color: white; width: 48px; height: 48px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 23, 68, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2); border: 2px solid rgba(255, 255, 255, 0.3); transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);';
+                
+                muteButton.onclick = function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const slideIndex = parseInt(this.getAttribute('data-slide-index'));
+                    const targetSlide = document.querySelectorAll('.premium-ad-slide')[slideIndex];
+                    const video = targetSlide.querySelector('video');
+                    if (video) {
+                        const isMuted = this.getAttribute('data-muted') === 'true';
+                        video.muted = !isMuted;
+                        this.setAttribute('data-muted', !isMuted);
+                        this.innerHTML = isMuted ? '<i class="fas fa-volume-up"></i>' : '<i class="fas fa-volume-mute"></i>';
+                        this.style.background = isMuted ? 'rgba(255, 23, 68, 0.9)' : 'rgba(0, 0, 0, 0.7)';
+                        this.style.transform = 'scale(1.2)';
+                        setTimeout(() => { this.style.transform = 'scale(1)'; }, 200);
+                    }
+                };
+                
+                muteButton.onmouseenter = function() {
+                    this.style.transform = 'scale(1.15)';
+                    this.style.boxShadow = '0 6px 16px rgba(0, 0, 0, 0.6), 0 0 30px rgba(255, 23, 68, 0.5), inset 0 2px 0 rgba(255, 255, 255, 0.3)';
+                };
+                muteButton.onmouseleave = function() {
+                    this.style.transform = 'scale(1)';
+                    this.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 23, 68, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2)';
+                };
+                
+                adButtonsContainer.appendChild(muteButton);
+            }
+            
+            // Add CTA button if link is provided
+            if (adLink && adLink.trim() !== '') {
+                const ctaButton = document.createElement('a');
+                ctaButton.href = adLink;
+                ctaButton.target = '_blank';
+                ctaButton.rel = 'noopener noreferrer';
+                ctaButton.className = 'ad-cta-button';
+                ctaButton.innerHTML = `<i class="fas fa-external-link-alt"></i> ${buttonText}`;
+                ctaButton.style.cssText = 'background: linear-gradient(135deg, #FF1744, #ff5252); color: white; padding: 12px 24px; border-radius: 50px; font-weight: 800; font-size: 0.9rem; text-decoration: none; display: flex; align-items: center; gap: 8px; box-shadow: 0 8px 24px rgba(255, 23, 68, 0.6), 0 0 40px rgba(255, 23, 68, 0.4), inset 0 2px 0 rgba(255, 255, 255, 0.3); border: 3px solid rgba(255, 255, 255, 0.9); transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); text-transform: uppercase; letter-spacing: 0.08em; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); animation: ctaPulse 2s ease-in-out infinite;';
+                
+                ctaButton.onmouseenter = function() {
+                    this.style.transform = 'scale(1.1) translateY(-2px)';
+                    this.style.boxShadow = '0 12px 32px rgba(255, 23, 68, 0.8), 0 0 60px rgba(255, 23, 68, 0.6), inset 0 3px 0 rgba(255, 255, 255, 0.4)';
+                    this.style.animation = 'none';
+                };
+                ctaButton.onmouseleave = function() {
+                    this.style.transform = 'scale(1) translateY(0)';
+                    this.style.boxShadow = '0 8px 24px rgba(255, 23, 68, 0.6), 0 0 40px rgba(255, 23, 68, 0.4), inset 0 2px 0 rgba(255, 255, 255, 0.3)';
+                    this.style.animation = 'ctaPulse 2s ease-in-out infinite';
+                };
+                
+                adButtonsContainer.appendChild(ctaButton);
             }
         }
 
@@ -1889,13 +1941,8 @@
                         newVideo.play().catch(e => console.log('Video autoplay prevented:', e));
                     }
                     
-                    // Restart CTA button animation
-                    const ctaButton = slides[currentAdIndex].querySelector('.ad-cta-button');
-                    if (ctaButton) {
-                        ctaButton.style.animation = 'none';
-                        ctaButton.offsetHeight; // Trigger reflow
-                        ctaButton.style.animation = 'ctaPulse 2s ease-in-out infinite';
-                    }
+                    // Update buttons for new ad
+                    updateAdButtons(currentAdIndex);
                 });
             });
             
