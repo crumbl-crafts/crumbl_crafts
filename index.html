@@ -822,6 +822,8 @@
             flex: 1;
             min-height: 0;
             overscroll-behavior: contain;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
         }
         .activity-list::-webkit-scrollbar { 
             width: 8px; 
@@ -844,7 +846,7 @@
             display: flex; 
             align-items: flex-start; 
             gap: 12px; 
-            padding: 12px; 
+            padding: 14px; 
             background: 
                 radial-gradient(circle at 90% 50%, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
                 radial-gradient(circle at 10% 50%, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
@@ -856,9 +858,10 @@
             border: 2px solid rgba(255, 255, 255, 0.1); 
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
             position: relative;
-            overflow: hidden;
+            overflow: visible;
             backdrop-filter: blur(12px);
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            min-height: fit-content;
         }
         .activity-item::before {
             content: '';
@@ -922,12 +925,17 @@
         .activity-content { 
             flex: 1; 
             min-width: 0; 
+            overflow: visible;
         }
         .activity-message { 
             font-size: 0.875rem; 
             color: var(--text); 
-            line-height: 1.5; 
+            line-height: 1.6; 
             margin-bottom: 6px;
+            word-wrap: break-word;
+            word-break: break-word;
+            white-space: normal;
+            overflow-wrap: break-word;
         }
         .activity-message a { 
             color: var(--primary); 
@@ -2174,7 +2182,7 @@
         };
         const FORUM_CHANNEL_BASE = 'https://discord.com/channels/';
         const ACTIVITY_RETENTION_DAYS = 7;
-        const MAX_ACTIVITY_ITEMS = 100;
+        const MAX_ACTIVITY_ITEMS = 10000;
         const REFRESH_INTERVAL = 2000; // 2 seconds - optimized for performance
         const FETCH_TIMEOUT = 5000; // 5 second timeout for reliability
         
