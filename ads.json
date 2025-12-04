@@ -2,15 +2,9 @@
   "ads": [
     {
       "url": "https://raw.githubusercontent.com/crumbl-crafts/crumbl_crafts/main/ad-banner.jpg",
-      "alt": "Premium Advertisement 1"
-    },
-    {
-      "url": "https://raw.githubusercontent.com/crumbl-crafts/crumbl_crafts/main/ad-banner-2.jpg",
-      "alt": "Premium Advertisement 2"
-    },
-    {
-      "url": "https://raw.githubusercontent.com/crumbl-crafts/crumbl_crafts/main/ad-banner-3.jpg",
-      "alt": "Premium Advertisement 3"
+      "alt": "Premium Advertisement 1",
+      "link": "https://example.com/offer1",
+      "buttonText": "Order Now"
     }
   ]
 }
