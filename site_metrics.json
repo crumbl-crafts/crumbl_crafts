@@ -91,6 +91,33 @@
   "news": [
     {
       "type": "trend",
+      "title": "DAISY &amp; SOPHIE STEAL A CHEESECAKE! #shorts #roblox #bloxburgroleplay #roleplay #bloxburg #steal",
+      "description": "DAISY & SOPHIE STEAL A CHEESECAKE! Make sure to like and check out the full video in the link to fin...",
+      "source": "YouTube",
+      "timestamp": 1764864014.0,
+      "url": "https://www.youtube.com/watch?v=9Y__OyxVCu0",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Who does it best? \ud83d\ude02 #berryave #berryavenue #roblox #robloxrp #bloxburg",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1764863766.0,
+      "url": "https://www.youtube.com/watch?v=wdJ3bIUEGoc",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "#roblox #robloxshorts #realrosa #shorts #bloxburg #robloxedit",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1764863445.0,
+      "url": "https://www.youtube.com/watch?v=ANPdwNszR8k",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "#roblox #bloxburg #funny #robloxedit #kids #typicallykatie #robloxmemes #rblx #videogamememes",
       "description": "...",
       "source": "YouTube",
@@ -126,15 +153,6 @@
       "icon": "fa-fire"
     },
     {
-      "type": "trend",
-      "title": "#memes #bloxburg #robloxedit #robloxbrookhaven #roblox",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1764850842.0,
-      "url": "https://www.youtube.com/watch?v=5E2a5m76joU",
-      "icon": "fa-youtube"
-    },
-    {
       "type": "tip",
       "title": "Money Making Guide 2024",
       "description": "Best jobs and strategies to earn cash quickly",
@@ -142,24 +160,6 @@
       "timestamp": 1764850700.0890772,
       "url": "#",
       "icon": "fa-lightbulb"
-    },
-    {
-      "type": "trend",
-      "title": "day four! #christmas #roblox #bloxburg #fyp\u30b7",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1764849941.0,
-      "url": "https://www.youtube.com/watch?v=QeM0Jr8MYCk",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Flaming Car Company \ud83d\udc95\ud83d\ude0d #roblox #bloxburg #gaming #funny #memes #relatable #robloxrant #rblx #roblo",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1764849184.0,
-      "url": "https://www.youtube.com/watch?v=brYdmZDzkDE",
-      "icon": "fa-youtube"
     },
     {
       "type": "community",
@@ -172,7 +172,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1764863906.3652408,
+    "generated_at": 1764865106.368734,
     "mode": "memory",
     "refresh_interval": 2000
   }
