@@ -1005,19 +1005,21 @@
             gap: 4px;
         }
         .chat-message-author {
-            font-weight: 700;
-            color: var(--primary);
-            font-size: 0.9rem;
+            font-weight: 800;
+            color: #FF1744;
+            font-size: 1rem;
             flex-shrink: 0;
-            padding: 2px 6px;
-            background: rgba(255, 23, 68, 0.15);
-            border: 1px solid rgba(255, 23, 68, 0.3);
-            border-radius: 4px;
+            text-shadow: 
+                -1px -1px 0 rgba(0, 0, 0, 0.8),
+                1px -1px 0 rgba(0, 0, 0, 0.8),
+                -1px 1px 0 rgba(0, 0, 0, 0.8),
+                1px 1px 0 rgba(0, 0, 0, 0.8),
+                0 0 8px rgba(255, 23, 68, 0.6);
         }
         .chat-message-text {
             color: var(--text);
-            font-size: 0.95rem;
-            line-height: 1.5;
+            font-size: 1.05rem;
+            line-height: 1.6;
             word-wrap: break-word;
             word-break: break-word;
             margin-top: 4px;
@@ -1029,10 +1031,10 @@
             flex-wrap: wrap;
         }
         .chat-message-time {
-            font-size: 0.75rem;
+            font-size: 0.85rem;
             color: var(--text-muted);
             flex-shrink: 0;
-            opacity: 0.8;
+            opacity: 0.85;
             font-weight: 600;
         }
         .chat-message.reply {
@@ -1040,17 +1042,18 @@
             border-left: 3px solid var(--primary);
         }
         .chat-message-reply-info {
-            font-size: 0.75rem;
+            font-size: 0.85rem;
             color: var(--text-muted);
             font-style: italic;
-            margin-bottom: 2px;
+            margin-bottom: 4px;
         }
         .chat-mention {
-            color: var(--primary);
-            font-weight: 700;
-            background: rgba(255, 23, 68, 0.1);
-            padding: 1px 4px;
-            border-radius: 3px;
+            color: #FF5252;
+            font-weight: 800;
+            background: rgba(255, 23, 68, 0.15);
+            padding: 2px 6px;
+            border-radius: 4px;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
         }
         .chat-input-container {
             display: flex;
@@ -1059,12 +1062,12 @@
         }
         .chat-input {
             flex: 1;
-            padding: 8px 12px;
+            padding: 10px 14px;
             background: rgba(40, 50, 70, 0.6);
             border: 2px solid rgba(255, 255, 255, 0.1);
             border-radius: 10px;
             color: var(--text);
-            font-size: 0.95rem;
+            font-size: 1rem;
             font-family: 'Fredoka', sans-serif;
             transition: all 0.3s ease;
             outline: none;
