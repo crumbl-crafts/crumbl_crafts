@@ -70,91 +70,9 @@
       "status": "good"
     }
   ],
-  "news": [
-    {
-      "type": "game_update",
-      "title": "New Winter Update Available!",
-      "description": "Explore new winter-themed furniture and decorations",
-      "source": "Bloxburg Official",
-      "timestamp": 1764831168.2350101,
-      "url": "https://twitter.com/BloxburgGame",
-      "icon": "fa-gamepad"
-    },
-    {
-      "type": "trend",
-      "title": "Weirdest Roblox game.. \ud83d\ude02\ud83d\ude02#bloxburg #lunchly #prime #ksi #loganpaul #horror",
-      "description": "Weirdest Roblox game.. #bloxburg #lunchly #prime #ksi #loganpaul #horror....",
-      "source": "YouTube",
-      "timestamp": 1764830701.0,
-      "url": "https://www.youtube.com/watch?v=HwP398rQCmY",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Weirdest Roblox game.. \ud83d\ude02\ud83d\ude02#bloxburg #lunchly #prime #ksi #loganpaul #horror",
-      "description": "Weirdest Roblox game.. #bloxburg #lunchly #prime #ksi #loganpaul #horror....",
-      "source": "YouTube",
-      "timestamp": 1764828901.0,
-      "url": "https://www.youtube.com/watch?v=63uGWGc3swg",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Modern Mansion Builds Trending",
-      "description": "Community showcasing stunning modern architecture",
-      "source": "YouTube",
-      "timestamp": 1764827568.2350116,
-      "url": "https://youtube.com/results?search_query=bloxburg+modern+mansion",
-      "icon": "fa-fire"
-    },
-    {
-      "type": "trend",
-      "title": "RUMI in the MILITARY?! #adoptme #roblox #adoptmeroblox #robloxedit #art #edit #bloxburg #dance #dank",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1764827481.0,
-      "url": "https://www.youtube.com/watch?v=o--v32EELEA",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "tip",
-      "title": "Money Making Guide 2024",
-      "description": "Best jobs and strategies to earn cash quickly",
-      "source": "Community Guide",
-      "timestamp": 1764823968.2350123,
-      "url": "#",
-      "icon": "fa-lightbulb"
-    },
-    {
-      "type": "trend",
-      "title": "BIBI TIDAK MAU MAKAN KARNA KANGEN DEDEK UCUP | BLOXBURG RP",
-      "description": "Terimakasiih adik-adik udah nonton video ini sampai akhirr, lup yu all -----------   -Tags  - #roblo...",
-      "source": "YouTube",
-      "timestamp": 1764821849.0,
-      "url": "https://www.youtube.com/watch?v=Lb5yzNYjf3w",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "SEBENERNYA KITA ITU KERLUARGA BETAWI  #roblox #bloxburg #bimalafamily",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1764821702.0,
-      "url": "https://www.youtube.com/watch?v=f5cvrwPMvbM",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "community",
-      "title": "Weekly Build Contest",
-      "description": "Submit your best holiday-themed builds to win prizes!",
-      "source": "Crumbl Crafts",
-      "timestamp": 1764820368.2350128,
-      "url": "#",
-      "icon": "fa-trophy"
-    }
-  ],
+  "news": [],
   "meta": {
-    "generated_at": 1764834866.3735945,
+    "generated_at": 1764835242.9500291,
     "mode": "memory",
     "refresh_interval": 2000
   }
