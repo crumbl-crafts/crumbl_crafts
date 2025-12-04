@@ -70,9 +70,91 @@
       "status": "good"
     }
   ],
-  "news": [],
+  "news": [
+    {
+      "type": "trend",
+      "title": "WOOW LET&#39;S GOOO #memes #brookhave #roblox #automobile #smartphone #games #funny #bloxburg #tiktok",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1764837282.0,
+      "url": "https://www.youtube.com/watch?v=XS_BiDHCAxA",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "BloxBurg Breaking News Jandel Impostor?\ud83d\ude31\ud83d\udea8",
+      "description": "roblox #jandel #bloxburgnews #kreekcraft #bloxburgnewleaks disclaimer : this video is for entertainm...",
+      "source": "YouTube",
+      "timestamp": 1764837145.0,
+      "url": "https://www.youtube.com/watch?v=w5mnwawecPE",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Time flies \ud83e\udd79",
+      "description": "You cant even see the new town #bloxburg #bloxburgcontentcreator #robloxbloxburg #roblox....",
+      "source": "YouTube",
+      "timestamp": 1764836615.0,
+      "url": "https://www.youtube.com/watch?v=9c2IF-96iDA",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "game_update",
+      "title": "New Winter Update Available!",
+      "description": "Explore new winter-themed furniture and decorations",
+      "source": "Bloxburg Official",
+      "timestamp": 1764835192.1019347,
+      "url": "https://twitter.com/BloxburgGame",
+      "icon": "fa-gamepad"
+    },
+    {
+      "type": "trend",
+      "title": "Modern Mansion Builds Trending",
+      "description": "Community showcasing stunning modern architecture",
+      "source": "YouTube",
+      "timestamp": 1764831592.101936,
+      "url": "https://youtube.com/results?search_query=bloxburg+modern+mansion",
+      "icon": "fa-fire"
+    },
+    {
+      "type": "trend",
+      "title": "Weirdest Roblox game.. \ud83d\ude02\ud83d\ude02#bloxburg #lunchly #prime #ksi #loganpaul #horror",
+      "description": "Weirdest Roblox game.. #bloxburg #lunchly #prime #ksi #loganpaul #horror....",
+      "source": "YouTube",
+      "timestamp": 1764830701.0,
+      "url": "https://www.youtube.com/watch?v=HwP398rQCmY",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Weirdest Roblox game.. \ud83d\ude02\ud83d\ude02#bloxburg #lunchly #prime #ksi #loganpaul #horror",
+      "description": "Weirdest Roblox game.. #bloxburg #lunchly #prime #ksi #loganpaul #horror....",
+      "source": "YouTube",
+      "timestamp": 1764828901.0,
+      "url": "https://www.youtube.com/watch?v=63uGWGc3swg",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "tip",
+      "title": "Money Making Guide 2024",
+      "description": "Best jobs and strategies to earn cash quickly",
+      "source": "Community Guide",
+      "timestamp": 1764827992.101937,
+      "url": "#",
+      "icon": "fa-lightbulb"
+    },
+    {
+      "type": "community",
+      "title": "Weekly Build Contest",
+      "description": "Submit your best holiday-themed builds to win prizes!",
+      "source": "Crumbl Crafts",
+      "timestamp": 1764824392.1019378,
+      "url": "#",
+      "icon": "fa-trophy"
+    }
+  ],
   "meta": {
-    "generated_at": 1764838795.801334,
+    "generated_at": 1764838798.6839159,
     "mode": "memory",
     "refresh_interval": 2000
   }
