@@ -1921,7 +1921,12 @@
         };
         
         const mergeActivities = (newActivities) => {
-            if (!Array.isArray(newActivities)) return;
+            if (!Array.isArray(newActivities)) {
+                console.warn('mergeActivities: newActivities is not an array', newActivities);
+                return;
+            }
+            
+            console.log(`mergeActivities called: ${newActivities.length} new, ${activityCache.length} cached`);
             
             // If backend sends empty array and we have cached items, clean old ones
             if (newActivities.length === 0 && activityCache.length > 0) {
@@ -1933,7 +1938,10 @@
                 return;
             }
             
-            if (newActivities.length === 0) return;
+            if (newActivities.length === 0) {
+                console.log('No new activities from backend');
+                return;
+            }
             
             let addedCount = 0;
             
@@ -2258,6 +2266,8 @@
             const list = getElement('activityList');
             const count = getElement('activityCount');
             if (!list) return;
+            
+            console.log('renderActivityFeed called with', activities?.length || 0, 'activities');
             
             // Merge with cache
             mergeActivities(activities);
