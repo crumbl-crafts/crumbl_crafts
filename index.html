@@ -2288,7 +2288,10 @@
                 return;
             }
             
+            console.log('Activity cache data:', activityCache);
+            
             const activityHTML = activityCache.map((item, index) => {
+                console.log('Rendering activity item:', item);
                 const icon = activityIcons[item.type] || activityIcons.sent;
                 const typeClass = `type-${item.type}`;
                 // Use the URL from backend if available, otherwise construct from thread_id/server_id
