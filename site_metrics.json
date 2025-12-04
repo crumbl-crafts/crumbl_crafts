@@ -91,6 +91,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "#roblox #bloxburgcontentcreator #robloxindonesia #robloxshorts #robloxedit #bloxburg",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1764849657.0,
+      "url": "https://www.youtube.com/watch?v=RW7-aHb2w9c",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Flaming Car Company \ud83d\udc95\ud83d\ude0d #roblox #bloxburg #gaming #funny #memes #relatable #robloxrant #rblx #roblo",
       "description": "...",
       "source": "YouTube",
@@ -123,15 +132,6 @@
       "source": "YouTube",
       "timestamp": 1764837282.0,
       "url": "https://www.youtube.com/watch?v=XS_BiDHCAxA",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Time flies \ud83e\udd79",
-      "description": "You cant even see the new town #bloxburg #bloxburgcontentcreator #robloxbloxburg #roblox....",
-      "source": "YouTube",
-      "timestamp": 1764836615.0,
-      "url": "https://www.youtube.com/watch?v=9c2IF-96iDA",
       "icon": "fa-youtube"
     },
     {
@@ -172,7 +172,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1764851100.3516114,
+    "generated_at": 1764852300.3471363,
     "mode": "memory",
     "refresh_interval": 2000
   }
