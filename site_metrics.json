@@ -73,6 +73,24 @@
   "news": [
     {
       "type": "trend",
+      "title": "SEBENERNYA KITA ITU KERLUARGA BETAWI  #roblox #bloxburg #bimalafamily",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1764821702.0,
+      "url": "https://www.youtube.com/watch?v=f5cvrwPMvbM",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "BIBI MENANGIS SEHARIAN MINTA DEDEK SAMA MAMI PAPI  || BLOXBURG\ud83c\udfe1 ROBLOX INDONESIA",
+      "description": "Bibi mau punya dedek mami papi pliss bibi mau UN Roblox ......",
+      "source": "YouTube",
+      "timestamp": 1764820805.0,
+      "url": "https://www.youtube.com/watch?v=7aBrwrbnask",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Grocery Shopping prep! \ud83d\uded2\ud83d\udecd\ufe0f #berryave #berryavenue #robloxrp #bloxburg",
       "description": "...",
       "source": "YouTube",
@@ -96,24 +114,6 @@
       "source": "YouTube",
       "timestamp": 1764807215.0,
       "url": "https://www.youtube.com/watch?v=mYyhmTzf7oo",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "#roblox #pubg #\u0631\u0648\u0628\u0644\u0648\u0643\u0633 #towerofhellrace #\u0627\u0644\u0646\u0638\u0627\u0641\u0647 #\u0627\u0643\u0633\u0628\u0644\u0648\u0631 #bloxburg",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1764804921.0,
-      "url": "https://www.youtube.com/watch?v=OKCzT4jy8bY",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "i love breaking into bloxburg houses",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1764804086.0,
-      "url": "https://www.youtube.com/watch?v=4VYx2JCWTlk",
       "icon": "fa-youtube"
     },
     {
@@ -154,7 +154,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1764821735.161282,
+    "generated_at": 1764822935.1607926,
     "mode": "memory",
     "refresh_interval": 2000
   }
