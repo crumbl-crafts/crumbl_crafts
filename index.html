@@ -2528,11 +2528,10 @@
             // News toggle functionality with smooth transition
             const toggleNewsBtn = getElement('toggleNews');
             const newsListWrapper = getElement('newsListWrapper');
-            const newsList = getElement('newsList');
             const newsChevron = getElement('newsChevron');
             const newsButtonText = getElement('newsButtonText');
             
-            if (toggleNewsBtn && newsListWrapper && newsList && newsChevron && newsButtonText) {
+            if (toggleNewsBtn && newsListWrapper && newsChevron && newsButtonText) {
                 let isExpanded = false;
                 
                 // Load saved state from localStorage
