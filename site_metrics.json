@@ -7,13 +7,22 @@
     "request_completion_ratio": 0
   },
   "server": {
-    "total_members": 326,
+    "total_members": 325,
     "joined_today": 5,
     "active_shops": 0,
     "avg_response_time": 0
   },
   "topBuilders": [],
   "activityLog": [
+    {
+      "type": "member_leave",
+      "shop_name": "Server",
+      "message": "hid3nori left the server",
+      "timestamp": 1764880218,
+      "thread_id": null,
+      "server_id": 1301988304279048275,
+      "url": "https://discord.com/users/1098992055272878081"
+    },
     {
       "type": "member_join",
       "shop_name": "Server",
@@ -262,7 +271,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1764879604.5261855,
+    "generated_at": 1764880221.3075426,
     "mode": "memory",
     "refresh_interval": 2000
   }
