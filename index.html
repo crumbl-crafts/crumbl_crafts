@@ -511,7 +511,8 @@
             height: calc(100vh - 48px);
             display: flex;
             flex-direction: column;
-            overflow: hidden;
+            overflow: visible;
+            contain: layout style;
         }
         .section-title {
             font-size: 1.5rem;
@@ -780,7 +781,8 @@
             flex-direction: column;
             min-height: 0;
             height: 100%;
-            overflow: hidden;
+            overflow: visible;
+            position: relative;
         }
         .feed-header {
             display: flex;
@@ -812,35 +814,48 @@
             box-shadow: 0 0 8px var(--primary-glow);
         }
         .activity-list { 
-            overflow-y: auto; 
+            overflow-y: scroll !important; 
             overflow-x: hidden;
             display: flex; 
             flex-direction: column; 
             gap: 10px; 
-            padding-right: 4px;
-            max-height: calc(100vh - 300px);
+            padding-right: 12px;
+            height: 100%;
             flex: 1;
-            min-height: 0;
+            min-height: 200px;
             overscroll-behavior: contain;
             scroll-behavior: smooth;
             -webkit-overflow-scrolling: touch;
+            scrollbar-gutter: stable;
+            will-change: scroll-position;
+            scroll-padding: 10px;
         }
         .activity-list::-webkit-scrollbar { 
-            width: 8px; 
+            width: 12px; 
         }
         .activity-list::-webkit-scrollbar-track { 
-            background: rgba(0, 0, 0, 0.3); 
-            border-radius: 10px;
+            background: linear-gradient(180deg, rgba(20, 30, 50, 0.8), rgba(10, 20, 40, 0.9)); 
+            border-radius: 12px;
+            border: 2px solid rgba(255, 255, 255, 0.08);
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+            margin: 4px 0;
         }
         .activity-list::-webkit-scrollbar-thumb { 
-            background: var(--border); 
-            border-radius: 10px;
-            transition: background 0.2s ease;
-            border: 2px solid rgba(0, 0, 0, 0.3);
+            background: linear-gradient(180deg, rgba(255, 23, 68, 0.8), rgba(255, 23, 68, 0.5)); 
+            border-radius: 12px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid rgba(0, 0, 0, 0.5);
+            box-shadow: 0 2px 8px rgba(255, 23, 68, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
         }
         .activity-list::-webkit-scrollbar-thumb:hover { 
-            background: var(--primary); 
-            box-shadow: 0 0 8px var(--primary-glow);
+            background: linear-gradient(180deg, rgba(255, 23, 68, 1), rgba(255, 23, 68, 0.8)); 
+            box-shadow: 0 0 16px rgba(255, 23, 68, 1), 0 4px 12px rgba(255, 23, 68, 0.6), inset 0 2px 0 rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.3);
+            transform: scaleX(1.1);
+        }
+        .activity-list::-webkit-scrollbar-thumb:active { 
+            background: linear-gradient(180deg, rgba(255, 52, 82, 1), rgba(255, 23, 68, 0.9)); 
+            box-shadow: 0 0 20px rgba(255, 23, 68, 1), inset 0 2px 0 rgba(255, 255, 255, 0.4);
         }
         .activity-item { 
             display: flex; 
