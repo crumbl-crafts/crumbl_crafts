@@ -276,18 +276,13 @@
         }
         .stat-card {
             background: 
-                linear-gradient(135deg, 
-                    rgba(255, 23, 68, 0.08) 0%,
-                    rgba(10, 15, 26, 0.95) 30%,
-                    rgba(10, 15, 26, 0.95) 70%,
-                    rgba(41, 121, 255, 0.08) 100%);
-            background-size: 200% 200%;
-            animation: gradientShift 8s ease infinite;
-            border: 2px solid;
-            border-image: linear-gradient(135deg, 
-                rgba(255, 23, 68, 0.6), 
-                rgba(41, 121, 255, 0.6),
-                rgba(255, 215, 0, 0.6)) 1;
+                radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+                radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+                radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 0.8px, transparent 0.8px),
+                rgba(30, 40, 60, 0.6);
+            background-size: 8px 8px, 8px 8px, 4px 4px, 100% 100%;
+            background-position: 0 0, 4px 4px, 2px 2px, 0 0;
+            border: 2px solid rgba(255, 255, 255, 0.15);
             border-radius: 12px;
             padding: 20px;
             position: relative; 
@@ -297,11 +292,11 @@
             gap: 12px;
             transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
             cursor: pointer;
-            backdrop-filter: blur(20px) saturate(180%);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6),
-                        0 0 0 1px rgba(255, 255, 255, 0.05),
-                        inset 0 1px 0 rgba(255, 255, 255, 0.1),
-                        0 4px 16px var(--glow);
+            backdrop-filter: blur(20px) saturate(1.2);
+            -webkit-backdrop-filter: blur(20px) saturate(1.2);
+            box-shadow: 0 12px 40px rgba(255, 23, 68, 0.25), 
+                        0 0 0 1px rgba(255, 255, 255, 0.1),
+                        inset 0 2px 0 rgba(255, 255, 255, 0.15);
             animation: cardFloat 6s ease-in-out infinite;
         }
         @keyframes gradientShift {
@@ -315,16 +310,19 @@
         .stat-card::before {
             content: '';
             position: absolute;
-            inset: -2px;
-            background: linear-gradient(135deg, 
-                rgba(255, 23, 68, 0.4), 
-                rgba(41, 121, 255, 0.4),
-                rgba(255, 215, 0, 0.4));
-            border-radius: 12px;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, 
+                #ff1744 0%, 
+                #ffffff 25%, 
+                #2979FF 50%, 
+                #ffffff 75%, 
+                #ff1744 100%);
+            background-size: 200% 100%;
             opacity: 0;
-            filter: blur(8px);
             transition: opacity 0.4s ease;
-            z-index: -1;
+            border-radius: 12px 12px 0 0;
+            z-index: 1;
         }
         .stat-card::after {
             content: '';
@@ -346,13 +344,19 @@
         .stat-card:hover { 
             transform: translateY(-8px) scale(1.02);
             animation: none;
-            box-shadow: 0 16px 48px rgba(255, 23, 68, 0.5),
+            border-color: rgba(255, 23, 68, 0.4);
+            box-shadow: 0 16px 48px rgba(255, 23, 68, 0.4),
                         0 0 0 1px rgba(255, 255, 255, 0.2),
                         inset 0 2px 0 rgba(255, 255, 255, 0.2),
-                        0 8px 32px var(--primary-glow);
+                        0 0 60px rgba(255, 23, 68, 0.3);
         }
         .stat-card:hover::before {
             opacity: 1;
+            animation: shimmer 2s linear infinite;
+        }
+        @keyframes shimmer {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 200% 0%; }
         }
 
         .stat-card .icon-wrapper { 
@@ -363,25 +367,33 @@
             place-items: center; 
             font-size: 26px; 
             flex-shrink: 0;
-            background: linear-gradient(135deg, 
-                rgba(255, 23, 68, 0.3) 0%, 
-                rgba(124, 58, 237, 0.3) 50%,
-                rgba(41, 121, 255, 0.3) 100%);
+            background: rgba(255, 23, 68, 0.15);
             position: relative;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4),
-                        0 0 24px var(--glow),
-                        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.15);
             animation: iconPulse 3s ease-in-out infinite;
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 23, 68, 0.3);
         }
         @keyframes iconPulse {
-            0%, 100% { box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4), 0 0 24px var(--glow); }
-            50% { box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4), 0 0 40px var(--glow), 0 0 60px var(--glow); }
+            0%, 100% { 
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 
+                            inset 0 1px 0 rgba(255, 255, 255, 0.15),
+                            0 0 20px rgba(255, 23, 68, 0.3); 
+            }
+            50% { 
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 
+                            inset 0 1px 0 rgba(255, 255, 255, 0.15),
+                            0 0 35px rgba(255, 23, 68, 0.5); 
+            }
         }
         .stat-card:hover .icon-wrapper {
             transform: scale(1.1) rotate(5deg);
             animation: none;
-            box-shadow: 0 8px 24px rgba(255, 23, 68, 0.6), 0 0 48px var(--primary-glow);
+            background: rgba(255, 23, 68, 0.25);
+            border-color: rgba(255, 23, 68, 0.5);
+            box-shadow: 0 8px 24px rgba(255, 23, 68, 0.4), 
+                        inset 0 1px 0 rgba(255, 255, 255, 0.2),
+                        0 0 40px rgba(255, 23, 68, 0.4);
         }
         .stat-card .icon-wrapper i {
             position: relative;
