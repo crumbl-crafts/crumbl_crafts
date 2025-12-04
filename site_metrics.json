@@ -17,6 +17,15 @@
     {
       "type": "new_request_thread",
       "shop_name": "Build-Request-Board",
+      "message": "tobolchi posted a new request: test5",
+      "timestamp": 1764838830,
+      "thread_id": 1446063606008512583,
+      "server_id": 1301988304279048275,
+      "url": "https://discord.com/channels/1301988304279048275/1446063606008512583"
+    },
+    {
+      "type": "new_request_thread",
+      "shop_name": "Build-Request-Board",
       "message": "tobolchi posted a new request: test",
       "timestamp": 1764834863,
       "thread_id": 1446046969532518483,
@@ -154,7 +163,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1764838798.9454434,
+    "generated_at": 1764838830.3296916,
     "mode": "memory",
     "refresh_interval": 2000
   }
