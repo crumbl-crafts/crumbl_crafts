@@ -13,7 +13,17 @@
     "avg_response_time": 0
   },
   "topBuilders": [],
-  "activityLog": [],
+  "activityLog": [
+    {
+      "type": "new_request_thread",
+      "shop_name": "Build-Request-Board",
+      "message": "tobolchi posted a new request: test",
+      "timestamp": 1764834863,
+      "thread_id": 1446046969532518483,
+      "server_id": 1301988304279048275,
+      "url": "https://discord.com/channels/1301988304279048275/1446046969532518483"
+    }
+  ],
   "pipeline": [
     {
       "label": "Pending Requests",
@@ -144,7 +154,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1764834774.7929525,
+    "generated_at": 1764834866.3735945,
     "mode": "memory",
     "refresh_interval": 2000
   }
