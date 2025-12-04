@@ -199,6 +199,24 @@
   "news": [
     {
       "type": "trend",
+      "title": "FAMILY WINTER NIGHT ROUTINE IN OUR NEW HOME! *DRAMA!!* Roblox Bloxburg Voiced RP Roleplay",
+      "description": "Description: \u2661\ufe0e. \u25dd \u2b50\ufe0fUSE STARCODE 'PEACH' WHEN BUYING ROBUX OR PREMIUM!\u2b50\ufe0f \u029a hey everyone!   Today it...",
+      "source": "YouTube",
+      "timestamp": 1764882006.0,
+      "url": "https://www.youtube.com/watch?v=-TYW75MVkRU",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "ITS TIME!!! #roblox #trending #shorts #bloxburg #robloxrp #trendingshorts",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1764880369.0,
+      "url": "https://www.youtube.com/watch?v=7Oyal_Yviv4",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "I BUILT A MEGA ICE SKATING RINK IN BLOXBURG",
       "description": "bloxburg #roblox #robloxbloxburg I built an ice skating rink that covered the whole plot in bloxburg...",
       "source": "YouTube",
@@ -222,24 +240,6 @@
       "source": "YouTube",
       "timestamp": 1764871422.0,
       "url": "https://www.youtube.com/watch?v=GoqYkToeuRs",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "&quot;Don&#39;t Push Me on the Swing! \ud83d\ude02 Instant Karma&quot;#shorts",
-      "description": "A funny Roblox animation where a bully pushes a noob too hard, but gets launched into space by a cra...",
-      "source": "YouTube",
-      "timestamp": 1764869862.0,
-      "url": "https://www.youtube.com/watch?v=Xw_jiwoHpro",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "bloxburg youtubers as baddies @DaPandaGirl @Robuilds_ @capdo_roblox  @SiimplyBubliie",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1764867618.0,
-      "url": "https://www.youtube.com/watch?v=BCvlSHUuV3o",
       "icon": "fa-youtube"
     },
     {
@@ -280,7 +280,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1764883106.7258675,
+    "generated_at": 1764884306.3692327,
     "mode": "memory",
     "refresh_interval": 2000
   }
