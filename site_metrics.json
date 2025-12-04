@@ -199,20 +199,20 @@
   "news": [
     {
       "type": "trend",
+      "title": "every. single. pile \ud83d\ude29\ud83c\udf84 #roblox #bloxburg #bloxburgupdate #relate #fyp",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1764890138.0,
+      "url": "https://www.youtube.com/watch?v=cHZ9sn0TIyg",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "#cocomelon #roblox #13million #robloxmemes #bloxburg #videogamememes #gaming #funnygames #memes",
       "description": "...",
       "source": "YouTube",
       "timestamp": 1764889098.0,
       "url": "https://www.youtube.com/watch?v=vks7mi5UT8o",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "ma\u00e7\u00e3s  \ud83c\udf4e \ud83d\udc41\ud83d\udc44\ud83d\udc41 #vem7k #roblox #naofloppa #bloxburg #memes #rumoa2kdeinscritos #adoptme #desflopacomu",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1764888721.0,
-      "url": "https://www.youtube.com/watch?v=6yv7AbA15go",
       "icon": "fa-youtube"
     },
     {
@@ -280,7 +280,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1764891506.3649197,
+    "generated_at": 1764892706.3639295,
     "mode": "memory",
     "refresh_interval": 2000
   }
