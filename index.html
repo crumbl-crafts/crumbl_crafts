@@ -1559,8 +1559,8 @@
             </header>
 
             <!-- Premium Ad Showcase - Attached Below Header (Dynamic) -->
-            <section id="adSection" style="padding: 0; overflow: visible; position: relative; margin: -12px auto 8px auto; display: none; max-width: 1200px;">
-                <div class="premium-ad-carousel" id="premiumAdCarousel" style="position: relative; width: 100%; height: 300px; background: linear-gradient(135deg, #0a0f1a 0%, #1a2030 50%, #0a0f1a 100%); border-radius: 20px; overflow: hidden; box-shadow: 0 8px 0 rgba(0,0,0,0.7), 0 0 40px rgba(255,23,68,0.5), inset 0 3px 0 rgba(255,255,255,0.08); border: 4px solid #FF1744; transform: translateZ(0);">
+            <section id="adSection" style="padding: 0; overflow: visible; position: relative; margin: -12px 0 8px 0; display: none;">
+                <div class="premium-ad-carousel" id="premiumAdCarousel" style="position: relative; width: 100%; max-width: 1200px; height: 300px; margin: 0 auto; background: linear-gradient(135deg, #0a0f1a 0%, #1a2030 50%, #0a0f1a 100%); border-radius: 20px; overflow: hidden; box-shadow: 0 8px 0 rgba(0,0,0,0.7), 0 0 40px rgba(255,23,68,0.5), inset 0 3px 0 rgba(255,255,255,0.08); border: 4px solid #FF1744; transform: translateZ(0);">
                     
                     <!-- Subtle Halftone Pattern -->
                     <div style="position: absolute; inset: 0; background-image: radial-gradient(circle, rgba(255,23,68,0.06) 1px, transparent 1px); background-size: 8px 8px; z-index: 2; pointer-events: none; opacity: 0.5;"></div>
@@ -1731,7 +1731,7 @@
                         mediaElement.muted = true;
                         mediaElement.playsInline = true;
                         mediaElement.setAttribute('data-ad-index', index);
-                        mediaElement.style.cssText = 'width: 100%; height: 100%; object-fit: contain; transform: translateZ(0); background: #000;';
+                        mediaElement.style.cssText = 'width: 100%; height: 100%; object-fit: cover; transform: translateZ(0);';
                         
                         // Advance to next ad when video ends (only if multiple ads)
                         if (totalAds > 1) {
@@ -1758,7 +1758,7 @@
                         mediaElement.src = ad.url;
                         mediaElement.alt = ad.alt || `Premium Advertisement ${index + 1}`;
                         mediaElement.loading = index === 0 ? 'eager' : 'lazy';
-                        mediaElement.style.cssText = 'width: 100%; height: 100%; object-fit: contain; image-rendering: auto; transform: translateZ(0); background: #000;';
+                        mediaElement.style.cssText = 'width: 100%; height: 100%; object-fit: cover; image-rendering: auto; transform: translateZ(0);';
                         
                         // Handle image load errors
                         mediaElement.onerror = function() {
