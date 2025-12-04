@@ -2413,7 +2413,7 @@
             'help': 60000       // 1 minute
         };
         
-        function switchChatChannel(channel) {
+        window.switchChatChannel = function(channel) {
             if (currentChannel === channel) return;
             
             // Update UI
@@ -2483,7 +2483,7 @@
         let usernameCheckTimeout = null;
 
         // Validate username input - only alphanumeric and underscore
-        function validateUsernameInput(input) {
+        window.validateUsernameInput = function(input) {
             input.value = input.value.replace(/[^a-zA-Z0-9_]/g, '');
         }
 
@@ -2546,7 +2546,7 @@
         });
 
         // Handle Sign Up
-        async function handleSignup() {
+        window.handleSignup = async function() {
             const username = document.getElementById('signupUsername').value.trim();
             const email = document.getElementById('signupEmail').value.trim();
             const password = document.getElementById('signupPassword').value;
@@ -2647,7 +2647,7 @@
         }
 
         // Handle Sign In
-        async function handleSignIn() {
+        window.handleSignIn = async function() {
             const email = document.getElementById('signinEmail').value.trim();
             const password = document.getElementById('signinPassword').value;
             
@@ -2700,7 +2700,7 @@
         }
 
         // Handle Password Reset
-        async function handlePasswordReset() {
+        window.handlePasswordReset = async function() {
             const email = document.getElementById('resetEmail').value.trim();
             
             document.querySelectorAll('.auth-error-msg').forEach(el => el.classList.remove('show'));
@@ -2729,7 +2729,7 @@
         }
 
         // Handle Profile Update
-        async function handleProfileUpdate() {
+        window.handleProfileUpdate = async function() {
             const newUsername = document.getElementById('editUsername').value.trim();
             const profilePicFile = document.getElementById('editProfilePic').files[0];
             
@@ -2809,7 +2809,7 @@
         }
 
         // Handle Sign Out
-        async function handleSignOut() {
+        window.handleSignOut = async function() {
             try {
                 await signOut(auth);
                 closeAuthModal();
@@ -2866,7 +2866,7 @@
             document.body.style.overflow = 'hidden';
         }
 
-        function closeAuthModal() {
+        window.closeAuthModal = function() {
             document.getElementById('authModal').classList.remove('show');
             document.body.style.overflow = '';
             
@@ -2878,7 +2878,7 @@
             document.querySelectorAll('.auth-error-msg').forEach(el => el.classList.remove('show'));
         }
 
-        function showSignUp() {
+        window.showSignUp = function() {
             document.getElementById('signupForm').style.display = 'block';
             document.getElementById('signinForm').style.display = 'none';
             document.getElementById('forgotPasswordForm').style.display = 'none';
@@ -2886,7 +2886,7 @@
             openAuthModal();
         }
 
-        function showSignIn() {
+        window.showSignIn = function() {
             document.getElementById('signupForm').style.display = 'none';
             document.getElementById('signinForm').style.display = 'block';
             document.getElementById('forgotPasswordForm').style.display = 'none';
@@ -2894,7 +2894,7 @@
             openAuthModal();
         }
 
-        function showForgotPassword() {
+        window.showForgotPassword = function() {
             document.getElementById('signupForm').style.display = 'none';
             document.getElementById('signinForm').style.display = 'none';
             document.getElementById('forgotPasswordForm').style.display = 'block';
