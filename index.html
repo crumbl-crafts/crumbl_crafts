@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <style>
         :root {
@@ -43,7 +43,7 @@
             scroll-behavior: smooth; 
         }
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Fredoka', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             background: var(--bg-primary);
             color: var(--text);
             min-height: 100vh;
@@ -287,22 +287,24 @@
             background-size: 4px 4px, 6px 6px, 8px 8px, 7px 7px, 100% 100%;
             background-position: 0 0, 3px 3px, 5px 5px, 2px 6px, 0 0;
             border: 3px solid rgba(255, 23, 68, 0.4);
-            border-radius: 16px;
-            padding: 16px;
+            border-radius: 20px;
+            padding: 20px;
             position: relative; 
             overflow: visible;
+            display: flex;
+            align-items: center;
+            gap: 16px;
             transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), 
                         border-color 0.3s ease;
             cursor: default;
             will-change: transform;
-            contain: layout style;
             transform: translateZ(0);
             backdrop-filter: blur(20px);
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5),
                         0 0 0 4px rgba(255, 23, 68, 0.15),
                         inset 0 2px 0 rgba(255, 255, 255, 0.1),
                         inset 0 -2px 0 rgba(0, 0, 0, 0.2);
-            clip-path: polygon(0 6px, 6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%);
+            clip-path: polygon(0 8px, 8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%);
         }
         .stat-card::before {
             content: '';
@@ -349,40 +351,59 @@
         }
 
         .stat-card .icon-wrapper { 
-            width: 36px; 
-            height: 36px; 
-            border-radius: 10px; 
+            width: 60px; 
+            height: 60px; 
+            border-radius: 16px; 
             display: grid; 
             place-items: center; 
-            font-size: 18px; 
-            margin-bottom: 10px;
-            background: var(--glow);
+            font-size: 28px; 
+            flex-shrink: 0;
+            background: linear-gradient(135deg, rgba(255, 23, 68, 0.3), rgba(41, 121, 255, 0.3));
             position: relative;
+            box-shadow: 0 4px 12px rgba(255, 23, 68, 0.4), inset 0 2px 0 rgba(255, 255, 255, 0.2);
         }
         .stat-card .icon-wrapper i {
             position: relative;
             z-index: 1;
         }
+        .stat-card .stat-content {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            flex: 1;
+        }
         .stat-card .label { 
             color: var(--text-muted); 
-            font-size: 0.65rem; 
+            font-size: 0.75rem; 
             text-transform: uppercase; 
-            letter-spacing: 0.08em; 
+            letter-spacing: 0.1em; 
             font-weight: 700;
             text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.6);
             line-height: 1.2;
         }
         .stat-card .value { 
             display: block; 
-            font-size: 1.75rem; 
-            font-weight: 900; 
-            color: var(--text-bright); 
-            margin-top: 4px; 
+            font-size: 2.5rem; 
+            font-weight: 700; 
+            background: linear-gradient(90deg, 
+                #ff1744 0%, 
+                #ff9100 20%, 
+                #ffd700 40%,
+                #00e676 60%,
+                #2979ff 80%,
+                #ff1744 100%);
+            background-size: 200% 100%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: rainbowShift 3s linear infinite;
             letter-spacing: -0.02em;
-            line-height: 1.1;
-            text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8),
-                         -1px -1px 0 rgba(255, 23, 68, 0.3),
-                         0 0 15px rgba(255, 23, 68, 0.5);
+            line-height: 1;
+            filter: drop-shadow(0 2px 4px rgba(255, 23, 68, 0.6));
+        }
+        @keyframes rainbowShift {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 200% 50%; }
         }
         .stat-card .trend { 
             display: inline-flex; 
@@ -423,15 +444,17 @@
             overflow: hidden;
         }
         .section-title {
-            font-size: 1.25rem;
-            font-weight: 800;
+            font-size: 1.5rem;
+            font-weight: 700;
             color: var(--text-bright);
             margin-bottom: 6px;
             display: flex;
             align-items: center;
-            gap: 10px;
-            text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8),
-                         -1px -1px 0 rgba(255, 255, 255, 0.1);
+            gap: 12px;
+            text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.8),
+                         -1px -1px 0 rgba(255, 23, 68, 0.3),
+                         0 0 20px rgba(255, 23, 68, 0.4);
+            letter-spacing: 0.02em;
         }
         .section-subtitle {
             color: var(--text-muted);
@@ -2137,9 +2160,10 @@
                         <div class="icon-wrapper" style="color: ${stat.color}">
                             <i class="fas ${stat.icon}"></i>
                         </div>
-                        <span class="label">${stat.label}</span>
-                        <span class="value" data-value-container></span>
-                        <span class="trend"><i class="fas fa-circle" style="font-size: 6px;"></i> Live</span>
+                        <div class="stat-content">
+                            <span class="label">${stat.label}</span>
+                            <span class="value" data-value-container></span>
+                        </div>
                     `;
                     grid.appendChild(card);
                 }
