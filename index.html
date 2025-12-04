@@ -1983,7 +1983,7 @@
                 
                 <div class="auth-form-group">
                     <label class="auth-form-label">Username</label>
-                    <input type="text" id="signupUsername" class="auth-form-input" placeholder="Choose a unique username" maxlength="20">
+                    <input type="text" id="signupUsername" class="auth-form-input" placeholder="alphanumeric and _ only" maxlength="20" oninput="validateUsernameInput(this)">
                     <div id="usernameCheck" class="username-check"></div>
                     <div id="signupUsernameError" class="auth-error-msg"></div>
                 </div>
@@ -2091,7 +2091,7 @@
                 
                 <div class="auth-form-group">
                     <label class="auth-form-label">Username</label>
-                    <input type="text" id="editUsername" class="auth-form-input" placeholder="New username" maxlength="20">
+                    <input type="text" id="editUsername" class="auth-form-input" placeholder="alphanumeric and _ only" maxlength="20" oninput="validateUsernameInput(this)">
                     <div id="editUsernameCheck" class="username-check"></div>
                     <div id="editUsernameError" class="auth-error-msg"></div>
                 </div>
@@ -2121,11 +2121,6 @@
                 </div>
                 
                 <div style="display: flex; align-items: center; gap: 12px; flex-shrink: 0;">
-                    <a href="https://discord.gg/fqQfmSwfMj" target="_blank" class="discord-join-btn" style="text-decoration: none; display: flex; align-items: center; gap: 10px; padding: 12px 20px; background: linear-gradient(135deg, #5865F2 0%, #4752C4 100%); border: 3px solid rgba(255,255,255,0.3); border-radius: 14px; color: white; font-weight: 800; font-size: 0.9rem; cursor: pointer; transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); box-shadow: 0 6px 0 #3c44a8, 0 8px 20px rgba(88,101,242,0.5), inset 0 2px 0 rgba(255,255,255,0.3); position: relative; overflow: hidden; will-change: transform;">
-                        <i class="fab fa-discord" style="font-size: 1.3rem; filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5));"></i>
-                        <span style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5); letter-spacing: 0.5px;">JOIN SERVER</span>
-                        <div class="discord-pulse" style="position: absolute; inset: -3px; background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, transparent 70%); border-radius: 14px; opacity: 0; animation: discordPulse 2s ease-in-out infinite;"></div>
-                    </a>
                     <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 4px;">
                         <div class="status-badge" id="statusBadge">
                             <span class="status-dot" id="statusDot"></span>
@@ -2135,11 +2130,15 @@
                             <span id="latencyDisplay">—</span>
                         </div>
                     </div>
-                    <button id="authButton" class="auth-btn" style="display: flex; align-items: center; gap: 8px; padding: 10px 18px; background: linear-gradient(135deg, #FF1744, #ff5252); border: 3px solid rgba(255,255,255,0.3); border-radius: 12px; color: white; font-weight: 800; font-size: 0.85rem; cursor: pointer; transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); box-shadow: 0 4px 0 #c41c3a, 0 6px 16px rgba(255,23,68,0.5), inset 0 2px 0 rgba(255,255,255,0.3);">
+                    <a href="https://discord.gg/fqQfmSwfMj" target="_blank" class="discord-join-btn" style="text-decoration: none; display: flex; align-items: center; gap: 8px; padding: 10px 18px; background: linear-gradient(135deg, #5865F2 0%, #4752C4 100%); border: 3px solid rgba(255,255,255,0.3); border-radius: 12px; color: white; font-weight: 800; font-size: 0.85rem; cursor: pointer; transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); box-shadow: 0 6px 0 #3c44a8, 0 8px 20px rgba(88,101,242,0.5), inset 0 2px 0 rgba(255,255,255,0.3); position: relative; overflow: hidden;">
+                        <i class="fab fa-discord" style="font-size: 1.1rem;"></i>
+                        <span>DISCORD</span>
+                    </a>
+                    <button id="authButton" class="auth-btn" onclick="showSignUp()" style="display: flex; align-items: center; gap: 8px; padding: 10px 18px; background: linear-gradient(135deg, #FF1744, #ff5252); border: 3px solid rgba(255,255,255,0.3); border-radius: 12px; color: white; font-weight: 800; font-size: 0.85rem; cursor: pointer; transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); box-shadow: 0 4px 0 #c41c3a, 0 6px 16px rgba(255,23,68,0.5), inset 0 2px 0 rgba(255,255,255,0.3);">
                         <i class="fas fa-user-plus"></i>
                         <span>SIGN UP</span>
                     </button>
-                    <div id="userProfile" style="display: none; align-items: center; gap: 10px; cursor: pointer;">
+                    <div id="userProfile" onclick="showProfileEdit()" style="display: none; align-items: center; gap: 10px; cursor: pointer;">
                         <img id="userAvatar" src="" alt="Avatar" style="width: 40px; height: 40px; border-radius: 50%; border: 3px solid var(--primary); box-shadow: 0 0 12px rgba(255,23,68,0.5);">
                         <span id="userName" style="font-weight: 700; color: var(--text-bright);"></span>
                     </div>
@@ -2280,7 +2279,7 @@
         // Import Firebase SDKs
         import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-analytics.js";
-        import { getDatabase, ref, push, onChildAdded, serverTimestamp, limitToLast, query, get, set, update, child } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-database.js";
+        import { getDatabase, ref, push, onChildAdded, onValue, off, serverTimestamp, limitToLast, query, get, set, update, child } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-database.js";
         import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged, sendPasswordResetEmail, updateProfile } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
         import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-storage.js";
 
@@ -2435,9 +2434,16 @@
         const usersRef = ref(database, 'users');
         let usernameCheckTimeout = null;
 
+        // Validate username input - only alphanumeric and underscore
+        function validateUsernameInput(input) {
+            input.value = input.value.replace(/[^a-zA-Z0-9_]/g, '');
+        }
+
         // Check if username is available
         async function checkUsernameAvailability(username) {
             if (!username || username.length < 3) return false;
+            // Validate format
+            if (!/^[a-zA-Z0-9_]+$/.test(username)) return false;
             const snapshot = await get(child(ref(database), `usernames/${username.toLowerCase()}`));
             return !snapshot.exists();
         }
@@ -2508,6 +2514,9 @@
             
             if (username.length < 3) {
                 showError('signupUsername', 'signupUsernameError', 'Username must be at least 3 characters');
+                hasError = true;
+            } else if (!/^[a-zA-Z0-9_]+$/.test(username)) {
+                showError('signupUsername', 'signupUsernameError', 'Username can only contain letters, numbers, and underscores');
                 hasError = true;
             }
             
@@ -2696,6 +2705,11 @@
                         return;
                     }
                     
+                    if (!/^[a-zA-Z0-9_]+$/.test(newUsername)) {
+                        showError('editUsername', 'editUsernameError', 'Username can only contain letters, numbers, and underscores');
+                        return;
+                    }
+                    
                     const available = await checkUsernameAvailability(newUsername);
                     if (!available) {
                         showError('editUsername', 'editUsernameError', 'Username is already taken');
@@ -2864,9 +2878,6 @@
                 error.classList.add('show');
             }
         }
-
-        // Auth button click handler
-        document.getElementById('authButton')?.addEventListener('click', showSignUp);
 
         // Username check for profile edit
         document.getElementById('editUsername')?.addEventListener('input', async (e) => {
