@@ -91,6 +91,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "#bloxburg #roblox #\u0634\u0644\u062a\u0646\u0627",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1764866103.0,
+      "url": "https://www.youtube.com/watch?v=_ZEb25N19D8",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "DAISY &amp; SOPHIE STEAL A CHEESECAKE! #shorts #roblox #bloxburgroleplay #roleplay #bloxburg #steal",
       "description": "DAISY & SOPHIE STEAL A CHEESECAKE! Make sure to like and check out the full video in the link to fin...",
       "source": "YouTube",
@@ -123,15 +132,6 @@
       "source": "YouTube",
       "timestamp": 1764858920.0,
       "url": "https://www.youtube.com/watch?v=SjQ5XackXPo",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "#hello #roblox #bloxburgnewleaks #new #funny #nightmarenarratives #bloxburg #bloxburgcontentcreator",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1764858568.0,
-      "url": "https://www.youtube.com/watch?v=XyBn34PKypo",
       "icon": "fa-youtube"
     },
     {
@@ -172,7 +172,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1764867506.3693628,
+    "generated_at": 1764868706.3680615,
     "mode": "memory",
     "refresh_interval": 2000
   }
