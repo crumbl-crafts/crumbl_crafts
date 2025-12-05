@@ -199,6 +199,33 @@
   "news": [
     {
       "type": "trend",
+      "title": "Bacoon really THREW ME \ud83e\udd23 Roblox Brookhaven Meme #roblox #funny #meme #shorts #bloxburg",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1764907474.0,
+      "url": "https://www.youtube.com/watch?v=PyXfjuVpVjE",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "SALJU PERTAMA BIBI BERRR DINGIN SEKALI  || BLOXBURG\ud83c\udfe1 ROBLOX INDONESIA",
+      "description": "Bibi senang sekali melihat salju untuk peltama kalinya semoga besok bisa belmain belsama sama Mami P...",
+      "source": "YouTube",
+      "timestamp": 1764907214.0,
+      "url": "https://www.youtube.com/watch?v=6SYWglyY1mU",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "LETTING SUBSCRIBER INDEX #roblox #robloxpvp #robloxmemes #roblo #robloxedit #bloxburg #rblx",
+      "description": "LETTING VEIWERS INDEX....",
+      "source": "YouTube",
+      "timestamp": 1764906830.0,
+      "url": "https://www.youtube.com/watch?v=zrrxddVIoeA",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Bloxburg Christmas update build itself snowman #bloxburg #bloxburgcontentcreator #bloxburgchristmas",
       "description": "...",
       "source": "YouTube",
@@ -213,33 +240,6 @@
       "source": "YouTube",
       "timestamp": 1764900690.0,
       "url": "https://www.youtube.com/watch?v=5QrAYGiOBBU",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "BloxBurg Breaking News On Grow A Garden\ud83d\udce2",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1764900163.0,
-      "url": "https://www.youtube.com/watch?v=ix90DlnGAPw",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "BUILDING the NEW BLOXBURG MODERN GINGERBREAD UPDATE ITEM INTO a HOUSE",
-      "description": "I finally am getting around to this very totally interesting video idea! We got a new christmas upda...",
-      "source": "YouTube",
-      "timestamp": 1764899377.0,
-      "url": "https://www.youtube.com/watch?v=l0q4EckJc7Q",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Stranger Things In Bloxburg #bloxburg #netflixseries#strangerthings #strangerthingsedit #cool",
-      "description": "Stranger things in Bloxburg #strangerthings #bloxburg #strangerthings5 #strangerthingsedit #cool #sc...",
-      "source": "YouTube",
-      "timestamp": 1764896635.0,
-      "url": "https://www.youtube.com/watch?v=WF9Y2MibErA",
       "icon": "fa-youtube"
     },
     {
@@ -280,7 +280,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1764908306.364471,
+    "generated_at": 1764909506.3697038,
     "mode": "memory",
     "refresh_interval": 2000
   }
