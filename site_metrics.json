@@ -199,6 +199,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "How to Get Help Fast in Roblox? \ud83d\ude0a#roblox #robloxgames #robloxfyp #bloxburg",
+      "description": "roblox #robloxgames #robloxfyp #bloxburg....",
+      "source": "YouTube",
+      "timestamp": 1764921351.0,
+      "url": "https://www.youtube.com/watch?v=Z86RpVK4_6k",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "second bananito bandito :P #roblox #butifyoucloseyoureyes #robloxedit #bloxburg #edit",
       "description": "...",
       "source": "YouTube",
@@ -231,15 +240,6 @@
       "source": "YouTube",
       "timestamp": 1764907474.0,
       "url": "https://www.youtube.com/watch?v=PyXfjuVpVjE",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "SALJU PERTAMA BIBI BERRR DINGIN SEKALI  || BLOXBURG\ud83c\udfe1 ROBLOX INDONESIA",
-      "description": "Bibi senang sekali melihat salju untuk peltama kalinya semoga besok bisa belmain belsama sama Mami P...",
-      "source": "YouTube",
-      "timestamp": 1764907214.0,
-      "url": "https://www.youtube.com/watch?v=6SYWglyY1mU",
       "icon": "fa-youtube"
     },
     {
@@ -280,7 +280,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1764922706.3668578,
+    "generated_at": 1764923906.3659654,
     "mode": "memory",
     "refresh_interval": 2000
   }
