@@ -199,6 +199,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "HUJAN SALJU PERTAMA DI BULAN DESEMBER | BLOXBURG RP",
+      "description": "Terimakasiih adik-adik udah nonton video ini sampai akhirr, lup yu all -----------   -Tags  - #roblo...",
+      "source": "YouTube",
+      "timestamp": 1764910590.0,
+      "url": "https://www.youtube.com/watch?v=rFtkT-bFqec",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "#roblox #bloxburg",
       "description": "...",
       "source": "YouTube",
@@ -231,15 +240,6 @@
       "source": "YouTube",
       "timestamp": 1764906830.0,
       "url": "https://www.youtube.com/watch?v=zrrxddVIoeA",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Bloxburg Christmas update build itself snowman #bloxburg #bloxburgcontentcreator #bloxburgchristmas",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1764902083.0,
-      "url": "https://www.youtube.com/watch?v=ebnsnh5S2QA",
       "icon": "fa-youtube"
     },
     {
@@ -280,7 +280,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1764916706.3661633,
+    "generated_at": 1764917906.3661044,
     "mode": "memory",
     "refresh_interval": 2000
   }
