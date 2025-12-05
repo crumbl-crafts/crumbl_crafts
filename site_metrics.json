@@ -199,6 +199,24 @@
   "news": [
     {
       "type": "trend",
+      "title": "#edit #bloxburg #robloxedit #roblox #music #audio #bass #edm #facts",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1764969058.0,
+      "url": "https://www.youtube.com/watch?v=QAviDTAN558",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "#brasil #roblox #duet #edit #robloxedit #memes #welcomehome #mm2 #flamengo #bloxburg",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1764967581.0,
+      "url": "https://www.youtube.com/watch?v=XsCKOfjnwf0",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "literally how I used to do my roofing \ud83d\ude2d #roblox #bloxburg #relatable #robloxfunny #fyp",
       "description": "...",
       "source": "YouTube",
@@ -217,29 +235,11 @@
     },
     {
       "type": "trend",
-      "title": "Bloxburg KICKING Creators?",
-      "description": "Yesterday, popular Roblox YouTuber Ashley The Unicorn was removed from Bloxburg's Creator Program. I...",
-      "source": "YouTube",
-      "timestamp": 1764963007.0,
-      "url": "https://www.youtube.com/watch?v=mcRD_0c_TA4",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
       "title": "the cutest advent calendar!! \ud83c\udf84\ud83c\udf85\ud83c\udffc#bloxburg #roblox #bloxburgchristmas #bloxburgupdate #fyp",
       "description": "...",
       "source": "YouTube",
       "timestamp": 1764962954.0,
       "url": "https://www.youtube.com/watch?v=HzQ7GwP--QY",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "If this thing flies in, I&#39;ll be shocked.",
-      "description": "Hello, Robloxers ! I create content for those who love: \u200e\u2022 discovering new games; \u200e\u2022 laughing at gam...",
-      "source": "YouTube",
-      "timestamp": 1764962096.0,
-      "url": "https://www.youtube.com/watch?v=UDKIjYsCNKM",
       "icon": "fa-youtube"
     },
     {
@@ -280,7 +280,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1764969506.6733701,
+    "generated_at": 1764970706.3709362,
     "mode": "memory",
     "refresh_interval": 2000
   }
