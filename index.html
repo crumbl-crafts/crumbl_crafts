@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <title>Crumbl Crafts · Live Dashboard</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🍪</text></svg>" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -54,6 +56,18 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             text-rendering: optimizeLegibility;
+        }
+        /* Screen reader only class for accessibility */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
         }
         body::after {
             content: '';
@@ -200,6 +214,7 @@
             transform: translateY(-4px);
         }
         .logo-icon img {
+            image-rendering: -webkit-optimize-contrast;
             image-rendering: crisp-edges;
             image-rendering: -webkit-optimize-contrast;
         }
@@ -1046,6 +1061,21 @@
             word-wrap: break-word;
             word-break: break-word;
             margin-top: 1px;
+        }
+        .loading-indicator {
+            padding: 12px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.85rem;
+            font-style: italic;
+            background: linear-gradient(135deg, rgba(30, 50, 80, 0.3), rgba(20, 40, 70, 0.3));
+            border-radius: 8px;
+            margin: 8px 0;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
         }
         .chat-message-header {
             display: flex;
@@ -2655,7 +2685,7 @@
             modal.className = 'build-modal show';
             modal.innerHTML = `
                 <div class="build-modal-content" style="max-width: 600px; background: linear-gradient(135deg, rgba(30, 40, 60, 0.98), rgba(20, 30, 50, 0.98)); border: 3px solid rgba(255, 23, 68, 0.4); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), 0 0 40px rgba(255, 23, 68, 0.3);">
-                    <button class="build-modal-close" onclick="this.closest('.build-modal').remove()">×</button>
+                    <button class="build-modal-close" onclick="this.closest('.build-modal').remove()" aria-label="Close upload modal" title="Close">×</button>
                     
                     <div style="text-align: center; margin-bottom: 24px;">
                         <div style="display: inline-flex; align-items: center; justify-content: center; width: 70px; height: 70px; background: linear-gradient(135deg, #FF1744, #FF5252); border-radius: 50%; margin-bottom: 16px; box-shadow: 0 8px 24px rgba(255, 23, 68, 0.5);">
@@ -2669,20 +2699,20 @@
                     
                     <div style="display: flex; flex-direction: column; gap: 20px;">
                         <div style="background: rgba(0, 0, 0, 0.2); padding: 20px; border-radius: 12px; border: 2px solid rgba(255, 255, 255, 0.05);">
-                            <label style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px; font-weight: 800; color: var(--text-bright); font-size: 0.95rem;">
+                            <label for="buildTitle" style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px; font-weight: 800; color: var(--text-bright); font-size: 0.95rem;">
                                 <i class="fas fa-heading" style="color: var(--primary);"></i>
                                 Build Title
                             </label>
-                            <input id="buildTitle" type="text" placeholder="e.g., Modern Luxury Villa" style="width: 100%; padding: 14px; border-radius: 10px; border: 2px solid rgba(255, 255, 255, 0.15); background: rgba(0, 0, 0, 0.4); color: var(--text-bright); font-size: 1rem; font-weight: 600; transition: all 0.3s ease;" maxlength="60" onfocus="this.style.borderColor='rgba(255, 23, 68, 0.6)'" onblur="this.style.borderColor='rgba(255, 255, 255, 0.15)'">
+                            <input id="buildTitle" type="text" placeholder="e.g., Modern Luxury Villa" style="width: 100%; padding: 14px; border-radius: 10px; border: 2px solid rgba(255, 255, 255, 0.15); background: rgba(0, 0, 0, 0.4); color: var(--text-bright); font-size: 1rem; font-weight: 600; transition: all 0.3s ease;" maxlength="60" onfocus="this.style.borderColor='rgba(255, 23, 68, 0.6)'" onblur="this.style.borderColor='rgba(255, 255, 255, 0.15)'" aria-label="Build title" title="Enter your build title">
                             <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 6px; text-align: right;"><span id="titleCount">0</span>/60</p>
                         </div>
                         
                         <div style="background: rgba(0, 0, 0, 0.2); padding: 20px; border-radius: 12px; border: 2px solid rgba(255, 255, 255, 0.05);">
-                            <label style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px; font-weight: 800; color: var(--text-bright); font-size: 0.95rem;">
+                            <label for="buildDescription" style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px; font-weight: 800; color: var(--text-bright); font-size: 0.95rem;">
                                 <i class="fas fa-align-left" style="color: var(--primary);"></i>
                                 Description
                             </label>
-                            <textarea id="buildDescription" placeholder="Describe your build: design style, features, time spent building..." style="width: 100%; padding: 14px; border-radius: 10px; border: 2px solid rgba(255, 255, 255, 0.15); background: rgba(0, 0, 0, 0.4); color: var(--text-bright); font-size: 0.95rem; min-height: 100px; resize: vertical; font-family: inherit; transition: all 0.3s ease;" maxlength="500" onfocus="this.style.borderColor='rgba(255, 23, 68, 0.6)'" onblur="this.style.borderColor='rgba(255, 255, 255, 0.15)'"></textarea>
+                            <textarea id="buildDescription" placeholder="Describe your build: design style, features, time spent building..." style="width: 100%; padding: 14px; border-radius: 10px; border: 2px solid rgba(255, 255, 255, 0.15); background: rgba(0, 0, 0, 0.4); color: var(--text-bright); font-size: 0.95rem; min-height: 100px; resize: vertical; font-family: inherit; transition: all 0.3s ease;" maxlength="500" onfocus="this.style.borderColor='rgba(255, 23, 68, 0.6)'" onblur="this.style.borderColor='rgba(255, 255, 255, 0.15)'" aria-label="Build description" title="Describe your build"></textarea>
                             <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 6px; text-align: right;"><span id="descCount">0</span>/500</p>
                         </div>
                         
@@ -2732,7 +2762,7 @@
     <!-- Authentication Modal -->
     <div id="authModal" class="auth-modal">
         <div class="auth-modal-content">
-            <button class="auth-modal-close" onclick="closeAuthModal()">
+            <button class="auth-modal-close" onclick="closeAuthModal()" aria-label="Close authentication modal" title="Close">
                 <i class="fas fa-times"></i>
             </button>
             
@@ -2742,37 +2772,37 @@
                 <p class="auth-modal-subtitle">Join the Crumbl Crafts community</p>
                 
                 <div class="auth-form-group">
-                    <label class="auth-form-label">Username</label>
-                    <input type="text" id="signupUsername" class="auth-form-input" placeholder="Username (no spaces)" maxlength="20" oninput="validateUsernameInput(this)">
+                    <label class="auth-form-label" for="signupUsername">Username</label>
+                    <input type="text" id="signupUsername" class="auth-form-input" placeholder="Username (no spaces)" maxlength="20" oninput="validateUsernameInput(this)" aria-label="Username" title="Enter your username">
                     <p style="font-size: 0.7rem; color: var(--text-muted); margin-top: 4px;">3-20 characters, no spaces allowed</p>
                     <div id="usernameCheck" class="username-check"></div>
                     <div id="signupUsernameError" class="auth-error-msg"></div>
                 </div>
                 
                 <div class="auth-form-group">
-                    <label class="auth-form-label">Email</label>
-                    <input type="email" id="signupEmail" class="auth-form-input" placeholder="your@email.com">
+                    <label class="auth-form-label" for="signupEmail">Email</label>
+                    <input type="email" id="signupEmail" class="auth-form-input" placeholder="your@email.com" aria-label="Email address" title="Enter your email address">
                     <div id="signupEmailError" class="auth-error-msg"></div>
                 </div>
                 
                 <div class="auth-form-group">
-                    <label class="auth-form-label">Password</label>
-                    <input type="password" id="signupPassword" class="auth-form-input" placeholder="Minimum 6 characters">
+                    <label class="auth-form-label" for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" class="auth-form-input" placeholder="Minimum 6 characters" aria-label="Password" title="Enter your password">
                     <div id="signupPasswordError" class="auth-error-msg"></div>
                 </div>
                 
                 <div class="auth-form-group">
-                    <label class="auth-form-label">Confirm Password</label>
-                    <input type="password" id="signupConfirmPassword" class="auth-form-input" placeholder="Re-enter password">
+                    <label class="auth-form-label" for="signupConfirmPassword">Confirm Password</label>
+                    <input type="password" id="signupConfirmPassword" class="auth-form-input" placeholder="Re-enter password" aria-label="Confirm password" title="Re-enter your password">
                     <div id="signupConfirmError" class="auth-error-msg"></div>
                 </div>
                 
                 <div class="auth-form-group">
-                    <label class="auth-form-label">Profile Picture (Optional)</label>
+                    <label class="auth-form-label" for="signupProfilePic">Profile Picture (Optional)</label>
                     <div class="profile-pic-upload">
                         <img id="signupProfilePreview" class="profile-pic-preview" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23333'/%3E%3Ctext x='50' y='50' text-anchor='middle' dy='.3em' fill='%23fff' font-size='40' font-family='Arial'%3E%3F%3C/text%3E%3C/svg%3E" alt="Profile">
-                        <input type="file" id="signupProfilePic" accept="image/*" style="display: none;">
-                        <button type="button" class="profile-pic-btn" onclick="document.getElementById('signupProfilePic').click()">
+                        <input type="file" id="signupProfilePic" accept="image/*" style="display: none;" aria-label="Upload profile picture" title="Choose a profile picture">
+                        <button type="button" class="profile-pic-btn" onclick="document.getElementById('signupProfilePic').click()" aria-label="Upload photo" title="Upload profile photo">
                             <i class="fas fa-upload"></i> Upload Photo
                         </button>
                     </div>
@@ -3060,11 +3090,12 @@
                         <h2 class="section-title" style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
                             <i class="fas fa-comments" style="font-size: 1.2rem;"></i>
                             <span>Live Chat</span>
+                            <span id="messageCount" style="font-size: 0.7rem; color: rgba(255,255,255,0.4); margin-left: auto;"></span>
                         </h2>
                         <div class="chat-channels">
-                            <button class="chat-channel-btn active" data-channel="general" onclick="switchChatChannel('general')">General</button>
-                            <button class="chat-channel-btn" data-channel="builders" onclick="switchChatChannel('builders')">Builders</button>
-                            <button class="chat-channel-btn" data-channel="help" onclick="switchChatChannel('help')">Help</button>
+                            <button class="chat-channel-btn active" data-channel="general" onclick="switchChatChannel('general')" title="General chat channel" aria-label="General chat">General</button>
+                            <button class="chat-channel-btn" data-channel="builders" onclick="switchChatChannel('builders')" title="Builders chat channel" aria-label="Builders chat">Builders</button>
+                            <button class="chat-channel-btn" data-channel="help" onclick="switchChatChannel('help')" title="Help chat channel" aria-label="Help chat">Help</button>
                         </div>
                     </div>
                 </div>
@@ -3083,16 +3114,17 @@
                     </div>
                     <div class="mention-autocomplete" id="mentionAutocomplete"></div>
                     <div class="chat-actions">
-                        <button class="chat-action-btn" onclick="toggleEmojiPicker()">
+                        <button class="chat-action-btn" onclick="toggleEmojiPicker()" aria-label="Add emoji" title="Add emoji">
                             <i class="fas fa-smile"></i> Emoji
                         </button>
-                        <button class="chat-action-btn" onclick="toggleGifPicker()">
+                        <button class="chat-action-btn" onclick="toggleGifPicker()" aria-label="Add GIF" title="Add GIF">
                             <i class="fas fa-film"></i> GIF
                         </button>
                     </div>
                     <div class="chat-input-container">
-                        <input type="text" id="chatInput" class="chat-input" placeholder="Type a message..." maxlength="500">
-                        <button id="chatSendBtn" class="chat-send-btn">
+                        <label for="chatInput" class="sr-only">Chat message</label>
+                        <input type="text" id="chatInput" class="chat-input" placeholder="Type a message..." maxlength="500" aria-label="Type your chat message" title="Type your chat message">
+                        <button id="chatSendBtn" class="chat-send-btn" aria-label="Send message" title="Send message">
                             <i class="fas fa-paper-plane"></i>
                         </button>
                     </div>
@@ -3159,6 +3191,11 @@
         const chatMessages = document.getElementById('chatMessages');
         const chatInput = document.getElementById('chatInput');
         const chatSendBtn = document.getElementById('chatSendBtn');
+        
+        // Infinite scroll state for loading older messages
+        let isLoadingOlderMessages = false;
+        let oldestMessageTimestamp = null;
+        let hasMoreMessages = true;
 
         // Generate random user ID if not exists
         let userId = localStorage.getItem('chatUserId');
@@ -3252,9 +3289,18 @@
         }
         
         // Optimized message display with DocumentFragment
+        // Update message count display
+        function updateMessageCount() {
+            const messageCount = chatMessages.querySelectorAll('.chat-message').length;
+            const countElement = document.getElementById('messageCount');
+            if (countElement) {
+                countElement.textContent = `${messageCount} messages loaded`;
+            }
+        }
+        
         // Cleanup old messages to prevent memory issues with massive chat history
         function cleanupOldMessages() {
-            const maxMessages = 150; // Keep max 150 messages in DOM
+            const maxMessages = 300; // Keep max 300 messages in DOM (optimized for performance)
             const messageElements = chatMessages.querySelectorAll('.chat-message');
             if (messageElements.length > maxMessages) {
                 const removeCount = messageElements.length - maxMessages;
@@ -3315,9 +3361,11 @@
             
             const isGif = msg.text && (msg.text.includes('giphy.com') || msg.text.includes('tenor.com'));
             if (isGif) {
-                text.innerHTML = `<img src="${msg.text}" style="max-width:250px;max-height:250px;border-radius:8px;margin-top:4px" loading="lazy">`;
+                text.innerHTML = `<img src="${msg.text}" style="max-width:250px;max-height:250px;border-radius:8px;margin-top:4px" loading="lazy" decoding="async" alt="GIF">`;
             } else {
-                text.innerHTML = (msg.text || '').replace(/@(\w+)/g, '<span class="chat-mention">@$1</span>');
+                // Sanitize and render text with mentions
+                const sanitizedText = (msg.text || '').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+                text.innerHTML = sanitizedText.replace(/@(\w+)/g, '<span class="chat-mention">@$1</span>');
             }
             
             content.append(header, text);
@@ -3409,8 +3457,12 @@
             requestAnimationFrame(() => {
                 chatMessages.appendChild(fragment);
                 
-                // Cleanup old messages to prevent lag
-                cleanupOldMessages();
+                // Cleanup old messages during idle time to prevent lag
+                if ('requestIdleCallback' in window) {
+                    requestIdleCallback(() => cleanupOldMessages(), { timeout: 2000 });
+                } else {
+                    setTimeout(cleanupOldMessages, 100);
+                }
                 
                 if (hasScrolledToBottom) {
                     chatMessages.scrollTop = chatMessages.scrollHeight;
@@ -3418,6 +3470,78 @@
             });
         }
 
+        // Infinite scroll: Load older messages when scrolling to top
+        chatMessages.addEventListener('scroll', () => {
+            const scrolledToTop = chatMessages.scrollTop < 100;
+            
+            if (scrolledToTop && !isLoadingOlderMessages && hasMoreMessages) {
+                loadOlderMessages();
+            }
+            
+            // Track if user is at bottom for auto-scroll
+            const atBottom = chatMessages.scrollHeight - chatMessages.scrollTop <= chatMessages.clientHeight + 50;
+            hasScrolledToBottom = atBottom;
+        });
+        
+        // Load older messages when scrolling up
+        async function loadOlderMessages() {
+            if (isLoadingOlderMessages || !hasMoreMessages || !oldestMessageTimestamp) return;
+            
+            isLoadingOlderMessages = true;
+            const loadingIndicator = document.createElement('div');
+            loadingIndicator.className = 'loading-indicator';
+            loadingIndicator.textContent = 'Loading older messages...';
+            chatMessages.insertBefore(loadingIndicator, chatMessages.firstChild);
+            
+            const prevScrollHeight = chatMessages.scrollHeight;
+            
+            try {
+                const olderMessagesRef = ref(database, `chat/${currentChannel}/messages`);
+                const olderQuery = query(
+                    olderMessagesRef,
+                    orderByChild('timestamp'),
+                    endBefore(oldestMessageTimestamp),
+                    limitToLast(50)
+                );
+                
+                const snapshot = await get(olderQuery);
+                const messages = [];
+                snapshot.forEach((childSnapshot) => {
+                    messages.push({
+                        id: childSnapshot.key,
+                        ...childSnapshot.val()
+                    });
+                });
+                
+                if (messages.length === 0) {
+                    hasMoreMessages = false;
+                    loadingIndicator.textContent = 'No more messages';
+                    setTimeout(() => loadingIndicator.remove(), 2000);
+                } else {
+                    messages.sort((a, b) => (a.timestamp || 0) - (b.timestamp || 0));
+                    oldestMessageTimestamp = messages[0].timestamp;
+                    
+                    const fragment = document.createDocumentFragment();
+                    messages.forEach(msg => {
+                        const msgElement = createMessageElement(msg, false);
+                        if (msgElement) fragment.appendChild(msgElement);
+                    });
+                    
+                    loadingIndicator.remove();
+                    chatMessages.insertBefore(fragment, chatMessages.firstChild);
+                    
+                    // Maintain scroll position
+                    chatMessages.scrollTop = chatMessages.scrollHeight - prevScrollHeight;
+                }
+            } catch (error) {
+                debug.error('Error loading older messages:', error);
+                loadingIndicator.textContent = 'Failed to load messages';
+                setTimeout(() => loadingIndicator.remove(), 2000);
+            } finally {
+                isLoadingOlderMessages = false;
+            }
+        }
+        
         // Event listeners
         chatSendBtn.addEventListener('click', sendMessage);
         chatInput.addEventListener('keypress', (e) => {
@@ -3639,8 +3763,8 @@
             
             // Subscribe to new channel
             chatMessagesRef = ref(database, `chat/${channel}/messages`);
-            // Limit to 100 recent messages for performance
-            const messagesQuery = query(chatMessagesRef, limitToLast(100));
+            // Load 200 most recent messages (optimized with virtual scrolling)
+            const messagesQuery = query(chatMessagesRef, limitToLast(200));
             
             let isInitialLoad = true;
             chatMessagesListener = onValue(messagesQuery, (snapshot) => {
@@ -3656,6 +3780,12 @@
                     
                     messages.sort((a, b) => (a.timestamp || 0) - (b.timestamp || 0));
                     
+                    // Track oldest message for infinite scroll
+                    if (messages.length > 0) {
+                        oldestMessageTimestamp = messages[0].timestamp;
+                        hasMoreMessages = true;
+                    }
+                    
                     // Use DocumentFragment for efficient DOM updates
                     const fragment = document.createDocumentFragment();
                     messages.forEach(msg => {
@@ -3664,7 +3794,7 @@
                     });
                     chatMessages.appendChild(fragment);
                     
-                    // Cleanup excess messages in DOM (keep only last 150)
+                    // Cleanup excess messages in DOM (keep only last 300)
                     cleanupOldMessages();
                     
                     chatMessages.scrollTop = chatMessages.scrollHeight;
