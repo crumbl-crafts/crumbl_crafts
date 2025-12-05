@@ -199,6 +199,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "Dia 5  #roblox #robloxbloxburgspeedbuild #bloxburg #bloxburgnewleaks #robloxgames #robloxedit",
+      "description": "Hoy abrimos el dia 5 del calendario de adviento de Bloxburg 2025....",
+      "source": "YouTube",
+      "timestamp": 1764964881.0,
+      "url": "https://www.youtube.com/watch?v=QjEzQ-0IIkk",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Bloxburg KICKING Creators?",
       "description": "Yesterday, popular Roblox YouTuber Ashley The Unicorn was removed from Bloxburg's Creator Program. I...",
       "source": "YouTube",
@@ -231,15 +240,6 @@
       "source": "YouTube",
       "timestamp": 1764958631.0,
       "url": "https://www.youtube.com/watch?v=6ri_UxNkaUc",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Wheel chooses my OUTFIT in ROBLOX? #preppy #bloxburg #roblox #code #adoptme",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1764956164.0,
-      "url": "https://www.youtube.com/watch?v=i0tS_pq6xGU",
       "icon": "fa-youtube"
     },
     {
@@ -280,7 +280,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1764965906.3696725,
+    "generated_at": 1764967106.369272,
     "mode": "memory",
     "refresh_interval": 2000
   }
