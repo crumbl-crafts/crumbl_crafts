@@ -3142,6 +3142,7 @@
         import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged, sendPasswordResetEmail, updateProfile, signInAnonymously, GoogleAuthProvider, signInWithPopup, sendSignInLinkToEmail, isSignInWithEmailLink, signInWithEmailLink } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
         import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-storage.js";
         import { getFirestore, collection, addDoc, getDocs, doc, updateDoc, arrayUnion, serverTimestamp as firestoreTimestamp, query as firestoreQuery, orderBy, limit } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
+        import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm';
 
         // Firebase configuration
         const firebaseConfig = {
@@ -3170,6 +3171,15 @@
         window.firebaseStorage = storage;
         window.firebaseAnalytics = analytics;
         window.firestore = firestore;
+        // Initialize Supabase client (optional - used for Storage & builds migration)
+        try {
+            const SUPABASE_URL = 'https://eoxdfyjwpcgcilbjmpxp.supabase.co';
+            const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVveGRmeWp3cGNnY2lsYmptcHhwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjQ5MTk3OTUsImV4cCI6MjA4MDQ5NTc5NX0.kGAHijXQGYJv1PUE01te2z7nCXROx9K5lwvXznVzmG0';
+            window.supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+            console.log('Supabase initialized');
+        } catch (err) {
+            console.warn('Supabase init failed', err);
+        }
         
         // Make Firebase functions globally accessible
         window.storageRef = storageRef;
@@ -5925,11 +5935,29 @@
         }
         
         async function loadBuildsFromFirestore() {
+            // Backwards-compatible loader: if Supabase is available, load from Supabase 'builds' table,
+            // otherwise fall back to Firestore. This lets us migrate storage/metadata gradually.
             try {
+                if (window.supabase) {
+                    const { data, error } = await window.supabase
+                        .from('builds')
+                        .select('*')
+                        .order('created_at', { ascending: false })
+                        .limit(50);
+                    if (error) throw error;
+
+                    buildMuseumBuilds = (data || []).map((row) => ({
+                        id: row.id || row.build_id || null,
+                        ...row
+                    }));
+                    console.log(`Loaded ${buildMuseumBuilds.length} builds from Supabase`);
+                    return;
+                }
+
                 const buildsCollection = collection(window.firestore, 'builds');
                 const buildsQuery = firestoreQuery(buildsCollection, orderBy('createdAt', 'desc'), limit(50));
                 const snapshot = await getDocs(buildsQuery);
-                
+
                 buildMuseumBuilds = [];
                 snapshot.forEach((doc) => {
                     buildMuseumBuilds.push({
@@ -5937,7 +5965,7 @@
                         ...doc.data()
                     });
                 });
-                
+
                 console.log(`Loaded ${buildMuseumBuilds.length} builds from Firestore`);
             } catch (error) {
                 console.error('Error loading builds:', error);
@@ -6132,7 +6160,191 @@
         }
         
         // Upload build functionality
+        // Image optimization helpers: compress images to WebP and create thumbnails to save storage
+        async function compressImageToWebP(file, maxWidth = 1920, maxHeight = 1080, quality = 0.82) {
+            return new Promise((resolve, reject) => {
+                try {
+                    const img = new Image();
+                    const reader = new FileReader();
+                    reader.onload = function (e) {
+                        img.onload = function () {
+                            // compute target size while preserving aspect ratio
+                            let w = img.width;
+                            let h = img.height;
+                            const ratio = Math.min(maxWidth / w, maxHeight / h, 1);
+                            const tw = Math.round(w * ratio);
+                            const th = Math.round(h * ratio);
+
+                            const canvas = document.createElement('canvas');
+                            canvas.width = tw;
+                            canvas.height = th;
+                            const ctx = canvas.getContext('2d');
+                            ctx.drawImage(img, 0, 0, tw, th);
+                            canvas.toBlob((blob) => {
+                                if (!blob) return reject(new Error('Compression failed (no blob)'));
+                                resolve(blob);
+                            }, 'image/webp', quality);
+                        };
+                        img.onerror = (err) => reject(err);
+                        img.src = e.target.result;
+                    };
+                    reader.onerror = (err) => reject(err);
+                    reader.readAsDataURL(file);
+                } catch (err) { reject(err); }
+            });
+        }
+
+        async function createThumbnailBlob(file, thumbMax = 400, quality = 0.7) {
+            // Use the same helper but smaller dimensions
+            return compressImageToWebP(file, thumbMax, thumbMax, quality);
+        }
+
         async function uploadBuild(file, title, description) {
+            // Prefer Supabase if available; otherwise fall back to Firebase implementation.
+            if (window.supabase) {
+                // Supabase path
+                try {
+                    // Resolve user via Supabase Auth
+                    let user = null;
+                    try {
+                        const userRes = await window.supabase.auth.getUser();
+                        user = userRes?.data?.user || null;
+                    } catch (e) {
+                        // older versions may have user or auth.user()
+                        user = window.supabase.auth.user ? window.supabase.auth.user() : null;
+                    }
+
+                    if (!user && window.currentUser) user = window.currentUser;
+                    if (!user) {
+                        alert('Please sign in to upload builds!');
+                        return false;
+                    }
+
+                    console.log('Starting Supabase upload...', { title, description, file: file?.name, user: user && (user.id || user.email) });
+
+                    // Validate file
+                    const maxImageSize = 5 * 1024 * 1024; // 5MB
+                    const maxVideoSize = 50 * 1024 * 1024; // 50MB
+                    const isVideo = file.type.startsWith('video/');
+                    const isImage = file.type.startsWith('image/');
+
+                    if (!isVideo && !isImage) {
+                        alert('Please upload an image or video file.');
+                        return false;
+                    }
+                    if (isImage && file.size > maxImageSize) { alert('Image size must be less than 5MB.'); return false; }
+                    if (isVideo && file.size > maxVideoSize) { alert('Video size must be less than 50MB.'); return false; }
+
+                    const uploadBtn = document.getElementById('uploadSubmitBtn');
+                    if (uploadBtn) { uploadBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Uploading...'; uploadBtn.disabled = true; }
+
+                    const timestamp = Date.now();
+                    const fileExtension = (file.name || '').split('.').pop();
+
+                    // For images: compress to WebP and upload compressed image + thumbnail to save space
+                    let path = `builds/${user.id}/${timestamp}.${fileExtension}`;
+                    let thumbPath = null;
+                    let uploadedSize = file.size;
+
+                    if (isImage) {
+                        // compress the image (resize + convert to webp)
+                        const compressedBlob = await compressImageToWebP(file, 1920, 1080, 0.82);
+                        const thumbBlob = await createThumbnailBlob(file, 400, 0.7);
+
+                        // use .webp for stored files to maximize compression
+                        path = `builds/${user.id}/${timestamp}.webp`;
+                        thumbPath = `builds/${user.id}/${timestamp}_thumb.webp`;
+
+                        // Upload compressed image and thumbnail
+                        const { error: uploadError } = await window.supabase.storage.from('builds').upload(path, compressedBlob, { upsert: false });
+                        if (uploadError) throw uploadError;
+
+                        const { error: thumbErr } = await window.supabase.storage.from('builds').upload(thumbPath, thumbBlob, { upsert: false });
+                        if (thumbErr) console.warn('Thumbnail upload warning:', thumbErr);
+
+                        uploadedSize = compressedBlob.size + (thumbBlob && thumbBlob.size ? thumbBlob.size : 0);
+                    } else {
+                        // Non-image (video): upload original file as-is (we cap size upstream)
+                        path = `builds/${user.id}/${timestamp}.${fileExtension}`;
+                        const { error: uploadError } = await window.supabase.storage.from('builds').upload(path, file, { upsert: false });
+                        if (uploadError) throw uploadError;
+                    }
+
+                    // Try to get a public URL; if bucket is private, request a signed URL
+                    let mediaUrl = null;
+                    let thumbUrl = null;
+                    try {
+                        const { data: publicData } = window.supabase.storage.from('builds').getPublicUrl(path);
+                        mediaUrl = publicData?.publicUrl || null;
+                    } catch (e) { mediaUrl = null; }
+
+                    if (!mediaUrl) {
+                        const { data: signedData, error: signedErr } = await window.supabase.storage.from('builds').createSignedUrl(path, 60 * 60);
+                        if (signedErr) throw signedErr;
+                        mediaUrl = signedData?.signedUrl || signedData?.signedURL || null;
+                    }
+
+                    if (thumbPath) {
+                        try {
+                            const { data: tpub } = window.supabase.storage.from('builds').getPublicUrl(thumbPath);
+                            thumbUrl = tpub?.publicUrl || null;
+                        } catch (e) { thumbUrl = null; }
+
+                        if (!thumbUrl) {
+                            try {
+                                const { data: tsign, error: tErr } = await window.supabase.storage.from('builds').createSignedUrl(thumbPath, 60 * 60);
+                                if (tErr) console.warn('Thumb signed url error', tErr);
+                                thumbUrl = tsign?.signedUrl || tsign?.signedURL || null;
+                            } catch (err) { console.warn('Thumb url fetch error', err); }
+                        }
+                    }
+
+                    // Prepare build metadata (keep keys compatible with existing Firestore-based UI)
+                    const buildData = {
+                        title: title,
+                        description: description || '',
+                        author: (user.user_metadata && (user.user_metadata.full_name || user.user_metadata.name)) || user.email || 'Anonymous',
+                        authorId: user.id,
+                        authorPhoto: (user.user_metadata && user.user_metadata.avatar_url) || '',
+                        type: isVideo ? 'video' : 'image',
+                        mediaUrl: mediaUrl,
+                        storagePath: path,
+                        thumbPath: thumbPath || null,
+                        fileSize: uploadedSize,
+                        contentType: isImage ? 'image/webp' : file.type,
+                        thumbUrl: thumbUrl || null,
+                        rating: 0,
+                        ratingCount: 0,
+                        ratings: {},
+                        views: 0,
+                        comments: [],
+                        createdAt: new Date().toISOString(),
+                        created_at: new Date().toISOString()
+                    };
+
+                    // Insert into Supabase 'builds' table
+                    const { data: insertData, error: insertError } = await window.supabase.from('builds').insert([buildData]);
+                    if (insertError) throw insertError;
+
+                    console.log('Build added to Supabase:', insertData);
+
+                    // Refresh builds and UI (loader handles Supabase if available)
+                    await loadBuildsFromFirestore();
+                    renderBuildMuseum();
+
+                    if (uploadBtn) { uploadBtn.innerHTML = '<i class="fas fa-cloud-upload-alt"></i> Upload Build'; uploadBtn.disabled = false; }
+                    alert('Build uploaded successfully! 🎉');
+                    return true;
+                } catch (error) {
+                    console.error('Supabase upload error:', error);
+                    alert(`Failed to upload build: ${error.message || error}`);
+                    const uploadBtn = document.getElementById('uploadSubmitBtn');
+                    if (uploadBtn) { uploadBtn.innerHTML = '<i class="fas fa-cloud-upload-alt"></i> Upload Build'; uploadBtn.disabled = false; }
+                    return false;
+                }
+            }
+
+            // Fallback to Firebase implementation (original behavior)
             // Safely resolve the authenticated user - avoid ReferenceError if `currentUser` isn't defined in this scope
             const user = (typeof currentUser !== 'undefined' && currentUser) || window.currentUser || (window.firebaseAuth && window.firebaseAuth.currentUser) || (typeof auth !== 'undefined' && auth.currentUser) || null;
             if (!user) {
@@ -6151,17 +6363,17 @@
                 
                 if (!isVideo && !isImage) {
                     alert('Please upload an image or video file.');
-                    return;
+                    return false;
                 }
                 
                 if (isImage && file.size > maxImageSize) {
                     alert('Image size must be less than 5MB.');
-                    return;
+                    return false;
                 }
                 
                 if (isVideo && file.size > maxVideoSize) {
                     alert('Video size must be less than 50MB.');
-                    return;
+                    return false;
                 }
                 
                 // Show uploading message
