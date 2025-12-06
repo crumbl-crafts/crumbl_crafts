@@ -199,6 +199,33 @@
   "news": [
     {
       "type": "trend",
+      "title": "#roblox #memes #bloxburg #funny #edit #animation #cartoon #robloxedit #pkxd",
+      "description": "roblox #memes #bloxburg #funny #edit #animation #cartoon #robloxedit #pkxd....",
+      "source": "YouTube",
+      "timestamp": 1764996409.0,
+      "url": "https://www.youtube.com/watch?v=WSSGW-28CvY",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Pt.3\ud83d\udc7b #roblox #robloxshorts #robloxedit #bloxburg #robloxanimation #robloxbloxburg",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1764992360.0,
+      "url": "https://www.youtube.com/watch?v=rVZUtxzZ0rc",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "getting my BLOXBURG HOUSE READY FOR CHRISTMAS in HARD MODE.. someone drove into my house",
+      "description": "we're back with more bloxburg hard mode after a good moment again! this time for the winter season! ...",
+      "source": "YouTube",
+      "timestamp": 1764991555.0,
+      "url": "https://www.youtube.com/watch?v=ZWzFNCuAwiU",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "BIBI PERTAMA KALI BERMAIN ESKATING/SKI || BLOXBURG\ud83c\udfe1 ROBLOX INDONESIA",
       "description": "Bibi tejatuh teyus atit lasanya tetapi seyu sekali UN Roblox : BibiCantik01 Tiktok : @bibicantikk01 ...",
       "source": "YouTube",
@@ -213,33 +240,6 @@
       "source": "YouTube",
       "timestamp": 1764990001.0,
       "url": "https://www.youtube.com/watch?v=-i6dVrvnlyQ",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Our Family\u2019s Snow Day \u2603\ufe0f\u2744\ufe0f | Bloxburg *Voiced Roleplay* ",
-      "description": "Hey y'allll We are offically doing our roleplays in Bloxburg! In this video, we had a *family snow d...",
-      "source": "YouTube",
-      "timestamp": 1764987066.0,
-      "url": "https://www.youtube.com/watch?v=G50ojjALSQI",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "#sab #trusted #nice #roblox #tradingplan #gaming #trading #tradingstrategy #foryou #bloxburg",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1764983875.0,
-      "url": "https://www.youtube.com/watch?v=f6JieW1pCSg",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "D\u00eda 6 del Calendario de Adviento de Bloxburg \ud83d\uddd3\ufe0f\ud83c\udf84 #shorts #bloxburg #roblox #christmas",
-      "description": "D\u00eda 6 del Calendario de Adviento de Bloxburg ------------------------------------------------- \u2b50 Mis...",
-      "source": "YouTube",
-      "timestamp": 1764979902.0,
-      "url": "https://www.youtube.com/watch?v=O8dH1wdBWZ8",
       "icon": "fa-youtube"
     },
     {
@@ -280,7 +280,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1764998306.3765223,
+    "generated_at": 1764999506.3661158,
     "mode": "memory",
     "refresh_interval": 2000
   }
