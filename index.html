@@ -5869,6 +5869,10 @@
                     const cutoff = Date.now() / 1000 - (ACTIVITY_RETENTION_DAYS * 86400);
                     const beforeClean = activityCache.length;
                     activityCache = activityCache.filter(item => item.timestamp > cutoff);
+                    
+                    // Sort by timestamp descending (newest first)
+                    activityCache.sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
+                    
                     if (beforeClean > activityCache.length) {
                         console.log(`Cleaned ${beforeClean - activityCache.length} old activities from cache`);
                         saveActivityCache();
@@ -5942,6 +5946,9 @@
                 if (lastActivityCount > 0) { // Don't play on initial load
                     playNotificationSound();
                 }
+                
+                // Sort by timestamp descending (newest first)
+                activityCache.sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
                 
                 // Limit to MAX_ACTIVITY_ITEMS
                 if (activityCache.length > MAX_ACTIVITY_ITEMS) {
