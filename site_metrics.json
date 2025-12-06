@@ -209,12 +209,30 @@
   "news": [
     {
       "type": "trend",
+      "title": "I need to start naming them better \ud83d\ude29 #roblox #bloxburg #relatable #robloxfunny #foryoupage",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765052254.0,
+      "url": "https://www.youtube.com/watch?v=lOLwslKOZ5c",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "I WENT UNDERCOVER AS A CHEF IN A BLOXBURG NEIGHBOURHOOD",
       "description": "bloxburg #roblox #robloxbloxburg I pretended to be a chef and spied on the weird neighbour...I am sc...",
       "source": "YouTube",
       "timestamp": 1765051253.0,
       "url": "https://www.youtube.com/watch?v=qQFR8zT4vww",
       "icon": "fa-youtube"
+    },
+    {
+      "type": "game_update",
+      "title": "New Winter Update Available!",
+      "description": "Explore new winter-themed furniture and decorations",
+      "source": "Bloxburg Official",
+      "timestamp": 1765050326.2409942,
+      "url": "https://twitter.com/BloxburgGame",
+      "icon": "fa-gamepad"
     },
     {
       "type": "trend",
@@ -245,28 +263,10 @@
     },
     {
       "type": "trend",
-      "title": "ideia de sala #christmas #oldies #music #xmas #roblox  #bloxburg #fy #naoflopa#shorts #viral",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765048098.0,
-      "url": "https://www.youtube.com/watch?v=ciLETeJ4mWg",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "game_update",
-      "title": "New Winter Update Available!",
-      "description": "Explore new winter-themed furniture and decorations",
-      "source": "Bloxburg Official",
-      "timestamp": 1765047987.8518777,
-      "url": "https://twitter.com/BloxburgGame",
-      "icon": "fa-gamepad"
-    },
-    {
-      "type": "trend",
       "title": "Modern Mansion Builds Trending",
       "description": "Community showcasing stunning modern architecture",
       "source": "YouTube",
-      "timestamp": 1765044387.8518796,
+      "timestamp": 1765046726.2409961,
       "url": "https://youtube.com/results?search_query=bloxburg+modern+mansion",
       "icon": "fa-fire"
     },
@@ -275,7 +275,7 @@
       "title": "Money Making Guide 2024",
       "description": "Best jobs and strategies to earn cash quickly",
       "source": "Community Guide",
-      "timestamp": 1765040787.85188,
+      "timestamp": 1765043126.2409966,
       "url": "#",
       "icon": "fa-lightbulb"
     },
@@ -284,13 +284,13 @@
       "title": "Weekly Build Contest",
       "description": "Submit your best holiday-themed builds to win prizes!",
       "source": "Crumbl Crafts",
-      "timestamp": 1765037187.851881,
+      "timestamp": 1765039526.240997,
       "url": "#",
       "icon": "fa-trophy"
     }
   ],
   "meta": {
-    "generated_at": 1765052794.024418,
+    "generated_at": 1765053930.6151452,
     "mode": "memory",
     "refresh_interval": 2000
   }
