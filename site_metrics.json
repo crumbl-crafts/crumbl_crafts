@@ -209,6 +209,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "I WENT UNDERCOVER AS A CHEF IN A BLOXBURG NEIGHBOURHOOD",
+      "description": "bloxburg #roblox #robloxbloxburg I pretended to be a chef and spied on the weird neighbour...I am sc...",
+      "source": "YouTube",
+      "timestamp": 1765051253.0,
+      "url": "https://www.youtube.com/watch?v=qQFR8zT4vww",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Berry Avenue 2 Baby Cutesy Outfit Codes || Bloxburg Brookhaven Berry Avenue #shorts",
       "description": "\ua540 thank you for watching this video! \u02da these outfits work for brookhaven, berry avenue, and bloxburg...",
       "source": "YouTube",
@@ -244,20 +253,11 @@
       "icon": "fa-youtube"
     },
     {
-      "type": "trend",
-      "title": "Turning An IGLOO Into A HOUSE In BLOXBURG...",
-      "description": "This video is sponsored by Epic Games! Check out Fortnite Chapter 7 now or any of the other awesome ...",
-      "source": "YouTube",
-      "timestamp": 1765047647.0,
-      "url": "https://www.youtube.com/watch?v=k8WV5NX8V7M",
-      "icon": "fa-youtube"
-    },
-    {
       "type": "game_update",
       "title": "New Winter Update Available!",
       "description": "Explore new winter-themed furniture and decorations",
       "source": "Bloxburg Official",
-      "timestamp": 1765045076.4060106,
+      "timestamp": 1765047987.8518777,
       "url": "https://twitter.com/BloxburgGame",
       "icon": "fa-gamepad"
     },
@@ -266,7 +266,7 @@
       "title": "Modern Mansion Builds Trending",
       "description": "Community showcasing stunning modern architecture",
       "source": "YouTube",
-      "timestamp": 1765041476.4060118,
+      "timestamp": 1765044387.8518796,
       "url": "https://youtube.com/results?search_query=bloxburg+modern+mansion",
       "icon": "fa-fire"
     },
@@ -275,7 +275,7 @@
       "title": "Money Making Guide 2024",
       "description": "Best jobs and strategies to earn cash quickly",
       "source": "Community Guide",
-      "timestamp": 1765037876.4060128,
+      "timestamp": 1765040787.85188,
       "url": "#",
       "icon": "fa-lightbulb"
     },
@@ -284,13 +284,13 @@
       "title": "Weekly Build Contest",
       "description": "Submit your best holiday-themed builds to win prizes!",
       "source": "Crumbl Crafts",
-      "timestamp": 1765034276.4060133,
+      "timestamp": 1765037187.851881,
       "url": "#",
       "icon": "fa-trophy"
     }
   ],
   "meta": {
-    "generated_at": 1765051083.1284678,
+    "generated_at": 1765051592.107337,
     "mode": "memory",
     "refresh_interval": 2000
   }
