@@ -2975,6 +2975,14 @@
 
             <!-- Premium Ad Showcase - Attached Below Header (Dynamic) -->
             <section id="adSection" style="padding: 0; overflow: visible; position: relative; margin: -12px 0 8px 0; display: none;">
+                <!-- Ad Section Header -->
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; padding: 0 4px;">
+                    <h3 style="font-size: 0.9rem; font-weight: 800; color: var(--text-bright); text-transform: uppercase; letter-spacing: 1px; display: flex; align-items: center; gap: 8px; text-shadow: 2px 2px 0 rgba(0,0,0,0.7);">
+                        <i class="fas fa-ad" style="color: var(--primary);"></i>
+                        <span>Featured Ads</span>
+                    </h3>
+                    <span style="font-size: 0.7rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Sponsored</span>
+                </div>
                 <div class="premium-ad-carousel" id="premiumAdCarousel" style="position: relative; width: 100%; height: 200px; background: linear-gradient(135deg, #0a0f1a 0%, #1a2030 50%, #0a0f1a 100%); border-radius: 20px; overflow: hidden; box-shadow: 0 8px 0 rgba(0,0,0,0.7), 0 0 40px rgba(255,23,68,0.5), inset 0 3px 0 rgba(255,255,255,0.08); border: 4px solid #FF1744; transform: translateZ(0);">
                     
                     <!-- Subtle Halftone Pattern -->
@@ -3100,10 +3108,6 @@
                             <button class="chat-channel-btn active" data-channel="general" onclick="switchChatChannel('general')" title="General chat channel" aria-label="General chat">General</button>
                             <button class="chat-channel-btn" data-channel="builders" onclick="switchChatChannel('builders')" title="Builders chat channel" aria-label="Builders chat">Builders</button>
                             <button class="chat-channel-btn" data-channel="help" onclick="switchChatChannel('help')" title="Help chat channel" aria-label="Help chat">Help</button>
-                            <button class="chat-channel-btn" data-channel="ads" onclick="switchChatChannel('ads')" title="Ads channel" aria-label="Ads channel" style="display: inline-flex; align-items: center; gap: 8px;"> 
-                                <i class="fas fa-bullhorn" aria-hidden="true" style="font-size:0.9rem;"></i>
-                                <span>Ads</span>
-                            </button>
                         </div>
                     </div>
                 </div>
