@@ -208,6 +208,15 @@
     },
     {
       "type": "trend",
+      "title": "POV: Your BLOXBURG House Is On Fire",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765016340.0,
+      "url": "https://www.youtube.com/watch?v=8HwoYrNqjVY",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "DAISY FIGHTS SOPHIE AND GETS GROUNDED! #shorts #roblox #bloxburgroleplay #roleplay #bloxburg #steal",
       "description": "DAISY FIGHTS SOPHIE AND GETS GROUNDED! Make sure to like and check out the full video in the link to...",
       "source": "YouTube",
@@ -234,62 +243,44 @@
       "icon": "fa-youtube"
     },
     {
-      "type": "trend",
-      "title": "Day 6 | The 24 Days of Christmas Village in Bloxburg. Brought to life by MCM creations. #bloxburg",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765008404.0,
-      "url": "https://www.youtube.com/watch?v=D1q-1y5Wb0Y",
-      "icon": "fa-youtube"
+      "type": "game_update",
+      "title": "New Winter Update Available!",
+      "description": "Explore new winter-themed furniture and decorations",
+      "source": "Bloxburg Official",
+      "timestamp": 1764857900.089075,
+      "url": "https://twitter.com/BloxburgGame",
+      "icon": "fa-gamepad"
     },
     {
       "type": "trend",
-      "title": "99 nights trolling 3#3.  #roblox #robloxedit #robloxgames #bloxburg",
-      "description": "...",
+      "title": "Modern Mansion Builds Trending",
+      "description": "Community showcasing stunning modern architecture",
       "source": "YouTube",
-      "timestamp": 1765006553.0,
-      "url": "https://www.youtube.com/watch?v=JNO_F-fmpC4",
-      "icon": "fa-youtube"
+      "timestamp": 1764854300.0890765,
+      "url": "https://youtube.com/results?search_query=bloxburg+modern+mansion",
+      "icon": "fa-fire"
     },
     {
-      "type": "trend",
-      "title": "bloxburg pov noob vs pro flower decoration #bloxburg #roblox",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765000620.0,
-      "url": "https://www.youtube.com/watch?v=ClMafHk1vVE",
-      "icon": "fa-youtube"
+      "type": "tip",
+      "title": "Money Making Guide 2024",
+      "description": "Best jobs and strategies to earn cash quickly",
+      "source": "Community Guide",
+      "timestamp": 1764850700.0890772,
+      "url": "#",
+      "icon": "fa-lightbulb"
     },
     {
-      "type": "trend",
-      "title": "#roblox #memes #bloxburg #funny #edit #animation #cartoon #robloxedit #pkxd",
-      "description": "roblox #memes #bloxburg #funny #edit #animation #cartoon #robloxedit #pkxd....",
-      "source": "YouTube",
-      "timestamp": 1764996409.0,
-      "url": "https://www.youtube.com/watch?v=WSSGW-28CvY",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Pt.3\ud83d\udc7b #roblox #robloxshorts #robloxedit #bloxburg #robloxanimation #robloxbloxburg",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1764992360.0,
-      "url": "https://www.youtube.com/watch?v=rVZUtxzZ0rc",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Pt. 2\ud83d\ude2e #roblox #robloxshorts #robloxedit #bloxburg #robloxanimation #robloxbloxburg",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1764992325.0,
-      "url": "https://www.youtube.com/watch?v=rLjjuwVACRw",
-      "icon": "fa-youtube"
+      "type": "community",
+      "title": "Weekly Build Contest",
+      "description": "Submit your best holiday-themed builds to win prizes!",
+      "source": "Crumbl Crafts",
+      "timestamp": 1764847100.0890782,
+      "url": "#",
+      "icon": "fa-trophy"
     }
   ],
   "meta": {
-    "generated_at": 1765024706.3648615,
+    "generated_at": 1765025906.3715322,
     "mode": "memory",
     "refresh_interval": 2000
   }
