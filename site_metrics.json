@@ -39,125 +39,278 @@
       "message": "Request sent by tobolchi",
       "timestamp": 1765053973,
       "thread_id": 1446931774826610790,
-      "server_id": 1301988304279048275,
-      "url": "https://discord.com/channels/1301988304279048275/1446931774826610790"
+      "url": "https://discord.com/channels/1301988304279048275/1446931774826610790",
+      "server_id": 1301988304279048275
     },
     {
       "type": "member_leave",
       "shop_name": "Server",
       "message": "tegan09859 left the server",
       "timestamp": 1765044700,
-      "thread_id": null,
       "server_id": 1301988304279048275,
-      "url": "https://discord.com/users/1317568551170871306"
+      "url": "https://discord.com/users/1317568551170871306",
+      "thread_id": null
     },
     {
       "type": "member_join",
       "shop_name": "Server",
       "message": "tegan09859 joined the server",
       "timestamp": 1765044550,
-      "thread_id": null,
       "server_id": 1301988304279048275,
-      "url": "https://discord.com/users/1317568551170871306"
+      "url": "https://discord.com/users/1317568551170871306",
+      "thread_id": null
     },
     {
       "type": "member_leave",
       "shop_name": "Server",
       "message": "ariiipooh._ left the server",
       "timestamp": 1765038879,
-      "thread_id": null,
       "server_id": 1301988304279048275,
-      "url": "https://discord.com/users/1262553444472979618"
+      "url": "https://discord.com/users/1262553444472979618",
+      "thread_id": null
     },
     {
       "type": "member_join",
       "shop_name": "Server",
       "message": "ariiipooh._ joined the server",
       "timestamp": 1765034436,
-      "thread_id": null,
       "server_id": 1301988304279048275,
-      "url": "https://discord.com/users/1262553444472979618"
+      "url": "https://discord.com/users/1262553444472979618",
+      "thread_id": null
     },
     {
       "type": "member_leave",
       "shop_name": "Server",
       "message": "oearthy left the server",
       "timestamp": 1765032877,
-      "thread_id": null,
       "server_id": 1301988304279048275,
-      "url": "https://discord.com/users/1207681883358629940"
+      "url": "https://discord.com/users/1207681883358629940",
+      "thread_id": null
     },
     {
       "type": "member_join",
       "shop_name": "Server",
       "message": "oearthy joined the server",
       "timestamp": 1765032602,
-      "thread_id": null,
       "server_id": 1301988304279048275,
-      "url": "https://discord.com/users/1207681883358629940"
+      "url": "https://discord.com/users/1207681883358629940",
+      "thread_id": null
     },
     {
       "type": "member_join",
       "shop_name": "Server",
       "message": "deronplayzz joined the server",
       "timestamp": 1765030458,
-      "thread_id": null,
       "server_id": 1301988304279048275,
-      "url": "https://discord.com/users/230495923858309121"
+      "url": "https://discord.com/users/230495923858309121",
+      "thread_id": null
     },
     {
       "type": "member_join",
       "shop_name": "Server",
       "message": "partnerpyxii joined the server",
       "timestamp": 1764977356,
-      "thread_id": null,
       "server_id": 1301988304279048275,
-      "url": "https://discord.com/users/1436428098886308160"
+      "url": "https://discord.com/users/1436428098886308160",
+      "thread_id": null
     },
     {
       "type": "member_leave",
       "shop_name": "Server",
       "message": "vivvny left the server",
       "timestamp": 1764977350,
-      "thread_id": null,
       "server_id": 1301988304279048275,
-      "url": "https://discord.com/users/805964068128555008"
+      "url": "https://discord.com/users/805964068128555008",
+      "thread_id": null
     },
     {
       "type": "member_join",
       "shop_name": "Server",
       "message": "vivvny joined the server",
       "timestamp": 1764977296,
-      "thread_id": null,
       "server_id": 1301988304279048275,
-      "url": "https://discord.com/users/805964068128555008"
+      "url": "https://discord.com/users/805964068128555008",
+      "thread_id": null
     },
     {
       "type": "member_leave",
       "shop_name": "Server",
       "message": "acbacey left the server",
       "timestamp": 1764959510,
-      "thread_id": null,
       "server_id": 1301988304279048275,
-      "url": "https://discord.com/users/881566376991535134"
+      "url": "https://discord.com/users/881566376991535134",
+      "thread_id": null
     },
     {
       "type": "member_join",
       "shop_name": "Server",
       "message": "hid3nori joined the server",
       "timestamp": 1764880618,
-      "thread_id": null,
       "server_id": 1301988304279048275,
-      "url": "https://discord.com/users/1098992055272878081"
+      "url": "https://discord.com/users/1098992055272878081",
+      "thread_id": null
     },
     {
       "type": "member_leave",
       "shop_name": "Server",
       "message": "hid3nori left the server",
       "timestamp": 1764880607,
-      "thread_id": null,
       "server_id": 1301988304279048275,
-      "url": "https://discord.com/users/1098992055272878081"
+      "url": "https://discord.com/users/1098992055272878081",
+      "thread_id": null
+    },
+    {
+      "type": "member_join",
+      "shop_name": "Server",
+      "message": "hid3nori joined the server",
+      "timestamp": 1764880435,
+      "server_id": 1301988304279048275,
+      "url": "https://discord.com/users/1098992055272878081",
+      "thread_id": null
+    },
+    {
+      "type": "member_leave",
+      "shop_name": "Server",
+      "message": "hid3nori left the server",
+      "timestamp": 1764880411,
+      "server_id": 1301988304279048275,
+      "url": "https://discord.com/users/1098992055272878081",
+      "thread_id": null
+    },
+    {
+      "type": "member_join",
+      "shop_name": "Server",
+      "message": "hid3nori joined the server",
+      "timestamp": 1764880227,
+      "server_id": 1301988304279048275,
+      "url": "https://discord.com/users/1098992055272878081",
+      "thread_id": null
+    },
+    {
+      "type": "member_leave",
+      "shop_name": "Server",
+      "message": "hid3nori left the server",
+      "timestamp": 1764880218,
+      "server_id": 1301988304279048275,
+      "url": "https://discord.com/users/1098992055272878081",
+      "thread_id": null
+    },
+    {
+      "type": "member_join",
+      "shop_name": "Server",
+      "message": "hid3nori joined the server",
+      "timestamp": 1764879602,
+      "server_id": 1301988304279048275,
+      "url": "https://discord.com/users/1098992055272878081",
+      "thread_id": null
+    },
+    {
+      "type": "member_leave",
+      "shop_name": "Server",
+      "message": "hid3nori left the server",
+      "timestamp": 1764879593,
+      "server_id": 1301988304279048275,
+      "url": "https://discord.com/users/1098992055272878081",
+      "thread_id": null
+    },
+    {
+      "type": "member_join",
+      "shop_name": "Server",
+      "message": "hid3nori joined the server",
+      "timestamp": 1764879477,
+      "server_id": 1301988304279048275,
+      "url": "https://discord.com/users/1098992055272878081",
+      "thread_id": null
+    },
+    {
+      "type": "member_leave",
+      "shop_name": "Server",
+      "message": "hid3nori left the server",
+      "timestamp": 1764879466,
+      "server_id": 1301988304279048275,
+      "url": "https://discord.com/users/1098992055272878081",
+      "thread_id": null
+    },
+    {
+      "type": "member_join",
+      "shop_name": "Server",
+      "message": "hid3nori joined the server",
+      "timestamp": 1764879196,
+      "server_id": 1301988304279048275,
+      "url": "https://discord.com/users/1098992055272878081",
+      "thread_id": null
+    },
+    {
+      "type": "member_leave",
+      "shop_name": "Server",
+      "message": "hid3nori left the server",
+      "timestamp": 1764879185,
+      "server_id": 1301988304279048275,
+      "url": "https://discord.com/users/1098992055272878081",
+      "thread_id": null
+    },
+    {
+      "type": "member_join",
+      "shop_name": "Server",
+      "message": "hid3nori joined the server",
+      "timestamp": 1764878957,
+      "server_id": 1301988304279048275,
+      "url": "https://discord.com/users/1098992055272878081",
+      "thread_id": null
+    },
+    {
+      "type": "member_leave",
+      "shop_name": "Server",
+      "message": "hid3nori left the server",
+      "timestamp": 1764878949,
+      "server_id": 1301988304279048275,
+      "url": "https://discord.com/users/1098992055272878081",
+      "thread_id": null
+    },
+    {
+      "type": "member_join",
+      "shop_name": "Server",
+      "message": "hid3nori joined the server",
+      "timestamp": 1764877920,
+      "server_id": 1301988304279048275,
+      "url": "https://discord.com/users/1098992055272878081",
+      "thread_id": null
+    },
+    {
+      "type": "member_leave",
+      "shop_name": "Server",
+      "message": "hid3nori left the server",
+      "timestamp": 1764877858,
+      "server_id": 1301988304279048275,
+      "url": "https://discord.com/users/1098992055272878081",
+      "thread_id": null
+    },
+    {
+      "type": "task_claimed",
+      "shop_name": "test5",
+      "message": "Bovian claimed the task",
+      "timestamp": 1764838956,
+      "thread_id": 1446063606008512583,
+      "server_id": 1301988304279048275,
+      "url": "https://discord.com/channels/1301988304279048275/1446063606008512583/1446064131974369433"
+    },
+    {
+      "type": "new_request_thread",
+      "shop_name": "Build-Request-Board",
+      "message": "tobolchi posted a new request: test5",
+      "timestamp": 1764838830,
+      "thread_id": 1446063606008512583,
+      "server_id": 1301988304279048275,
+      "url": "https://discord.com/channels/1301988304279048275/1446063606008512583"
+    },
+    {
+      "type": "new_request_thread",
+      "shop_name": "Build-Request-Board",
+      "message": "tobolchi posted a new request: test",
+      "timestamp": 1764834863,
+      "thread_id": 1446046969532518483,
+      "server_id": 1301988304279048275,
+      "url": "https://discord.com/channels/1301988304279048275/1446046969532518483"
     }
   ],
   "pipeline": [
@@ -230,7 +383,7 @@
       "title": "New Winter Update Available!",
       "description": "Explore new winter-themed furniture and decorations",
       "source": "Bloxburg Official",
-      "timestamp": 1765050326.2409942,
+      "timestamp": 1765050783.7398396,
       "url": "https://twitter.com/BloxburgGame",
       "icon": "fa-gamepad"
     },
@@ -266,7 +419,7 @@
       "title": "Modern Mansion Builds Trending",
       "description": "Community showcasing stunning modern architecture",
       "source": "YouTube",
-      "timestamp": 1765046726.2409961,
+      "timestamp": 1765047183.7398407,
       "url": "https://youtube.com/results?search_query=bloxburg+modern+mansion",
       "icon": "fa-fire"
     },
@@ -275,7 +428,7 @@
       "title": "Money Making Guide 2024",
       "description": "Best jobs and strategies to earn cash quickly",
       "source": "Community Guide",
-      "timestamp": 1765043126.2409966,
+      "timestamp": 1765043583.7398412,
       "url": "#",
       "icon": "fa-lightbulb"
     },
@@ -284,13 +437,13 @@
       "title": "Weekly Build Contest",
       "description": "Submit your best holiday-themed builds to win prizes!",
       "source": "Crumbl Crafts",
-      "timestamp": 1765039526.240997,
+      "timestamp": 1765039983.7398417,
       "url": "#",
       "icon": "fa-trophy"
     }
   ],
   "meta": {
-    "generated_at": 1765053992.7888658,
+    "generated_at": 1765054387.7506652,
     "mode": "memory",
     "refresh_interval": 2000
   }
