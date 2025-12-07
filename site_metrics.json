@@ -7,8 +7,8 @@
     "request_completion_ratio": 0.0
   },
   "server": {
-    "total_members": 327,
-    "joined_today": 1,
+    "total_members": 328,
+    "joined_today": 2,
     "active_shops": 1,
     "avg_response_time": 17.0
   },
@@ -24,6 +24,15 @@
     }
   ],
   "activityLog": [
+    {
+      "type": "member_join",
+      "shop_name": "Server",
+      "message": "kitthething joined the server",
+      "timestamp": 1765072657,
+      "thread_id": null,
+      "server_id": 1301988304279048275,
+      "url": "https://discord.com/users/933779619595817000"
+    },
     {
       "type": "sent",
       "shop_name": "Hidenori's Shop",
@@ -389,6 +398,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "Playing robolox \ud83d\ude02 ##roblox #bloxburg #robloxedit",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765071009.0,
+      "url": "https://www.youtube.com/watch?v=AcOM08HBl4Y",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Come with me to take all of my Halloween  decorations in bloxburg! #bloxburg #Halloween #roblox \ufffc\ufffc",
       "description": "...",
       "source": "YouTube",
@@ -421,15 +439,6 @@
       "source": "YouTube",
       "timestamp": 1765058415.0,
       "url": "https://www.youtube.com/watch?v=9tRrf3oy1pE",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Small house tour Christmas edition #shorts #roblox #bloxburgcontentcreator #bloxburg #christmas ",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765057640.0,
-      "url": "https://www.youtube.com/watch?v=S7mo8RU0h10",
       "icon": "fa-youtube"
     },
     {
@@ -470,7 +479,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765072389.7062888,
+    "generated_at": 1765072659.8437505,
     "mode": "memory",
     "refresh_interval": 2000
   }
