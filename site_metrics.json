@@ -2,7 +2,7 @@
   "summary": {
     "builder_count": 1,
     "total_completed": 0,
-    "total_requests": 2,
+    "total_requests": 3,
     "total_ratings": 0,
     "request_completion_ratio": 0.0
   },
@@ -24,6 +24,15 @@
     }
   ],
   "activityLog": [
+    {
+      "type": "sent",
+      "shop_name": "Hidenori's Shop",
+      "message": "Request sent by yoyoyoyo5088_yabihyook",
+      "timestamp": 1765111283,
+      "thread_id": 1446931774826610790,
+      "server_id": 1301988304279048275,
+      "url": "https://discord.com/channels/1301988304279048275/1446931774826610790"
+    },
     {
       "type": "member_join",
       "shop_name": "Server",
@@ -460,8 +469,8 @@
   "pipeline": [
     {
       "label": "Pending Requests",
-      "value": 0,
-      "trend": "2 new today \u00b7 2 responded",
+      "value": 1,
+      "trend": "3 new today \u00b7 2 responded",
       "max": 50
     },
     {
@@ -472,7 +481,7 @@
     },
     {
       "label": "Requests (7d)",
-      "value": 2,
+      "value": 3,
       "trend": "1 accepted \u00b7 1 rejected",
       "max": 100
     }
@@ -498,7 +507,7 @@
     },
     {
       "title": "Queue Health",
-      "detail": "0 requests awaiting response",
+      "detail": "1 requests awaiting response",
       "score": "Manageable",
       "status": "good"
     }
@@ -587,7 +596,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765111282.3043478,
+    "generated_at": 1765111285.9784422,
     "mode": "memory",
     "refresh_interval": 2000
   }
