@@ -578,6 +578,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "DECORANDO MI CASA | ROBLOX #parati #roblox #humor #youtubeshorts #robloxedit #bloxburg #navidad",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765134635.0,
+      "url": "https://www.youtube.com/watch?v=-SsLnJX9BGc",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "cute cozy winter outfits for you guys!! \u2764\ufe0f\ud83c\udf84 #roblox #bloxburg #bloxburgoutfitcodes #berryave  #fyp",
       "description": "...",
       "source": "YouTube",
@@ -592,6 +601,15 @@
       "source": "YouTube",
       "timestamp": 1765130406.0,
       "url": "https://www.youtube.com/watch?v=A7pT-Q-YsJo",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Bloxburg Suburban Christmas House 169k",
+      "description": "welcometobloxburg #bloxburgspeedbuilds - 3 bedrooms 1 nursery - 3 bathrooms - living room - kitchen ...",
+      "source": "YouTube",
+      "timestamp": 1765129415.0,
+      "url": "https://www.youtube.com/watch?v=JX4wYxBpKAw",
       "icon": "fa-youtube"
     },
     {
@@ -622,44 +640,35 @@
       "icon": "fa-youtube"
     },
     {
-      "type": "game_update",
-      "title": "New Winter Update Available!",
-      "description": "Explore new winter-themed furniture and decorations",
-      "source": "Bloxburg Official",
-      "timestamp": 1765050783.7398396,
-      "url": "https://twitter.com/BloxburgGame",
-      "icon": "fa-gamepad"
+      "type": "trend",
+      "title": "A Bloxburg story I\u2019ll NEVER forget\ud83d\ude4f\ud83d\udc94 #roblox #rblx #robloxrant #hearttouching",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765127141.0,
+      "url": "https://www.youtube.com/watch?v=_yXTFv85uOA",
+      "icon": "fa-youtube"
     },
     {
       "type": "trend",
-      "title": "Modern Mansion Builds Trending",
-      "description": "Community showcasing stunning modern architecture",
+      "title": "day 7! \u2764\ufe0f\ud83c\udf84 #roblox #bloxburg #bloxburgadventcalendar #bloxburgupdate #fyp",
+      "description": "...",
       "source": "YouTube",
-      "timestamp": 1765047183.7398407,
-      "url": "https://youtube.com/results?search_query=bloxburg+modern+mansion",
-      "icon": "fa-fire"
+      "timestamp": 1765127095.0,
+      "url": "https://www.youtube.com/watch?v=Bx7A8mTYP5E",
+      "icon": "fa-youtube"
     },
     {
-      "type": "tip",
-      "title": "Money Making Guide 2024",
-      "description": "Best jobs and strategies to earn cash quickly",
-      "source": "Community Guide",
-      "timestamp": 1765043583.7398412,
-      "url": "#",
-      "icon": "fa-lightbulb"
-    },
-    {
-      "type": "community",
-      "title": "Weekly Build Contest",
-      "description": "Submit your best holiday-themed builds to win prizes!",
-      "source": "Crumbl Crafts",
-      "timestamp": 1765039983.7398417,
-      "url": "#",
-      "icon": "fa-trophy"
+      "type": "trend",
+      "title": "DECORATING OUR HOUSE FOR CHRISTMAS!! *MY NEPHEW WAS CATFISHED!?* | Bloxburg Family Roleplay",
+      "description": "Hey ZeeFam! It's \"Zaryee\" here! Don't forget to join the family! All you have to do is like, comment...",
+      "source": "YouTube",
+      "timestamp": 1765126807.0,
+      "url": "https://www.youtube.com/watch?v=PKajnKB0l5U",
+      "icon": "fa-youtube"
     }
   ],
   "meta": {
-    "generated_at": 1765135390.0912113,
+    "generated_at": 1765135989.7041347,
     "mode": "memory",
     "refresh_interval": 2000
   }
