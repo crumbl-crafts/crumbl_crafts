@@ -578,6 +578,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "BRINGING MY NEWBORN BABY HOME FROM THE HOSPITAL! *TIRING..* Roblox Bloxburg Roleplay",
+      "description": "in today's video\u2026 WE BROUGHT THE NEWBORN HOME!...",
+      "source": "YouTube",
+      "timestamp": 1765130406.0,
+      "url": "https://www.youtube.com/watch?v=A7pT-Q-YsJo",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "vlogmas day 7!! \ud83c\udf84\ud83c\udf80\u2728 a WHOLE WEEK of vlogmas #Vlogmas #roblox #bloxburg #bloxburgchristmas #fyp",
       "description": "...",
       "source": "YouTube",
@@ -610,15 +619,6 @@
       "source": "YouTube",
       "timestamp": 1765127095.0,
       "url": "https://www.youtube.com/watch?v=Bx7A8mTYP5E",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "DECORATING OUR HOUSE FOR CHRISTMAS!! *MY NEPHEW WAS CATFISHED!?* | Bloxburg Family Roleplay",
-      "description": "Hey ZeeFam! It's \"Zaryee\" here! Don't forget to join the family! All you have to do is like, comment...",
-      "source": "YouTube",
-      "timestamp": 1765126807.0,
-      "url": "https://www.youtube.com/watch?v=PKajnKB0l5U",
       "icon": "fa-youtube"
     },
     {
@@ -659,7 +659,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765131189.7083433,
+    "generated_at": 1765132389.704656,
     "mode": "memory",
     "refresh_interval": 2000
   }
