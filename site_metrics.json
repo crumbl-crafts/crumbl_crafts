@@ -25,6 +25,15 @@
   ],
   "activityLog": [
     {
+      "type": "new_request_thread",
+      "shop_name": "Looking for builder!",
+      "message": "<@1426276966054625372> posted a new request titled: Looking for builder!",
+      "timestamp": 1765118906,
+      "thread_id": 1447238329128190114,
+      "server_id": 1301988304279048275,
+      "url": "https://discord.com/channels/1301988304279048275/1447238329128190114"
+    },
+    {
       "type": "member_join",
       "shop_name": "Server",
       "message": "geordie0822 joined the server",
@@ -623,7 +632,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765118266.1153789,
+    "generated_at": 1765118906.2993956,
     "mode": "memory",
     "refresh_interval": 2000
   }
