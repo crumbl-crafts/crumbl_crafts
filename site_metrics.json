@@ -496,53 +496,44 @@
       "icon": "fa-youtube"
     },
     {
-      "type": "trend",
-      "title": "who else loves bloxburg?",
-      "description": "robloxaccessories#roblox#lifeisbutadream#steak #bloxburg#memes#funny#fortnite#caylus....",
-      "source": "YouTube",
-      "timestamp": 1765076876.0,
-      "url": "https://www.youtube.com/watch?v=lRPx-CVyrpQ",
-      "icon": "fa-youtube"
+      "type": "game_update",
+      "title": "New Winter Update Available!",
+      "description": "Explore new winter-themed furniture and decorations",
+      "source": "Bloxburg Official",
+      "timestamp": 1765050783.7398396,
+      "url": "https://twitter.com/BloxburgGame",
+      "icon": "fa-gamepad"
     },
     {
       "type": "trend",
-      "title": "KURANG RAJIN APA AKU NI GUYSS ?? | BLOXBURG",
-      "description": "HAI TERIMAKASIH SUDAH MENONTON JANGAN LUPA SUBSCRIBE DAN LIKE YA KALO KAMU SUDAH SUBSCRIBE, ......",
+      "title": "Modern Mansion Builds Trending",
+      "description": "Community showcasing stunning modern architecture",
       "source": "YouTube",
-      "timestamp": 1765073153.0,
-      "url": "https://www.youtube.com/watch?v=AbhyhJfN_68",
-      "icon": "fa-youtube"
+      "timestamp": 1765047183.7398407,
+      "url": "https://youtube.com/results?search_query=bloxburg+modern+mansion",
+      "icon": "fa-fire"
     },
     {
-      "type": "trend",
-      "title": "this goat is just moral support lol #bloxburg #roblox #goat #school #bloxburgschool",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765072050.0,
-      "url": "https://www.youtube.com/watch?v=lBG-1pGVVJM",
-      "icon": "fa-youtube"
+      "type": "tip",
+      "title": "Money Making Guide 2024",
+      "description": "Best jobs and strategies to earn cash quickly",
+      "source": "Community Guide",
+      "timestamp": 1765043583.7398412,
+      "url": "#",
+      "icon": "fa-lightbulb"
     },
     {
-      "type": "trend",
-      "title": "Playing robolox \ud83d\ude02 ##roblox #bloxburg #robloxedit",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765071009.0,
-      "url": "https://www.youtube.com/watch?v=AcOM08HBl4Y",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Come with me to take all of my Halloween  decorations in bloxburg! #bloxburg #Halloween #roblox \ufffc\ufffc",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765068935.0,
-      "url": "https://www.youtube.com/watch?v=Ec6sDr3ZtFM",
-      "icon": "fa-youtube"
+      "type": "community",
+      "title": "Weekly Build Contest",
+      "description": "Submit your best holiday-themed builds to win prizes!",
+      "source": "Crumbl Crafts",
+      "timestamp": 1765039983.7398417,
+      "url": "#",
+      "icon": "fa-trophy"
     }
   ],
   "meta": {
-    "generated_at": 1765104789.7070363,
+    "generated_at": 1765105989.7049005,
     "mode": "memory",
     "refresh_interval": 2000
   }
