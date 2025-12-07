@@ -407,6 +407,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "KURANG RAJIN APA AKU NI GUYSS ?? | BLOXBURG",
+      "description": "HAI TERIMAKASIH SUDAH MENONTON JANGAN LUPA SUBSCRIBE DAN LIKE YA KALO KAMU SUDAH SUBSCRIBE, ......",
+      "source": "YouTube",
+      "timestamp": 1765073153.0,
+      "url": "https://www.youtube.com/watch?v=AbhyhJfN_68",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Playing robolox \ud83d\ude02 ##roblox #bloxburg #robloxedit",
       "description": "...",
       "source": "YouTube",
@@ -439,15 +448,6 @@
       "source": "YouTube",
       "timestamp": 1765060100.0,
       "url": "https://www.youtube.com/watch?v=VDIFrhITDiA",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "BUILDING A GINGERBREAD HOUSE IN BLOXBURG  #bloxburg #roblox",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765058415.0,
-      "url": "https://www.youtube.com/watch?v=9tRrf3oy1pE",
       "icon": "fa-youtube"
     },
     {
@@ -488,7 +488,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765073589.703866,
+    "generated_at": 1765074789.703594,
     "mode": "memory",
     "refresh_interval": 2000
   }
