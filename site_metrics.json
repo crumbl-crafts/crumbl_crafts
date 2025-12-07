@@ -7,8 +7,8 @@
     "request_completion_ratio": 0.0
   },
   "server": {
-    "total_members": 330,
-    "joined_today": 7,
+    "total_members": 331,
+    "joined_today": 8,
     "active_shops": 1,
     "avg_response_time": 6664.5
   },
@@ -24,6 +24,15 @@
     }
   ],
   "activityLog": [
+    {
+      "type": "member_join",
+      "shop_name": "Server",
+      "message": "yoyoyoyo5088_yabihyook joined the server",
+      "timestamp": 1765110620,
+      "thread_id": null,
+      "server_id": 1301988304279048275,
+      "url": "https://discord.com/users/1334386044199505960"
+    },
     {
       "type": "member_join",
       "shop_name": "Server",
@@ -541,53 +550,44 @@
       "icon": "fa-youtube"
     },
     {
-      "type": "trend",
-      "title": "who else loves bloxburg?",
-      "description": "robloxaccessories#roblox#lifeisbutadream#steak #bloxburg#memes#funny#fortnite#caylus....",
-      "source": "YouTube",
-      "timestamp": 1765076876.0,
-      "url": "https://www.youtube.com/watch?v=lRPx-CVyrpQ",
-      "icon": "fa-youtube"
+      "type": "game_update",
+      "title": "New Winter Update Available!",
+      "description": "Explore new winter-themed furniture and decorations",
+      "source": "Bloxburg Official",
+      "timestamp": 1765050783.7398396,
+      "url": "https://twitter.com/BloxburgGame",
+      "icon": "fa-gamepad"
     },
     {
       "type": "trend",
-      "title": "KURANG RAJIN APA AKU NI GUYSS ?? | BLOXBURG",
-      "description": "HAI TERIMAKASIH SUDAH MENONTON JANGAN LUPA SUBSCRIBE DAN LIKE YA KALO KAMU SUDAH SUBSCRIBE, ......",
+      "title": "Modern Mansion Builds Trending",
+      "description": "Community showcasing stunning modern architecture",
       "source": "YouTube",
-      "timestamp": 1765073153.0,
-      "url": "https://www.youtube.com/watch?v=AbhyhJfN_68",
-      "icon": "fa-youtube"
+      "timestamp": 1765047183.7398407,
+      "url": "https://youtube.com/results?search_query=bloxburg+modern+mansion",
+      "icon": "fa-fire"
     },
     {
-      "type": "trend",
-      "title": "BIBI DAN MAMI PAPI BERMAIN PERANG BOLA SALJU SERU SEKALI || BLOXBURG\ud83c\udfe1 ROBLOX INDONESIA",
-      "description": "Sepeda bibi menyangkut seyu sekali kalau ada musim salju UN Roblox : BibiCantik01 Tiktok : @bibicant...",
-      "source": "YouTube",
-      "timestamp": 1765072851.0,
-      "url": "https://www.youtube.com/watch?v=jnnLJmQv37c",
-      "icon": "fa-youtube"
+      "type": "tip",
+      "title": "Money Making Guide 2024",
+      "description": "Best jobs and strategies to earn cash quickly",
+      "source": "Community Guide",
+      "timestamp": 1765043583.7398412,
+      "url": "#",
+      "icon": "fa-lightbulb"
     },
     {
-      "type": "trend",
-      "title": "this goat is just moral support lol #bloxburg #roblox #goat #school #bloxburgschool",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765072050.0,
-      "url": "https://www.youtube.com/watch?v=lBG-1pGVVJM",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Playing robolox \ud83d\ude02 ##roblox #bloxburg #robloxedit",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765071009.0,
-      "url": "https://www.youtube.com/watch?v=AcOM08HBl4Y",
-      "icon": "fa-youtube"
+      "type": "community",
+      "title": "Weekly Build Contest",
+      "description": "Submit your best holiday-themed builds to win prizes!",
+      "source": "Crumbl Crafts",
+      "timestamp": 1765039983.7398417,
+      "url": "#",
+      "icon": "fa-trophy"
     }
   ],
   "meta": {
-    "generated_at": 1765109619.529504,
+    "generated_at": 1765110623.2378433,
     "mode": "memory",
     "refresh_interval": 2000
   }
