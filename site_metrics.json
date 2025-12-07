@@ -7,8 +7,8 @@
     "request_completion_ratio": 0.0
   },
   "server": {
-    "total_members": 329,
-    "joined_today": 6,
+    "total_members": 330,
+    "joined_today": 7,
     "active_shops": 1,
     "avg_response_time": 6664.5
   },
@@ -24,6 +24,15 @@
     }
   ],
   "activityLog": [
+    {
+      "type": "member_join",
+      "shop_name": "Server",
+      "message": "ed_rblx joined the server",
+      "timestamp": 1765109617,
+      "thread_id": null,
+      "server_id": 1301988304279048275,
+      "url": "https://discord.com/users/1447033102122881208"
+    },
     {
       "type": "member_leave",
       "shop_name": "Server",
@@ -578,7 +587,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765109589.701666,
+    "generated_at": 1765109619.529504,
     "mode": "memory",
     "refresh_interval": 2000
   }
