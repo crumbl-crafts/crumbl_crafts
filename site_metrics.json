@@ -407,6 +407,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "who else loves bloxburg?",
+      "description": "robloxaccessories#roblox#lifeisbutadream#steak #bloxburg#memes#funny#fortnite#caylus....",
+      "source": "YouTube",
+      "timestamp": 1765076876.0,
+      "url": "https://www.youtube.com/watch?v=lRPx-CVyrpQ",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "KURANG RAJIN APA AKU NI GUYSS ?? | BLOXBURG",
       "description": "HAI TERIMAKASIH SUDAH MENONTON JANGAN LUPA SUBSCRIBE DAN LIKE YA KALO KAMU SUDAH SUBSCRIBE, ......",
       "source": "YouTube",
@@ -451,44 +460,44 @@
       "icon": "fa-youtube"
     },
     {
-      "type": "game_update",
-      "title": "New Winter Update Available!",
-      "description": "Explore new winter-themed furniture and decorations",
-      "source": "Bloxburg Official",
-      "timestamp": 1765050783.7398396,
-      "url": "https://twitter.com/BloxburgGame",
-      "icon": "fa-gamepad"
+      "type": "trend",
+      "title": "BUILDING A GINGERBREAD HOUSE IN BLOXBURG  #bloxburg #roblox",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765058415.0,
+      "url": "https://www.youtube.com/watch?v=9tRrf3oy1pE",
+      "icon": "fa-youtube"
     },
     {
       "type": "trend",
-      "title": "Modern Mansion Builds Trending",
-      "description": "Community showcasing stunning modern architecture",
+      "title": "Small house tour Christmas edition #shorts #roblox #bloxburgcontentcreator #bloxburg #christmas ",
+      "description": "...",
       "source": "YouTube",
-      "timestamp": 1765047183.7398407,
-      "url": "https://youtube.com/results?search_query=bloxburg+modern+mansion",
-      "icon": "fa-fire"
+      "timestamp": 1765057640.0,
+      "url": "https://www.youtube.com/watch?v=S7mo8RU0h10",
+      "icon": "fa-youtube"
     },
     {
-      "type": "tip",
-      "title": "Money Making Guide 2024",
-      "description": "Best jobs and strategies to earn cash quickly",
-      "source": "Community Guide",
-      "timestamp": 1765043583.7398412,
-      "url": "#",
-      "icon": "fa-lightbulb"
+      "type": "trend",
+      "title": "#roblox #dancemoms #realitytvshow #ora #aldc #tvshow #rblx #bloxburg #addisonrae #xyzbca #fyp #viral",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765056196.0,
+      "url": "https://www.youtube.com/watch?v=-HN1uNPqA_k",
+      "icon": "fa-youtube"
     },
     {
-      "type": "community",
-      "title": "Weekly Build Contest",
-      "description": "Submit your best holiday-themed builds to win prizes!",
-      "source": "Crumbl Crafts",
-      "timestamp": 1765039983.7398417,
-      "url": "#",
-      "icon": "fa-trophy"
+      "type": "trend",
+      "title": "\ud83d\udd34FINISHING MY KIDS BEDROOMS ON BLOXBURG...",
+      "description": "Description: \u2661\ufe0e. \u25dd \u2b50\ufe0fUSE STARCODE PEACH when buying robux or premium!\u2b50\ufe0f \ud83c\udf99\ufe0fBe sure to SUBSCRIBE   to ...",
+      "source": "YouTube",
+      "timestamp": 1765055405.0,
+      "url": "https://www.youtube.com/watch?v=MR7ZZtPstVI",
+      "icon": "fa-youtube"
     }
   ],
   "meta": {
-    "generated_at": 1765077189.7077765,
+    "generated_at": 1765078389.7060328,
     "mode": "memory",
     "refresh_interval": 2000
   }
