@@ -3,7 +3,7 @@
     "builder_count": 1,
     "total_completed": 0,
     "total_requests": 3,
-    "total_ratings": 0,
+    "total_ratings": 1,
     "request_completion_ratio": 0.0
   },
   "server": {
@@ -16,7 +16,7 @@
     {
       "shop_name": "Hidenori's Shop",
       "completed_projects": 0,
-      "average_rating": 0.0,
+      "average_rating": 5.0,
       "thread_id": 1446931774826610790,
       "avatar_url": "https://cdn.discordapp.com/avatars/1098992055272878081/3d5587425a502f14a7fbf5cfaaa493a1.png?size=1024",
       "server_id": 1301988304279048275,
@@ -24,6 +24,15 @@
     }
   ],
   "activityLog": [
+    {
+      "type": "rating",
+      "shop_name": "Hidenori's Shop",
+      "message": "yoyoyoyo5088_yabihyook rated Hidenori's Shop 5 stars",
+      "timestamp": 1765112057,
+      "thread_id": 1446931774826610790,
+      "server_id": 1301988304279048275,
+      "url": "https://discord.com/channels/1301988304279048275/1446931774826610790"
+    },
     {
       "type": "accepted",
       "shop_name": "Hidenori's Shop",
@@ -524,6 +533,24 @@
   "news": [
     {
       "type": "trend",
+      "title": "Daily Life in Roblox #roblox #gamer #foryou #robloxedit #shorts #bloxburg #dailyshorts #fyp #gaming",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765110466.0,
+      "url": "https://www.youtube.com/watch?v=B8GQ17pfXYc",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "i travelled back to the old bloxburg map! #bloxburg",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765110402.0,
+      "url": "https://www.youtube.com/watch?v=junNxnxZpCY",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "DAISY FLOODS THE BATHROOM! #shorts #roblox #bloxburgroleplay #roleplay #bloxburg #steal",
       "description": "DAISY FLOODS THE BATHROOM! Make sure to like and check out the full video in the link to find out wh...",
       "source": "YouTube",
@@ -547,24 +574,6 @@
       "source": "YouTube",
       "timestamp": 1765082971.0,
       "url": "https://www.youtube.com/watch?v=PKajnKB0l5U",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Roblox christmas rug decal codes for berry avenue and bloxburg #roblox #bloxburg #shortsviral #codes",
-      "description": "im sleepy - - - - - DISCLAIMER - If you plan on reposting my video, please give credit where it's du...",
-      "source": "YouTube",
-      "timestamp": 1765080469.0,
-      "url": "https://www.youtube.com/watch?v=BdAJySQriIg",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "PAPI JAHILIN MAMI SAMA BIBI PAKEK BOLA SALJU | BLOXBURG RP",
-      "description": "Terimakasiih adik-adik udah nonton video ini sampai akhirr, lup yu all -----------   -Tags  - #roblo...",
-      "source": "YouTube",
-      "timestamp": 1765077730.0,
-      "url": "https://www.youtube.com/watch?v=gObB5LBSS4o",
       "icon": "fa-youtube"
     },
     {
@@ -605,7 +614,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765111989.7090774,
+    "generated_at": 1765112059.9781747,
     "mode": "memory",
     "refresh_interval": 2000
   }
