@@ -7,8 +7,8 @@
     "request_completion_ratio": 0.0
   },
   "server": {
-    "total_members": 331,
-    "joined_today": 8,
+    "total_members": 332,
+    "joined_today": 9,
     "active_shops": 1,
     "avg_response_time": 4450.666666666667
   },
@@ -24,6 +24,15 @@
     }
   ],
   "activityLog": [
+    {
+      "type": "member_join",
+      "shop_name": "Server",
+      "message": "geordie0822 joined the server",
+      "timestamp": 1765118263,
+      "thread_id": null,
+      "server_id": 1301988304279048275,
+      "url": "https://discord.com/users/1426276966054625372"
+    },
     {
       "type": "rating",
       "shop_name": "Hidenori's Shop",
@@ -614,7 +623,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765117989.7041793,
+    "generated_at": 1765118266.1153789,
     "mode": "memory",
     "refresh_interval": 2000
   }
