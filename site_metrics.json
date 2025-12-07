@@ -7,8 +7,8 @@
     "request_completion_ratio": 0.0
   },
   "server": {
-    "total_members": 333,
-    "joined_today": 10,
+    "total_members": 334,
+    "joined_today": 11,
     "active_shops": 1,
     "avg_response_time": 4450.666666666667
   },
@@ -24,6 +24,15 @@
     }
   ],
   "activityLog": [
+    {
+      "type": "member_join",
+      "shop_name": "Server",
+      "message": "butter_fly_2 joined the server",
+      "timestamp": 1765126108,
+      "thread_id": null,
+      "server_id": 1301988304279048275,
+      "url": "https://discord.com/users/1415548905466105896"
+    },
     {
       "type": "member_join",
       "shop_name": "Server",
@@ -641,7 +650,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765125189.702903,
+    "generated_at": 1765126111.410224,
     "mode": "memory",
     "refresh_interval": 2000
   }
