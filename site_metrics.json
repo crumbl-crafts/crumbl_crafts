@@ -10,7 +10,7 @@
     "total_members": 328,
     "joined_today": 2,
     "active_shops": 1,
-    "avg_response_time": 17.0
+    "avg_response_time": 6664.5
   },
   "topBuilders": [
     {
@@ -24,6 +24,15 @@
     }
   ],
   "activityLog": [
+    {
+      "type": "accepted",
+      "shop_name": "Hidenori's Shop",
+      "message": "Request from deronplayzz accepted",
+      "timestamp": 1765084274,
+      "thread_id": 1446931774826610790,
+      "server_id": 1301988304279048275,
+      "url": "https://discord.com/channels/1301988304279048275/1447093057861451903"
+    },
     {
       "type": "new_request_thread",
       "shop_name": "LF FOR A BUILDER",
@@ -361,8 +370,8 @@
   "pipeline": [
     {
       "label": "Pending Requests",
-      "value": 1,
-      "trend": "2 new today \u00b7 1 responded",
+      "value": 0,
+      "trend": "2 new today \u00b7 2 responded",
       "max": 50
     },
     {
@@ -374,7 +383,7 @@
     {
       "label": "Requests (7d)",
       "value": 2,
-      "trend": "0 accepted \u00b7 1 rejected",
+      "trend": "1 accepted \u00b7 1 rejected",
       "max": 100
     }
   ],
@@ -387,7 +396,7 @@
     },
     {
       "title": "Acceptance Rate",
-      "detail": "0.0% of requests accepted (0 accepted, 1 rejected)",
+      "detail": "50.0% of requests accepted (1 accepted, 1 rejected)",
       "score": "Monitor",
       "status": "warning"
     },
@@ -399,12 +408,21 @@
     },
     {
       "title": "Queue Health",
-      "detail": "1 requests awaiting response",
+      "detail": "0 requests awaiting response",
       "score": "Manageable",
       "status": "good"
     }
   ],
   "news": [
+    {
+      "type": "trend",
+      "title": "Roblox christmas rug decal codes for berry avenue and bloxburg #roblox #bloxburg #shortsviral #codes",
+      "description": "im sleepy - - - - - DISCLAIMER - If you plan on reposting my video, please give credit where it's du...",
+      "source": "YouTube",
+      "timestamp": 1765080469.0,
+      "url": "https://www.youtube.com/watch?v=BdAJySQriIg",
+      "icon": "fa-youtube"
+    },
     {
       "type": "trend",
       "title": "PAPI JAHILIN MAMI SAMA BIBI PAKEK BOLA SALJU | BLOXBURG RP",
@@ -439,15 +457,6 @@
       "source": "YouTube",
       "timestamp": 1765071009.0,
       "url": "https://www.youtube.com/watch?v=AcOM08HBl4Y",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Map : Bloxburg #roblox #robloxedit #bloxburgcontentcreator #bloxburg #robloxshorts",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765068915.0,
-      "url": "https://www.youtube.com/watch?v=_LiSEDG9mt8",
       "icon": "fa-youtube"
     },
     {
@@ -488,7 +497,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765083189.7027004,
+    "generated_at": 1765084276.538247,
     "mode": "memory",
     "refresh_interval": 2000
   }
