@@ -7,8 +7,8 @@
     "request_completion_ratio": 0.0
   },
   "server": {
-    "total_members": 328,
-    "joined_today": 3,
+    "total_members": 329,
+    "joined_today": 4,
     "active_shops": 1,
     "avg_response_time": 6664.5
   },
@@ -24,6 +24,15 @@
     }
   ],
   "activityLog": [
+    {
+      "type": "member_join",
+      "shop_name": "Server",
+      "message": "sombrsoph joined the server",
+      "timestamp": 1765088505,
+      "thread_id": null,
+      "server_id": 1301988304279048275,
+      "url": "https://discord.com/users/794105640993030175"
+    },
     {
       "type": "member_leave",
       "shop_name": "Server",
@@ -515,7 +524,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765087989.7059672,
+    "generated_at": 1765088508.1812668,
     "mode": "memory",
     "refresh_interval": 2000
   }
