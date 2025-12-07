@@ -578,20 +578,29 @@
   "news": [
     {
       "type": "trend",
+      "title": "Roblox Bloxburg: The Night Christmas Almost Disappeared #roblox #robloxmovie #robloxfyp #robloxobby",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765140627.0,
+      "url": "https://www.youtube.com/watch?v=mnIeHU7-PaE",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Who remember this meme \ud83d\ude02 #robloxedit #bloxburg #robloxstory #murdermystery2 #fyp\u30b7",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765140544.0,
+      "url": "https://www.youtube.com/watch?v=5qpjFZRlcks",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Dia 7 #roblox #robloxbloxburgspeedbuild #bloxburg #bloxburgnewleaks #bloxburgcontentcreator",
       "description": "Dia 7 calendario de invierno en Bloxburg!...",
       "source": "YouTube",
       "timestamp": 1765139736.0,
       "url": "https://www.youtube.com/watch?v=xQHhyOLb-kg",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "As live de 2025 kkkkkk #roblox #bloxburg #funny #robloxedit #fun \ufffc",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765139208.0,
-      "url": "https://www.youtube.com/watch?v=vsZzEc8Oj70",
       "icon": "fa-youtube"
     },
     {
@@ -610,15 +619,6 @@
       "source": "YouTube",
       "timestamp": 1765134635.0,
       "url": "https://www.youtube.com/watch?v=-SsLnJX9BGc",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "cute cozy winter outfits for you guys!! \u2764\ufe0f\ud83c\udf84 #roblox #bloxburg #bloxburgoutfitcodes #berryave  #fyp",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765132719.0,
-      "url": "https://www.youtube.com/watch?v=2Per4SzV8n8",
       "icon": "fa-youtube"
     },
     {
@@ -659,7 +659,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765141989.708577,
+    "generated_at": 1765143189.7032902,
     "mode": "memory",
     "refresh_interval": 2000
   }
