@@ -622,44 +622,53 @@
       "icon": "fa-youtube"
     },
     {
-      "type": "game_update",
-      "title": "New Winter Update Available!",
-      "description": "Explore new winter-themed furniture and decorations",
-      "source": "Bloxburg Official",
-      "timestamp": 1765050783.7398396,
-      "url": "https://twitter.com/BloxburgGame",
-      "icon": "fa-gamepad"
+      "type": "trend",
+      "title": "Being Santa in Bloxburg PT3\ud83c\udf85 #christmas #roblox #bloxburg #shorts",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765144228.0,
+      "url": "https://www.youtube.com/watch?v=izx0wWEdHow",
+      "icon": "fa-youtube"
     },
     {
       "type": "trend",
-      "title": "Modern Mansion Builds Trending",
-      "description": "Community showcasing stunning modern architecture",
+      "title": "SOPHIE STARTS HER OWN WEBSHOW! *INSPIRED BY ICARLY* Roblox Bloxburg Voiced RP Roleplay",
+      "description": "Description: \u2661\ufe0e. \u25dd \u2b50\ufe0fUSE STARCODE 'PEACH' WHEN BUYING ROBUX OR PREMIUM!\u2b50\ufe0f \u029a hey everyone!   Today it...",
       "source": "YouTube",
-      "timestamp": 1765047183.7398407,
-      "url": "https://youtube.com/results?search_query=bloxburg+modern+mansion",
-      "icon": "fa-fire"
+      "timestamp": 1765141206.0,
+      "url": "https://www.youtube.com/watch?v=BDKtoa869qs",
+      "icon": "fa-youtube"
     },
     {
-      "type": "tip",
-      "title": "Money Making Guide 2024",
-      "description": "Best jobs and strategies to earn cash quickly",
-      "source": "Community Guide",
-      "timestamp": 1765043583.7398412,
-      "url": "#",
-      "icon": "fa-lightbulb"
+      "type": "trend",
+      "title": "Who remember this meme \ud83d\ude02 #robloxedit #bloxburg #robloxstory #murdermystery2 #fyp\u30b7",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765140544.0,
+      "url": "https://www.youtube.com/watch?v=5qpjFZRlcks",
+      "icon": "fa-youtube"
     },
     {
-      "type": "community",
-      "title": "Weekly Build Contest",
-      "description": "Submit your best holiday-themed builds to win prizes!",
-      "source": "Crumbl Crafts",
-      "timestamp": 1765039983.7398417,
-      "url": "#",
-      "icon": "fa-trophy"
+      "type": "trend",
+      "title": "Dia 7 #roblox #robloxbloxburgspeedbuild #bloxburg #bloxburgnewleaks #bloxburgcontentcreator",
+      "description": "Dia 7 calendario de invierno en Bloxburg!...",
+      "source": "YouTube",
+      "timestamp": 1765139736.0,
+      "url": "https://www.youtube.com/watch?v=xQHhyOLb-kg",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Made in China \ud83c\udde8\ud83c\uddf3#FIP #roblox #bloxburg #robloxedit #storytime \ufffc\ufffc",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765138722.0,
+      "url": "https://www.youtube.com/watch?v=H4bZ2LWfZik",
+      "icon": "fa-youtube"
     }
   ],
   "meta": {
-    "generated_at": 1765159989.704456,
+    "generated_at": 1765161189.7057393,
     "mode": "memory",
     "refresh_interval": 2000
   }
