@@ -8,7 +8,7 @@
   },
   "server": {
     "total_members": 334,
-    "joined_today": 1,
+    "joined_today": 0,
     "active_shops": 1,
     "avg_response_time": 4450.666666666667
   },
@@ -587,6 +587,24 @@
   "news": [
     {
       "type": "trend",
+      "title": "\u2603\ufe0f Nueva MINI actualizaci\u00f3n de NAVIDAD de Bloxburg!! \ud83d\udce2 \ud83c\udf84 #shorts #bloxburg #robloxshorts  #roblox",
+      "description": "Nueva mini actualizaci\u00f3n de Bloxburg \u2603\ufe0f  . ------------------------------------------------- \u2b50 Mis r...",
+      "source": "YouTube",
+      "timestamp": 1765229658.0,
+      "url": "https://www.youtube.com/watch?v=pQigLMvCEZI",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "#roblox #robloxedit #edit #gaming #bloxburg #jumpstyle #trend #robloxrants",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765227375.0,
+      "url": "https://www.youtube.com/watch?v=MZ4TJouNu1g",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "vlogmas day 8!!! \ud83c\udf84\u2744\ufe0f .+*  #Vlogmas #roblox #bloxburg #bloxburgchristmas #fyp",
       "description": "...",
       "source": "YouTube",
@@ -605,29 +623,11 @@
     },
     {
       "type": "trend",
-      "title": "I BECAME A BABYSITTER FOR THE WORST BLOXBURG FAMILY",
-      "description": "bloxburg #roblox #robloxbloxburg I should have stayed in my mansion...becoming a babysitter was the ...",
-      "source": "YouTube",
-      "timestamp": 1765224049.0,
-      "url": "https://www.youtube.com/watch?v=j8cHhF2gviQ",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "2 more daysss!! #roblox #bloxburg #bloxburgchristmas #bloxburgchristmasupdate #fyp",
+      "title": "#christmas #roblox #bloxburg #edit",
       "description": "...",
       "source": "YouTube",
-      "timestamp": 1765223105.0,
-      "url": "https://www.youtube.com/watch?v=aXqKMgDFP80",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "i usually play on mute \ud83d\ude2d #roblox #bloxburg #robloxbeat #bloxburgchristmas #fyp",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765218556.0,
-      "url": "https://www.youtube.com/watch?v=KaIguvGWs2g",
+      "timestamp": 1765224347.0,
+      "url": "https://www.youtube.com/watch?v=7HUwqMK_swM",
       "icon": "fa-youtube"
     },
     {
@@ -668,7 +668,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765230789.7060175,
+    "generated_at": 1765231989.7046719,
     "mode": "memory",
     "refresh_interval": 2000
   }
