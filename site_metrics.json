@@ -587,6 +587,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "Would you taste my BLOXBURG HOLIDAY CUPCAKES I made \ud83d\udc40\u2744\ufe0f\u2603\ufe0f",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765185868.0,
+      "url": "https://www.youtube.com/watch?v=6s7Vydd7h1M",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "BIBI TAKUT SAMA OM SANTA  #roblox #brookhaven #bibicantik #robloxedit #bibiroblox #bloxburg",
       "description": "BIBI TIDAK KETEMU PELMENYA T-T UN Roblox : BibiCantik01 Tiktok : @bibicantikk01 #roblox #brookhaven ...",
       "source": "YouTube",
@@ -619,15 +628,6 @@
       "source": "YouTube",
       "timestamp": 1765167108.0,
       "url": "https://www.youtube.com/watch?v=sFxS6lHboIY",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "BIMALA FAMILY KOMPAK IKUT MERAMAIKAN FESTIVAL SALJU DIKOTA | BLOXBURG RP",
-      "description": "Terimakasiih adik-adik udah nonton video ini sampai akhirr, lup yu all -----------   -Tags  - #roblo...",
-      "source": "YouTube",
-      "timestamp": 1765166464.0,
-      "url": "https://www.youtube.com/watch?v=xghiMas4NTk",
       "icon": "fa-youtube"
     },
     {
@@ -668,7 +668,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765194790.0992374,
+    "generated_at": 1765195989.7035046,
     "mode": "memory",
     "refresh_interval": 2000
   }
