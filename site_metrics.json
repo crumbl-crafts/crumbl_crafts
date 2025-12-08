@@ -587,6 +587,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "SOPHIE RIPPED MR UNICORNS HEAD OFF! #shorts #roblox #bloxburgroleplay #roleplay #bloxburg #steal",
+      "description": "SOPHIE RIPPED MR UNICORNS HEAD OFF! Make sure to like and check out the full video in the link to fi...",
+      "source": "YouTube",
+      "timestamp": 1765209705.0,
+      "url": "https://www.youtube.com/watch?v=zZ-6lxryXCI",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "cr an ely #roblox #birdtrend #sehar #bloxburg #lifeisbutadream #edit",
       "description": "...",
       "source": "YouTube",
@@ -619,15 +628,6 @@
       "source": "YouTube",
       "timestamp": 1765198737.0,
       "url": "https://www.youtube.com/watch?v=NDs40HbFxqA",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Le No\u00ebl des capybaras #remix #music #song #roblox #brookhave #memes #blookhaven #bloxburg #viral",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765195631.0,
-      "url": "https://www.youtube.com/watch?v=WKa7jNqlIpw",
       "icon": "fa-youtube"
     },
     {
@@ -668,7 +668,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765210990.12953,
+    "generated_at": 1765211589.7028844,
     "mode": "memory",
     "refresh_interval": 2000
   }
