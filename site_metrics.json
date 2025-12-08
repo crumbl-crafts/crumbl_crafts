@@ -631,53 +631,44 @@
       "icon": "fa-youtube"
     },
     {
-      "type": "trend",
-      "title": "WHEN YOUR CRUSH COMES OVER!! #roblox #bloxburg  #sakuraschoolsimulator #americe #comedyshorts",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765198829.0,
-      "url": "https://www.youtube.com/watch?v=F0ULLFQDR3s",
-      "icon": "fa-youtube"
+      "type": "game_update",
+      "title": "New Winter Update Available!",
+      "description": "Explore new winter-themed furniture and decorations",
+      "source": "Bloxburg Official",
+      "timestamp": 1765050783.7398396,
+      "url": "https://twitter.com/BloxburgGame",
+      "icon": "fa-gamepad"
     },
     {
       "type": "trend",
-      "title": "rare animals caught on camera \ud83d\udcf8 pt. 1 #roblox #bloxburg #thesims4 #comparison #bloxburgspeedbuilds",
-      "description": "...",
+      "title": "Modern Mansion Builds Trending",
+      "description": "Community showcasing stunning modern architecture",
       "source": "YouTube",
-      "timestamp": 1765198737.0,
-      "url": "https://www.youtube.com/watch?v=NDs40HbFxqA",
-      "icon": "fa-youtube"
+      "timestamp": 1765047183.7398407,
+      "url": "https://youtube.com/results?search_query=bloxburg+modern+mansion",
+      "icon": "fa-fire"
     },
     {
-      "type": "trend",
-      "title": "Le No\u00ebl des capybaras #remix #music #song #roblox #brookhave #memes #blookhaven #bloxburg #viral",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765195631.0,
-      "url": "https://www.youtube.com/watch?v=WKa7jNqlIpw",
-      "icon": "fa-youtube"
+      "type": "tip",
+      "title": "Money Making Guide 2024",
+      "description": "Best jobs and strategies to earn cash quickly",
+      "source": "Community Guide",
+      "timestamp": 1765043583.7398412,
+      "url": "#",
+      "icon": "fa-lightbulb"
     },
     {
-      "type": "trend",
-      "title": "Please welcome Bella to MDL Studios! \u2728\ufe0f #bloxburg #roblox #kpopentertainment #robloxkuv #kuv #kpop",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765195474.0,
-      "url": "https://www.youtube.com/watch?v=d8_p4znMfDc",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "dont tap song #roblox #robloxmemes #bloxburg #funny #robloxadoptme",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765191681.0,
-      "url": "https://www.youtube.com/watch?v=VBJZ4mjDD68",
-      "icon": "fa-youtube"
+      "type": "community",
+      "title": "Weekly Build Contest",
+      "description": "Submit your best holiday-themed builds to win prizes!",
+      "source": "Crumbl Crafts",
+      "timestamp": 1765039983.7398417,
+      "url": "#",
+      "icon": "fa-trophy"
     }
   ],
   "meta": {
-    "generated_at": 1765217589.702946,
+    "generated_at": 1765218789.7019227,
     "mode": "memory",
     "refresh_interval": 2000
   }
