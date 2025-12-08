@@ -596,6 +596,15 @@
     },
     {
       "type": "trend",
+      "title": "battle roblox #roblox #bloxburg #bloxburgbuild #robloxbloxburg #robloxshorts",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765168085.0,
+      "url": "https://www.youtube.com/watch?v=LvXEZhRI7sg",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "BIMALA FAMILY KOMPAK IKUT MERAMAIKAN FESTIVAL SALJU DIKOTA | BLOXBURG RP",
       "description": "Terimakasiih adik-adik udah nonton video ini sampai akhirr, lup yu all -----------   -Tags  - #roblo...",
       "source": "YouTube",
@@ -619,15 +628,6 @@
       "source": "YouTube",
       "timestamp": 1765160881.0,
       "url": "https://www.youtube.com/watch?v=HepY1xjz7Rg",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Recent Car Crash at Bloxburg bridge",
-      "description": "Shorts #FYP #Viral #FunnyShorts #LifeHacks #Storytime #BeforeAfter #LearnOnYouTube #AItools #motivat...",
-      "source": "YouTube",
-      "timestamp": 1765155656.0,
-      "url": "https://www.youtube.com/watch?v=isWFIAliGnE",
       "icon": "fa-youtube"
     },
     {
@@ -668,7 +668,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765173189.9808102,
+    "generated_at": 1765174389.7114708,
     "mode": "memory",
     "refresh_interval": 2000
   }
