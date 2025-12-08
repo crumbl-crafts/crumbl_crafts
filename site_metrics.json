@@ -631,53 +631,44 @@
       "icon": "fa-youtube"
     },
     {
-      "type": "trend",
-      "title": "Please welcome Bella to MDL Studios! \u2728\ufe0f #bloxburg #roblox #kpopentertainment #robloxkuv #kuv #kpop",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765195474.0,
-      "url": "https://www.youtube.com/watch?v=d8_p4znMfDc",
-      "icon": "fa-youtube"
+      "type": "game_update",
+      "title": "New Winter Update Available!",
+      "description": "Explore new winter-themed furniture and decorations",
+      "source": "Bloxburg Official",
+      "timestamp": 1765050783.7398396,
+      "url": "https://twitter.com/BloxburgGame",
+      "icon": "fa-gamepad"
     },
     {
       "type": "trend",
-      "title": "Would you taste my BLOXBURG HOLIDAY CUPCAKES I made \ud83d\udc40\u2744\ufe0f\u2603\ufe0f",
-      "description": "...",
+      "title": "Modern Mansion Builds Trending",
+      "description": "Community showcasing stunning modern architecture",
       "source": "YouTube",
-      "timestamp": 1765185868.0,
-      "url": "https://www.youtube.com/watch?v=6s7Vydd7h1M",
-      "icon": "fa-youtube"
+      "timestamp": 1765047183.7398407,
+      "url": "https://youtube.com/results?search_query=bloxburg+modern+mansion",
+      "icon": "fa-fire"
     },
     {
-      "type": "trend",
-      "title": "BIBI TAKUT SAMA OM SANTA  #roblox #brookhaven #bibicantik #robloxedit #bibiroblox #bloxburg",
-      "description": "BIBI TIDAK KETEMU PELMENYA T-T UN Roblox : BibiCantik01 Tiktok : @bibicantikk01 #roblox #brookhaven ...",
-      "source": "YouTube",
-      "timestamp": 1765177213.0,
-      "url": "https://www.youtube.com/watch?v=DfGnqEJy5YY",
-      "icon": "fa-youtube"
+      "type": "tip",
+      "title": "Money Making Guide 2024",
+      "description": "Best jobs and strategies to earn cash quickly",
+      "source": "Community Guide",
+      "timestamp": 1765043583.7398412,
+      "url": "#",
+      "icon": "fa-lightbulb"
     },
     {
-      "type": "trend",
-      "title": "#robolox #sahur #brainrot",
-      "description": "robolox #sahur #brainrot roblox brainrot, italian brainrot, roblox memes, roblox shorts, roblox funn...",
-      "source": "YouTube",
-      "timestamp": 1765171102.0,
-      "url": "https://www.youtube.com/watch?v=nX23NW8ww5I",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "DECORATING THE NEW BLOXBURG MODERN GINGERBREAD HOUSE",
-      "description": "so today we finish up that bloxburg modern gingerbread house by decorating the interior of it! once ...",
-      "source": "YouTube",
-      "timestamp": 1765167108.0,
-      "url": "https://www.youtube.com/watch?v=sFxS6lHboIY",
-      "icon": "fa-youtube"
+      "type": "community",
+      "title": "Weekly Build Contest",
+      "description": "Submit your best holiday-themed builds to win prizes!",
+      "source": "Crumbl Crafts",
+      "timestamp": 1765039983.7398417,
+      "url": "#",
+      "icon": "fa-trophy"
     }
   ],
   "meta": {
-    "generated_at": 1765209189.7120292,
+    "generated_at": 1765210389.7088559,
     "mode": "memory",
     "refresh_interval": 2000
   }
