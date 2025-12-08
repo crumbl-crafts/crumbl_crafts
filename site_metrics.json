@@ -578,6 +578,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "#roblox #bloxburg #roleplay come on me to make Sunday dinner  like sub and For more videos like this",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765148950.0,
+      "url": "https://www.youtube.com/watch?v=i4x9Rt2vxy0",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Being Santa in Bloxburg PT3\ud83c\udf85 #christmas #roblox #bloxburg #shorts",
       "description": "...",
       "source": "YouTube",
@@ -610,15 +619,6 @@
       "source": "YouTube",
       "timestamp": 1765139736.0,
       "url": "https://www.youtube.com/watch?v=xQHhyOLb-kg",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Made in China \ud83c\udde8\ud83c\uddf3#FIP #roblox #bloxburg #robloxedit #storytime \ufffc\ufffc",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765138722.0,
-      "url": "https://www.youtube.com/watch?v=H4bZ2LWfZik",
       "icon": "fa-youtube"
     },
     {
@@ -659,7 +659,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765151590.0038698,
+    "generated_at": 1765152789.7035975,
     "mode": "memory",
     "refresh_interval": 2000
   }
