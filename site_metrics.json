@@ -596,6 +596,24 @@
   "news": [
     {
       "type": "trend",
+      "title": "BLOXBURG ELF HUNT IS COMING! #bloxburg",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765284105.0,
+      "url": "https://www.youtube.com/watch?v=WfvIjyYWQ6g",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Jump scare\ufffc",
+      "description": "businesstipsforsmallbusinessowners #roblox #dothingsyoudontwanttodo #drawing #helpmemakethismakesens...",
+      "source": "YouTube",
+      "timestamp": 1765283652.0,
+      "url": "https://www.youtube.com/watch?v=4QhmXberb2w",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Roblox Shorts Funny \ud83e\udd23\ud83e\udd7a #roblox #bloxburg #robloxgames #robloxedit",
       "description": "...",
       "source": "YouTube",
@@ -619,24 +637,6 @@
       "source": "YouTube",
       "timestamp": 1765268324.0,
       "url": "https://www.youtube.com/watch?v=3nze2hjWvss",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Sound Credits to RenovatedPotato #roblox #funny #bloxburg #games #robloxstory #\u0bb0\u0bcb\u0baa\u0bcd\u0bb2\u0bbe\u0b95\u0bcd\u0bb8\u0bcd #rblx",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765264214.0,
-      "url": "https://www.youtube.com/watch?v=pl_cGSMLrB0",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Remodeling a followers home in bloxburg #bloxburg #roblox #robloxbloxburgspeedbuild #robloxedit",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765258054.0,
-      "url": "https://www.youtube.com/watch?v=A0R8HKM2lrM",
       "icon": "fa-youtube"
     },
     {
@@ -677,7 +677,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765284789.7058473,
+    "generated_at": 1765285989.7135499,
     "mode": "memory",
     "refresh_interval": 2000
   }
