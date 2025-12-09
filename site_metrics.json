@@ -587,6 +587,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "Nyamar jadi pengamen #roblox #bloxburg #robloxedit",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765254116.0,
+      "url": "https://www.youtube.com/watch?v=R1kZxf_UBPg",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "IT\u2019S THAT TIME AGAIN \ud83c\udf84\u2b06\ufe0f New Bloxburg Vid | Mars Skye #roblox #shorts #gaming #funny",
       "description": "Let's explore the new Bloxburg update OUT NOW. #gameplay #games #fun #comedy #new #trending #viral #...",
       "source": "YouTube",
@@ -619,15 +628,6 @@
       "source": "YouTube",
       "timestamp": 1765235768.0,
       "url": "https://www.youtube.com/watch?v=mjcoCdigWIk",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "TOURING the NEW $525K BLOXBURG LIMITED PREBUILT HOUSE... and NEW ITEMS MINI UPDATE!",
-      "description": "today bloxburg released a mini update which brings a new limited holiday prebuilt home and some item...",
-      "source": "YouTube",
-      "timestamp": 1765234128.0,
-      "url": "https://www.youtube.com/watch?v=Hi_IK380J8E",
       "icon": "fa-youtube"
     },
     {
@@ -668,7 +668,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765255989.7048922,
+    "generated_at": 1765257189.7072794,
     "mode": "memory",
     "refresh_interval": 2000
   }
