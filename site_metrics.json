@@ -587,6 +587,24 @@
   "news": [
     {
       "type": "trend",
+      "title": "0_0 #roblox #butifyoucloseyoureyes #bloxburg #memes #haveitoldyoulatelythatiloveyou #gaming",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765268867.0,
+      "url": "https://www.youtube.com/watch?v=y7LKhE3NjNU",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Spend a day  at uni w/m #bloxburg#pinterest #music #outfitideas #university#us #aesthetic #fypp#vlog",
+      "description": "spend a day with me at uni .Productive day filled with so many study sessions .Romanticizing study s...",
+      "source": "YouTube",
+      "timestamp": 1765268324.0,
+      "url": "https://www.youtube.com/watch?v=3nze2hjWvss",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Remodeling a followers home in bloxburg #bloxburg #roblox #robloxbloxburgspeedbuild #robloxedit",
       "description": "...",
       "source": "YouTube",
@@ -631,44 +649,35 @@
       "icon": "fa-youtube"
     },
     {
-      "type": "game_update",
-      "title": "New Winter Update Available!",
-      "description": "Explore new winter-themed furniture and decorations",
-      "source": "Bloxburg Official",
-      "timestamp": 1765050783.7398396,
-      "url": "https://twitter.com/BloxburgGame",
-      "icon": "fa-gamepad"
+      "type": "trend",
+      "title": "Fnaf Sister Location Animatronics Bloxburg #bloxburg #fnaf #bloxburgbuilds",
+      "description": "Various Fnaf SL Animatronics in Bloxburg....",
+      "source": "YouTube",
+      "timestamp": 1765245989.0,
+      "url": "https://www.youtube.com/watch?v=qWK7HAobiuw",
+      "icon": "fa-youtube"
     },
     {
       "type": "trend",
-      "title": "Modern Mansion Builds Trending",
-      "description": "Community showcasing stunning modern architecture",
+      "title": "\u201cI Aged 1 to 100 in Brookhaven\u2026 The Ending Is Crazy!\u201d #bloxburg #bloxtalesBrookhaven Roblox #roblox",
+      "description": "...",
       "source": "YouTube",
-      "timestamp": 1765047183.7398407,
-      "url": "https://youtube.com/results?search_query=bloxburg+modern+mansion",
-      "icon": "fa-fire"
+      "timestamp": 1765241765.0,
+      "url": "https://www.youtube.com/watch?v=x966liQo4ao",
+      "icon": "fa-youtube"
     },
     {
-      "type": "tip",
-      "title": "Money Making Guide 2024",
-      "description": "Best jobs and strategies to earn cash quickly",
-      "source": "Community Guide",
-      "timestamp": 1765043583.7398412,
-      "url": "#",
-      "icon": "fa-lightbulb"
-    },
-    {
-      "type": "community",
-      "title": "Weekly Build Contest",
-      "description": "Submit your best holiday-themed builds to win prizes!",
-      "source": "Crumbl Crafts",
-      "timestamp": 1765039983.7398417,
-      "url": "#",
-      "icon": "fa-trophy"
+      "type": "trend",
+      "title": "Finally control rework #roblox #bloxfruits #prisonfood #videogamemusic #funny #technodance #bloxburg",
+      "description": "ROBLOX BLOX FRUITS RACE MINK GHOUL CYBORG HUMAN ANGET SHARK DRACO #roblox #videogamemusic ......",
+      "source": "YouTube",
+      "timestamp": 1765235917.0,
+      "url": "https://www.youtube.com/watch?v=c_LR9PFSzC8",
+      "icon": "fa-youtube"
     }
   ],
   "meta": {
-    "generated_at": 1765270390.0846028,
+    "generated_at": 1765271589.7097373,
     "mode": "memory",
     "refresh_interval": 2000
   }
