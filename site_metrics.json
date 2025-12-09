@@ -596,6 +596,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "k #roblox #lifeisbutadream #bloxburg #gaming  #adoptme #trade #stealabrainrot #funny #memes",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765299101.0,
+      "url": "https://www.youtube.com/watch?v=YbFU25WTl-k",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Open Houses #bloxburg #roblox #robloxstory #rblx #ytshorts #bloxburgroleplay",
       "description": "...",
       "source": "YouTube",
@@ -631,62 +640,44 @@
       "icon": "fa-youtube"
     },
     {
-      "type": "trend",
-      "title": "Coolest build in roblox Bloxburg #bloxburg #bloxburgbuilds #bloxburgroleplay #roblox",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765289290.0,
-      "url": "https://www.youtube.com/watch?v=g9jeNo_EGwU",
-      "icon": "fa-youtube"
+      "type": "game_update",
+      "title": "New Winter Update Available!",
+      "description": "Explore new winter-themed furniture and decorations",
+      "source": "Bloxburg Official",
+      "timestamp": 1765050783.7398396,
+      "url": "https://twitter.com/BloxburgGame",
+      "icon": "fa-gamepad"
     },
     {
       "type": "trend",
-      "title": "Winter Update Is Here!! Roblox Bloxburg #bloxburg #bloxburgbuilds #bloxburgroleplay #roblox",
-      "description": "...",
+      "title": "Modern Mansion Builds Trending",
+      "description": "Community showcasing stunning modern architecture",
       "source": "YouTube",
-      "timestamp": 1765289175.0,
-      "url": "https://www.youtube.com/watch?v=0chvmVcPMUU",
-      "icon": "fa-youtube"
+      "timestamp": 1765047183.7398407,
+      "url": "https://youtube.com/results?search_query=bloxburg+modern+mansion",
+      "icon": "fa-fire"
     },
     {
-      "type": "trend",
-      "title": "#roblox #dancemoms #dancemoms #realitytvshow #ora #aldc #tvshow #rblx #bloxburg",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765288472.0,
-      "url": "https://www.youtube.com/watch?v=S1Vh__2ki3s",
-      "icon": "fa-youtube"
+      "type": "tip",
+      "title": "Money Making Guide 2024",
+      "description": "Best jobs and strategies to earn cash quickly",
+      "source": "Community Guide",
+      "timestamp": 1765043583.7398412,
+      "url": "#",
+      "icon": "fa-lightbulb"
     },
     {
-      "type": "trend",
-      "title": "BLOXBURG ELF HUNT IS COMING! #bloxburg",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765284105.0,
-      "url": "https://www.youtube.com/watch?v=WfvIjyYWQ6g",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Roblox Shorts Funny \ud83e\udd23\ud83e\udd7a #roblox #bloxburg #robloxgames #robloxedit",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765275188.0,
-      "url": "https://www.youtube.com/watch?v=0t-lSjMObho",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "0_0 #roblox #butifyoucloseyoureyes #bloxburg #memes #haveitoldyoulatelythatiloveyou #gaming",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765268867.0,
-      "url": "https://www.youtube.com/watch?v=y7LKhE3NjNU",
-      "icon": "fa-youtube"
+      "type": "community",
+      "title": "Weekly Build Contest",
+      "description": "Submit your best holiday-themed builds to win prizes!",
+      "source": "Crumbl Crafts",
+      "timestamp": 1765039983.7398417,
+      "url": "#",
+      "icon": "fa-trophy"
     }
   ],
   "meta": {
-    "generated_at": 1765300389.7100487,
+    "generated_at": 1765301589.709126,
     "mode": "memory",
     "refresh_interval": 2000
   }
