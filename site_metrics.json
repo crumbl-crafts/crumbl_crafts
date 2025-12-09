@@ -587,20 +587,20 @@
   "news": [
     {
       "type": "trend",
+      "title": "Fnaf Sister Location Animatronics Bloxburg #bloxburg #fnaf #bloxburgbuilds",
+      "description": "Various Fnaf SL Animatronics in Bloxburg....",
+      "source": "YouTube",
+      "timestamp": 1765245989.0,
+      "url": "https://www.youtube.com/watch?v=qWK7HAobiuw",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "#bloxburg #roblox #robloxbloxburg #savingmoney #fah #makemefamous #relatable #goviral",
       "description": "...",
       "source": "YouTube",
       "timestamp": 1765235768.0,
       "url": "https://www.youtube.com/watch?v=mjcoCdigWIk",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "day 8 of my bloxburg Christmas calendar",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765235609.0,
-      "url": "https://www.youtube.com/watch?v=6ZJOTNerRQk",
       "icon": "fa-youtube"
     },
     {
@@ -668,7 +668,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765246389.711811,
+    "generated_at": 1765247589.7058299,
     "mode": "memory",
     "refresh_interval": 2000
   }
