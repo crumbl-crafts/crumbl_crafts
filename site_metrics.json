@@ -605,6 +605,15 @@
     },
     {
       "type": "trend",
+      "title": "\u201cI Aged 1 to 100 in Brookhaven\u2026 The Ending Is Crazy!\u201d #bloxburg #bloxtalesBrookhaven Roblox #roblox",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765241765.0,
+      "url": "https://www.youtube.com/watch?v=x966liQo4ao",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "D\u00eda 9 del Calendario de Adviento de Bloxburg \ud83d\uddd3\ufe0f\ud83c\udf84 #shorts #bloxburg #roblox #christmas",
       "description": "D\u00eda 9 del Calendario de Adviento de Bloxburg ------------------------------------------------- \u2b50 Mis...",
       "source": "YouTube",
@@ -619,15 +628,6 @@
       "source": "YouTube",
       "timestamp": 1765235768.0,
       "url": "https://www.youtube.com/watch?v=mjcoCdigWIk",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "TOURING the NEW $525K BLOXBURG LIMITED PREBUILT HOUSE... and NEW ITEMS MINI UPDATE!",
-      "description": "today bloxburg released a mini update which brings a new limited holiday prebuilt home and some item...",
-      "source": "YouTube",
-      "timestamp": 1765234128.0,
-      "url": "https://www.youtube.com/watch?v=Hi_IK380J8E",
       "icon": "fa-youtube"
     },
     {
@@ -668,7 +668,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765252389.7083197,
+    "generated_at": 1765253589.7027795,
     "mode": "memory",
     "refresh_interval": 2000
   }
