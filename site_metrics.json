@@ -596,6 +596,24 @@
   "news": [
     {
       "type": "trend",
+      "title": "Faxina em casa !!! #bloxburg #ritmodonatal #rotina",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765310023.0,
+      "url": "https://www.youtube.com/watch?v=Y-3oCtui6y0",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "vlogmas day 9!!  my cozy winter night routine \u2603\ufe0f #vlogmas #roblox #bloxburg #bloxburgchristmas #fyp",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765309139.0,
+      "url": "https://www.youtube.com/watch?v=dwgM4QHTgj8",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "4 cool ftap spots #roblox #robloxedit #bloxburg #robloxgames #edit",
       "description": "roblox #trending #shortsfeed #forsaken #funny #memes #viral #goviralplease #youtubeshorts....",
       "source": "YouTube",
@@ -619,24 +637,6 @@
       "source": "YouTube",
       "timestamp": 1765297752.0,
       "url": "https://www.youtube.com/watch?v=-V-f2-DhQJE",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "DAISY BURNT THE KITCHEN DOWN! #shorts #roblox #bloxburgroleplay #roleplay #bloxburg #steal",
-      "description": "DAISY BURNT THE KITCHEN DOWN! Make sure to like and check out the full video in the link to find out...",
-      "source": "YouTube",
-      "timestamp": 1765296056.0,
-      "url": "https://www.youtube.com/watch?v=ZA3McY_i8Bc",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Strange\u2026 New Ad in Roblox Bloxburg #bloxburg #bloxburgbuilds #bloxburgroleplay #roblox",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765289449.0,
-      "url": "https://www.youtube.com/watch?v=tCJeB-LXQv8",
       "icon": "fa-youtube"
     },
     {
@@ -677,7 +677,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765311189.7145023,
+    "generated_at": 1765312389.7139587,
     "mode": "memory",
     "refresh_interval": 2000
   }
