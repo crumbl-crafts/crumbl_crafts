@@ -596,6 +596,15 @@
     },
     {
       "type": "trend",
+      "title": "TOURING the NEW $525K BLOXBURG LIMITED PREBUILT HOUSE... and NEW ITEMS MINI UPDATE!",
+      "description": "today bloxburg released a mini update which brings a new limited holiday prebuilt home and some item...",
+      "source": "YouTube",
+      "timestamp": 1765234128.0,
+      "url": "https://www.youtube.com/watch?v=Hi_IK380J8E",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "\ud83d\udce2 MA\u00d1ANA inicia el EVENTO DE LOS ELFOS de Bloxburg\ud83d\udea8\ud83c\udf85  #shorts #bloxburg #robloxshorts #roblox",
       "description": "MA\u00d1ANA inicia el EVENTO DE LOS ELFOS de Bloxburg     -----------------------------------------------...",
       "source": "YouTube",
@@ -619,15 +628,6 @@
       "source": "YouTube",
       "timestamp": 1765229499.0,
       "url": "https://www.youtube.com/watch?v=NHeUpFp2P6g",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "ROBLOX | \u00bfCUANTO DINERO CONSEGUI EN 10 MIUTOS EN BLOXBURG?   #parati #roblox #youtubeshorts",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765229324.0,
-      "url": "https://www.youtube.com/watch?v=iSl1fTd38cw",
       "icon": "fa-youtube"
     },
     {
@@ -668,7 +668,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765239189.7060792,
+    "generated_at": 1765240389.701933,
     "mode": "memory",
     "refresh_interval": 2000
   }
