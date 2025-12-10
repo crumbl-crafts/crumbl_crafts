@@ -623,20 +623,29 @@
   "news": [
     {
       "type": "trend",
-      "title": "The SECOND Bloxburg ELF Location! [2025]",
-      "description": "The second elf is heree Twitter: https://twitter.com/BramPeee Instagram: https://www.instagram.com/b...",
+      "title": "Localiza\u00e7\u00e3o Elfo 2 do bloxburg \ud83c\udf85\ud83c\udf84 #bloxburg #bloxburgelfhunt #bloxburgchristmas #roblox",
+      "description": "...",
       "source": "YouTube",
-      "timestamp": 1765401834.0,
-      "url": "https://www.youtube.com/watch?v=--d--ZG0d-8",
+      "timestamp": 1765405203.0,
+      "url": "https://www.youtube.com/watch?v=dmfbQ15Fhlo",
       "icon": "fa-youtube"
     },
     {
       "type": "trend",
-      "title": "Elf Hunt Day 2 - 2025 #elfhunt #bloxburg #bloxburgelfhunt",
-      "description": "Elf Hunt Day 2 - 2025 #elfhunt #bloxburg #bloxburgelfhunt....",
+      "title": "Bloxburg Elf Location Day 2!!! Went live with you all and it was so fun!! #bloxburgelfhunt",
+      "description": "...",
       "source": "YouTube",
-      "timestamp": 1765401468.0,
-      "url": "https://www.youtube.com/watch?v=YtpSoD18edA",
+      "timestamp": 1765404959.0,
+      "url": "https://www.youtube.com/watch?v=AqSfBn0S5fo",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Ubicaci\u00f3n del ELFO 2 de Bloxburg \ud83c\udf84\u2603\ufe0f #shorts #roblox #bloxburg #robloxshorts",
+      "description": "Ubicaci\u00f3n del ELFO 2 de Bloxburg 2025  \u2603\ufe0f ------------------------------------------------- \u2b50 Mis re...",
+      "source": "YouTube",
+      "timestamp": 1765403338.0,
+      "url": "https://www.youtube.com/watch?v=ZdjYfKdUkWY",
       "icon": "fa-youtube"
     },
     {
@@ -655,15 +664,6 @@
       "source": "YouTube",
       "timestamp": 1765396907.0,
       "url": "https://www.youtube.com/watch?v=ANTPfXSbFa4",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "BLOXBURG ELF HUNT DAY 1 LOCATION + WHAT IT NEEDS",
-      "description": "THOSE SANTAS BALLS....",
-      "source": "YouTube",
-      "timestamp": 1765388279.0,
-      "url": "https://www.youtube.com/watch?v=gQyPuw5U-W8",
       "icon": "fa-youtube"
     },
     {
@@ -704,7 +704,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765407189.7042282,
+    "generated_at": 1765408389.7071223,
     "mode": "memory",
     "refresh_interval": 2000
   }
