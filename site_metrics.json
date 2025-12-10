@@ -596,6 +596,24 @@
   "news": [
     {
       "type": "trend",
+      "title": "\u2027\u208a\u02da\ud83c\udf84\u2729 ELF HUNT DAY 1! \u2729 #bloxburg #roblox #robloxbloxburgspeedbuild #musicplayer #bloxburgchristmas",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765324941.0,
+      "url": "https://www.youtube.com/watch?v=j7-PKLvij5k",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Where to find the new Elves in the 2025 bloxburg elf hunt + more",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765324088.0,
+      "url": "https://www.youtube.com/watch?v=Sk3u0JvkGGU",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Here is how to get the first elf in bloxburg #roblox #relatable #roblox #voicechat #dahood #bloxburg",
       "description": "...",
       "source": "YouTube",
@@ -614,29 +632,11 @@
     },
     {
       "type": "trend",
-      "title": "BLOXBURG ELF DAY 1\ud83e\udddd\u200d\u2640\ufe0f #welcometobloxburg #roblox #bloxburg #robloxshorts #robloxedit #bloxburgrp",
+      "title": "Ubicaci\u00f3n del ELFO 1 de Bloxburg \ud83c\udf84\u2603\ufe0f #shorts #roblox #bloxburg #robloxshorts",
       "description": "...",
       "source": "YouTube",
-      "timestamp": 1765320629.0,
-      "url": "https://www.youtube.com/watch?v=k0udQa-ErfE",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Localiza\u00e7\u00e3o Elfo 1 do bloxburg #bloxburg #bloxburgelfhunt #bloxburgchristmas #roblox",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765320412.0,
-      "url": "https://www.youtube.com/watch?v=jCdWGmpW40g",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "I WENT TO A BLOXBURG BALL\ud83e\udee3#welcometobloxburg #roblox #bloxburg #robloxshorts #robloxedit #dtiroblox",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765319986.0,
-      "url": "https://www.youtube.com/watch?v=juGEOXUIN-4",
+      "timestamp": 1765320587.0,
+      "url": "https://www.youtube.com/watch?v=P3P-88hwnQY",
       "icon": "fa-youtube"
     },
     {
@@ -677,7 +677,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765325589.706715,
+    "generated_at": 1765326789.7024825,
     "mode": "memory",
     "refresh_interval": 2000
   }
