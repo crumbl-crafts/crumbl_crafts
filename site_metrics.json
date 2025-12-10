@@ -596,6 +596,24 @@
   "news": [
     {
       "type": "trend",
+      "title": "Bloxburg | Apartment floorplan #bloxburg #aesthetic",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765365175.0,
+      "url": "https://www.youtube.com/watch?v=nCcEGV0gXeE",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Elf #1 2025 Elf hunt  #bloxburg  #elfhunt",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765364005.0,
+      "url": "https://www.youtube.com/watch?v=29iowS6xTRw",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "elf hunt day one bloxburg location #roblox #bloxburg #christmas #santa #elf #edit #funny",
       "description": "2025 bloxburg elf hunt day one location....",
       "source": "YouTube",
@@ -619,24 +637,6 @@
       "source": "YouTube",
       "timestamp": 1765331327.0,
       "url": "https://www.youtube.com/watch?v=4fowslDwBwc",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Day 1 Elf Location in Bloxburg \ud83c\udf81 #bloxburg #bloxburgupdate #roblox",
-      "description": "Thank you for watching. In this short, we're finding Santa's elves for the winter event \"Elf Hunt\" i...",
-      "source": "YouTube",
-      "timestamp": 1765328638.0,
-      "url": "https://www.youtube.com/watch?v=LPqYWGi8cKM",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Bloxburg Elf Hunt Day 1! \u2729  #bloxburg #roblox #robloxbloxburgspeedbuild #bloxburgchristmas",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765324941.0,
-      "url": "https://www.youtube.com/watch?v=j7-PKLvij5k",
       "icon": "fa-youtube"
     },
     {
@@ -677,7 +677,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765365189.7053494,
+    "generated_at": 1765366389.7040255,
     "mode": "memory",
     "refresh_interval": 2000
   }
