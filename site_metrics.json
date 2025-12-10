@@ -623,15 +623,6 @@
   "news": [
     {
       "type": "trend",
-      "title": "Day 1! #roblox #bloxburg #robloxedit #christmas #elf #bloxburgroleplay #growagarden #fyp\u30b7 #fyp",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765366751.0,
-      "url": "https://www.youtube.com/watch?v=b_5z-FOIo50",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
       "title": "Bloxburg | Apartment floorplan #bloxburg #aesthetic",
       "description": "...",
       "source": "YouTube",
@@ -664,6 +655,15 @@
       "source": "YouTube",
       "timestamp": 1765332000.0,
       "url": "https://www.youtube.com/watch?v=F66wcj6lsos",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "ELF #1 here we go again..!  #roblox #bloxburg #elfhunt",
+      "description": "Merchandise: https://web.roblox.com/groups/7156568/Savanna-Squad#!/store \u2606 Twitter: https://twitter....",
+      "source": "YouTube",
+      "timestamp": 1765331855.0,
+      "url": "https://www.youtube.com/watch?v=jsIYP3vnfGg",
       "icon": "fa-youtube"
     },
     {
@@ -704,7 +704,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765378390.0741913,
+    "generated_at": 1765379589.7103844,
     "mode": "memory",
     "refresh_interval": 2000
   }
