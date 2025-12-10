@@ -667,44 +667,53 @@
       "icon": "fa-youtube"
     },
     {
-      "type": "game_update",
-      "title": "New Winter Update Available!",
-      "description": "Explore new winter-themed furniture and decorations",
-      "source": "Bloxburg Official",
-      "timestamp": 1765050783.7398396,
-      "url": "https://twitter.com/BloxburgGame",
-      "icon": "fa-gamepad"
+      "type": "trend",
+      "title": "ELF #1 here we go again..!  #roblox #bloxburg #elfhunt",
+      "description": "Merchandise: https://web.roblox.com/groups/7156568/Savanna-Squad#!/store \u2606 Twitter: https://twitter....",
+      "source": "YouTube",
+      "timestamp": 1765331855.0,
+      "url": "https://www.youtube.com/watch?v=jsIYP3vnfGg",
+      "icon": "fa-youtube"
     },
     {
       "type": "trend",
-      "title": "Modern Mansion Builds Trending",
-      "description": "Community showcasing stunning modern architecture",
+      "title": "D\u00eda 10 del Calendario de Adviento de Bloxburg \ud83d\uddd3\ufe0f\ud83c\udf84 #shorts #bloxburg #roblox #christmas",
+      "description": "D\u00eda 10 del Calendario de Adviento de Bloxburg ------------------------------------------------- \u2b50 Mi...",
       "source": "YouTube",
-      "timestamp": 1765047183.7398407,
-      "url": "https://youtube.com/results?search_query=bloxburg+modern+mansion",
-      "icon": "fa-fire"
+      "timestamp": 1765331327.0,
+      "url": "https://www.youtube.com/watch?v=4fowslDwBwc",
+      "icon": "fa-youtube"
     },
     {
-      "type": "tip",
-      "title": "Money Making Guide 2024",
-      "description": "Best jobs and strategies to earn cash quickly",
-      "source": "Community Guide",
-      "timestamp": 1765043583.7398412,
-      "url": "#",
-      "icon": "fa-lightbulb"
+      "type": "trend",
+      "title": "Day 1 Elf Location in Bloxburg \ud83c\udf81 #bloxburg #bloxburgupdate #roblox",
+      "description": "Thank you for watching. In this short, we're finding Santa's elves for the winter event \"Elf Hunt\" i...",
+      "source": "YouTube",
+      "timestamp": 1765328638.0,
+      "url": "https://www.youtube.com/watch?v=LPqYWGi8cKM",
+      "icon": "fa-youtube"
     },
     {
-      "type": "community",
-      "title": "Weekly Build Contest",
-      "description": "Submit your best holiday-themed builds to win prizes!",
-      "source": "Crumbl Crafts",
-      "timestamp": 1765039983.7398417,
-      "url": "#",
-      "icon": "fa-trophy"
+      "type": "trend",
+      "title": "Bloxburg Elf Hunt Day 1! \u2729  #bloxburg #roblox #robloxbloxburgspeedbuild #bloxburgchristmas",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765324941.0,
+      "url": "https://www.youtube.com/watch?v=j7-PKLvij5k",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Where to find the new Elves in the 2025 bloxburg elf hunt + more",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765324088.0,
+      "url": "https://www.youtube.com/watch?v=Sk3u0JvkGGU",
+      "icon": "fa-youtube"
     }
   ],
   "meta": {
-    "generated_at": 1765383790.0123289,
+    "generated_at": 1765384389.7074468,
     "mode": "memory",
     "refresh_interval": 2000
   }
