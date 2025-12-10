@@ -623,6 +623,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "The SECOND Bloxburg ELF Location! [2025]",
+      "description": "The second elf is heree Twitter: https://twitter.com/BramPeee Instagram: https://www.instagram.com/b...",
+      "source": "YouTube",
+      "timestamp": 1765401834.0,
+      "url": "https://www.youtube.com/watch?v=--d--ZG0d-8",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Elf Hunt Day 2 - 2025 #elfhunt #bloxburg #bloxburgelfhunt",
       "description": "Elf Hunt Day 2 - 2025 #elfhunt #bloxburg #bloxburgelfhunt....",
       "source": "YouTube",
@@ -655,15 +664,6 @@
       "source": "YouTube",
       "timestamp": 1765388279.0,
       "url": "https://www.youtube.com/watch?v=gQyPuw5U-W8",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "#roblox #bloxburg #elfhunt",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765386103.0,
-      "url": "https://www.youtube.com/watch?v=uuqJueoNtlM",
       "icon": "fa-youtube"
     },
     {
@@ -704,7 +704,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765405390.0194054,
+    "generated_at": 1765405989.7039263,
     "mode": "memory",
     "refresh_interval": 2000
   }
