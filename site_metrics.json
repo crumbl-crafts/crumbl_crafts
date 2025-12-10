@@ -596,6 +596,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "Day 1 Elf Location in Bloxburg \ud83c\udf81 #bloxburg #bloxburgupdate #roblox",
+      "description": "Thank you for watching. In this short, we're finding Santa's elves for the winter event \"Elf Hunt\" i...",
+      "source": "YouTube",
+      "timestamp": 1765328638.0,
+      "url": "https://www.youtube.com/watch?v=LPqYWGi8cKM",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "When Your Daughter Roasts You! \ud83e\udd2c\ud83d\ude2d #bloxburg #bloxburgfamily #roblox #shorts",
       "description": "...",
       "source": "YouTube",
@@ -605,7 +614,7 @@
     },
     {
       "type": "trend",
-      "title": "\u2027\u208a\u02da\ud83c\udf84\u2729 ELF HUNT DAY 1! \u2729 #bloxburg #roblox #robloxbloxburgspeedbuild #musicplayer #bloxburgchristmas",
+      "title": "Bloxburg Elf Hunt Day 1! \u2729  #bloxburg #roblox #robloxbloxburgspeedbuild #bloxburgchristmas",
       "description": "...",
       "source": "YouTube",
       "timestamp": 1765324941.0,
@@ -628,15 +637,6 @@
       "source": "YouTube",
       "timestamp": 1765322697.0,
       "url": "https://www.youtube.com/watch?v=JhjVtGkwBgg",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Mansi\u00f3n Bloxburg colapsa al final \ud83d\udc80 #roblox",
-      "description": "2 HORAS construyendo mi dream house en Bloxburg\u2026 Coloco el techo final \u2192 \u00a1TODO SE DERRUMBA! Suscr\u00edbe...",
-      "source": "YouTube",
-      "timestamp": 1765320880.0,
-      "url": "https://www.youtube.com/watch?v=n_X7onF3m-8",
       "icon": "fa-youtube"
     },
     {
@@ -677,7 +677,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765329790.0036933,
+    "generated_at": 1765330389.7074754,
     "mode": "memory",
     "refresh_interval": 2000
   }
