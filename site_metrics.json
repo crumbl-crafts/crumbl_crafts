@@ -676,53 +676,44 @@
       "icon": "fa-youtube"
     },
     {
-      "type": "trend",
-      "title": "Where to find the 2nd &amp; 3rd elves in the bloxburg elf hunt + item",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765415161.0,
-      "url": "https://www.youtube.com/watch?v=CJ5HJzJGips",
-      "icon": "fa-youtube"
+      "type": "game_update",
+      "title": "New Winter Update Available!",
+      "description": "Explore new winter-themed furniture and decorations",
+      "source": "Bloxburg Official",
+      "timestamp": 1765050783.7398396,
+      "url": "https://twitter.com/BloxburgGame",
+      "icon": "fa-gamepad"
     },
     {
       "type": "trend",
-      "title": "D\u00eda 11 del Calendario de Adviento de Bloxburg \ud83d\uddd3\ufe0f\ud83c\udf84 #shorts #bloxburg #roblox #christmas",
-      "description": "D\u00eda 11 del Calendario de Adviento de Bloxburg ------------------------------------------------- \u2b50 Mi...",
+      "title": "Modern Mansion Builds Trending",
+      "description": "Community showcasing stunning modern architecture",
       "source": "YouTube",
-      "timestamp": 1765412001.0,
-      "url": "https://www.youtube.com/watch?v=UjvNSYODhkc",
-      "icon": "fa-youtube"
+      "timestamp": 1765047183.7398407,
+      "url": "https://youtube.com/results?search_query=bloxburg+modern+mansion",
+      "icon": "fa-fire"
     },
     {
-      "type": "trend",
-      "title": "we need moreee!! #roblox #bloxburg #jellycat #robloxupdate #fyp",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765410342.0,
-      "url": "https://www.youtube.com/watch?v=s8bBDugLR6M",
-      "icon": "fa-youtube"
+      "type": "tip",
+      "title": "Money Making Guide 2024",
+      "description": "Best jobs and strategies to earn cash quickly",
+      "source": "Community Guide",
+      "timestamp": 1765043583.7398412,
+      "url": "#",
+      "icon": "fa-lightbulb"
     },
     {
-      "type": "trend",
-      "title": "Bloxburg b\u00fasqueda de elfos d\u00eda 2 #bloxburgelfhunt",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765410023.0,
-      "url": "https://www.youtube.com/watch?v=n3qw3LjHcmg",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Day 2 Elf Location in Bloxburg \ud83c\udf81 #bloxburg #bloxburgupdate #roblox",
-      "description": "Thank you for watching. In this short, we're finding Santa's elves for the winter event \"Elf Hunt\" i...",
-      "source": "YouTube",
-      "timestamp": 1765407997.0,
-      "url": "https://www.youtube.com/watch?v=8853YEvWcLg",
-      "icon": "fa-youtube"
+      "type": "community",
+      "title": "Weekly Build Contest",
+      "description": "Submit your best holiday-themed builds to win prizes!",
+      "source": "Crumbl Crafts",
+      "timestamp": 1765039983.7398417,
+      "url": "#",
+      "icon": "fa-trophy"
     }
   ],
   "meta": {
-    "generated_at": 1765462389.7097504,
+    "generated_at": 1765463589.7060096,
     "mode": "memory",
     "refresh_interval": 2000
   }
