@@ -4,27 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
-    <meta http-equiv="Cache-Control" content="public, max-age=31536000" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <title>Crumbl Crafts · Live Dashboard</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🍪</text></svg>" />
-    
-    <!-- Advanced Resource Hints for Performance -->
+    <!-- Critical resource hints -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://www.gstatic.com" crossorigin />
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
     <link rel="dns-prefetch" href="https://firebaseinstallations.googleapis.com" />
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" />
-    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    
-    <!-- Optimized async font loading -->
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
-    
-    <!-- Optimized async icon loading -->
+    <!-- Async font loading with reduced weights -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet" /></noscript>
+    <!-- Async icon loading -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
+    <script>
+        // Early performance detection
+        (function() {
+            const isLowEnd = (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 4) ||
+                            (navigator.deviceMemory && navigator.deviceMemory <= 4) ||
+                            /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            if (isLowEnd) document.documentElement.classList.add('low-end-device');
+            
+            if ('connection' in navigator) {
+                const conn = navigator.connection;
+                if (conn && (conn.effectiveType === 'slow-2g' || conn.effectiveType === '2g' || conn.saveData)) {
+                    document.documentElement.classList.add('slow-connection');
+                }
+            }
+        })();
+    </script>
     <style>
         :root {
             color-scheme: dark;
@@ -64,14 +75,65 @@
             padding: 0;
             overflow-x: hidden;
             position: relative;
-            /* Advanced Performance optimizations */
+            /* Performance optimizations */
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             text-rendering: optimizeSpeed;
-            will-change: scroll-position;
+        }
+        /* GPU acceleration for animated elements */
+        .glass, .stat-card, .builder-card, .podium-card, .activity-item, .chat-message, .news-card {
             transform: translateZ(0);
             backface-visibility: hidden;
-            perspective: 1000px;
+        }
+        /* Selective will-change on interaction only */
+        .stat-card:hover, .builder-card:hover, .podium-card:hover, .news-card:hover {
+            will-change: transform, opacity;
+        }
+        /* Content containment for scroll performance */
+        .activity-list, .chat-messages, .builders-grid, .news-list {
+            contain: layout style paint;
+            content-visibility: auto;
+        }
+        /* Individual item containment */
+        .activity-item, .chat-message, .builder-card, .news-card {
+            contain: layout style paint;
+            content-visibility: auto;
+            contain-intrinsic-size: auto 100px;
+        }
+        /* Low-end device optimizations */
+        .low-end-device .glass::before,
+        .low-end-device .glass::after,
+        .low-end-device body::after,
+        .low-end-device body::before {
+            display: none !important;
+        }
+        .low-end-device *, .low-end-device *::before, .low-end-device *::after {
+            animation-duration: 0.1s !important;
+            transition-duration: 0.1s !important;
+        }
+        .slow-connection img:not(.loaded) {
+            filter: blur(5px);
+            transition: filter 0.3s;
+        }
+        .slow-connection img.loaded {
+            filter: none;
+        }
+        /* Reduce motion preference */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+        /* Mobile optimizations */
+        @media (max-width: 768px) {
+            body::before, body::after {
+                display: none;
+            }
+            .glass::before, .glass::after {
+                opacity: 0.2;
+            }
         }
         /* Screen reader only class for accessibility */
         .sr-only {
@@ -97,9 +159,6 @@
             pointer-events: none;
             z-index: 0;
             mix-blend-mode: screen;
-            will-change: transform;
-            transform: translateZ(0);
-            backface-visibility: hidden;
         }
         body::before {
             content: '';
@@ -111,9 +170,6 @@
             pointer-events: none;
             z-index: 0;
             opacity: 0.3;
-            will-change: transform;
-            transform: translateZ(0);
-            backface-visibility: hidden;
         }
         .wrapper { 
             position: relative; 
@@ -2692,112 +2748,8 @@
             transform: translateY(0);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         }
-        
-        /* ========================================
-           PERFORMANCE OPTIMIZATIONS FOR LOW-END DEVICES
-           ======================================== */
-        
-        /* Reduce motion for accessibility and performance */
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-                scroll-behavior: auto !important;
-            }
-        }
-        
-        /* Optimize animations with GPU acceleration */
-        .glass, .stat-card, .builder-card, .podium-card, .activity-item, .chat-message {
-            will-change: transform;
-            transform: translateZ(0);
-            backface-visibility: hidden;
-            perspective: 1000px;
-        }
-        
-        /* Lazy load images */
-        img[loading="lazy"] {
-            opacity: 0;
-            transition: opacity 0.3s ease-in;
-        }
-        
-        img[loading="lazy"].loaded {
-            opacity: 1;
-        }
-        
-        /* Optimize scrolling performance */
-        .activity-list, .chat-messages, .builders-grid {
-            contain: layout style paint;
-            content-visibility: auto;
-        }
-        
-        /* Reduce unnecessary repaints */
-        .icon-wrapper, .activity-icon, .news-icon {
-            contain: layout style;
-        }
-        
-        /* Battery-aware performance */
-        @media (prefers-reduced-data: reduce) {
-            body::after {
-                background-image: none;
-            }
-            .glass::before, .glass::after {
-                display: none;
-            }
-        }
-        
-        /* Low-end device optimizations */
-        @media (max-width: 768px) {
-            body::before {
-                display: none; /* Remove grid pattern on mobile */
-            }
-            .glass::before, .glass::after {
-                opacity: 0.3; /* Reduce glass effects */
-            }
-            * {
-                animation-duration: 0.2s !important; /* Faster animations */
-            }
-        }
     </style>
     <script>
-        // Performance monitoring and optimization
-        (function() {
-            // Detect low-end device
-            const isLowEndDevice = navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 4 || 
-                                   navigator.deviceMemory && navigator.deviceMemory <= 4;
-            
-            if (isLowEndDevice) {
-                document.documentElement.classList.add('low-end-device');
-                // Reduce animation complexity
-                document.documentElement.style.setProperty('--animation-speed', '0.2s');
-            }
-            
-            // Lazy load images
-            if ('loading' in HTMLImageElement.prototype) {
-                const images = document.querySelectorAll('img[loading="lazy"]');
-                images.forEach(img => {
-                    img.addEventListener('load', () => img.classList.add('loaded'));
-                });
-            } else {
-                // Fallback for older browsers
-                const script = document.createElement('script');
-                script.src = 'https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js';
-                document.body.appendChild(script);
-            }
-            
-            // Connection-aware loading
-            if ('connection' in navigator) {
-                const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-                if (connection && connection.effectiveType) {
-                    if (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g') {
-                        document.documentElement.classList.add('slow-connection');
-                        // Disable heavy animations
-                        document.documentElement.style.setProperty('--enable-animations', '0');
-                    }
-                }
-            }
-        })();
-        
         // Make upload modal function available immediately
         window.openUploadModal = function() {
             if (!BUILD_MUSEUM_ENABLED) {
@@ -3425,11 +3377,24 @@
         let nodePool = [];
         const VIRTUAL_CONFIG = {
             avgHeight: 72,
-            overscan: 8,
+            overscan: 6,
             minWindow: 10
         };
 
-        const POOL_MAX = 120;
+        const POOL_MAX = 80;
+        
+        // RAF-based throttle for smooth 60fps performance
+        function rafThrottle(fn) {
+            let rafId = null;
+            return function(...args) {
+                if (rafId === null) {
+                    rafId = requestAnimationFrame(() => {
+                        fn.apply(this, args);
+                        rafId = null;
+                    });
+                }
+            };
+        }
 
         function computeWindowSize() {
             if (!chatMessages) return VIRTUAL_CONFIG.minWindow;
@@ -3642,36 +3607,27 @@
         }
         let lastRenderedMessageCount = 0;
         
-        // Optimized throttle and debounce utilities
-        function throttle(func, delay) {
-            let lastCall = 0;
-            return function(...args) {
-                const now = Date.now();
-                if (now - lastCall >= delay) {
-                    lastCall = now;
-                    return func.apply(this, args);
-                }
-            };
-        }
-        
-        function debounce(func, delay) {
-            let timeoutId;
-            return function(...args) {
-                clearTimeout(timeoutId);
-                timeoutId = setTimeout(() => func.apply(this, args), delay);
-            };
-        }
-        
-        // Throttle scroll event for performance (16ms = 60fps)
-        const handleScroll = throttle(() => {
-            const isAtBottom = chatMessages.scrollHeight - chatMessages.scrollTop <= chatMessages.clientHeight + 50;
-            if (isAtBottom && newMessageCount > 0) {
-                resetNewMessageCounter();
-            }
+        // RAF-based scroll handler for 60fps smoothness
+        const handleScroll = rafThrottle(() => {
+            const isAtBottom = chatMessages.scrollHeight - chatMessages.scrollTop <= chatMessages.clientHeight + 120;
             hasScrolledToBottom = isAtBottom;
-        }, 16);
-        
-        chatMessages.addEventListener('scroll', handleScroll, { passive: true });
+            
+            // Virtual scroll update
+            if (allMessages.length > 0) {
+                renderVirtualWindow();
+            }
+        });
+        let scrollTimeout;
+        chatMessages.addEventListener('scroll', () => {
+            if (scrollTimeout) clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                const isAtBottom = chatMessages.scrollHeight - chatMessages.scrollTop <= chatMessages.clientHeight + 50;
+                if (isAtBottom && newMessageCount > 0) {
+                    resetNewMessageCounter();
+                }
+                hasScrolledToBottom = isAtBottom;
+            }, 100);
+        });
         
         function showNewMessageCounter() {
             let counter = document.getElementById('newMessageCounter');
@@ -5367,19 +5323,9 @@
             }
         }
 
-        // Username check for profile edit with debouncing
-        const debouncedUsernameCheck = debounce(async (username, checkEl) => {
-            const available = await checkUsernameAvailability(username);
-            if (available) {
-                checkEl.textContent = '✓ Username available';
-                checkEl.className = 'username-check available';
-            } else {
-                checkEl.textContent = '✗ Username taken';
-                checkEl.className = 'username-check taken';
-            }
-        }, 500);
-        
+        // Username check for profile edit
         document.getElementById('editUsername')?.addEventListener('input', async (e) => {
+            clearTimeout(usernameCheckTimeout);
             const username = e.target.value.trim();
             const checkEl = document.getElementById('editUsernameCheck');
             
@@ -5396,7 +5342,16 @@
             checkEl.textContent = 'Checking...';
             checkEl.className = 'username-check';
             
-            debouncedUsernameCheck(username, checkEl);
+            usernameCheckTimeout = setTimeout(async () => {
+                const available = await checkUsernameAvailability(username);
+                if (available) {
+                    checkEl.textContent = '✓ Username available';
+                    checkEl.className = 'username-check available';
+                } else {
+                    checkEl.textContent = '✗ Username taken';
+                    checkEl.className = 'username-check taken';
+                }
+            }, 500);
         });
 
         // ==================== END AUTHENTICATION SYSTEM ====================
@@ -5902,9 +5857,9 @@
         };
         const FORUM_CHANNEL_BASE = 'https://discord.com/channels/';
         const ACTIVITY_RETENTION_DAYS = 7;
-        const MAX_ACTIVITY_ITEMS = 10000;
-        const REFRESH_INTERVAL = 2000; // 2 seconds - optimized for performance
-        const FETCH_TIMEOUT = 5000; // 5 second timeout for reliability
+        const MAX_ACTIVITY_ITEMS = 200; // Reduced for memory efficiency
+        const REFRESH_INTERVAL = 5000; // 5 seconds - balanced performance
+        const FETCH_TIMEOUT = 8000; // 8 second timeout for reliability
         
         const formatNumber = (v) => new Intl.NumberFormat('en-US').format(v ?? 0);
         const formatTime = (s) => { 
@@ -6072,20 +6027,23 @@
             
             let addedCount = 0;
             
+            // Use Map for O(1) lookup instead of O(n) some() calls
+            const cacheMap = new Map();
+            activityCache.forEach(cached => {
+                const cachedId = `${cached.timestamp}-${cached.type}-${cached.shop_name || ''}`;
+                cacheMap.set(cachedId, true);
+            });
+            
             // Add new activities that don't exist in cache
             newActivities.forEach(item => {
                 if (!item.timestamp) return; // Skip invalid items
                 
-                // Create unique ID for better duplicate detection
-                const itemId = `${item.timestamp}-${item.type}-${item.shop_name || ''}-${item.message?.substring(0, 50) || ''}`;
+                // Create unique ID for duplicate detection
+                const itemId = `${item.timestamp}-${item.type}-${item.shop_name || ''}`;
                 
-                const exists = activityCache.some(cached => {
-                    const cachedId = `${cached.timestamp}-${cached.type}-${cached.shop_name || ''}-${cached.message?.substring(0, 50) || ''}`;
-                    return cachedId === itemId;
-                });
-                
-                if (!exists) {
+                if (!cacheMap.has(itemId)) {
                     activityCache.unshift(item);
+                    cacheMap.set(itemId, true);
                     addedCount++;
                 }
             });
@@ -6143,7 +6101,7 @@
         };
         const withCacheBust = (url) => url.includes('?') ? `${url}&v=${Date.now()}` : `${url}?v=${Date.now()}`;
         
-        // Optimized fetch with timeout and compression support
+        // Fetch with timeout
         async function fetchWithTimeout(url, timeout = FETCH_TIMEOUT) {
             const controller = new AbortController();
             const timeoutId = setTimeout(() => controller.abort(), timeout);
@@ -6151,12 +6109,13 @@
             try {
                 const response = await fetch(url, {
                     signal: controller.signal,
-                    cache: 'force-cache', // Use browser cache for better performance
+                    cache: 'no-store',
                     keepalive: true,
                     priority: 'high',
                     headers: {
-                        'Accept-Encoding': 'gzip, deflate, br',
-                        'Accept': 'application/json'
+                        'Cache-Control': 'no-cache',
+                        'Pragma': 'no-cache',
+                        'Accept-Encoding': 'gzip, deflate, br'
                     }
                 });
                 clearTimeout(timeoutId);
@@ -6197,7 +6156,29 @@
         let lastSuccessfulFetch = Date.now();
         let pendingFetch = null;
         
+        // Data caching for performance
+        const dataCache = { metrics: null, timestamp: 0, ttl: 15000 };
+        
+        function getCachedMetrics() {
+            if (dataCache.metrics && (Date.now() - dataCache.timestamp < dataCache.ttl)) {
+                return dataCache.metrics;
+            }
+            return null;
+        }
+        
+        function setCachedMetrics(data) {
+            dataCache.metrics = data;
+            dataCache.timestamp = Date.now();
+        }
+        
         async function fetchMetrics() {
+            // Check cache first
+            const cached = getCachedMetrics();
+            if (cached) {
+                debug.log('📦 Using cached data');
+                return cached;
+            }
+            
             // Deduplicate - return existing pending request if one is in flight
             if (pendingFetch) {
                 return pendingFetch;
@@ -6209,10 +6190,11 @@
                 try { 
                     const data = await fetchFrom(REMOTE_METRICS_ENDPOINT);
                     
-                    // Success - reset failure counter
+                    // Success - reset failure counter and cache
                     consecutiveFailures = 0;
                     lastSuccessfulFetch = Date.now();
                     isOnline = true;
+                    setCachedMetrics(data);
                     
                     const latency = Math.round(performance.now() - startTime);
                     debug.log(`✓ Fetched in ${latency}ms`);
@@ -6255,8 +6237,8 @@
             
             debug.log('📊 renderStats:', { count: statsConfig.length });
             
-            // Use requestAnimationFrame for smoother rendering with idle callback
-            const renderStatsWork = () => {
+            // Use requestAnimationFrame for smoother rendering
+            requestAnimationFrame(() => {
                 statsConfig.forEach((stat, i) => {
                     const value = summary[stat.key] ?? 0;
                     const displayValue = stat.format === 'duration' ? formatDuration(value) : formatNumber(value);
@@ -6302,14 +6284,7 @@
                 
                     previousStats[stat.key] = value;
                 });
-            };
-            
-            // Use requestIdleCallback for non-critical updates, fallback to rAF
-            if ('requestIdleCallback' in window) {
-                requestIdleCallback(renderStatsWork, { timeout: 100 });
-            } else {
-                requestAnimationFrame(renderStatsWork);
-            }
+            });
         }
         
         function renderBuilders(builders) {
@@ -7012,44 +6987,6 @@
             list.innerHTML = insightsHTML;
         }
         
-        // Performance metrics tracking
-        const performanceMetrics = {
-            fetchTimes: [],
-            renderTimes: [],
-            frameDrops: 0,
-            lastFPS: 60
-        };
-        
-        // Monitor frame rate
-        let lastFrameTime = performance.now();
-        let frameCount = 0;
-        
-        function monitorFPS() {
-            const now = performance.now();
-            const delta = now - lastFrameTime;
-            frameCount++;
-            
-            if (delta >= 1000) {
-                const fps = Math.round((frameCount * 1000) / delta);
-                performanceMetrics.lastFPS = fps;
-                
-                if (fps < 30) {
-                    performanceMetrics.frameDrops++;
-                    console.warn(`⚠️ Low FPS detected: ${fps}fps`);
-                }
-                
-                frameCount = 0;
-                lastFrameTime = now;
-            }
-            
-            requestAnimationFrame(monitorFPS);
-        }
-        
-        // Start FPS monitoring
-        if (typeof requestAnimationFrame !== 'undefined') {
-            monitorFPS();
-        }
-        
         async function updateDashboard() {
             const statusText = getElement('statusText');
             const statusBadge = getElement('statusBadge');
@@ -7061,42 +6998,23 @@
                 if (statusText) statusText.textContent = '⟳';
                 
                 const data = await fetchMetrics();
-                const fetchTime = Math.round(performance.now() - startTime);
-                
-                // Track fetch performance
-                performanceMetrics.fetchTimes.push(fetchTime);
-                if (performanceMetrics.fetchTimes.length > 10) {
-                    performanceMetrics.fetchTimes.shift();
-                }
+                const totalTime = Math.round(performance.now() - startTime);
                 
                 // Update latency display
                 if (latencyDisplay) {
-                    const avgFetch = Math.round(
-                        performanceMetrics.fetchTimes.reduce((a, b) => a + b, 0) / 
-                        performanceMetrics.fetchTimes.length
-                    );
-                    latencyDisplay.textContent = `${fetchTime}ms (avg: ${avgFetch}ms)`;
-                    latencyDisplay.style.color = fetchTime < 100 ? 'var(--success)' : 
-                                                 fetchTime < 500 ? 'var(--warning)' : 'var(--danger)';
+                    latencyDisplay.textContent = `${totalTime}ms`;
+                    latencyDisplay.style.color = totalTime < 100 ? 'var(--success)' : 
+                                                 totalTime < 500 ? 'var(--warning)' : 'var(--danger)';
                 }
                 
                 // Batch DOM updates using requestAnimationFrame
-                const renderStart = performance.now();
                 requestAnimationFrame(() => {
                     // Render in order of visual priority
                     renderStats(data);
                     renderBuilders(data.topBuilders);
                     renderActivityFeed(data.activityLog);
                     renderNews(data.news);
-                    
-                    // Track render performance
-                    const renderTime = Math.round(performance.now() - renderStart);
-                    performanceMetrics.renderTimes.push(renderTime);
-                    if (performanceMetrics.renderTimes.length > 10) {
-                        performanceMetrics.renderTimes.shift();
-                    }
-                    
-                    debug.log(`🎨 Render completed in ${renderTime}ms (FPS: ${performanceMetrics.lastFPS})`);
+                    // Build Museum is initialized on page load, not from API data
                 });
                 
                 if (statusText) statusText.textContent = 'LIVE';
@@ -7228,17 +7146,8 @@
                 });
             }
             
-            // Auto-rotate every 5 seconds (optimized with passive listeners)
-            const rotateInterval = setInterval(rotatePremiumAd, 5000);
-            
-            // Pause rotation when tab is hidden to save resources
-            document.addEventListener('visibilitychange', () => {
-                if (document.hidden) {
-                    clearInterval(rotateInterval);
-                } else {
-                    setInterval(rotatePremiumAd, 5000);
-                }
-            }, { passive: true });
+            // Auto-rotate every 5 seconds
+            setInterval(rotatePremiumAd, 5000);
             
             // Manual dot click
             premiumAdDots.forEach((dot, idx) => {
@@ -7285,16 +7194,7 @@
                 if (document.hidden) {
                     // Stop polling when hidden
                     clearInterval(refreshInterval);
-                    debug.log('⏸ Paused updates (saving battery & bandwidth)');
-                    
-                    // Log performance metrics before pausing
-                    const avgFetch = performanceMetrics.fetchTimes.length > 0 
-                        ? Math.round(performanceMetrics.fetchTimes.reduce((a, b) => a + b, 0) / performanceMetrics.fetchTimes.length)
-                        : 0;
-                    const avgRender = performanceMetrics.renderTimes.length > 0
-                        ? Math.round(performanceMetrics.renderTimes.reduce((a, b) => a + b, 0) / performanceMetrics.renderTimes.length)
-                        : 0;
-                    debug.log(`📊 Performance: Fetch=${avgFetch}ms, Render=${avgRender}ms, FPS=${performanceMetrics.lastFPS}, Drops=${performanceMetrics.frameDrops}`);
+                    debug.log('⏸ Paused updates');
                 } else {
                     // Resume polling when visible
                     debug.log('▶ Resumed updates');
@@ -7302,7 +7202,7 @@
                     updateDashboard(); // Immediate update
                     refreshInterval = setInterval(updateDashboard, REFRESH_INTERVAL);
                 }
-            }, { passive: true });
+            });
         }
         
         // Wait for DOM to be ready before initializing
@@ -7313,23 +7213,23 @@
             initializeDashboard();
         }
         
-        // Network status monitoring with passive listeners
+        // Network status monitoring
         window.addEventListener('online', () => {
             debug.log('🌐 Network online');
             isOnline = true;
             consecutiveFailures = 0;
             updateDashboard();
-        }, { passive: true });
+        });
         
         window.addEventListener('offline', () => {
             debug.log('📡 Network offline');
             isOnline = false;
-        }, { passive: true });
+        });
         
         // Unlock audio on first user interaction (required for browser autoplay policies)
-        document.addEventListener('click', unlockAudio, { once: true, passive: true });
-        document.addEventListener('keydown', unlockAudio, { once: true, passive: true });
-        document.addEventListener('touchstart', unlockAudio, { once: true, passive: true });
+        document.addEventListener('click', unlockAudio, { once: true });
+        document.addEventListener('keydown', unlockAudio, { once: true });
+        document.addEventListener('touchstart', unlockAudio, { once: true });
         
         // Preload and cache critical resources
         if ('requestIdleCallback' in window) {
@@ -7341,103 +7241,6 @@
                 document.head.appendChild(link);
             });
         }
-        
-        // ========================================
-        // PERFORMANCE MONITORING & DEBUGGING
-        // ========================================
-        
-        // Log performance metrics on load (for debugging)
-        window.addEventListener('load', () => {
-            if ('performance' in window && performance.timing) {
-                const timing = performance.timing;
-                const loadTime = timing.loadEventEnd - timing.navigationStart;
-                const domReady = timing.domContentLoadedEventEnd - timing.navigationStart;
-                const dnsTime = timing.domainLookupEnd - timing.domainLookupStart;
-                const tcpTime = timing.connectEnd - timing.connectStart;
-                const requestTime = timing.responseEnd - timing.requestStart;
-                
-                console.log('%c🚀 Crumbl Crafts Performance Report', 'color: #ff1744; font-size: 16px; font-weight: bold;');
-                console.log(`📊 Total Load Time: ${loadTime}ms`);
-                console.log(`⚡ DOM Ready: ${domReady}ms`);
-                console.log(`🔍 DNS Lookup: ${dnsTime}ms`);
-                console.log(`🔌 TCP Connect: ${tcpTime}ms`);
-                console.log(`📥 Request Time: ${requestTime}ms`);
-                
-                // Check for performance marks
-                if (performance.getEntriesByType) {
-                    const resources = performance.getEntriesByType('resource');
-                    const totalSize = resources.reduce((sum, r) => sum + (r.transferSize || 0), 0);
-                    console.log(`📦 Resources Loaded: ${resources.length} (${(totalSize / 1024).toFixed(2)} KB)`);
-                    
-                    // Find slowest resources
-                    const slowest = resources
-                        .sort((a, b) => b.duration - a.duration)
-                        .slice(0, 5);
-                    
-                    if (slowest.length > 0) {
-                        console.log('🐌 Slowest Resources:');
-                        slowest.forEach((r, i) => {
-                            console.log(`  ${i + 1}. ${r.name.split('/').pop()} - ${Math.round(r.duration)}ms`);
-                        });
-                    }
-                }
-                
-                // Device info
-                console.log(`💻 Device: ${navigator.hardwareConcurrency || 'Unknown'} cores, ${navigator.deviceMemory || 'Unknown'} GB RAM`);
-                console.log(`📱 Connection: ${navigator.connection?.effectiveType || 'Unknown'}`);
-                console.log(`🎨 Low-end optimizations: ${document.documentElement.classList.contains('low-end-device') ? 'ENABLED' : 'DISABLED'}`);
-            }
-            
-            // Report any long tasks (> 50ms)
-            if ('PerformanceObserver' in window) {
-                try {
-                    const observer = new PerformanceObserver((list) => {
-                        for (const entry of list.getEntries()) {
-                            if (entry.duration > 50) {
-                                console.warn(`⚠️ Long task detected: ${Math.round(entry.duration)}ms`);
-                            }
-                        }
-                    });
-                    observer.observe({ entryTypes: ['longtask'] });
-                } catch (e) {
-                    // Long task API not supported
-                }
-            }
-        }, { passive: true });
-        
-        // Expose performance API to console for debugging
-        window.crumblPerformance = {
-            getMetrics: () => performanceMetrics,
-            getFPS: () => performanceMetrics.lastFPS,
-            getAvgFetch: () => {
-                const times = performanceMetrics.fetchTimes;
-                return times.length > 0 
-                    ? Math.round(times.reduce((a, b) => a + b, 0) / times.length)
-                    : 0;
-            },
-            getAvgRender: () => {
-                const times = performanceMetrics.renderTimes;
-                return times.length > 0
-                    ? Math.round(times.reduce((a, b) => a + b, 0) / times.length)
-                    : 0;
-            },
-            clearCache: () => {
-                localStorage.removeItem('crumbl_activity_feed');
-                localStorage.removeItem('crumbl_activity_cache_version');
-                activityCache = [];
-                console.log('✓ Cache cleared');
-            },
-            summary: () => {
-                console.log('%c📊 Performance Summary', 'color: #ff1744; font-size: 14px; font-weight: bold;');
-                console.log(`Average Fetch: ${window.crumblPerformance.getAvgFetch()}ms`);
-                console.log(`Average Render: ${window.crumblPerformance.getAvgRender()}ms`);
-                console.log(`Current FPS: ${performanceMetrics.lastFPS}`);
-                console.log(`Frame Drops: ${performanceMetrics.frameDrops}`);
-                console.log(`Activity Cache: ${activityCache.length} items`);
-            }
-        };
-        
-        console.log('%c💡 Tip: Use window.crumblPerformance.summary() to see performance stats', 'color: #00e676; font-style: italic;');
     </script>
 </body>
 </html>
