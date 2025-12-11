@@ -581,24 +581,6 @@
       "server_id": 1301988304279048275,
       "url": "https://discord.com/users/1098992055272878081",
       "thread_id": null
-    },
-    {
-      "type": "member_join",
-      "shop_name": "Server",
-      "message": "hid3nori joined the server",
-      "timestamp": 1764877920,
-      "server_id": 1301988304279048275,
-      "url": "https://discord.com/users/1098992055272878081",
-      "thread_id": null
-    },
-    {
-      "type": "member_leave",
-      "shop_name": "Server",
-      "message": "hid3nori left the server",
-      "timestamp": 1764877858,
-      "server_id": 1301988304279048275,
-      "url": "https://discord.com/users/1098992055272878081",
-      "thread_id": null
     }
   ],
   "pipeline": [
@@ -731,7 +713,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765481589.7083352,
+    "generated_at": 1765482789.7048318,
     "mode": "memory",
     "refresh_interval": 2000
   }
