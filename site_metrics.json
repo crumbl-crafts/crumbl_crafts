@@ -581,24 +581,6 @@
       "server_id": 1301988304279048275,
       "url": "https://discord.com/users/1098992055272878081",
       "thread_id": null
-    },
-    {
-      "type": "task_claimed",
-      "shop_name": "test5",
-      "message": "Bovian claimed the task",
-      "timestamp": 1764838956,
-      "thread_id": 1446063606008512583,
-      "server_id": 1301988304279048275,
-      "url": "https://discord.com/channels/1301988304279048275/1446063606008512583/1446064131974369433"
-    },
-    {
-      "type": "new_request_thread",
-      "shop_name": "Build-Request-Board",
-      "message": "tobolchi posted a new request: test5",
-      "timestamp": 1764838830,
-      "thread_id": 1446063606008512583,
-      "server_id": 1301988304279048275,
-      "url": "https://discord.com/channels/1301988304279048275/1446063606008512583"
     }
   ],
   "pipeline": [
@@ -731,7 +713,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765443190.0375822,
+    "generated_at": 1765444389.706076,
     "mode": "memory",
     "refresh_interval": 2000
   }
