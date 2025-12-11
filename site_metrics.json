@@ -676,44 +676,53 @@
       "icon": "fa-youtube"
     },
     {
-      "type": "game_update",
-      "title": "New Winter Update Available!",
-      "description": "Explore new winter-themed furniture and decorations",
-      "source": "Bloxburg Official",
-      "timestamp": 1765050783.7398396,
-      "url": "https://twitter.com/BloxburgGame",
-      "icon": "fa-gamepad"
+      "type": "trend",
+      "title": "we need moreee!! #roblox #bloxburg #jellycat #robloxupdate #fyp",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765410342.0,
+      "url": "https://www.youtube.com/watch?v=s8bBDugLR6M",
+      "icon": "fa-youtube"
     },
     {
       "type": "trend",
-      "title": "Modern Mansion Builds Trending",
-      "description": "Community showcasing stunning modern architecture",
+      "title": "Bloxburg b\u00fasqueda de elfos d\u00eda 2 #bloxburgelfhunt",
+      "description": "...",
       "source": "YouTube",
-      "timestamp": 1765047183.7398407,
-      "url": "https://youtube.com/results?search_query=bloxburg+modern+mansion",
-      "icon": "fa-fire"
+      "timestamp": 1765410023.0,
+      "url": "https://www.youtube.com/watch?v=n3qw3LjHcmg",
+      "icon": "fa-youtube"
     },
     {
-      "type": "tip",
-      "title": "Money Making Guide 2024",
-      "description": "Best jobs and strategies to earn cash quickly",
-      "source": "Community Guide",
-      "timestamp": 1765043583.7398412,
-      "url": "#",
-      "icon": "fa-lightbulb"
+      "type": "trend",
+      "title": "Day 2 Elf Location in Bloxburg \ud83c\udf81 #bloxburg #bloxburgupdate #roblox",
+      "description": "Thank you for watching. In this short, we're finding Santa's elves for the winter event \"Elf Hunt\" i...",
+      "source": "YouTube",
+      "timestamp": 1765407997.0,
+      "url": "https://www.youtube.com/watch?v=8853YEvWcLg",
+      "icon": "fa-youtube"
     },
     {
-      "type": "community",
-      "title": "Weekly Build Contest",
-      "description": "Submit your best holiday-themed builds to win prizes!",
-      "source": "Crumbl Crafts",
-      "timestamp": 1765039983.7398417,
-      "url": "#",
-      "icon": "fa-trophy"
+      "type": "trend",
+      "title": "ELF #2 On another adventure..!! \ud83c\udf6a  #roblox #bloxburg #elfhunt",
+      "description": "Merchandise: https://web.roblox.com/groups/7156568/Savanna-Squad#!/store \u2606 Twitter: https://twitter....",
+      "source": "YouTube",
+      "timestamp": 1765407357.0,
+      "url": "https://www.youtube.com/watch?v=kVr5ZdrGqeo",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "ONDE ENCONTRAR O SEGUNDO ELFO DO EVENTO DE NATAL DO BLOXBURG (2025) - ROBLOX",
+      "description": "MINHA LOJA VIRTUAL: https://br.shp.ee/i88qtg8 MEU NOVO CANAL PESSOAL: ......",
+      "source": "YouTube",
+      "timestamp": 1765403422.0,
+      "url": "https://www.youtube.com/watch?v=MjaIdTxu2KM",
+      "icon": "fa-youtube"
     }
   ],
   "meta": {
-    "generated_at": 1765455189.712674,
+    "generated_at": 1765456389.7066035,
     "mode": "memory",
     "refresh_interval": 2000
   }
