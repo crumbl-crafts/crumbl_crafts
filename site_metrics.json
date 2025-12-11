@@ -506,11 +506,29 @@
   "news": [
     {
       "type": "trend",
+      "title": "Real",
+      "description": "roblox #robloxmemes #bloxfruits #growagarden #bloxburg #fyp #robloxmemes   #funny #memes #naturaldis...",
+      "source": "YouTube",
+      "timestamp": 1765490307.0,
+      "url": "https://www.youtube.com/watch?v=yhTblnO2dg4",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Elfo 3 en Bloxburg #bloxburg #roblox #cazadelelfo #elfo3",
       "description": "...",
       "source": "YouTube",
       "timestamp": 1765489923.0,
       "url": "https://www.youtube.com/watch?v=QorSfySG7jo",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Bloxburg Elf Hunt Day 3 #christmas #roblox #bloxburg #shorts",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765489766.0,
+      "url": "https://www.youtube.com/watch?v=9-VzNEgISfE",
       "icon": "fa-youtube"
     },
     {
@@ -524,29 +542,11 @@
     },
     {
       "type": "trend",
-      "title": "\ud83d\udd34BUSCANDO EL ELFO #3 de BLOXBURG EN VIVO!",
-      "description": "\u00danete a mi grupo de Roblox: https://www.roblox.com/groups/5045574/grupo-oficial-de-fessy#!/about S\u00edg...",
-      "source": "YouTube",
-      "timestamp": 1765488414.0,
-      "url": "https://www.youtube.com/watch?v=OTotbZn0gbk",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
       "title": "Third Elf in Bloxburg! Bloxburg day 3 Elf!! #bloxburgelfhunt",
       "description": "...",
       "source": "YouTube",
       "timestamp": 1765488357.0,
       "url": "https://www.youtube.com/watch?v=3BHfsGw74QY",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Bloxburg ELF HUNT LOCATION 3 | QUICK &amp; EASY TUTORIAL",
-      "description": "1. GET ONE CHOC CHIP COOKIE 2, TRAVEL BY BUS TO LAKE HEIGHT VIEW 3. JUMP IN THE SNOW TRACK JUST OUTS...",
-      "source": "YouTube",
-      "timestamp": 1765488041.0,
-      "url": "https://www.youtube.com/watch?v=yQ6oEcQf9TU",
       "icon": "fa-youtube"
     },
     {
@@ -587,7 +587,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765491790.0028613,
+    "generated_at": 1765492389.702656,
     "mode": "memory",
     "refresh_interval": 2000
   }
