@@ -506,6 +506,33 @@
   "news": [
     {
       "type": "trend",
+      "title": "UBICACI\u00d3N ELFO #3 en BLOXBURG \ud83c\udf6a | #roblox #bloxburgelfhunt #christmas #elfosbloxburg #robloxgames",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765492380.0,
+      "url": "https://www.youtube.com/watch?v=_mapoN8lrak",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Ubicaci\u00f3n del ELFO 3 de Bloxburg \ud83c\udf84\u2603\ufe0f #shorts #roblox #bloxburg #robloxshorts",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765491956.0,
+      "url": "https://www.youtube.com/watch?v=F8tIaVU9n70",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Day 3 Elf Location in Bloxburg \ud83c\udf81 #bloxburg #bloxburgupdate #roblox",
+      "description": "Thank you for watching. In this short, we're finding Santa's elves for the winter event \"Elf Hunt\" i...",
+      "source": "YouTube",
+      "timestamp": 1765491951.0,
+      "url": "https://www.youtube.com/watch?v=jc9j9oFZYxA",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Real",
       "description": "roblox #robloxmemes #bloxfruits #growagarden #bloxburg #fyp #robloxmemes   #funny #memes #naturaldis...",
       "source": "YouTube",
@@ -520,33 +547,6 @@
       "source": "YouTube",
       "timestamp": 1765489923.0,
       "url": "https://www.youtube.com/watch?v=QorSfySG7jo",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Bloxburg Elf Hunt Day 3 #christmas #roblox #bloxburg #shorts",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765489766.0,
-      "url": "https://www.youtube.com/watch?v=9-VzNEgISfE",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Elfo 3  #roblox #robloxbloxburgspeedbuild #bloxburg #bloxburgnewleaks #bloxburgcontentcreator",
-      "description": "Dia 3 de la busqueda del elfo en Bloxburg!...",
-      "source": "YouTube",
-      "timestamp": 1765488689.0,
-      "url": "https://www.youtube.com/watch?v=J6GhacQPrDY",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Third Elf in Bloxburg! Bloxburg day 3 Elf!! #bloxburgelfhunt",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765488357.0,
-      "url": "https://www.youtube.com/watch?v=3BHfsGw74QY",
       "icon": "fa-youtube"
     },
     {
@@ -587,7 +587,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765493589.7065969,
+    "generated_at": 1765494789.7035415,
     "mode": "memory",
     "refresh_interval": 2000
   }
