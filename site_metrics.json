@@ -506,6 +506,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "*DAY 3* 3RD ELF LOCATION IN BLOXBURG! BLOXBURG ELF HUNT 2025",
+      "description": "IN THIS VIDEO: I'll show you to the 3rd ELF LOCATION for the ELF BLOXURG HUNT 2025!...",
+      "source": "YouTube",
+      "timestamp": 1765517143.0,
+      "url": "https://www.youtube.com/watch?v=d-ap9H-SYMI",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "\u0631\u0648\u0628\u0644\u0648\u0643\u0633 #roblox #adoptme #bloxburg #pink #robloxedit #edit #rainbowfriends #gaming #games #funny",
       "description": "...",
       "source": "YouTube",
@@ -529,15 +538,6 @@
       "source": "YouTube",
       "timestamp": 1765503674.0,
       "url": "https://www.youtube.com/watch?v=QrT-Fw7m8kA",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Localiza\u00e7\u00e3o Elfos 1 e 2 - Bloxburg 2025 \u2728 #bloxburg #eventos #roblox #viral #entertainment",
-      "description": "Espero muito que gostem !! Sempre feito com amor e carinho para voc\u00eas! E n\u00e3o esquece do like em? Um ...",
-      "source": "YouTube",
-      "timestamp": 1765496685.0,
-      "url": "https://www.youtube.com/watch?v=gfjwykcQDdg",
       "icon": "fa-youtube"
     },
     {
@@ -587,7 +587,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765516389.6995857,
+    "generated_at": 1765517589.7032876,
     "mode": "memory",
     "refresh_interval": 2000
   }
