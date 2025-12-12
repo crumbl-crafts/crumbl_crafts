@@ -542,6 +542,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "Localiza\u00e7\u00e3o Elfo 4 - Bloxburg 2025 \u2728 #bloxburg  #eventos  #roblox  #viral #natal #elfos",
+      "description": "Espero muito que gostem !! Sempre feito com amor e carinho para voc\u00eas! E n\u00e3o esquece do like em? Um ...",
+      "source": "YouTube",
+      "timestamp": 1765579772.0,
+      "url": "https://www.youtube.com/watch?v=qDYAzjDxq-0",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "BLOXBURG ELF HUNT - DAY 4 #roblox #trending #bloxburg #bloxburgelfhunt #shorts #foryou #blowup #day4",
       "description": "...",
       "source": "YouTube",
@@ -556,15 +565,6 @@
       "source": "YouTube",
       "timestamp": 1765577846.0,
       "url": "https://www.youtube.com/watch?v=RqTB4voSHQ4",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "One Story House Layout #bloxburg #robloxbloxburgspeedbuild #bloxburgbuilds #roblox #robloxbloxburg",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765577574.0,
-      "url": "https://www.youtube.com/watch?v=MYnxSJJAsRc",
       "icon": "fa-youtube"
     },
     {
@@ -623,7 +623,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765580369.9589834,
+    "generated_at": 1765581570.3427863,
     "mode": "memory",
     "refresh_interval": 2000
   }
