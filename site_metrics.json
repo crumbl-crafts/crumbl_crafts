@@ -505,6 +505,51 @@
   ],
   "news": [
     {
+      "type": "trend",
+      "title": "\u0631\u0648\u0628\u0644\u0648\u0643\u0633 #roblox #adoptme #bloxburg #pink #robloxedit #edit #rainbowfriends #gaming #games #funny",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765508470.0,
+      "url": "https://www.youtube.com/watch?v=roZ6DxKY8Jw",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "BIBI JATUH TEYUS BELMAIN ICESKATING  #roblox #brookhaven #bibicantik #bibiroblox #bloxburg",
+      "description": "ADUH BIBI KEDEBUK UN Roblox : BibiCantik01 Tiktok : @bibicantikk01 #roblox #brookhaven #bibicantik01...",
+      "source": "YouTube",
+      "timestamp": 1765508407.0,
+      "url": "https://www.youtube.com/watch?v=5CeRL3jcIOs",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "D\u00eda 12 del Calendario de Adviento de Bloxburg \ud83d\uddd3\ufe0f\ud83c\udf84 #shorts #bloxburg #roblox #christmas",
+      "description": "D\u00eda 12 del Calendario de Adviento de Bloxburg ------------------------------------------------- \u2b50 Mi...",
+      "source": "YouTube",
+      "timestamp": 1765503674.0,
+      "url": "https://www.youtube.com/watch?v=QrT-Fw7m8kA",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Localiza\u00e7\u00e3o Elfos 1 e 2 - Bloxburg 2025 \u2728 #bloxburg #eventos #roblox #viral #entertainment",
+      "description": "Espero muito que gostem !! Sempre feito com amor e carinho para voc\u00eas! E n\u00e3o esquece do like em? Um ...",
+      "source": "YouTube",
+      "timestamp": 1765496685.0,
+      "url": "https://www.youtube.com/watch?v=gfjwykcQDdg",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "#automobile #punk #metal #rap #audio #memes #yosoydelos7mil #bloxburg #humor #eljugueterodelaesme",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765496663.0,
+      "url": "https://www.youtube.com/watch?v=waba1h8zufI",
+      "icon": "fa-youtube"
+    },
+    {
       "type": "game_update",
       "title": "New Winter Update Available!",
       "description": "Explore new winter-themed furniture and decorations",
@@ -542,7 +587,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765509189.7029233,
+    "generated_at": 1765510389.7049603,
     "mode": "memory",
     "refresh_interval": 2000
   }
