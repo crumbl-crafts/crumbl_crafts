@@ -542,6 +542,24 @@
   "news": [
     {
       "type": "trend",
+      "title": "HOW TO FIND THE 4TH ELF IN BLOXBURG! #bloxburg",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765575780.0,
+      "url": "https://www.youtube.com/watch?v=a11-dC4OFyE",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Elf Hunt Day 4 - 2025 #bloxburgelfhunt #bloxburg #roblox",
+      "description": "Elf Hunt Day 4 - 2025 #bloxburgelfhunt #bloxburg #roblox....",
+      "source": "YouTube",
+      "timestamp": 1765575465.0,
+      "url": "https://www.youtube.com/watch?v=8gAzofI202Y",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "#roblox  #robloxbloxburgspeedbuild #music #robloxedit #bloxburgnewleaks #robloxmusic #mm2 #bloxburg",
       "description": "...",
       "source": "YouTube",
@@ -568,15 +586,6 @@
       "icon": "fa-youtube"
     },
     {
-      "type": "trend",
-      "title": "i don\u2019t understand kitchens #roblox #bloxburg #katrinabloom",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765568159.0,
-      "url": "https://www.youtube.com/watch?v=q3YX8BRAg9A",
-      "icon": "fa-youtube"
-    },
-    {
       "type": "game_update",
       "title": "New Winter Update Available!",
       "description": "Explore new winter-themed furniture and decorations",
@@ -584,15 +593,6 @@
       "timestamp": 1765563563.6636922,
       "url": "https://twitter.com/BloxburgGame",
       "icon": "fa-gamepad"
-    },
-    {
-      "type": "trend",
-      "title": "Ubicaci\u00f3n del elfo 3 en Bloxburg #bloxburg #roblox #robloxgames #navidad #roleplay",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765560053.0,
-      "url": "https://www.youtube.com/watch?v=G4AjXgBRnCo",
-      "icon": "fa-youtube"
     },
     {
       "type": "trend",
@@ -623,7 +623,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765575569.954905,
+    "generated_at": 1765576769.9577227,
     "mode": "memory",
     "refresh_interval": 2000
   }
