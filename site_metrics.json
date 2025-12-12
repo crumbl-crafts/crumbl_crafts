@@ -524,6 +524,33 @@
   "news": [
     {
       "type": "trend",
+      "title": "Ubicaci\u00f3n del elfo 3 en Bloxburg #bloxburg #roblox #robloxgames #navidad #roleplay",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765560053.0,
+      "url": "https://www.youtube.com/watch?v=G4AjXgBRnCo",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Day 11 | The 24 Days of Christmas Village in Bloxburg. Brought to life by MCM creations. #bloxburg",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765558866.0,
+      "url": "https://www.youtube.com/watch?v=roEB7UJl6bU",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Roblox christmas decal codes for berry avenue and bloxburg #roblox #shortsviral #berryave #bloxburg",
+      "description": "yall my stomach hurt like crazy - - - - -also threw up 8 times yesterday DISCLAIMER - If you plan on...",
+      "source": "YouTube",
+      "timestamp": 1765557198.0,
+      "url": "https://www.youtube.com/watch?v=XCccJM7lTIE",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "elf hunt day 3 bloxburg location #roblox #roleplay #robloxedit #bloxburg #christmas #funnymemes",
       "description": "bloxburg elf hunt day 3 location....",
       "source": "YouTube",
@@ -538,33 +565,6 @@
       "source": "YouTube",
       "timestamp": 1765540903.0,
       "url": "https://www.youtube.com/watch?v=oFlBKN7aBYE",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "pls no scam #roblox #roblox #roblox #sab #bloxburg #robloxedit #robloxmemes",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765535065.0,
-      "url": "https://www.youtube.com/watch?v=KfC9vFwyKbA",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "This is the cutest part of the bloxburg update\ud83d\ude2d #rblx #roblox #bloxburg #cute #pvp #shorts #bloxy",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765521389.0,
-      "url": "https://www.youtube.com/watch?v=q5UsJ_99pBE",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "*DAY 3* 3RD ELF LOCATION IN BLOXBURG! BLOXBURG ELF HUNT 2025",
-      "description": "IN THIS VIDEO: I'll show you to the 3rd ELF LOCATION for the ELF BLOXURG HUNT 2025!...",
-      "source": "YouTube",
-      "timestamp": 1765517143.0,
-      "url": "https://www.youtube.com/watch?v=d-ap9H-SYMI",
       "icon": "fa-youtube"
     },
     {
@@ -605,7 +605,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765559589.703912,
+    "generated_at": 1765560789.7046618,
     "mode": "memory",
     "refresh_interval": 2000
   }
