@@ -506,11 +506,29 @@
   "news": [
     {
       "type": "trend",
+      "title": "Localiza\u00e7\u00e3o Elfos 1 e 2 - Bloxburg 2025 \u2728 #bloxburg #eventos #roblox #viral #entertainment",
+      "description": "Espero muito que gostem !! Sempre feito com amor e carinho para voc\u00eas! E n\u00e3o esquece do like em? Um ...",
+      "source": "YouTube",
+      "timestamp": 1765496685.0,
+      "url": "https://www.youtube.com/watch?v=gfjwykcQDdg",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "#automobile #punk #metal #rap #audio #memes #yosoydelos7mil #bloxburg #humor #eljugueterodelaesme",
       "description": "...",
       "source": "YouTube",
       "timestamp": 1765496663.0,
       "url": "https://www.youtube.com/watch?v=waba1h8zufI",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "3rd BLOXBURG ELF LOCATION #roblox #bloxburg #bloxburgelfhunt",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765496516.0,
+      "url": "https://www.youtube.com/watch?v=OyUEx2bxOb8",
       "icon": "fa-youtube"
     },
     {
@@ -524,29 +542,11 @@
     },
     {
       "type": "trend",
-      "title": "I SKIPPED SCHOOL for the Bloxburg ELF HUNT... #elfhunt #Bloxburg #roblox",
-      "description": "I SKIPPED SCHOOL for the Bloxburg ELF HUNT... #elfhunt #Bloxburg #roblox....",
-      "source": "YouTube",
-      "timestamp": 1765495026.0,
-      "url": "https://www.youtube.com/watch?v=rGM3UpKxoYo",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
       "title": "UBICACI\u00d3N ELFO #3 en BLOXBURG \ud83c\udf6a | #roblox #bloxburgelfhunt #christmas #elfosbloxburg #robloxgames",
       "description": "...",
       "source": "YouTube",
       "timestamp": 1765492380.0,
       "url": "https://www.youtube.com/watch?v=_mapoN8lrak",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Day 3 Elf Location in Bloxburg \ud83c\udf81 #bloxburg #bloxburgupdate #roblox",
-      "description": "Thank you for watching. In this short, we're finding Santa's elves for the winter event \"Elf Hunt\" i...",
-      "source": "YouTube",
-      "timestamp": 1765491951.0,
-      "url": "https://www.youtube.com/watch?v=jc9j9oFZYxA",
       "icon": "fa-youtube"
     },
     {
@@ -587,7 +587,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765498389.8117251,
+    "generated_at": 1765499589.7334313,
     "mode": "memory",
     "refresh_interval": 2000
   }
