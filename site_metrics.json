@@ -542,6 +542,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "#roblox  #robloxbloxburgspeedbuild #music #robloxedit #bloxburgnewleaks #robloxmusic #mm2 #bloxburg",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765573078.0,
+      "url": "https://www.youtube.com/watch?v=UJRkcHdF54I",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "I BUILT AN INSANE ASYLUM IN BLOXBURG",
       "description": "bloxburg #roblox #robloxbloxburg This is the worst mental asylum in all of bloxburg...if not roblox....",
       "source": "YouTube",
@@ -556,6 +565,15 @@
       "source": "YouTube",
       "timestamp": 1765568929.0,
       "url": "https://www.youtube.com/watch?v=_huWWwJFE_Q",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "i don\u2019t understand kitchens #roblox #bloxburg #katrinabloom",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765568159.0,
+      "url": "https://www.youtube.com/watch?v=q3YX8BRAg9A",
       "icon": "fa-youtube"
     },
     {
@@ -586,15 +604,6 @@
       "icon": "fa-fire"
     },
     {
-      "type": "trend",
-      "title": "Day 11 | The 24 Days of Christmas Village in Bloxburg. Brought to life by MCM creations. #bloxburg",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765558866.0,
-      "url": "https://www.youtube.com/watch?v=roEB7UJl6bU",
-      "icon": "fa-youtube"
-    },
-    {
       "type": "tip",
       "title": "Money Making Guide 2024",
       "description": "Best jobs and strategies to earn cash quickly",
@@ -602,24 +611,6 @@
       "timestamp": 1765556363.6636944,
       "url": "#",
       "icon": "fa-lightbulb"
-    },
-    {
-      "type": "trend",
-      "title": "3RD ELF - BLOXBURG ELF HUNT #bloxburgelfhunt #bloxburg #shorts",
-      "description": "Hallo, ich bin DerNeueYoutuber. Ich habe zwar einen deutschen Namen aber ich mache viele englische V...",
-      "source": "YouTube",
-      "timestamp": 1765553718.0,
-      "url": "https://www.youtube.com/watch?v=LyJUu56Eqy8",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "elf hunt day 3 bloxburg location #roblox #roleplay #robloxedit #bloxburg #christmas #funnymemes",
-      "description": "bloxburg elf hunt day 3 location....",
-      "source": "YouTube",
-      "timestamp": 1765553139.0,
-      "url": "https://www.youtube.com/watch?v=2hb2qj4PsVg",
-      "icon": "fa-youtube"
     },
     {
       "type": "community",
@@ -632,7 +623,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765573979.7326117,
+    "generated_at": 1765574369.9590185,
     "mode": "memory",
     "refresh_interval": 2000
   }
