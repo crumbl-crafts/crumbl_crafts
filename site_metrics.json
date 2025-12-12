@@ -476,7 +476,7 @@
     {
       "label": "Active Shops",
       "value": 1,
-      "trend": "1 open \u00b7 0 limited \u00b7 0 24/7",
+      "trend": "0 open \u00b7 0 limited \u00b7 1 24/7",
       "max": 20
     },
     {
@@ -596,7 +596,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765564389.7029507,
+    "generated_at": 1765565130.7598088,
     "mode": "memory",
     "refresh_interval": 2000
   }
