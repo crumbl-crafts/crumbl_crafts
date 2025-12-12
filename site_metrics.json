@@ -506,6 +506,33 @@
   "news": [
     {
       "type": "trend",
+      "title": "#automobile #punk #metal #rap #audio #memes #yosoydelos7mil #bloxburg #humor #eljugueterodelaesme",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765496663.0,
+      "url": "https://www.youtube.com/watch?v=waba1h8zufI",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Elfo numero 3 de la caza del elfo en bloxburg #bloxburg #roblox",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765496227.0,
+      "url": "https://www.youtube.com/watch?v=RnxAuLyhuSo",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "I SKIPPED SCHOOL for the Bloxburg ELF HUNT... #elfhunt #Bloxburg #roblox",
+      "description": "I SKIPPED SCHOOL for the Bloxburg ELF HUNT... #elfhunt #Bloxburg #roblox....",
+      "source": "YouTube",
+      "timestamp": 1765495026.0,
+      "url": "https://www.youtube.com/watch?v=rGM3UpKxoYo",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "UBICACI\u00d3N ELFO #3 en BLOXBURG \ud83c\udf6a | #roblox #bloxburgelfhunt #christmas #elfosbloxburg #robloxgames",
       "description": "...",
       "source": "YouTube",
@@ -515,38 +542,11 @@
     },
     {
       "type": "trend",
-      "title": "Ubicaci\u00f3n del ELFO 3 de Bloxburg \ud83c\udf84\u2603\ufe0f #shorts #roblox #bloxburg #robloxshorts",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765491956.0,
-      "url": "https://www.youtube.com/watch?v=F8tIaVU9n70",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
       "title": "Day 3 Elf Location in Bloxburg \ud83c\udf81 #bloxburg #bloxburgupdate #roblox",
       "description": "Thank you for watching. In this short, we're finding Santa's elves for the winter event \"Elf Hunt\" i...",
       "source": "YouTube",
       "timestamp": 1765491951.0,
       "url": "https://www.youtube.com/watch?v=jc9j9oFZYxA",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Real",
-      "description": "roblox #robloxmemes #bloxfruits #growagarden #bloxburg #fyp #robloxmemes   #funny #memes #naturaldis...",
-      "source": "YouTube",
-      "timestamp": 1765490307.0,
-      "url": "https://www.youtube.com/watch?v=yhTblnO2dg4",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Elfo 3 en Bloxburg #bloxburg #roblox #cazadelelfo #elfo3",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765489923.0,
-      "url": "https://www.youtube.com/watch?v=QorSfySG7jo",
       "icon": "fa-youtube"
     },
     {
@@ -587,7 +587,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765497190.0358934,
+    "generated_at": 1765498389.8117251,
     "mode": "memory",
     "refresh_interval": 2000
   }
