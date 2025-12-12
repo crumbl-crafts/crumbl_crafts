@@ -8,7 +8,7 @@
   },
   "server": {
     "total_members": 337,
-    "joined_today": 2,
+    "joined_today": 0,
     "active_shops": 1,
     "avg_response_time": 4450.666666666667
   },
@@ -542,6 +542,33 @@
   "news": [
     {
       "type": "trend",
+      "title": "Ubicaci\u00f3n del ELFO 4 de Bloxburg \ud83c\udf84\u2603\ufe0f #shorts #roblox #bloxburg #robloxshorts",
+      "description": "Ubicaci\u00f3n del ELFO 4 de Bloxburg 2025  \u2603\ufe0f ------------------------------------------------- \u2b50 Mis re...",
+      "source": "YouTube",
+      "timestamp": 1765576894.0,
+      "url": "https://www.youtube.com/watch?v=NZWKmuNJm3U",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Day 4 Elf Location in Bloxburg \ud83c\udf81 #bloxburg #bloxburgupdate #roblox",
+      "description": "Thank you for watching. In this short, we're finding Santa's elves for the winter event \"Elf Hunt\" i...",
+      "source": "YouTube",
+      "timestamp": 1765576803.0,
+      "url": "https://www.youtube.com/watch?v=e0r-zJdh-nc",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Bloxburg Elf Hunt Day 4!",
+      "description": "Elf Hunt Day 4 Location 2025 #bloxburg #elfhunt #2025elfhunt #day4 #gamer #roblox....",
+      "source": "YouTube",
+      "timestamp": 1765576348.0,
+      "url": "https://www.youtube.com/watch?v=pfR5MxPlZro",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "HOW TO FIND THE 4TH ELF IN BLOXBURG! #bloxburg",
       "description": "...",
       "source": "YouTube",
@@ -556,33 +583,6 @@
       "source": "YouTube",
       "timestamp": 1765575465.0,
       "url": "https://www.youtube.com/watch?v=8gAzofI202Y",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "#roblox  #robloxbloxburgspeedbuild #music #robloxedit #bloxburgnewleaks #robloxmusic #mm2 #bloxburg",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765573078.0,
-      "url": "https://www.youtube.com/watch?v=UJRkcHdF54I",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "I BUILT AN INSANE ASYLUM IN BLOXBURG",
-      "description": "bloxburg #roblox #robloxbloxburg This is the worst mental asylum in all of bloxburg...if not roblox....",
-      "source": "YouTube",
-      "timestamp": 1765569646.0,
-      "url": "https://www.youtube.com/watch?v=kzXJ2keneGc",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "aw man \ud83d\ude14 #roblox #bloxburg #reltable #viral #fyp",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765568929.0,
-      "url": "https://www.youtube.com/watch?v=_huWWwJFE_Q",
       "icon": "fa-youtube"
     },
     {
@@ -623,7 +623,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765576769.9577227,
+    "generated_at": 1765577969.954875,
     "mode": "memory",
     "refresh_interval": 2000
   }
