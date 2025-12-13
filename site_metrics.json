@@ -515,6 +515,24 @@
   "news": [
     {
       "type": "trend",
+      "title": "Bloxburg Elf hunt #4!!! #bloxburgelfhunt #bloxburg",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765590764.0,
+      "url": "https://www.youtube.com/watch?v=H_mzOeWEFHw",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Bloxburg Elf Hunt Day 4 #christmas #roblox #bloxburg #shorts",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765587940.0,
+      "url": "https://www.youtube.com/watch?v=pZIjo76ZbqY",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "D\u00eda 13 del Calendario de Adviento de Bloxburg \ud83d\uddd3\ufe0f\ud83c\udf84 #shorts #bloxburg #roblox #christmas",
       "description": "D\u00eda 13 del Calendario de Adviento de Bloxburg ------------------------------------------------- \u2b50 Mi...",
       "source": "YouTube",
@@ -538,24 +556,6 @@
       "source": "YouTube",
       "timestamp": 1765583966.0,
       "url": "https://www.youtube.com/watch?v=LaMZwSlzAAE",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Localiza\u00e7\u00e3o Elfo 4 - Bloxburg 2025 \u2728 #bloxburg  #eventos  #roblox  #viral #natal #elfos",
-      "description": "Espero muito que gostem !! Sempre feito com amor e carinho para voc\u00eas! E n\u00e3o esquece do like em? Um ...",
-      "source": "YouTube",
-      "timestamp": 1765579772.0,
-      "url": "https://www.youtube.com/watch?v=qDYAzjDxq-0",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "BLOXBURG ELF HUNT - DAY 4 #roblox #trending #bloxburg #bloxburgelfhunt #shorts #foryou #blowup #day4",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765578268.0,
-      "url": "https://www.youtube.com/watch?v=BOwPCrSIzvM",
       "icon": "fa-youtube"
     },
     {
@@ -596,7 +596,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765594170.2620842,
+    "generated_at": 1765594769.955494,
     "mode": "memory",
     "refresh_interval": 2000
   }
