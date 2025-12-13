@@ -524,6 +524,24 @@
   "news": [
     {
       "type": "trend",
+      "title": "How to find the day 4 Bloxburg elf! #christmas #bloxburgelfhunt #elfhunt #elf",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765633031.0,
+      "url": "https://www.youtube.com/watch?v=2I2WzZRGa4U",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "#bloxburg #sad #roblox idk I made \ud83d\ude29",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765632733.0,
+      "url": "https://www.youtube.com/watch?v=Kvowg779ps8",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "does it work..!?\ud83d\ude02\ud83d\udcc8 #roblox #robloxedit #creativecontentcreator #funny #bloxburg #kr\u00f3tkiefilmy #games",
       "description": "does it work..!?     #roblox #robloxedit #creativecontentcreator #funny #bloxburg #kr\u00f3tkiefilmy #gam...",
       "source": "YouTube",
@@ -547,24 +565,6 @@
       "source": "YouTube",
       "timestamp": 1765618389.0,
       "url": "https://www.youtube.com/watch?v=FMmln8uuHSs",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Elf Hunt Day 4 - 2025 #elfhunt #bloxburgelfhunt #bloxburg #roblox #bloxburgwinter",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765618266.0,
-      "url": "https://www.youtube.com/watch?v=4cJ-qI4mWR8",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "When Bloxburg Pizza Delivery Goes Wrong",
-      "description": "He just wanted to deliver a pizza\u2026 but everything went completely wrong! From a crashed bike to angr...",
-      "source": "YouTube",
-      "timestamp": 1765616483.0,
-      "url": "https://www.youtube.com/watch?v=qmNlIxwbbKk",
       "icon": "fa-youtube"
     },
     {
@@ -605,7 +605,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765635569.9600651,
+    "generated_at": 1765636769.9551995,
     "mode": "memory",
     "refresh_interval": 2000
   }
