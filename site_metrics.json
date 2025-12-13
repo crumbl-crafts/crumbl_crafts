@@ -437,24 +437,6 @@
       "server_id": 1301988304279048275,
       "url": "https://discord.com/users/1394811078164090960",
       "thread_id": null
-    },
-    {
-      "type": "rejected",
-      "shop_name": "Hidenori's Shop",
-      "message": "Request from tobolchi rejected",
-      "timestamp": 1765053990,
-      "thread_id": 1446931774826610790,
-      "server_id": 1301988304279048275,
-      "url": "https://discord.com/channels/1301988304279048275/1446931774826610790"
-    },
-    {
-      "type": "sent",
-      "shop_name": "Hidenori's Shop",
-      "message": "Request sent by tobolchi",
-      "timestamp": 1765053973,
-      "thread_id": 1446931774826610790,
-      "url": "https://discord.com/channels/1301988304279048275/1446931774826610790",
-      "server_id": 1301988304279048275
     }
   ],
   "pipeline": [
@@ -472,7 +454,7 @@
     },
     {
       "label": "Requests (7d)",
-      "value": 3,
+      "value": 2,
       "trend": "2 accepted \u00b7 1 rejected",
       "max": 100
     }
@@ -587,7 +569,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765658369.9590666,
+    "generated_at": 1765658970.2434993,
     "mode": "memory",
     "refresh_interval": 2000
   }
