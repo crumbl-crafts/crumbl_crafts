@@ -515,6 +515,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "Bloxburg Elf Hunt 2025 Day 4 - Clip Roblox Bloxburg Indonesia #BloxburgIndonesia #ElfHunt2025",
+      "description": "Bloxburg Elf Hunt 2025 Day 4 - Clip Roblox Bloxburg Indonesia #BloxburgIndonesia #ElfHunt2025 Music ...",
+      "source": "YouTube",
+      "timestamp": 1765604333.0,
+      "url": "https://www.youtube.com/watch?v=0QU3NEmF-h0",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Bloxburg Elf hunt #4!!! #bloxburgelfhunt #bloxburg",
       "description": "...",
       "source": "YouTube",
@@ -547,15 +556,6 @@
       "source": "YouTube",
       "timestamp": 1765584603.0,
       "url": "https://www.youtube.com/watch?v=f-BAn5SUx-8",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Bloxburg Winter House Speedbuild",
-      "description": "Bloxburg winter speed build! gamepasses needed- advanced placement total house cost-607k no actually...",
-      "source": "YouTube",
-      "timestamp": 1765583966.0,
-      "url": "https://www.youtube.com/watch?v=LaMZwSlzAAE",
       "icon": "fa-youtube"
     },
     {
@@ -596,7 +596,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765606769.9529536,
+    "generated_at": 1765607969.9545767,
     "mode": "memory",
     "refresh_interval": 2000
   }
