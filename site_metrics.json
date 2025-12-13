@@ -464,15 +464,6 @@
       "server_id": 1301988304279048275,
       "url": "https://discord.com/users/1317568551170871306",
       "thread_id": null
-    },
-    {
-      "type": "member_leave",
-      "shop_name": "Server",
-      "message": "ariiipooh._ left the server",
-      "timestamp": 1765038879,
-      "server_id": 1301988304279048275,
-      "url": "https://discord.com/users/1262553444472979618",
-      "thread_id": null
     }
   ],
   "pipeline": [
@@ -524,6 +515,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "Can Bloxburg Be Saved?",
+      "description": "today we take a deep dive into roblox welcome to bloxburg in 2025... oh boy follow me on twitter - h...",
+      "source": "YouTube",
+      "timestamp": 1765641639.0,
+      "url": "https://www.youtube.com/watch?v=NGMEk4mNT0I",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "it\u2019s so cute \u2603\ufe0f #roblox #bloxburg #bloxburgbuild #bloxburgchristmas  #fyp",
       "description": "...",
       "source": "YouTube",
@@ -556,15 +556,6 @@
       "source": "YouTube",
       "timestamp": 1765633031.0,
       "url": "https://www.youtube.com/watch?v=2I2WzZRGa4U",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "#bloxburg #sad #roblox idk I made \ud83d\ude29",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765632733.0,
-      "url": "https://www.youtube.com/watch?v=Kvowg779ps8",
       "icon": "fa-youtube"
     },
     {
@@ -605,7 +596,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765642770.2654307,
+    "generated_at": 1765643969.955961,
     "mode": "memory",
     "refresh_interval": 2000
   }
