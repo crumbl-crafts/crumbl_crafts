@@ -506,6 +506,24 @@
   "news": [
     {
       "type": "trend",
+      "title": "I do not remember this happening\ud83d\udc80",
+      "description": "bloxburg #theamazingdigitalcircus....",
+      "source": "YouTube",
+      "timestamp": 1765653175.0,
+      "url": "https://www.youtube.com/watch?v=yhOoRemyxZM",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Elf hunt day 4 location #roblox #roleplay #gameplay #winter #bloxburg #christmas #funnymemes",
+      "description": "bloxburg elf hunt day four location....",
+      "source": "YouTube",
+      "timestamp": 1765652276.0,
+      "url": "https://www.youtube.com/watch?v=eSNbqpNpUhM",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "#music #song #love #slay #audio #bejba #remix #roblox #art #bejba #bloxburg",
       "description": "...",
       "source": "YouTube",
@@ -515,38 +533,20 @@
     },
     {
       "type": "trend",
+      "title": "Giving cookies to bloxburg families I #shorts #roblox #bloxburg #cookies #christmas #funny #oof #lol",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765649258.0,
+      "url": "https://www.youtube.com/watch?v=w9ttG7ixOvM",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "the best feeling ever \ud83e\udd79\u2728 #roblox #bloxburg #house #relateable #fyp",
       "description": "...",
       "source": "YouTube",
       "timestamp": 1765648287.0,
       "url": "https://www.youtube.com/watch?v=ORvE2XwsEw4",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Family SNOW DAY! CHRISTMAS DECORATING \ud83c\udf84 | Bloxburg Roleplay",
-      "description": "today's Bloxburg roleplay is our family's snow day routine! we spend a cozy winter morning at home a...",
-      "source": "YouTube",
-      "timestamp": 1765647902.0,
-      "url": "https://www.youtube.com/watch?v=bIpphxzR0yw",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "#2025 #ajgamer1109 #roblox #bloxburg #bloxburg #coconut",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765647099.0,
-      "url": "https://www.youtube.com/watch?v=35onxODZbqs",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Spending the rest of my Christmas week in Bloxburg! #shorts #bloxburg",
-      "description": "How I'm go be spending the rest of my Christmas week in Bloxburg! #bloxburg #bloxburgbuild #bloxburg...",
-      "source": "YouTube",
-      "timestamp": 1765645462.0,
-      "url": "https://www.youtube.com/watch?v=U3mhg23PGWc",
       "icon": "fa-youtube"
     },
     {
@@ -587,7 +587,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765653570.3299768,
+    "generated_at": 1765654769.9554183,
     "mode": "memory",
     "refresh_interval": 2000
   }
