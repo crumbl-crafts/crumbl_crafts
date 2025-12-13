@@ -7,7 +7,7 @@
     "request_completion_ratio": 0.0
   },
   "server": {
-    "total_members": 337,
+    "total_members": 336,
     "joined_today": 2,
     "active_shops": 1,
     "avg_response_time": 4450.666666666667
@@ -24,6 +24,15 @@
     }
   ],
   "activityLog": [
+    {
+      "type": "member_leave",
+      "shop_name": "Server",
+      "message": "bee.ts1213 left the server",
+      "timestamp": 1765640145,
+      "thread_id": null,
+      "server_id": 1301988304279048275,
+      "url": "https://discord.com/users/857429083846737940"
+    },
     {
       "type": "member_leave",
       "shop_name": "Server",
@@ -596,7 +605,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765640123.370008,
+    "generated_at": 1765640147.7838497,
     "mode": "memory",
     "refresh_interval": 2000
   }
