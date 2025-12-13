@@ -533,6 +533,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "#roblox #robloxshorts #bloxburgcontentcreator #robloxindonesia #robloxedit #gunungroblox #bloxburg",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765620300.0,
+      "url": "https://www.youtube.com/watch?v=OqDmtnpDZb8",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "CAN YOU GUESS THE ROBLOX GAME BY EMOJIS? \ud83d\ude2d (99% FAIL) #roblox   #shorts",
       "description": "Only a true Sigma can guess the final one\u2026 Comment your answer to lock it in Subscribe for daily Rob...",
       "source": "YouTube",
@@ -565,15 +574,6 @@
       "source": "YouTube",
       "timestamp": 1765604333.0,
       "url": "https://www.youtube.com/watch?v=0QU3NEmF-h0",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Bloxburg Elf hunt #4!!! #bloxburgelfhunt #bloxburg",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765590764.0,
-      "url": "https://www.youtube.com/watch?v=H_mzOeWEFHw",
       "icon": "fa-youtube"
     },
     {
@@ -614,7 +614,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765626570.2189164,
+    "generated_at": 1765627169.9547071,
     "mode": "memory",
     "refresh_interval": 2000
   }
