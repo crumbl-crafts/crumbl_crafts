@@ -344,15 +344,6 @@
     },
     {
       "type": "trend",
-      "title": "#roblox #brookhave #bloxburg #robloxedit #music #shorts",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765722697.0,
-      "url": "https://www.youtube.com/watch?v=yOzZWBQHxjE",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
       "title": "Toxic Bloxburg Landlords Are BROKEN \ud83d\ude2d (They Charge $5,000 for a Fridge) #robloxrant #roblox #rblx",
       "description": "You log into Bloxburg hoping for chill roleplay and immediately get hit by the Toxic Landlord class!...",
       "source": "YouTube",
@@ -376,6 +367,15 @@
       "source": "YouTube",
       "timestamp": 1765710600.0,
       "url": "https://www.youtube.com/watch?v=Ibr4h0Rqr3g",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "elf hunt day 5 location #roblox #winter #roleplay #bloxburg #christmas #funnymemes #robloxedit",
+      "description": "bloxburg elf hunt day 5 location....",
+      "source": "YouTube",
+      "timestamp": 1765709115.0,
+      "url": "https://www.youtube.com/watch?v=ve4qJsbAHuY",
       "icon": "fa-youtube"
     },
     {
@@ -416,7 +416,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765726769.955816,
+    "generated_at": 1765727969.9537644,
     "mode": "memory",
     "refresh_interval": 2000
   }
