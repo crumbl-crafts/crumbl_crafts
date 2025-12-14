@@ -308,6 +308,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "vlogmas day 14! \ud83c\udf84\u2764\ufe0f #vlogmas #roblox #bloxburg #goviral #fyp",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765737403.0,
+      "url": "https://www.youtube.com/watch?v=4IAqj5nsb34",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Flip edit :P",
       "description": "roblox #robloxedit #flop #tools #slay #fyp #bloxburg #royalhigh #edit....",
       "source": "YouTube",
@@ -340,15 +349,6 @@
       "source": "YouTube",
       "timestamp": 1765734246.0,
       "url": "https://www.youtube.com/watch?v=-6GdNXi4enw",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "When you sick but you still playing Bloxburg. #shorts #bloxburg",
-      "description": "When you sick but you still playing Bloxburg. #bloxburg #bloxburgbuild #welcometobloxburg....",
-      "source": "YouTube",
-      "timestamp": 1765734200.0,
-      "url": "https://www.youtube.com/watch?v=-O-o0kfSLM4",
       "icon": "fa-youtube"
     },
     {
@@ -389,7 +389,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765739970.2586107,
+    "generated_at": 1765741169.9569895,
     "mode": "memory",
     "refresh_interval": 2000
   }
