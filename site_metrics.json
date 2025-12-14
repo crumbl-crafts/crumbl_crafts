@@ -317,6 +317,24 @@
   "news": [
     {
       "type": "trend",
+      "title": "Dia 14 #roblox #robloxbloxburgspeedbuild #bloxburg #bloxburgnewleaks #bloxburgcontentcreator",
+      "description": "Dia 14 calendario de invierno en Bloxburg!...",
+      "source": "YouTube",
+      "timestamp": 1765755190.0,
+      "url": "https://www.youtube.com/watch?v=LSjGi5sDaFg",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "comment ic u wanna trade! #viral #roblox #amazingroblox #shortvideos #bloxburg #rblx",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765753953.0,
+      "url": "https://www.youtube.com/watch?v=jtg1FXwGn8c",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Vlogmas Day 1 #roblox #bloxburg",
       "description": "...",
       "source": "YouTube",
@@ -340,24 +358,6 @@
       "source": "YouTube",
       "timestamp": 1765750379.0,
       "url": "https://www.youtube.com/watch?v=LOpG7SvUhMg",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "ELF #6 FOR BLOXBURG&#39;S ELF HUNT! #shorts #roblox #bloxburgupdate #bloxburg #bloxburgelfhunt",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765750084.0,
-      "url": "https://www.youtube.com/watch?v=voeI_WnRCw8",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "6TH BLOXBURG ELF LOCATION! #roblox #bloxburg #elfhunt",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765749965.0,
-      "url": "https://www.youtube.com/watch?v=KEqNv3VYEGQ",
       "icon": "fa-youtube"
     },
     {
@@ -398,7 +398,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765756170.282495,
+    "generated_at": 1765756769.9566984,
     "mode": "memory",
     "refresh_interval": 2000
   }
