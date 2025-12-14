@@ -479,6 +479,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "Bloxburg Elf Hunt - Day 5 #welcometobloxburg #roblox #bloxburgcontentcreator #bloxburg",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765674266.0,
+      "url": "https://www.youtube.com/watch?v=flNWlLdH7so",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "gracias fessy por la idea \ud83e\udd79 @soyfessy #roblox #bloxburg",
       "description": "...",
       "source": "YouTube",
@@ -511,15 +520,6 @@
       "source": "YouTube",
       "timestamp": 1765669788.0,
       "url": "https://www.youtube.com/watch?v=OmBQURkybLk",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Gimme some tips please #roblox #mm2 #bloxburg",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765668326.0,
-      "url": "https://www.youtube.com/watch?v=VGJUO5MoxKg",
       "icon": "fa-youtube"
     },
     {
@@ -560,7 +560,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765683569.956469,
+    "generated_at": 1765684769.9533298,
     "mode": "memory",
     "refresh_interval": 2000
   }
