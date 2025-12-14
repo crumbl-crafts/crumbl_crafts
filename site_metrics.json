@@ -353,20 +353,20 @@
     },
     {
       "type": "trend",
-      "title": "Is anyone still playing this?b #roblox #robloxedit #bloxburg #edit #funny",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765710600.0,
-      "url": "https://www.youtube.com/watch?v=Ibr4h0Rqr3g",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
       "title": "elf hunt day 5 location #roblox #winter #roleplay #bloxburg #christmas #funnymemes #robloxedit",
       "description": "bloxburg elf hunt day 5 location....",
       "source": "YouTube",
       "timestamp": 1765709115.0,
       "url": "https://www.youtube.com/watch?v=ve4qJsbAHuY",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "FAMILY GO CHRISTMAS SHOPPING FOR BABY MAX! #shorts #roblox #bloxburgroleplay #roleplay #bloxburg",
+      "description": "FAMILY GO CHRISTMAS SHOPPING FOR BABY MAX! Make sure to like and check out the full video in the lin...",
+      "source": "YouTube",
+      "timestamp": 1765706488.0,
+      "url": "https://www.youtube.com/watch?v=vlvoCWGPPtw",
       "icon": "fa-youtube"
     },
     {
@@ -416,7 +416,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765723770.2946498,
+    "generated_at": 1765724369.9581585,
     "mode": "memory",
     "refresh_interval": 2000
   }
