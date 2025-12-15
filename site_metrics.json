@@ -7,7 +7,7 @@
     "request_completion_ratio": 0.0
   },
   "server": {
-    "total_members": 341,
+    "total_members": 340,
     "joined_today": 2,
     "active_shops": 1,
     "avg_response_time": 4450.666666666667
@@ -24,6 +24,15 @@
     }
   ],
   "activityLog": [
+    {
+      "type": "member_leave",
+      "shop_name": "Server",
+      "message": "glazzzzer_ left the server",
+      "timestamp": 1765776501,
+      "thread_id": null,
+      "server_id": 1301988304279048275,
+      "url": "https://discord.com/users/1012332835362852967"
+    },
     {
       "type": "member_join",
       "shop_name": "Server",
@@ -326,15 +335,6 @@
   "news": [
     {
       "type": "trend",
-      "title": "VIRTUOUS HIGH SCHOOL BLOXBURG#bloxburg#school#3millionviews",
-      "description": "spongebob....",
-      "source": "YouTube",
-      "timestamp": 1765771788.0,
-      "url": "https://www.youtube.com/watch?v=99uYlvs0GDg",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
       "title": "Bloxburg Elf Hunt 2025 Day 6 - Clip Roblox Bloxburg Indonesia #BloxburgIndonesia #ElfHunt2025",
       "description": "Bloxburg Elf Hunt 2025 Day 6 - Clip Roblox Bloxburg Indonesia #BloxburgIndonesia #ElfHunt2025 Music ...",
       "source": "YouTube",
@@ -367,6 +367,15 @@
       "source": "YouTube",
       "timestamp": 1765755818.0,
       "url": "https://www.youtube.com/watch?v=EKIGW8gPy_k",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Dia 14 #roblox #robloxbloxburgspeedbuild #bloxburg #bloxburgnewleaks #bloxburgcontentcreator",
+      "description": "Dia 14 calendario de invierno en Bloxburg!...",
+      "source": "YouTube",
+      "timestamp": 1765755190.0,
+      "url": "https://www.youtube.com/watch?v=LSjGi5sDaFg",
       "icon": "fa-youtube"
     },
     {
@@ -407,7 +416,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765775969.9537957,
+    "generated_at": 1765776504.4833527,
     "mode": "memory",
     "refresh_interval": 2000
   }
