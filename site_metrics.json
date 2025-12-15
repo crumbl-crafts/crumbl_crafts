@@ -344,6 +344,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "Bulldozing my first plot in bloxburg #bloxburg",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765838127.0,
+      "url": "https://www.youtube.com/watch?v=TFQfrtnyZaA",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Bloxburg Elf Hunt Day 7 #roblox #bloxburg",
       "description": "...",
       "source": "YouTube",
@@ -376,15 +385,6 @@
       "source": "YouTube",
       "timestamp": 1765835908.0,
       "url": "https://www.youtube.com/watch?v=3b89WEPHZxA",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Dia 15 #roblox #robloxbloxburgspeedbuild #bloxburg #bloxburgnewleaks #bloxburgcontentcreator",
-      "description": "Dia 15 calendario de invierno en Bloxburg!...",
-      "source": "YouTube",
-      "timestamp": 1765834825.0,
-      "url": "https://www.youtube.com/watch?v=Jpv_4lWxa5Q",
       "icon": "fa-youtube"
     },
     {
@@ -425,7 +425,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765838369.9560568,
+    "generated_at": 1765839569.958205,
     "mode": "memory",
     "refresh_interval": 2000
   }
