@@ -344,6 +344,24 @@
   "news": [
     {
       "type": "trend",
+      "title": "Localiza\u00e7\u00e3o Elfo 7 - Bloxburg 2025 \u2728 #bloxburg  #eventos  #roblox  #viral #natal #elfos",
+      "description": "Espero muito que gostem !! Sempre feito com amor e carinho para voc\u00eas! E n\u00e3o esquece do like em? Um ...",
+      "source": "YouTube",
+      "timestamp": 1765841042.0,
+      "url": "https://www.youtube.com/watch?v=ykOalGGPL_c",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Today is my second day of Christmas#newbuild#bloxburg#xmas",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765840459.0,
+      "url": "https://www.youtube.com/watch?v=t_bQsNyuXk4",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Hari Ke-7 Elf Hunt #bloxburg #elfhunt #roblox",
       "description": "...",
       "source": "YouTube",
@@ -367,24 +385,6 @@
       "source": "YouTube",
       "timestamp": 1765839088.0,
       "url": "https://www.youtube.com/watch?v=pLJYe8u5IRU",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "ANSWERING YOUR BLOXBURG ELF HUNT QUESTIONS!",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765839009.0,
-      "url": "https://www.youtube.com/watch?v=L0-_noPmLsg",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Bulldozing my first plot in bloxburg #bloxburg",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765838127.0,
-      "url": "https://www.youtube.com/watch?v=TFQfrtnyZaA",
       "icon": "fa-youtube"
     },
     {
@@ -425,7 +425,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765842570.2766411,
+    "generated_at": 1765843169.9529955,
     "mode": "memory",
     "refresh_interval": 2000
   }
