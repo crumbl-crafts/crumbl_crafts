@@ -335,6 +335,33 @@
   "news": [
     {
       "type": "trend",
+      "title": "Dia 15 #roblox #robloxbloxburgspeedbuild #bloxburg #bloxburgnewleaks #bloxburgcontentcreator",
+      "description": "Dia 15 calendario de invierno en Bloxburg!...",
+      "source": "YouTube",
+      "timestamp": 1765834825.0,
+      "url": "https://www.youtube.com/watch?v=Jpv_4lWxa5Q",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "\ud83d\udd34BUSCANDO EL ELFO #7 de BLOXBURG EN VIVO!",
+      "description": "\u00danete a mi grupo de Roblox: https://www.roblox.com/groups/5045574/grupo-oficial-de-fessy#!/about S\u00edg...",
+      "source": "YouTube",
+      "timestamp": 1765833740.0,
+      "url": "https://www.youtube.com/watch?v=PlNd7wzmFEo",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "UBICACIO\u0301N DEL ELFO #7 de BLOXBURG!",
+      "description": "\u00danete a mi grupo de Roblox: https://www.roblox.com/groups/5045574/grupo-oficial-de-fessy#!/about S\u00edg...",
+      "source": "YouTube",
+      "timestamp": 1765833711.0,
+      "url": "https://www.youtube.com/watch?v=Np6g01vgNbc",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Bloxburg ELF 7 LOCATION | QUICK &amp; EASY TUTORIAL",
       "description": "bloxburg #roblox bloxburg elf hunt, bloxburg elf hunt 2025, bloxburg christmas update 2025, where is...",
       "source": "YouTube",
@@ -344,38 +371,11 @@
     },
     {
       "type": "trend",
-      "title": "\ud83d\udd34RENOVATING ROOMS IN MY BLOXBURG MANSION!",
-      "description": "Description: \u2661\ufe0e. \u25dd \u2b50\ufe0fUSE STARCODE PEACH when buying robux or premium!\u2b50\ufe0f \ud83c\udf99\ufe0fBe sure to SUBSCRIBE   to ...",
+      "title": "7TH ELF LOCATION IN BLOXBURG | BLOXBURG ELF HUNT 2025 DAY 7",
+      "description": "IN THIS VDEO: 7TH ELF LOCATION IN BLOXBURG | BLOXBURG ELF HUNT 2025 DAY 7....",
       "source": "YouTube",
-      "timestamp": 1765832503.0,
-      "url": "https://www.youtube.com/watch?v=5OntXKYHQwY",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Vlogmas day 15!! \u2603\ufe0f\ud83d\udecd\ufe0f #Vlogmas #roblox #bloxburg #bloxburgrp #fyp",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765830244.0,
-      "url": "https://www.youtube.com/watch?v=x3fq6MRPen4",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "80 free bloxbucks!! \u2764\ufe0f\ud83c\udf84 #roblox #bloxburg #bloxburgadventcalendar #bloxburgupdate #fyp",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765826458.0,
-      "url": "https://www.youtube.com/watch?v=aKxeGpPbu2Q",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "elf hunt day 6 location #roblox #roleplay #bloxburg #edit #funnymemes #viraledit #christmas",
-      "description": "bloxburg elf hunt day 6 location (MY MIC IM SO SORRY-)...",
-      "source": "YouTube",
-      "timestamp": 1765822907.0,
-      "url": "https://www.youtube.com/watch?v=Zas_qTkeyCo",
+      "timestamp": 1765833106.0,
+      "url": "https://www.youtube.com/watch?v=MFQAm9AKy4M",
       "icon": "fa-youtube"
     },
     {
@@ -416,7 +416,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765834769.9579213,
+    "generated_at": 1765835969.9594204,
     "mode": "memory",
     "refresh_interval": 2000
   }
