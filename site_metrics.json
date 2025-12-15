@@ -353,6 +353,15 @@
     },
     {
       "type": "trend",
+      "title": "Does something happen to my kids #robloxstory #roblox #robloxedit #duet #bloxtales #bloxburg #roblox",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765777653.0,
+      "url": "https://www.youtube.com/watch?v=l0A9zsk233w",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "yg penting \ud83c\udd99\ufe0f\ud83d\uddff #roblox #bloxburg #satuklikuntukwujudkanimpianmu",
       "description": "...",
       "source": "YouTube",
@@ -367,15 +376,6 @@
       "source": "YouTube",
       "timestamp": 1765760464.0,
       "url": "https://www.youtube.com/watch?v=RmVgkPNIAoo",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "\ud83c\udf84 #fyp #contentcreator #roblox #robloxyoutuber #bloxburg #elfhunt #scavenger #subscribe",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765755818.0,
-      "url": "https://www.youtube.com/watch?v=EKIGW8gPy_k",
       "icon": "fa-youtube"
     },
     {
@@ -416,7 +416,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765786769.9566152,
+    "generated_at": 1765787969.9569361,
     "mode": "memory",
     "refresh_interval": 2000
   }
