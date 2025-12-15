@@ -317,6 +317,24 @@
   "news": [
     {
       "type": "trend",
+      "title": "Names We Like For The Twins! \ud83d\ude31\ud83e\udd79 #bloxburg #bloxburgfamily #roblox #shorts",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765760464.0,
+      "url": "https://www.youtube.com/watch?v=RmVgkPNIAoo",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Can you hold your breath this long #robloxeditusername #games #bloxburg",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765760462.0,
+      "url": "https://www.youtube.com/watch?v=LDtYi2DEcd8",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "\ud83c\udf84 #fyp #contentcreator #roblox #robloxyoutuber #bloxburg #elfhunt #scavenger #subscribe",
       "description": "...",
       "source": "YouTube",
@@ -340,24 +358,6 @@
       "source": "YouTube",
       "timestamp": 1765753953.0,
       "url": "https://www.youtube.com/watch?v=jtg1FXwGn8c",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Vlogmas Day 1 #roblox #bloxburg",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765751495.0,
-      "url": "https://www.youtube.com/watch?v=oQlq4DGo6ig",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "UBICACI\u00d3N 6to ELFO en BLOXBURG\ud83e\ude85| #roblox #bloxburg #fyp #robloxfyp #strawqne #shorts",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765751102.0,
-      "url": "https://www.youtube.com/watch?v=KvQT7_cjYIQ",
       "icon": "fa-youtube"
     },
     {
@@ -398,7 +398,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765762769.9547236,
+    "generated_at": 1765763969.953672,
     "mode": "memory",
     "refresh_interval": 2000
   }
