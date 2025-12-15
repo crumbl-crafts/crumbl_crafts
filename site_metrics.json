@@ -335,6 +335,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "Bloxburg Elf Hunt #6 Sixth Elf 2025",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765797832.0,
+      "url": "https://www.youtube.com/watch?v=A-jYE5SpWho",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "#cat #cutecat #cute #foryou #roblox #bloxburg #robloxedit #robloxgames #gaming #trending #viral #lov",
       "description": "...",
       "source": "YouTube",
@@ -367,15 +376,6 @@
       "source": "YouTube",
       "timestamp": 1765780463.0,
       "url": "https://www.youtube.com/watch?v=blXmSk6jQKU",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Does something happen to my kids #robloxstory #roblox #robloxedit #duet #bloxtales #bloxburg #roblox",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765777653.0,
-      "url": "https://www.youtube.com/watch?v=l0A9zsk233w",
       "icon": "fa-youtube"
     },
     {
@@ -416,7 +416,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765799370.3046036,
+    "generated_at": 1765799969.9550288,
     "mode": "memory",
     "refresh_interval": 2000
   }
