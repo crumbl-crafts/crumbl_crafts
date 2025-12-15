@@ -326,6 +326,24 @@
   "news": [
     {
       "type": "trend",
+      "title": "VIRTUOUS HIGH SCHOOL BLOXBURG#bloxburg#school#3millionviews",
+      "description": "spongebob....",
+      "source": "YouTube",
+      "timestamp": 1765771788.0,
+      "url": "https://www.youtube.com/watch?v=99uYlvs0GDg",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Bloxburg Elf Hunt 2025 Day 6 - Clip Roblox Bloxburg Indonesia #BloxburgIndonesia #ElfHunt2025",
+      "description": "Bloxburg Elf Hunt 2025 Day 6 - Clip Roblox Bloxburg Indonesia #BloxburgIndonesia #ElfHunt2025 Music ...",
+      "source": "YouTube",
+      "timestamp": 1765770823.0,
+      "url": "https://www.youtube.com/watch?v=nf81WOoyKQc",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "yg penting \ud83c\udd99\ufe0f\ud83d\uddff #roblox #bloxburg #satuklikuntukwujudkanimpianmu",
       "description": "...",
       "source": "YouTube",
@@ -349,24 +367,6 @@
       "source": "YouTube",
       "timestamp": 1765755818.0,
       "url": "https://www.youtube.com/watch?v=EKIGW8gPy_k",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Dia 14 #roblox #robloxbloxburgspeedbuild #bloxburg #bloxburgnewleaks #bloxburgcontentcreator",
-      "description": "Dia 14 calendario de invierno en Bloxburg!...",
-      "source": "YouTube",
-      "timestamp": 1765755190.0,
-      "url": "https://www.youtube.com/watch?v=LSjGi5sDaFg",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "comment ic u wanna trade! #viral #roblox #amazingroblox #shortvideos #bloxburg #rblx",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765753953.0,
-      "url": "https://www.youtube.com/watch?v=jtg1FXwGn8c",
       "icon": "fa-youtube"
     },
     {
@@ -407,7 +407,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765772370.3154688,
+    "generated_at": 1765773569.9542215,
     "mode": "memory",
     "refresh_interval": 2000
   }
