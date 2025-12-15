@@ -335,6 +335,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "80 free bloxbucks!! \u2764\ufe0f\ud83c\udf84 #roblox #bloxburg #bloxburgadventcalendar #bloxburgupdate #fyp",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765826458.0,
+      "url": "https://www.youtube.com/watch?v=aKxeGpPbu2Q",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "elf hunt day 6 location #roblox #roleplay #bloxburg #edit #funnymemes #viraledit #christmas",
       "description": "bloxburg elf hunt day 6 location (MY MIC IM SO SORRY-)...",
       "source": "YouTube",
@@ -344,11 +353,11 @@
     },
     {
       "type": "trend",
-      "title": "The Roblox Bloxburg News\ud83d\ude31 #roblox #shorts",
-      "description": "BREAKING: Roblox Bloxburg might be in trouble! The news spread so fast, it even showed up on the Las...",
+      "title": "#kpop #roblox #99nightintheforest #robloxedit #99nitf #lesserafim #freerobux #funny #bloxburg",
+      "description": "...",
       "source": "YouTube",
-      "timestamp": 1765814464.0,
-      "url": "https://www.youtube.com/watch?v=dVtYnueMZHc",
+      "timestamp": 1765809123.0,
+      "url": "https://www.youtube.com/watch?v=2iacfyIdHq0",
       "icon": "fa-youtube"
     },
     {
@@ -367,15 +376,6 @@
       "source": "YouTube",
       "timestamp": 1765801867.0,
       "url": "https://www.youtube.com/watch?v=fj0rYH_03cs",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "\ud83e\ude77 no gamepass blush christmas home [ bloxburg build ] #shorts #bloxburg #roblox",
-      "description": "no gamepass blush christmas home [ bloxburg build ] #shorts #bloxburg #roblox full build: https://yo...",
-      "source": "YouTube",
-      "timestamp": 1765800026.0,
-      "url": "https://www.youtube.com/watch?v=8s0w8qbEJUY",
       "icon": "fa-youtube"
     },
     {
@@ -416,7 +416,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765827569.9555445,
+    "generated_at": 1765828769.9535856,
     "mode": "memory",
     "refresh_interval": 2000
   }
