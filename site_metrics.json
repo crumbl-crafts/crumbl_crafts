@@ -7,8 +7,8 @@
     "request_completion_ratio": 0.0
   },
   "server": {
-    "total_members": 340,
-    "joined_today": 1,
+    "total_members": 341,
+    "joined_today": 2,
     "active_shops": 1,
     "avg_response_time": 4450.666666666667
   },
@@ -24,6 +24,15 @@
     }
   ],
   "activityLog": [
+    {
+      "type": "member_join",
+      "shop_name": "Server",
+      "message": "viviqx.rep joined the server",
+      "timestamp": 1765769287,
+      "thread_id": null,
+      "server_id": 1301988304279048275,
+      "url": "https://discord.com/users/1321469746394300488"
+    },
     {
       "type": "member_join",
       "shop_name": "Server",
@@ -353,11 +362,11 @@
     },
     {
       "type": "trend",
-      "title": "6th elf hunt + Give elf gingerbread house | Luz plays #roblox #bloxburg #elfhunt #Robloxshorts",
+      "title": "comment ic u wanna trade! #viral #roblox #amazingroblox #shortvideos #bloxburg #rblx",
       "description": "...",
       "source": "YouTube",
-      "timestamp": 1765754060.0,
-      "url": "https://www.youtube.com/watch?v=mCSBc6meGr4",
+      "timestamp": 1765753953.0,
+      "url": "https://www.youtube.com/watch?v=jtg1FXwGn8c",
       "icon": "fa-youtube"
     },
     {
@@ -398,7 +407,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765768769.954818,
+    "generated_at": 1765769290.2011547,
     "mode": "memory",
     "refresh_interval": 2000
   }
