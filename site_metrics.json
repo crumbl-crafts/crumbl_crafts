@@ -344,11 +344,20 @@
   "news": [
     {
       "type": "trend",
-      "title": "bloxburg elf hunt day 7 #roblox #bloxburgelfhunt #fyp #trending #viral #tiktok",
+      "title": "Bloxburg Th\u1ea5t B\u1ea1i N\u1eb7ng Nh\u1ea5t Roblox? M\u1ea5t 100 Tri\u1ec7u \u0110\u00f4 Ch\u1ec9 Trong 2 N\u0103m \ud83d\ude31| Hi\u1ebfu MRAIN",
+      "description": "Bloxburg Th\u1ea5t B\u1ea1i N\u1eb7ng Nh\u1ea5t Roblox? M\u1ea5t 100 Tri\u1ec7u \u0110\u00f4 Ch\u1ec9 Trong 2 N\u0103m Bloxburg t\u1eebng l\u00e0 t\u1ef1a game tr\u1ea3 p...",
+      "source": "YouTube",
+      "timestamp": 1765861752.0,
+      "url": "https://www.youtube.com/watch?v=4ghbwr65r9M",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Mencoba Masak di Roblox Bloxburg, Dapur Kebakaran  #faktaunik #roblox #shortvideo #games",
       "description": "...",
       "source": "YouTube",
-      "timestamp": 1765859657.0,
-      "url": "https://www.youtube.com/watch?v=zFZhNCSgXm0",
+      "timestamp": 1765856820.0,
+      "url": "https://www.youtube.com/watch?v=eHE9JdvzrEc",
       "icon": "fa-youtube"
     },
     {
@@ -376,15 +385,6 @@
       "source": "YouTube",
       "timestamp": 1765849619.0,
       "url": "https://www.youtube.com/watch?v=n8GumV4Jo3g",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "GIVING BLOXBURG STRANGERS BAD CHRISTMAS PRESENTS... they loved it!",
-      "description": "someone gave me a really funny video idea and today I decided to try it out! I think I've done this ...",
-      "source": "YouTube",
-      "timestamp": 1765848644.0,
-      "url": "https://www.youtube.com/watch?v=S0usLI0bEIM",
       "icon": "fa-youtube"
     },
     {
@@ -425,7 +425,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765862369.956905,
+    "generated_at": 1765863569.9549062,
     "mode": "memory",
     "refresh_interval": 2000
   }
