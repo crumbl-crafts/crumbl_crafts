@@ -344,6 +344,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "elf hunt day 7 location #roblox #bloxburg #funny #christmas #edit #funnymemes #robloxedit",
+      "description": "bloxburg elf hunt day 7 location....",
+      "source": "YouTube",
+      "timestamp": 1765918975.0,
+      "url": "https://www.youtube.com/watch?v=OgmLpQdAOLM",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "I BUILT A 2020 BLOXBURG HOUSE",
       "description": "bloxburg #roblox #robloxbloxburg I miss the good old days of bloxburg...so I traveled back to 2020 t...",
       "source": "YouTube",
@@ -376,15 +385,6 @@
       "source": "YouTube",
       "timestamp": 1765904188.0,
       "url": "https://www.youtube.com/watch?v=OPL8KBWLIHk",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "they failed?...",
-      "description": "they failed?... #roblox #shorts #robloxshorts #bloxburg....",
-      "source": "YouTube",
-      "timestamp": 1765903207.0,
-      "url": "https://www.youtube.com/watch?v=vT885xows9s",
       "icon": "fa-youtube"
     },
     {
@@ -425,7 +425,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765919969.955121,
+    "generated_at": 1765921169.956856,
     "mode": "memory",
     "refresh_interval": 2000
   }
