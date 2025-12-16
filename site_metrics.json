@@ -344,6 +344,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "Me because I&#39;m running low on tickets:  #bloxburg #roblox #christmas #fyp #grinding",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765886423.0,
+      "url": "https://www.youtube.com/watch?v=ELnu4VFttQc",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Con \u1edf mi\u1ec1n nam ra th\u0103m l\u0103ng b\u00e1c #anhonsungngotvoyeucuataiphiet #tamtrang #bloxburg",
       "description": "...",
       "source": "YouTube",
@@ -376,15 +385,6 @@
       "source": "YouTube",
       "timestamp": 1765855338.0,
       "url": "https://www.youtube.com/watch?v=TtUccY9DaVY",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "#roblox #dancemoms #ora #realitytvshow #rblx #aldc #tvshow #bloxburg #fyp #viral",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765850155.0,
-      "url": "https://www.youtube.com/watch?v=1tvEHN7JSzo",
       "icon": "fa-youtube"
     },
     {
@@ -425,7 +425,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765887569.9546103,
+    "generated_at": 1765888769.9579518,
     "mode": "memory",
     "refresh_interval": 2000
   }
