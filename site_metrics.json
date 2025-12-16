@@ -344,6 +344,24 @@
   "news": [
     {
       "type": "trend",
+      "title": "I BUILT A 2020 BLOXBURG HOUSE",
+      "description": "bloxburg #roblox #robloxbloxburg I miss the good old days of bloxburg...so I traveled back to 2020 t...",
+      "source": "YouTube",
+      "timestamp": 1765915200.0,
+      "url": "https://www.youtube.com/watch?v=0LrjGYyGBuQ",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "BUILDING A $5M TOWN in BLOXBURG BUT WE CAN&#39;T COMMUNICATE...",
+      "description": "CAN 20 PEOPLE WORK TOGETHER TO BUILD A FUNCTIONING TOWN IN BLOXBURG WITHOUT TALKING? WATCH TO FIND ....",
+      "source": "YouTube",
+      "timestamp": 1765911660.0,
+      "url": "https://www.youtube.com/watch?v=oEBJlY5fe-I",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "#animation #memes #roblox #boschrexroth #burgerking m #bloxburg #gaming #mcdonalds",
       "description": "...",
       "source": "YouTube",
@@ -367,24 +385,6 @@
       "source": "YouTube",
       "timestamp": 1765903207.0,
       "url": "https://www.youtube.com/watch?v=vT885xows9s",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "stay away \ud83d\ude20 #edit #roblox #bloxburg #christmas",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765901927.0,
-      "url": "https://www.youtube.com/watch?v=g7prW0u9Feg",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "era de madrugada #roblox #vr #robloxgames #vrchat #virtualreality #memes #bloxburg #funny #quest2",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765900854.0,
-      "url": "https://www.youtube.com/watch?v=UZns3JIZ_go",
       "icon": "fa-youtube"
     },
     {
@@ -425,7 +425,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765916369.9552555,
+    "generated_at": 1765917569.9629972,
     "mode": "memory",
     "refresh_interval": 2000
   }
