@@ -344,11 +344,56 @@
   "news": [
     {
       "type": "trend",
+      "title": "Stranger Things | The First Scene | In Bloxburg",
+      "description": "I have been remaking Stranger things in Bloxburg, I mean Im a fan ANYWAYS, Hopefully you enjoy, I'm ...",
+      "source": "YouTube",
+      "timestamp": 1765922406.0,
+      "url": "https://www.youtube.com/watch?v=judnBI26WWg",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Day 8 Elf Location in Bloxburg \ud83c\udf81 #bloxburg #bloxburgupdate #roblox",
       "description": "Thank you for watching. In this short, we're finding Santa's elves for the winter event \"Elf Hunt\" i...",
       "source": "YouTube",
       "timestamp": 1765921500.0,
       "url": "https://www.youtube.com/watch?v=EU86nphJVZA",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Elfo 8  #roblox #robloxbloxburgspeedbuild #bloxburg #shorts #shortvideo  #bloxburgcontentcreator",
+      "description": "Dia 8 de la busqueda del elfo en Bloxburg!...",
+      "source": "YouTube",
+      "timestamp": 1765921481.0,
+      "url": "https://www.youtube.com/watch?v=QJU8zZsAImQ",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "it\u2019s SO annoying #roblox #bloxburg #relateable #viral #fyp",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765921159.0,
+      "url": "https://www.youtube.com/watch?v=DQhp-hhoXco",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Elf Hunt Day 8 - 2025 #bloxburgelfhunt #bloxburg #elfhunt #roblox",
+      "description": "Elf Hunt Day 8 - 2025 #bloxburgelfhunt #bloxburg #elfhunt #roblox....",
+      "source": "YouTube",
+      "timestamp": 1765921077.0,
+      "url": "https://www.youtube.com/watch?v=btf6l1sgIDw",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Eighth Elf in bloxburg!! Bloxburg elf hunt day 8! #bloxburgelfhunt",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765920938.0,
+      "url": "https://www.youtube.com/watch?v=PRAjwaSDQWo",
       "icon": "fa-youtube"
     },
     {
@@ -386,46 +431,10 @@
       "timestamp": 1765915200.0,
       "url": "https://www.youtube.com/watch?v=0LrjGYyGBuQ",
       "icon": "fa-youtube"
-    },
-    {
-      "type": "game_update",
-      "title": "New Winter Update Available!",
-      "description": "Explore new winter-themed furniture and decorations",
-      "source": "Bloxburg Official",
-      "timestamp": 1765563563.6636922,
-      "url": "https://twitter.com/BloxburgGame",
-      "icon": "fa-gamepad"
-    },
-    {
-      "type": "trend",
-      "title": "Modern Mansion Builds Trending",
-      "description": "Community showcasing stunning modern architecture",
-      "source": "YouTube",
-      "timestamp": 1765559963.663694,
-      "url": "https://youtube.com/results?search_query=bloxburg+modern+mansion",
-      "icon": "fa-fire"
-    },
-    {
-      "type": "tip",
-      "title": "Money Making Guide 2024",
-      "description": "Best jobs and strategies to earn cash quickly",
-      "source": "Community Guide",
-      "timestamp": 1765556363.6636944,
-      "url": "#",
-      "icon": "fa-lightbulb"
-    },
-    {
-      "type": "community",
-      "title": "Weekly Build Contest",
-      "description": "Submit your best holiday-themed builds to win prizes!",
-      "source": "Crumbl Crafts",
-      "timestamp": 1765552763.6636949,
-      "url": "#",
-      "icon": "fa-trophy"
     }
   ],
   "meta": {
-    "generated_at": 1765923570.239962,
+    "generated_at": 1765924769.9561198,
     "mode": "memory",
     "refresh_interval": 2000
   }
