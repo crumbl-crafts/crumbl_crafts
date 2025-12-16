@@ -344,20 +344,20 @@
   "news": [
     {
       "type": "trend",
+      "title": "New Jump Style level 188",
+      "description": "jumpstyle #trending #trend #Builder #Obby #Adoptme #Bloxburg....",
+      "source": "YouTube",
+      "timestamp": 1765855338.0,
+      "url": "https://www.youtube.com/watch?v=TtUccY9DaVY",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "#roblox #dancemoms #ora #realitytvshow #rblx #aldc #tvshow #bloxburg #fyp #viral",
       "description": "...",
       "source": "YouTube",
       "timestamp": 1765850155.0,
       "url": "https://www.youtube.com/watch?v=1tvEHN7JSzo",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "a kid who doesn&#39;t have a life #raides #roblox #robloxedit #bloxburg #trend #robloxgames #robloxrant",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765849718.0,
-      "url": "https://www.youtube.com/watch?v=5bWOqwEss8A",
       "icon": "fa-youtube"
     },
     {
@@ -371,20 +371,20 @@
     },
     {
       "type": "trend",
-      "title": "DON\u2019T CLICK THE SOUND!!",
-      "description": "Bloxburg Music Roblox #bloxburg #fyp\u30b7\u309aviral #foryou #roblox #robloxfyp #bloxburgbuilds....",
+      "title": "GIVING BLOXBURG STRANGERS BAD CHRISTMAS PRESENTS... they loved it!",
+      "description": "someone gave me a really funny video idea and today I decided to try it out! I think I've done this ...",
       "source": "YouTube",
-      "timestamp": 1765843049.0,
-      "url": "https://www.youtube.com/watch?v=d3CiTSayT6k",
+      "timestamp": 1765848644.0,
+      "url": "https://www.youtube.com/watch?v=S0usLI0bEIM",
       "icon": "fa-youtube"
     },
     {
       "type": "trend",
-      "title": "7TH BLOXBURG ELF LOCATION! #roblox #bloxburg #elfhunt",
-      "description": "...",
+      "title": "Festive Dog Bloxburg Hack Tutorial! #shorts #bloxburg",
+      "description": "Since Bloxburg doesn't have REAL pets in the game, I decided to make a quick tutorial about how to m...",
       "source": "YouTube",
-      "timestamp": 1765842886.0,
-      "url": "https://www.youtube.com/watch?v=hZsxbUZXLeU",
+      "timestamp": 1765845785.0,
+      "url": "https://www.youtube.com/watch?v=d8AIcW21ZQ0",
       "icon": "fa-youtube"
     },
     {
@@ -425,7 +425,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765856369.9567003,
+    "generated_at": 1765857569.956905,
     "mode": "memory",
     "refresh_interval": 2000
   }
