@@ -344,6 +344,33 @@
   "news": [
     {
       "type": "trend",
+      "title": "Day 8 Elf Location in Bloxburg \ud83c\udf81 #bloxburg #bloxburgupdate #roblox",
+      "description": "Thank you for watching. In this short, we're finding Santa's elves for the winter event \"Elf Hunt\" i...",
+      "source": "YouTube",
+      "timestamp": 1765921500.0,
+      "url": "https://www.youtube.com/watch?v=EU86nphJVZA",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "HOW TO FIND THE 8TH ELF IN BLOXBURG! #bloxburg",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765920840.0,
+      "url": "https://www.youtube.com/watch?v=4BtwDV4TF-w",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Bloxburg ELF 8 LOCATION | QUICK &amp; EASY TUTORIAL",
+      "description": "bloxburg #roblox bloxburg elf hunt, bloxburg elf hunt 2025, bloxburg christmas update 2025, where is...",
+      "source": "YouTube",
+      "timestamp": 1765920108.0,
+      "url": "https://www.youtube.com/watch?v=5NbfyY1XaGE",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "elf hunt day 7 location #roblox #bloxburg #funny #christmas #edit #funnymemes #robloxedit",
       "description": "bloxburg elf hunt day 7 location....",
       "source": "YouTube",
@@ -358,33 +385,6 @@
       "source": "YouTube",
       "timestamp": 1765915200.0,
       "url": "https://www.youtube.com/watch?v=0LrjGYyGBuQ",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "BUILDING A $5M TOWN in BLOXBURG BUT WE CAN&#39;T COMMUNICATE...",
-      "description": "CAN 20 PEOPLE WORK TOGETHER TO BUILD A FUNCTIONING TOWN IN BLOXBURG WITHOUT TALKING? WATCH TO FIND ....",
-      "source": "YouTube",
-      "timestamp": 1765911660.0,
-      "url": "https://www.youtube.com/watch?v=oEBJlY5fe-I",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "#animation #memes #roblox #boschrexroth #burgerking m #bloxburg #gaming #mcdonalds",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765905434.0,
-      "url": "https://www.youtube.com/watch?v=X9LxKtK8A8c",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Ranking #roblox #bloxburgcontentcreator #robloxmemes #onepiece #videogamememes #edit #bloxburg",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765904188.0,
-      "url": "https://www.youtube.com/watch?v=OPL8KBWLIHk",
       "icon": "fa-youtube"
     },
     {
@@ -425,7 +425,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765921169.956856,
+    "generated_at": 1765922369.953795,
     "mode": "memory",
     "refresh_interval": 2000
   }
