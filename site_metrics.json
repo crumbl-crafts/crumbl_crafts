@@ -344,15 +344,6 @@
   "news": [
     {
       "type": "trend",
-      "title": "C\u00e2u chuy\u1ec7n kinh d\u1ecb v\u1ec1 #foryou #roblox #horror #scary #bloxburg #weird",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765879140.0,
-      "url": "https://www.youtube.com/watch?v=y939fObwH-o",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
       "title": "Con \u1edf mi\u1ec1n nam ra th\u0103m l\u0103ng b\u00e1c #anhonsungngotvoyeucuataiphiet #tamtrang #bloxburg",
       "description": "...",
       "source": "YouTube",
@@ -380,6 +371,15 @@
     },
     {
       "type": "trend",
+      "title": "Mencoba Masak di Roblox Bloxburg, Dapur Kebakaran  #faktaunik #roblox #shortvideo #games",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765856820.0,
+      "url": "https://www.youtube.com/watch?v=eHE9JdvzrEc",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "New Jump Style level 188",
       "description": "jumpstyle #trending #trend #Builder #Obby #Adoptme #Bloxburg....",
       "source": "YouTube",
@@ -388,53 +388,44 @@
       "icon": "fa-youtube"
     },
     {
-      "type": "trend",
-      "title": "#roblox #dancemoms #ora #realitytvshow #rblx #aldc #tvshow #bloxburg #fyp #viral",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765850155.0,
-      "url": "https://www.youtube.com/watch?v=1tvEHN7JSzo",
-      "icon": "fa-youtube"
+      "type": "game_update",
+      "title": "New Winter Update Available!",
+      "description": "Explore new winter-themed furniture and decorations",
+      "source": "Bloxburg Official",
+      "timestamp": 1765563563.6636922,
+      "url": "https://twitter.com/BloxburgGame",
+      "icon": "fa-gamepad"
     },
     {
       "type": "trend",
-      "title": "Bloxburg Elf Hunt #7 Seventh Elf 2025",
-      "description": "...",
+      "title": "Modern Mansion Builds Trending",
+      "description": "Community showcasing stunning modern architecture",
       "source": "YouTube",
-      "timestamp": 1765849619.0,
-      "url": "https://www.youtube.com/watch?v=n8GumV4Jo3g",
-      "icon": "fa-youtube"
+      "timestamp": 1765559963.663694,
+      "url": "https://youtube.com/results?search_query=bloxburg+modern+mansion",
+      "icon": "fa-fire"
     },
     {
-      "type": "trend",
-      "title": "GIVING BLOXBURG STRANGERS BAD CHRISTMAS PRESENTS... they loved it!",
-      "description": "someone gave me a really funny video idea and today I decided to try it out! I think I've done this ...",
-      "source": "YouTube",
-      "timestamp": 1765848644.0,
-      "url": "https://www.youtube.com/watch?v=S0usLI0bEIM",
-      "icon": "fa-youtube"
+      "type": "tip",
+      "title": "Money Making Guide 2024",
+      "description": "Best jobs and strategies to earn cash quickly",
+      "source": "Community Guide",
+      "timestamp": 1765556363.6636944,
+      "url": "#",
+      "icon": "fa-lightbulb"
     },
     {
-      "type": "trend",
-      "title": "Festive Dog Bloxburg Hack Tutorial! #shorts #bloxburg",
-      "description": "Since Bloxburg doesn't have REAL pets in the game, I decided to make a quick tutorial about how to m...",
-      "source": "YouTube",
-      "timestamp": 1765845785.0,
-      "url": "https://www.youtube.com/watch?v=d8AIcW21ZQ0",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "DON\u2019T CLICK THE SOUND!!",
-      "description": "Bloxburg Music Roblox #bloxburg #fyp\u30b7\u309aviral #foryou #roblox #robloxfyp #bloxburgbuilds....",
-      "source": "YouTube",
-      "timestamp": 1765843049.0,
-      "url": "https://www.youtube.com/watch?v=d3CiTSayT6k",
-      "icon": "fa-youtube"
+      "type": "community",
+      "title": "Weekly Build Contest",
+      "description": "Submit your best holiday-themed builds to win prizes!",
+      "source": "Crumbl Crafts",
+      "timestamp": 1765552763.6636949,
+      "url": "#",
+      "icon": "fa-trophy"
     }
   ],
   "meta": {
-    "generated_at": 1765883969.958811,
+    "generated_at": 1765885169.9608436,
     "mode": "memory",
     "refresh_interval": 2000
   }
