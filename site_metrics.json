@@ -353,6 +353,15 @@
     },
     {
       "type": "trend",
+      "title": "a kid who doesn&#39;t have a life #raides #roblox #robloxedit #bloxburg #trend #robloxgames #robloxrant",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765849718.0,
+      "url": "https://www.youtube.com/watch?v=5bWOqwEss8A",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Bloxburg Elf Hunt #7 Seventh Elf 2025",
       "description": "...",
       "source": "YouTube",
@@ -376,15 +385,6 @@
       "source": "YouTube",
       "timestamp": 1765842886.0,
       "url": "https://www.youtube.com/watch?v=hZsxbUZXLeU",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Localiza\u00e7\u00e3o Elfo 7 - Bloxburg 2025 \u2728 #bloxburg  #eventos  #roblox  #viral #natal #elfos",
-      "description": "Espero muito que gostem !! Sempre feito com amor e carinho para voc\u00eas! E n\u00e3o esquece do like em? Um ...",
-      "source": "YouTube",
-      "timestamp": 1765841042.0,
-      "url": "https://www.youtube.com/watch?v=ykOalGGPL_c",
       "icon": "fa-youtube"
     },
     {
@@ -425,7 +425,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765855169.9563735,
+    "generated_at": 1765856369.9567003,
     "mode": "memory",
     "refresh_interval": 2000
   }
