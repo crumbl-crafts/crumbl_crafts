@@ -344,47 +344,47 @@
   "news": [
     {
       "type": "trend",
+      "title": "#animation #memes #roblox #boschrexroth #burgerking m #bloxburg #gaming #mcdonalds",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765905434.0,
+      "url": "https://www.youtube.com/watch?v=X9LxKtK8A8c",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Ranking #roblox #bloxburgcontentcreator #robloxmemes #onepiece #videogamememes #edit #bloxburg",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765904188.0,
+      "url": "https://www.youtube.com/watch?v=OPL8KBWLIHk",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "they failed?...",
+      "description": "they failed?... #roblox #shorts #robloxshorts #bloxburg....",
+      "source": "YouTube",
+      "timestamp": 1765903207.0,
+      "url": "https://www.youtube.com/watch?v=vT885xows9s",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "stay away \ud83d\ude20 #edit #roblox #bloxburg #christmas",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765901927.0,
+      "url": "https://www.youtube.com/watch?v=g7prW0u9Feg",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "era de madrugada #roblox #vr #robloxgames #vrchat #virtualreality #memes #bloxburg #funny #quest2",
       "description": "...",
       "source": "YouTube",
       "timestamp": 1765900854.0,
       "url": "https://www.youtube.com/watch?v=UZns3JIZ_go",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Tutorial on how to make air conditioner in #bloxburg  \ud83e\uddf8 #bloxburgtutorial #roblox #bloxburgbuilder",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765900514.0,
-      "url": "https://www.youtube.com/watch?v=6Q2BF7TfvmQ",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "MY CAF\u00c8 IN BLOXBURG #bloxburg #caf\u00e8#cute",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765899047.0,
-      "url": "https://www.youtube.com/watch?v=n8HlnRFySaA",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "#roblox #bloxburg",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765894176.0,
-      "url": "https://www.youtube.com/watch?v=Buq5pwB0XGs",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "let&#39;s see \ud83e\udd40 #roblox#roblolx#bloxburg #oof#robloxgameplay#robloxupdate#robloxgiveaway#fyp #minecraft",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765893972.0,
-      "url": "https://www.youtube.com/watch?v=Cwm19pdgd6E",
       "icon": "fa-youtube"
     },
     {
@@ -425,7 +425,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765905569.9581378,
+    "generated_at": 1765906769.9606805,
     "mode": "memory",
     "refresh_interval": 2000
   }
