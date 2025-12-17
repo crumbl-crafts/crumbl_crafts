@@ -353,6 +353,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "DONT CLICK THE SOUND!!",
+      "description": "Bloxburg Music How to build a sink in bloxburg Roblox #bloxburg #fyp\u30b7\u309aviral #foryou #roblox #robloxf...",
+      "source": "YouTube",
+      "timestamp": 1765938371.0,
+      "url": "https://www.youtube.com/watch?v=2ld4IxW8IX0",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "D\u00eda 17 del Calendario de Adviento de Bloxburg \ud83d\uddd3\ufe0f\ud83c\udf84 #shorts #bloxburg #roblox #christmas",
       "description": "D\u00eda 17 del Calendario de Adviento de Bloxburg ------------------------------------------------- \u2b50 Mi...",
       "source": "YouTube",
@@ -380,20 +389,11 @@
     },
     {
       "type": "trend",
-      "title": "custom furniture runs my pockets dry\ud83d\ude29 #roblox #bloxburg #bloxburgbuild #relatable #fyp",
-      "description": "...",
+      "title": "Where to find the 8th Bloxburg elf",
+      "description": "Roblox user: Cupcakekittywrld Display name: Itz_ThatGirlLayL4y Roblox group: Layysquadd! Make sure t...",
       "source": "YouTube",
-      "timestamp": 1765926522.0,
-      "url": "https://www.youtube.com/watch?v=yJX8fY9ie_U",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "How to find the 8th &amp; 9th Bloxburg elf in the 2025 elf hunt \ud83d\ude4a",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765925601.0,
-      "url": "https://www.youtube.com/watch?v=HyiK7BP4SVs",
+      "timestamp": 1765925294.0,
+      "url": "https://www.youtube.com/watch?v=bax9ju-GT2U",
       "icon": "fa-youtube"
     },
     {
@@ -434,7 +434,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765939770.3166583,
+    "generated_at": 1765940369.9555845,
     "mode": "memory",
     "refresh_interval": 2000
   }
