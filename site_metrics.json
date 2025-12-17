@@ -275,24 +275,6 @@
       "server_id": 1301988304279048275,
       "url": "https://discord.com/users/1429499840835879003",
       "thread_id": null
-    },
-    {
-      "type": "member_leave",
-      "shop_name": "Server",
-      "message": "kennyboy0824_14939 left the server",
-      "timestamp": 1765376660,
-      "server_id": 1301988304279048275,
-      "url": "https://discord.com/users/1421595692547178639",
-      "thread_id": null
-    },
-    {
-      "type": "member_join",
-      "shop_name": "Server",
-      "message": "kennyboy0824_14939 joined the server",
-      "timestamp": 1765376634,
-      "server_id": 1301988304279048275,
-      "url": "https://discord.com/users/1421595692547178639",
-      "thread_id": null
     }
   ],
   "pipeline": [
@@ -344,6 +326,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "check the pinned comment @lilwhitit  #roblox #christmas #robloxstory #bloxburg #funny #plsdonate",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765980929.0,
+      "url": "https://www.youtube.com/watch?v=Db1puj4hiiw",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "My plots #christmas #roblox #rblx #music #bloxburg #adoptme #robloxdressup #robloxmusic #cozynights",
       "description": "...",
       "source": "YouTube",
@@ -379,62 +370,44 @@
       "icon": "fa-youtube"
     },
     {
-      "type": "trend",
-      "title": "DONT CLICK THE SOUND!!",
-      "description": "Bloxburg Music How to build a sink in bloxburg Roblox #bloxburg #fyp\u30b7\u309aviral #foryou #roblox #robloxf...",
-      "source": "YouTube",
-      "timestamp": 1765938371.0,
-      "url": "https://www.youtube.com/watch?v=2ld4IxW8IX0",
-      "icon": "fa-youtube"
+      "type": "game_update",
+      "title": "New Winter Update Available!",
+      "description": "Explore new winter-themed furniture and decorations",
+      "source": "Bloxburg Official",
+      "timestamp": 1765563563.6636922,
+      "url": "https://twitter.com/BloxburgGame",
+      "icon": "fa-gamepad"
     },
     {
       "type": "trend",
-      "title": "D\u00eda 17 del Calendario de Adviento de Bloxburg \ud83d\uddd3\ufe0f\ud83c\udf84 #shorts #bloxburg #roblox #christmas",
-      "description": "D\u00eda 17 del Calendario de Adviento de Bloxburg ------------------------------------------------- \u2b50 Mi...",
+      "title": "Modern Mansion Builds Trending",
+      "description": "Community showcasing stunning modern architecture",
       "source": "YouTube",
-      "timestamp": 1765932248.0,
-      "url": "https://www.youtube.com/watch?v=sh-NNZp2Fu0",
-      "icon": "fa-youtube"
+      "timestamp": 1765559963.663694,
+      "url": "https://youtube.com/results?search_query=bloxburg+modern+mansion",
+      "icon": "fa-fire"
     },
     {
-      "type": "trend",
-      "title": "It&#39;s time for Bloxburg Christmas! #shorts #bloxburg",
-      "description": "Celebrating for Christmas in my Bloxburg Christmas bedroom! #bloxburg #bloxburgbuild #bloxburgchrist...",
-      "source": "YouTube",
-      "timestamp": 1765932185.0,
-      "url": "https://www.youtube.com/watch?v=Hw_KubOwUnM",
-      "icon": "fa-youtube"
+      "type": "tip",
+      "title": "Money Making Guide 2024",
+      "description": "Best jobs and strategies to earn cash quickly",
+      "source": "Community Guide",
+      "timestamp": 1765556363.6636944,
+      "url": "#",
+      "icon": "fa-lightbulb"
     },
     {
-      "type": "trend",
-      "title": "Getting the Silver Trophy in Bloxburg! | #roblox #bloxburg",
-      "description": "Hello! My name is KingBuy31 (Miguel) and I make Roblox content, whether it's doors, bloxburg, you na...",
-      "source": "YouTube",
-      "timestamp": 1765932123.0,
-      "url": "https://www.youtube.com/watch?v=7awDl-SouhY",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "HOW TO FIND ELF #8 IN THE BLOXBURG ELF HUNT 2025! #bloxburgelfhunt #bloxburg #roblox",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765931829.0,
-      "url": "https://www.youtube.com/watch?v=uJZcyNFnlQ8",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Guys should I go on live and build this #roblox #bloxburg #barbie ib @07.04.07",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765929631.0,
-      "url": "https://www.youtube.com/watch?v=HYlHFDVnYlE",
-      "icon": "fa-youtube"
+      "type": "community",
+      "title": "Weekly Build Contest",
+      "description": "Submit your best holiday-themed builds to win prizes!",
+      "source": "Crumbl Crafts",
+      "timestamp": 1765552763.6636949,
+      "url": "#",
+      "icon": "fa-trophy"
     }
   ],
   "meta": {
-    "generated_at": 1765981169.955714,
+    "generated_at": 1765982369.9562366,
     "mode": "memory",
     "refresh_interval": 2000
   }
