@@ -353,6 +353,24 @@
   "news": [
     {
       "type": "trend",
+      "title": "HOW TO FIND ELF #8 IN THE BLOXBURG ELF HUNT 2025! #bloxburgelfhunt #bloxburg #roblox",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765931829.0,
+      "url": "https://www.youtube.com/watch?v=uJZcyNFnlQ8",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Guys should I go on live and build this #roblox #bloxburg #barbie ib @07.04.07",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765929631.0,
+      "url": "https://www.youtube.com/watch?v=HYlHFDVnYlE",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Localiza\u00e7\u00e3o Elfo 8 + Trof\u00e9u - Bloxburg 2025 \u2728 #bloxburg  #eventos  #roblox  #viral #natal #elfos",
       "description": "Espero muito que gostem !! Sempre feito com amor e carinho para voc\u00eas! E n\u00e3o esquece do like em? Um ...",
       "source": "YouTube",
@@ -376,24 +394,6 @@
       "source": "YouTube",
       "timestamp": 1765925601.0,
       "url": "https://www.youtube.com/watch?v=HyiK7BP4SVs",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Where to find the 8th Bloxburg elf",
-      "description": "Roblox user: Cupcakekittywrld Display name: Itz_ThatGirlLayL4y Roblox group: Layysquadd! Make sure t...",
-      "source": "YouTube",
-      "timestamp": 1765925294.0,
-      "url": "https://www.youtube.com/watch?v=bax9ju-GT2U",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Stranger Things | The First Scene | In Bloxburg",
-      "description": "I have been remaking Stranger things in Bloxburg, I mean Im a fan ANYWAYS, Hopefully you enjoy, I'm ...",
-      "source": "YouTube",
-      "timestamp": 1765922406.0,
-      "url": "https://www.youtube.com/watch?v=judnBI26WWg",
       "icon": "fa-youtube"
     },
     {
@@ -434,7 +434,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765931969.951991,
+    "generated_at": 1765933169.9547484,
     "mode": "memory",
     "refresh_interval": 2000
   }
