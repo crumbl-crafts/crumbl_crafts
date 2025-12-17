@@ -335,11 +335,29 @@
   "news": [
     {
       "type": "trend",
+      "title": "Bloxburg Elf Hunt Day 9 #christmas #roblox #bloxburg #shorts",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766010182.0,
+      "url": "https://www.youtube.com/watch?v=H8P2XzWrtYk",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "ELF #9 FOR BLOXBURG&#39;S ELF HUNT! #shorts #roblox #bloxburgupdate #bloxburg #bloxburgelfhunt",
       "description": "...",
       "source": "YouTube",
       "timestamp": 1766009356.0,
       "url": "https://www.youtube.com/watch?v=jfgGFJnTE_w",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "why\u2019s it so hard \ud83d\ude29 #roblox #bloxburg #relateable #fyp",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766009112.0,
+      "url": "https://www.youtube.com/watch?v=PONdtfjUjkg",
       "icon": "fa-youtube"
     },
     {
@@ -358,24 +376,6 @@
       "source": "YouTube",
       "timestamp": 1766007135.0,
       "url": "https://www.youtube.com/watch?v=o1g62kdXydo",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "\ud83d\udd34RENOVATING MY BEDROOM IN MY BLOXBURG MANSION!",
-      "description": "Description: \u2661\ufe0e. \u25dd \u2b50\ufe0fUSE STARCODE PEACH when buying robux or premium!\u2b50\ufe0f \ud83c\udf99\ufe0fBe sure to SUBSCRIBE   to ...",
-      "source": "YouTube",
-      "timestamp": 1766006586.0,
-      "url": "https://www.youtube.com/watch?v=fEhIHftc2ws",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "UBICACIO\u0301N DEL ELFO #9 de BLOXBURG!",
-      "description": "\u00danete a mi grupo de Roblox: https://www.roblox.com/groups/5045574/grupo-oficial-de-fessy#!/about S\u00edg...",
-      "source": "YouTube",
-      "timestamp": 1766006497.0,
-      "url": "https://www.youtube.com/watch?v=kxjMql5Qptk",
       "icon": "fa-youtube"
     },
     {
@@ -416,7 +416,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766011169.9543378,
+    "generated_at": 1766012369.9555957,
     "mode": "memory",
     "refresh_interval": 2000
   }
