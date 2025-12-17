@@ -353,15 +353,6 @@
   "news": [
     {
       "type": "trend",
-      "title": "Bloxburg Elf Hunt 2025 Day 8 - Clip Roblox Bloxburg Indonesia #BloxburgIndonesia #ElfHunt2025",
-      "description": "Bloxburg Elf Hunt 2025 Day 8 - Clip Roblox Bloxburg Indonesia #BloxburgIndonesia #ElfHunt2025 Music ...",
-      "source": "YouTube",
-      "timestamp": 1765946343.0,
-      "url": "https://www.youtube.com/watch?v=wvL817MRCT4",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
       "title": "DONT CLICK THE SOUND!!",
       "description": "Bloxburg Music How to build a sink in bloxburg Roblox #bloxburg #fyp\u30b7\u309aviral #foryou #roblox #robloxf...",
       "source": "YouTube",
@@ -394,6 +385,15 @@
       "source": "YouTube",
       "timestamp": 1765932123.0,
       "url": "https://www.youtube.com/watch?v=7awDl-SouhY",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "HOW TO FIND ELF #8 IN THE BLOXBURG ELF HUNT 2025! #bloxburgelfhunt #bloxburg #roblox",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1765931829.0,
+      "url": "https://www.youtube.com/watch?v=uJZcyNFnlQ8",
       "icon": "fa-youtube"
     },
     {
@@ -434,7 +434,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765957169.9589367,
+    "generated_at": 1765958369.9603393,
     "mode": "memory",
     "refresh_interval": 2000
   }
