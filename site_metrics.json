@@ -326,6 +326,24 @@
   "news": [
     {
       "type": "trend",
+      "title": "elf hunt day 8 location #roblox #bloxburg #roleplay #christmas #edit #funnymemes",
+      "description": "bloxburg elf hunt day 8 location....",
+      "source": "YouTube",
+      "timestamp": 1765995550.0,
+      "url": "https://www.youtube.com/watch?v=NIIozyPFPn8",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "20 Build Mode UPDATES Bloxburg Players Want!",
+      "description": "today we take a deep dive into roblox welcome to bloxburg building updates people want! follow me on...",
+      "source": "YouTube",
+      "timestamp": 1765990893.0,
+      "url": "https://www.youtube.com/watch?v=somYNANbNsI",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Part 4. ESCAPE PLAN \ud83d\udeaa #roblox #robloxshorts #robloxedit #bloxburg #robloxanimation #robloxbloxburg",
       "description": "...",
       "source": "YouTube",
@@ -349,24 +367,6 @@
       "source": "YouTube",
       "timestamp": 1765978000.0,
       "url": "https://www.youtube.com/watch?v=_y0yLBSgOR8",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "My plots #christmas #roblox #rblx #music #bloxburg #adoptme #robloxdressup #robloxmusic #cozynights",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765975809.0,
-      "url": "https://www.youtube.com/watch?v=wbrm46x27NQ",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "My lover was a snake part 2 #roblox #robloxedit #bloxburg #edit",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765970141.0,
-      "url": "https://www.youtube.com/watch?v=EHdzEEjaIkk",
       "icon": "fa-youtube"
     },
     {
@@ -407,7 +407,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765995569.9549532,
+    "generated_at": 1765996769.9575837,
     "mode": "memory",
     "refresh_interval": 2000
   }
