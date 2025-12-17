@@ -371,6 +371,15 @@
     },
     {
       "type": "trend",
+      "title": "Getting the Silver Trophy in Bloxburg! | #roblox #bloxburg",
+      "description": "Hello! My name is KingBuy31 (Miguel) and I make Roblox content, whether it's doors, bloxburg, you na...",
+      "source": "YouTube",
+      "timestamp": 1765932123.0,
+      "url": "https://www.youtube.com/watch?v=7awDl-SouhY",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "HOW TO FIND ELF #8 IN THE BLOXBURG ELF HUNT 2025! #bloxburgelfhunt #bloxburg #roblox",
       "description": "...",
       "source": "YouTube",
@@ -385,15 +394,6 @@
       "source": "YouTube",
       "timestamp": 1765929631.0,
       "url": "https://www.youtube.com/watch?v=HYlHFDVnYlE",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Where to find the 8th Bloxburg elf",
-      "description": "Roblox user: Cupcakekittywrld Display name: Itz_ThatGirlLayL4y Roblox group: Layysquadd! Make sure t...",
-      "source": "YouTube",
-      "timestamp": 1765925294.0,
-      "url": "https://www.youtube.com/watch?v=bax9ju-GT2U",
       "icon": "fa-youtube"
     },
     {
@@ -434,7 +434,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765946369.9546018,
+    "generated_at": 1765947569.9542086,
     "mode": "memory",
     "refresh_interval": 2000
   }
