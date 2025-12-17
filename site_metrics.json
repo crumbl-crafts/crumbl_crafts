@@ -344,6 +344,15 @@
     },
     {
       "type": "trend",
+      "title": "8TH ELF - BLOXBURG ELF HUNT #bloxburgelfhunt #bloxburg #shorts",
+      "description": "Hallo, ich bin DerNeueYoutuber. Ich habe zwar einen deutschen Namen aber ich mache viele englische V...",
+      "source": "YouTube",
+      "timestamp": 1765978000.0,
+      "url": "https://www.youtube.com/watch?v=_y0yLBSgOR8",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "My plots #christmas #roblox #rblx #music #bloxburg #adoptme #robloxdressup #robloxmusic #cozynights",
       "description": "...",
       "source": "YouTube",
@@ -358,15 +367,6 @@
       "source": "YouTube",
       "timestamp": 1765970141.0,
       "url": "https://www.youtube.com/watch?v=EHdzEEjaIkk",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Day 17 | The 24 Days of Christmas Village in Bloxburg. Brought to life by MCM creations. #bloxburg",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1765959056.0,
-      "url": "https://www.youtube.com/watch?v=c1h66YlfzxQ",
       "icon": "fa-youtube"
     },
     {
@@ -407,7 +407,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1765991969.95719,
+    "generated_at": 1765993169.95159,
     "mode": "memory",
     "refresh_interval": 2000
   }
