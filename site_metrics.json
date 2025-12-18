@@ -343,44 +343,53 @@
       "icon": "fa-youtube"
     },
     {
-      "type": "game_update",
-      "title": "New Winter Update Available!",
-      "description": "Explore new winter-themed furniture and decorations",
-      "source": "Bloxburg Official",
-      "timestamp": 1765563563.6636922,
-      "url": "https://twitter.com/BloxburgGame",
-      "icon": "fa-gamepad"
+      "type": "trend",
+      "title": "why\u2019s it so hard \ud83d\ude29 #roblox #bloxburg #relateable #fyp",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766009112.0,
+      "url": "https://www.youtube.com/watch?v=PONdtfjUjkg",
+      "icon": "fa-youtube"
     },
     {
       "type": "trend",
-      "title": "Modern Mansion Builds Trending",
-      "description": "Community showcasing stunning modern architecture",
+      "title": "Elfo 9  #roblox #robloxbloxburgspeedbuild #bloxburg #shorts #shortvideo  #bloxburgcontentcreator",
+      "description": "Dia 9 de la busqueda del elfo en Bloxburg!...",
       "source": "YouTube",
-      "timestamp": 1765559963.663694,
-      "url": "https://youtube.com/results?search_query=bloxburg+modern+mansion",
-      "icon": "fa-fire"
+      "timestamp": 1766007137.0,
+      "url": "https://www.youtube.com/watch?v=MDncFjCr2CE",
+      "icon": "fa-youtube"
     },
     {
-      "type": "tip",
-      "title": "Money Making Guide 2024",
-      "description": "Best jobs and strategies to earn cash quickly",
-      "source": "Community Guide",
-      "timestamp": 1765556363.6636944,
-      "url": "#",
-      "icon": "fa-lightbulb"
+      "type": "trend",
+      "title": "\ud83d\udd34RENOVATING MY BEDROOM IN MY BLOXBURG MANSION!",
+      "description": "Description: \u2661\ufe0e. \u25dd \u2b50\ufe0fUSE STARCODE PEACH when buying robux or premium!\u2b50\ufe0f \ud83c\udf99\ufe0fBe sure to SUBSCRIBE   to ...",
+      "source": "YouTube",
+      "timestamp": 1766006586.0,
+      "url": "https://www.youtube.com/watch?v=fEhIHftc2ws",
+      "icon": "fa-youtube"
     },
     {
-      "type": "community",
-      "title": "Weekly Build Contest",
-      "description": "Submit your best holiday-themed builds to win prizes!",
-      "source": "Crumbl Crafts",
-      "timestamp": 1765552763.6636949,
-      "url": "#",
-      "icon": "fa-trophy"
+      "type": "trend",
+      "title": "UBICACIO\u0301N DEL ELFO #9 de BLOXBURG!",
+      "description": "\u00danete a mi grupo de Roblox: https://www.roblox.com/groups/5045574/grupo-oficial-de-fessy#!/about S\u00edg...",
+      "source": "YouTube",
+      "timestamp": 1766006497.0,
+      "url": "https://www.youtube.com/watch?v=kxjMql5Qptk",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "The NINTH Bloxburg ELF Location! [2025]",
+      "description": "Here's the 9th Elf Twitter: https://twitter.com/BramPeee Instagram: https://www.instagram.com/brampe...",
+      "source": "YouTube",
+      "timestamp": 1766006024.0,
+      "url": "https://www.youtube.com/watch?v=c4Qu-5lPiOQ",
+      "icon": "fa-youtube"
     }
   ],
   "meta": {
-    "generated_at": 1766054369.9571974,
+    "generated_at": 1766055569.9621205,
     "mode": "memory",
     "refresh_interval": 2000
   }
