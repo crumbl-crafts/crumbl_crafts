@@ -248,24 +248,6 @@
       "server_id": 1301988304279048275,
       "url": "https://discord.com/users/1163821011377065995",
       "thread_id": null
-    },
-    {
-      "type": "member_leave",
-      "shop_name": "Server",
-      "message": "vvsxbri left the server",
-      "timestamp": 1765423766,
-      "server_id": 1301988304279048275,
-      "url": "https://discord.com/users/1442361827768930456",
-      "thread_id": null
-    },
-    {
-      "type": "member_join",
-      "shop_name": "Server",
-      "message": "vvsxbri joined the server",
-      "timestamp": 1765423416,
-      "server_id": 1301988304279048275,
-      "url": "https://discord.com/users/1442361827768930456",
-      "thread_id": null
     }
   ],
   "pipeline": [
@@ -317,20 +299,20 @@
   "news": [
     {
       "type": "trend",
+      "title": "Bloxburg Elf Hunt #9 Ninth Elf 2025",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766024110.0,
+      "url": "https://www.youtube.com/watch?v=nm-01tahPAY",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "aeroplane landing, cartoon video #bloxburg #cartoon #aeroplane #ytshorts",
       "description": "aeroplane landing, cartoon video #bloxburg #cartoon #aeroplane #ytshorts....",
       "source": "YouTube",
       "timestamp": 1766021415.0,
       "url": "https://www.youtube.com/watch?v=AJQ-oHoXa6I",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "HOW TO FIND ELF #9 IN THE BLOXBURG ELF HUNT 2025! #bloxburgelfhunt #bloxburg #roblox",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766019911.0,
-      "url": "https://www.youtube.com/watch?v=Byv3Z7_6XKw",
       "icon": "fa-youtube"
     },
     {
@@ -398,7 +380,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766027969.9579875,
+    "generated_at": 1766029169.9538593,
     "mode": "memory",
     "refresh_interval": 2000
   }
