@@ -299,6 +299,24 @@
   "news": [
     {
       "type": "trend",
+      "title": "IS BEATZ NIGHTCLUB RETURNING TO BLOXBURG? | BLOXBURG 2025  #roblox #bloxburg #bloxburgnewleaks #xmas",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766062079.0,
+      "url": "https://www.youtube.com/watch?v=_wmqMO0cv6E",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Roblox: 5 Tips to Survive Christmas Challenge!",
+      "description": "Get ready for the most epic Christmas Challenge in Roblox, where you'll need all the tips and tricks...",
+      "source": "YouTube",
+      "timestamp": 1766061001.0,
+      "url": "https://www.youtube.com/watch?v=1PF7v4SZv7c",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Speed Build of the Fortnite Map in BloxBurg!  #roblox   #bloxburgcontentcreator #gaming #bloxburg",
       "description": "...",
       "source": "YouTube",
@@ -322,24 +340,6 @@
       "source": "YouTube",
       "timestamp": 1766021415.0,
       "url": "https://www.youtube.com/watch?v=AJQ-oHoXa6I",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "HOW TO FIND ELF #9 IN THE BLOXBURG ELF HUNT 2025! #bloxburgelfhunt #bloxburg #roblox",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766019911.0,
-      "url": "https://www.youtube.com/watch?v=Byv3Z7_6XKw",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "\u2764\ufe0f #roblox #bloxburg",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766016004.0,
-      "url": "https://www.youtube.com/watch?v=2Jee9LjW_N0",
       "icon": "fa-youtube"
     },
     {
@@ -380,7 +380,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766061569.9633691,
+    "generated_at": 1766062769.9544349,
     "mode": "memory",
     "refresh_interval": 2000
   }
