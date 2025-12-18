@@ -281,6 +281,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "War in the Roblox Worlds #robloxrecommended #bloxburg #robloxedit",
+      "description": "HUNGRY SNAKE vs BIG WORM: WAR   Original video by @GameToonsOfficial....",
+      "source": "YouTube",
+      "timestamp": 1766088004.0,
+      "url": "https://www.youtube.com/watch?v=2y9SSs3iZ54",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "#memes #roblox #caminhoparaumavidamelhor #bloxburg #\u3147y\u3147",
       "description": "...",
       "source": "YouTube",
@@ -313,15 +322,6 @@
       "source": "YouTube",
       "timestamp": 1766072271.0,
       "url": "https://www.youtube.com/watch?v=ckgHEPLpl9k",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Real #real #fyp #viral  #trending #bloxburg",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766064636.0,
-      "url": "https://www.youtube.com/watch?v=Diytejtwggo",
       "icon": "fa-youtube"
     },
     {
@@ -362,7 +362,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766089169.9567475,
+    "generated_at": 1766090369.956197,
     "mode": "memory",
     "refresh_interval": 2000
   }
