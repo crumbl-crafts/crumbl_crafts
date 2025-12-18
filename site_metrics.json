@@ -281,6 +281,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "Bloxburg DECAL Tutorial \ud83d\udc68\u200d\ud83c\udfa8\ud83c\udfa8 #bloxburg #bloxburgdecals #bloxburgtutorial #bloxburgtown #roblox",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766096229.0,
+      "url": "https://www.youtube.com/watch?v=WruEVUXi4Ak",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Decimo Elfo Descubierto \ud83c\udf6a\u2728  #roblox  #teamchismetv #bloxburg #elf #navidad  #parati",
       "description": "...",
       "source": "YouTube",
@@ -313,15 +322,6 @@
       "source": "YouTube",
       "timestamp": 1766091606.0,
       "url": "https://www.youtube.com/watch?v=1kBIqTouOPY",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "War in the Roblox Worlds #robloxrecommended #bloxburg #robloxedit",
-      "description": "HUNGRY SNAKE vs BIG WORM: WAR   Original video by @GameToonsOfficial....",
-      "source": "YouTube",
-      "timestamp": 1766088004.0,
-      "url": "https://www.youtube.com/watch?v=2y9SSs3iZ54",
       "icon": "fa-youtube"
     },
     {
@@ -362,7 +362,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766096370.2565591,
+    "generated_at": 1766097569.9552798,
     "mode": "memory",
     "refresh_interval": 2000
   }
