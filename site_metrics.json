@@ -290,6 +290,15 @@
     },
     {
       "type": "trend",
+      "title": "The TENTH Bloxburg ELF Location! [2025]",
+      "description": "The tenth elf is here! We're nearing the end Twitter: https://twitter.com/BramPeee Instagram: ......",
+      "source": "YouTube",
+      "timestamp": 1766092409.0,
+      "url": "https://www.youtube.com/watch?v=njdviKvfqbU",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Bloxburg ELF 10 LOCATION | QUICK &amp; EASY TUTORIAL",
       "description": "bloxburg #roblox bloxburg elf hunt, bloxburg elf hunt 2025, bloxburg christmas update 2025, where is...",
       "source": "YouTube",
@@ -304,15 +313,6 @@
       "source": "YouTube",
       "timestamp": 1766091606.0,
       "url": "https://www.youtube.com/watch?v=1kBIqTouOPY",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "TRAPPING PLAYERS IN A BLOXBURG SLED TRAP",
-      "description": "bloxburg #roblox #robloxbloxburg How many people can I fit in my basement...watch to find out how su...",
-      "source": "YouTube",
-      "timestamp": 1766088014.0,
-      "url": "https://www.youtube.com/watch?v=8bNtcKnJmtc",
       "icon": "fa-youtube"
     },
     {
@@ -362,7 +362,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766093969.9638028,
+    "generated_at": 1766095169.9546099,
     "mode": "memory",
     "refresh_interval": 2000
   }
