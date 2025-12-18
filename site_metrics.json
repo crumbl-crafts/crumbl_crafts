@@ -290,6 +290,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "#memes #roblox #caminhoparaumavidamelhor #bloxburg #\u3147y\u3147",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766079079.0,
+      "url": "https://www.youtube.com/watch?v=iAyYWKxDwbk",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Pink christmas decal codes for berry ave &amp; bloxburg #bloxburg #shorts #roblox #berryavenueroleplay",
       "description": "...",
       "source": "YouTube",
@@ -368,19 +377,10 @@
       "timestamp": 1766019911.0,
       "url": "https://www.youtube.com/watch?v=Byv3Z7_6XKw",
       "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "\u2764\ufe0f #roblox #bloxburg",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766016004.0,
-      "url": "https://www.youtube.com/watch?v=2Jee9LjW_N0",
-      "icon": "fa-youtube"
     }
   ],
   "meta": {
-    "generated_at": 1766080170.2554867,
+    "generated_at": 1766080769.9605858,
     "mode": "memory",
     "refresh_interval": 2000
   }
