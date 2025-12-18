@@ -326,15 +326,6 @@
     },
     {
       "type": "trend",
-      "title": "POV: It\u2019s almost Christmas Guys! \ud83c\udf84\ud83d\ude31",
-      "description": "Roblox #RobloxChristmas #Christmas2025 #DressToImpress #Brookhaven #Bloxburg #Shorts #Gaming....",
-      "source": "YouTube",
-      "timestamp": 1766012469.0,
-      "url": "https://www.youtube.com/watch?v=pcP4Zt0eLCE",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
       "title": "ELF #9 FOR BLOXBURG&#39;S ELF HUNT! #shorts #roblox #bloxburgupdate #bloxburg #bloxburgelfhunt",
       "description": "...",
       "source": "YouTube",
@@ -349,6 +340,15 @@
       "source": "YouTube",
       "timestamp": 1766009112.0,
       "url": "https://www.youtube.com/watch?v=PONdtfjUjkg",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Elfo 9  #roblox #robloxbloxburgspeedbuild #bloxburg #shorts #shortvideo  #bloxburgcontentcreator",
+      "description": "Dia 9 de la busqueda del elfo en Bloxburg!...",
+      "source": "YouTube",
+      "timestamp": 1766007137.0,
+      "url": "https://www.youtube.com/watch?v=MDncFjCr2CE",
       "icon": "fa-youtube"
     },
     {
@@ -398,7 +398,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766020770.2664962,
+    "generated_at": 1766021969.9532256,
     "mode": "memory",
     "refresh_interval": 2000
   }
