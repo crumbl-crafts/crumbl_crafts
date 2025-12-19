@@ -236,6 +236,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "Winter arch! We locked in!! \ud83e\udd79\ud83e\udd0d #roblox #bloxburg #bloxburgrp",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766185204.0,
+      "url": "https://www.youtube.com/watch?v=36Lh_FKOYPQ",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "&quot;Something is Different&quot; #roblox #bloxburg #funny",
       "description": "\"Something is Different.\" I noticed the change because I had saved one of my snowmen from last year....",
       "source": "YouTube",
@@ -268,15 +277,6 @@
       "source": "YouTube",
       "timestamp": 1766180701.0,
       "url": "https://www.youtube.com/watch?v=-cvfLx1oqFQ",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Bloxburg Elf Hunt Day 11 #christmas #roblox #bloxburg #shorts",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766180154.0,
-      "url": "https://www.youtube.com/watch?v=OAIvZthE0L8",
       "icon": "fa-youtube"
     },
     {
@@ -317,7 +317,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766186369.956112,
+    "generated_at": 1766187569.9559653,
     "mode": "memory",
     "refresh_interval": 2000
   }
