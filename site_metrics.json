@@ -325,44 +325,53 @@
       "icon": "fa-youtube"
     },
     {
-      "type": "game_update",
-      "title": "New Winter Update Available!",
-      "description": "Explore new winter-themed furniture and decorations",
-      "source": "Bloxburg Official",
-      "timestamp": 1765563563.6636922,
-      "url": "https://twitter.com/BloxburgGame",
-      "icon": "fa-gamepad"
+      "type": "trend",
+      "title": "how to find the 10th elf in bloxburg! #bloxburg #elfhunt #elfhunt",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766097577.0,
+      "url": "https://www.youtube.com/watch?v=F1PALHrLKGM",
+      "icon": "fa-youtube"
     },
     {
       "type": "trend",
-      "title": "Modern Mansion Builds Trending",
-      "description": "Community showcasing stunning modern architecture",
+      "title": "Localiza\u00e7\u00e3o Elfo 10 do bloxburg \ud83c\udf85\ud83c\udf84 #bloxburg #bloxburgelfhunt #bloxburgchristmas #roblox",
+      "description": "...",
       "source": "YouTube",
-      "timestamp": 1765559963.663694,
-      "url": "https://youtube.com/results?search_query=bloxburg+modern+mansion",
-      "icon": "fa-fire"
+      "timestamp": 1766097513.0,
+      "url": "https://www.youtube.com/watch?v=6Xw0ui8LlfI",
+      "icon": "fa-youtube"
     },
     {
-      "type": "tip",
-      "title": "Money Making Guide 2024",
-      "description": "Best jobs and strategies to earn cash quickly",
-      "source": "Community Guide",
-      "timestamp": 1765556363.6636944,
-      "url": "#",
-      "icon": "fa-lightbulb"
+      "type": "trend",
+      "title": "elf hunt #10, IT TAKES FLASHLIGHT! #roblox #bloxburg #bloxburgelfhunt",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766096903.0,
+      "url": "https://www.youtube.com/watch?v=Mu2X5ha0ovw",
+      "icon": "fa-youtube"
     },
     {
-      "type": "community",
-      "title": "Weekly Build Contest",
-      "description": "Submit your best holiday-themed builds to win prizes!",
-      "source": "Crumbl Crafts",
-      "timestamp": 1765552763.6636949,
-      "url": "#",
-      "icon": "fa-trophy"
+      "type": "trend",
+      "title": "Abc for a rich baddie mom \ud83d\ude3c\ud83d\ude2d\ud83e\udef6\ud83c\udffb #roblox #bloxburg #roleplay",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766096427.0,
+      "url": "https://www.youtube.com/watch?v=P3GmP3jUvGc",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Bloxburg DECAL Tutorial \ud83d\udc68\u200d\ud83c\udfa8\ud83c\udfa8 #bloxburg #bloxburgdecals #bloxburgtutorial #bloxburgtown #roblox",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766096229.0,
+      "url": "https://www.youtube.com/watch?v=WruEVUXi4Ak",
+      "icon": "fa-youtube"
     }
   ],
   "meta": {
-    "generated_at": 1766129969.9564464,
+    "generated_at": 1766131169.9665182,
     "mode": "memory",
     "refresh_interval": 2000
   }
