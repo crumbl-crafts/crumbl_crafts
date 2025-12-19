@@ -236,6 +236,24 @@
   "news": [
     {
       "type": "trend",
+      "title": "&quot;Something is Different&quot; #roblox #bloxburg #funny",
+      "description": "\"Something is Different.\" I noticed the change because I had saved one of my snowmen from last year....",
+      "source": "YouTube",
+      "timestamp": 1766184504.0,
+      "url": "https://www.youtube.com/watch?v=2fdKA68XKSg",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Localiza\u00e7\u00e3o Elfo 11 do bloxburg \ud83c\udf85\ud83c\udf84 #bloxburg #bloxburgelfhunt #bloxburgchristmas #roblox",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766182813.0,
+      "url": "https://www.youtube.com/watch?v=keqIxV4wQ50",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Where to find the 11th Bloxburg elf\u2764\ufe0f",
       "description": "Roblox user: Cupcakekittywrld Display name: Itz_ThatGirlLayL4y Roblox group: Layysquadd! Make sure t...",
       "source": "YouTube",
@@ -254,29 +272,11 @@
     },
     {
       "type": "trend",
-      "title": "UBICACI\u00d3N 11vo ELFO EN BLOXBURG \ud83e\uddd1\ud83c\udffb\u200d\ud83c\udf84#roblox #bloxburg #fyp #strawqne #elfhuntbloxburg #shorts",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766180661.0,
-      "url": "https://www.youtube.com/watch?v=VWbW0xEx9C8",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
       "title": "Bloxburg Elf Hunt Day 11 #christmas #roblox #bloxburg #shorts",
       "description": "...",
       "source": "YouTube",
       "timestamp": 1766180154.0,
       "url": "https://www.youtube.com/watch?v=OAIvZthE0L8",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Day 11 Elf Location in Bloxburg \ud83c\udf81 #bloxburg #bloxburgupdate #roblox",
-      "description": "Thank you for watching. In this short, we're finding Santa's elves for the winter event \"Elf Hunt\" i...",
-      "source": "YouTube",
-      "timestamp": 1766179980.0,
-      "url": "https://www.youtube.com/watch?v=rG0vG-1FyFQ",
       "icon": "fa-youtube"
     },
     {
@@ -317,7 +317,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766183969.9573212,
+    "generated_at": 1766185169.9546812,
     "mode": "memory",
     "refresh_interval": 2000
   }
