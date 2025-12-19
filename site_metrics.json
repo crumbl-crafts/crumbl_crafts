@@ -281,6 +281,15 @@
     },
     {
       "type": "trend",
+      "title": "Breaking Roblox Bloxburg News \ud83d\ude2d \ud83d\udc80",
+      "description": "Script Roblox might be cooked because players were left shocked and unable to speak after the devast...",
+      "source": "YouTube",
+      "timestamp": 1766107802.0,
+      "url": "https://www.youtube.com/watch?v=1OmuvI5sKIg",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Bloxburg Elf Hunt #10 Tenth Elf 2025",
       "description": "...",
       "source": "YouTube",
@@ -295,15 +304,6 @@
       "source": "YouTube",
       "timestamp": 1766102419.0,
       "url": "https://www.youtube.com/watch?v=IpsUfy_twEU",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Dia18 #roblox #robloxbloxburgspeedbuild #bloxburg #bloxburgnewleaks #bloxburgcontentcreator #shorts",
-      "description": "Dia 18 calendario de invierno en Bloxburg!...",
-      "source": "YouTube",
-      "timestamp": 1766098961.0,
-      "url": "https://www.youtube.com/watch?v=-VdfjUWeThw",
       "icon": "fa-youtube"
     },
     {
@@ -344,7 +344,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766157569.959938,
+    "generated_at": 1766158769.9540002,
     "mode": "memory",
     "refresh_interval": 2000
   }
