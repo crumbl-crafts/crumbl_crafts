@@ -263,15 +263,6 @@
   "news": [
     {
       "type": "trend",
-      "title": "#bloxburg #roblox #bloxburgbuild #robloxbloxburg #robloxshorts #realrosa",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766139651.0,
-      "url": "https://www.youtube.com/watch?v=vm4zfNzKIX4",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
       "title": "FNAF Bloxburg tour! #fnaf #bloxburg #Roblox #shorts ",
       "description": "...",
       "source": "YouTube",
@@ -304,6 +295,15 @@
       "source": "YouTube",
       "timestamp": 1766098961.0,
       "url": "https://www.youtube.com/watch?v=-VdfjUWeThw",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Localiza\u00e7\u00e3o Elfo 10 do bloxburg \ud83c\udf85\ud83c\udf84 #bloxburg #bloxburgelfhunt #bloxburgchristmas #roblox",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766097513.0,
+      "url": "https://www.youtube.com/watch?v=6Xw0ui8LlfI",
       "icon": "fa-youtube"
     },
     {
@@ -344,7 +344,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766144970.2746634,
+    "generated_at": 1766145569.9565969,
     "mode": "memory",
     "refresh_interval": 2000
   }
