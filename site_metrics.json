@@ -281,11 +281,29 @@
   "news": [
     {
       "type": "trend",
+      "title": "FNAF Bloxburg tour! #fnaf #bloxburg #Roblox #shorts ",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766108208.0,
+      "url": "https://www.youtube.com/watch?v=SAKhdj5cj5w",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Bloxburg Elf Hunt #10 Tenth Elf 2025",
       "description": "...",
       "source": "YouTube",
       "timestamp": 1766107699.0,
       "url": "https://www.youtube.com/watch?v=WXdsoc6BTzk",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "10TH BLOXBURG ELF LOCATION! #roblox #bloxburg #elfhunt",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766102074.0,
+      "url": "https://www.youtube.com/watch?v=2jnWazOA9pA",
       "icon": "fa-youtube"
     },
     {
@@ -299,29 +317,11 @@
     },
     {
       "type": "trend",
-      "title": "how to find the 10th elf in bloxburg! #bloxburg #elfhunt #elfhunt",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766097577.0,
-      "url": "https://www.youtube.com/watch?v=F1PALHrLKGM",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
       "title": "Localiza\u00e7\u00e3o Elfo 10 do bloxburg \ud83c\udf85\ud83c\udf84 #bloxburg #bloxburgelfhunt #bloxburgchristmas #roblox",
       "description": "...",
       "source": "YouTube",
       "timestamp": 1766097513.0,
       "url": "https://www.youtube.com/watch?v=6Xw0ui8LlfI",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "elf hunt #10, IT TAKES FLASHLIGHT! #roblox #bloxburg #bloxburgelfhunt",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766096903.0,
-      "url": "https://www.youtube.com/watch?v=Mu2X5ha0ovw",
       "icon": "fa-youtube"
     },
     {
@@ -362,7 +362,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766110769.9584801,
+    "generated_at": 1766111969.9591012,
     "mode": "memory",
     "refresh_interval": 2000
   }
