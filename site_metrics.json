@@ -263,6 +263,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "elf hunt day 10 location #roblox #bloxburg #robloxedit #christmas #roleplay #edit #funnymemes",
+      "description": "bloxburg elf hunt day 10 location....",
+      "source": "YouTube",
+      "timestamp": 1766168601.0,
+      "url": "https://www.youtube.com/watch?v=MsT1NGKVKo4",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "the outside is abit.. #roblox #robloxbloxburgspeedbuild #bloxburg #fypp",
       "description": "...",
       "source": "YouTube",
@@ -295,15 +304,6 @@
       "source": "YouTube",
       "timestamp": 1766107802.0,
       "url": "https://www.youtube.com/watch?v=1OmuvI5sKIg",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Bloxburg Elf Hunt #10 Tenth Elf 2025",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766107699.0,
-      "url": "https://www.youtube.com/watch?v=WXdsoc6BTzk",
       "icon": "fa-youtube"
     },
     {
@@ -344,7 +344,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766169569.962171,
+    "generated_at": 1766170769.9578147,
     "mode": "memory",
     "refresh_interval": 2000
   }
