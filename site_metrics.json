@@ -281,6 +281,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "HOW TO FIND ELF #10 IN THE BLOXBURG ELF HUNT 2025! #bloxburgelfhunt #bloxburg #roblox",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766105465.0,
+      "url": "https://www.youtube.com/watch?v=hK9PF6k9L3I",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Dia18 #roblox #robloxbloxburgspeedbuild #bloxburg #bloxburgnewleaks #bloxburgcontentcreator #shorts",
       "description": "Dia 18 calendario de invierno en Bloxburg!...",
       "source": "YouTube",
@@ -313,15 +322,6 @@
       "source": "YouTube",
       "timestamp": 1766096903.0,
       "url": "https://www.youtube.com/watch?v=Mu2X5ha0ovw",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Bloxburg DECAL Tutorial \ud83d\udc68\u200d\ud83c\udfa8\ud83c\udfa8 #bloxburg #bloxburgdecals #bloxburgtutorial #bloxburgtown #roblox",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766096229.0,
-      "url": "https://www.youtube.com/watch?v=WruEVUXi4Ak",
       "icon": "fa-youtube"
     },
     {
@@ -362,7 +362,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766107170.234418,
+    "generated_at": 1766108369.953724,
     "mode": "memory",
     "refresh_interval": 2000
   }
