@@ -307,53 +307,44 @@
       "icon": "fa-youtube"
     },
     {
-      "type": "trend",
-      "title": "how to find the 10th elf in bloxburg! #bloxburg #elfhunt #elfhunt",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766097577.0,
-      "url": "https://www.youtube.com/watch?v=F1PALHrLKGM",
-      "icon": "fa-youtube"
+      "type": "game_update",
+      "title": "New Winter Update Available!",
+      "description": "Explore new winter-themed furniture and decorations",
+      "source": "Bloxburg Official",
+      "timestamp": 1765563563.6636922,
+      "url": "https://twitter.com/BloxburgGame",
+      "icon": "fa-gamepad"
     },
     {
       "type": "trend",
-      "title": "elf hunt #10, IT TAKES FLASHLIGHT! #roblox #bloxburg #bloxburgelfhunt",
-      "description": "...",
+      "title": "Modern Mansion Builds Trending",
+      "description": "Community showcasing stunning modern architecture",
       "source": "YouTube",
-      "timestamp": 1766096903.0,
-      "url": "https://www.youtube.com/watch?v=Mu2X5ha0ovw",
-      "icon": "fa-youtube"
+      "timestamp": 1765559963.663694,
+      "url": "https://youtube.com/results?search_query=bloxburg+modern+mansion",
+      "icon": "fa-fire"
     },
     {
-      "type": "trend",
-      "title": "Abc for a rich baddie mom \ud83d\ude3c\ud83d\ude2d\ud83e\udef6\ud83c\udffb #roblox #bloxburg #roleplay",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766096427.0,
-      "url": "https://www.youtube.com/watch?v=P3GmP3jUvGc",
-      "icon": "fa-youtube"
+      "type": "tip",
+      "title": "Money Making Guide 2024",
+      "description": "Best jobs and strategies to earn cash quickly",
+      "source": "Community Guide",
+      "timestamp": 1765556363.6636944,
+      "url": "#",
+      "icon": "fa-lightbulb"
     },
     {
-      "type": "trend",
-      "title": "Bloxburg DECAL Tutorial \ud83d\udc68\u200d\ud83c\udfa8\ud83c\udfa8 #bloxburg #bloxburgdecals #bloxburgtutorial #bloxburgtown #roblox",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766096229.0,
-      "url": "https://www.youtube.com/watch?v=WruEVUXi4Ak",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Ubicaci\u00f3n del ELFO 10 de Bloxburg \ud83c\udf84\u2603\ufe0f #shorts #roblox #bloxburg #robloxshorts",
-      "description": "Ubicaci\u00f3n del ELFO 10 de Bloxburg 2025  \u2603\ufe0f ------------------------------------------------- \u2b50 Mis r...",
-      "source": "YouTube",
-      "timestamp": 1766093930.0,
-      "url": "https://www.youtube.com/watch?v=cqdJe4zfHTA",
-      "icon": "fa-youtube"
+      "type": "community",
+      "title": "Weekly Build Contest",
+      "description": "Submit your best holiday-themed builds to win prizes!",
+      "source": "Crumbl Crafts",
+      "timestamp": 1765552763.6636949,
+      "url": "#",
+      "icon": "fa-trophy"
     }
   ],
   "meta": {
-    "generated_at": 1766153969.964344,
+    "generated_at": 1766155169.960668,
     "mode": "memory",
     "refresh_interval": 2000
   }
