@@ -272,15 +272,6 @@
     },
     {
       "type": "trend",
-      "title": "The Rise and Fall of Bloxburg..",
-      "description": "The Rise and Fall of Bloxburg.. Original Video - https://www.youtube.com/watch?v=9TWXSi5tqxk Follow ...",
-      "source": "YouTube",
-      "timestamp": 1766107817.0,
-      "url": "https://www.youtube.com/watch?v=CKdG8uWwP7M",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
       "title": "Bloxburg Elf Hunt #10 Tenth Elf 2025",
       "description": "...",
       "source": "YouTube",
@@ -290,20 +281,29 @@
     },
     {
       "type": "trend",
-      "title": "WELCOME and come have a tour of my house in bloxburg",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766105482.0,
-      "url": "https://www.youtube.com/watch?v=3G2B-SvA4wo",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
       "title": "#roblox #bloxburg #robloxedit #adoptme #funny #usa #99nightintheforest #99\u043d\u0456\u0447\u0432\u043b\u0456\u0441\u0456 #reallifehacks",
       "description": "...",
       "source": "YouTube",
       "timestamp": 1766102419.0,
       "url": "https://www.youtube.com/watch?v=IpsUfy_twEU",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "10TH BLOXBURG ELF LOCATION! #roblox #bloxburg #elfhunt",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766102074.0,
+      "url": "https://www.youtube.com/watch?v=2jnWazOA9pA",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Dia18 #roblox #robloxbloxburgspeedbuild #bloxburg #bloxburgnewleaks #bloxburgcontentcreator #shorts",
+      "description": "Dia 18 calendario de invierno en Bloxburg!...",
+      "source": "YouTube",
+      "timestamp": 1766098961.0,
+      "url": "https://www.youtube.com/watch?v=-VdfjUWeThw",
       "icon": "fa-youtube"
     },
     {
@@ -344,7 +344,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766134170.3575752,
+    "generated_at": 1766134769.955564,
     "mode": "memory",
     "refresh_interval": 2000
   }
