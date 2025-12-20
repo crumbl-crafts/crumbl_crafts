@@ -191,6 +191,33 @@
   "news": [
     {
       "type": "trend",
+      "title": "day 20!! free robux!!! #roblox #bloxburg #bloxburgadventcalendar #robloxfyp #fyp",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766251540.0,
+      "url": "https://www.youtube.com/watch?v=gEYlFWqjzwc",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Should i post more bloxburg shorts #youtubeshorts #roblox #bloxburg #gaming",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766250466.0,
+      "url": "https://www.youtube.com/watch?v=lURyJ7idmEY",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "BLOXBURG: Winter Modern House Speedbuild (interior + full tour) Roblox House Build",
+      "description": "Hello builders! In this video i am building a BLOXBURG: Winter Modern House Speedbuild (interior + f...",
+      "source": "YouTube",
+      "timestamp": 1766250072.0,
+      "url": "https://www.youtube.com/watch?v=rnMhiamojq8",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Family Goes CHRISTMAS SHOPPING! *SECRET SANTA GONE WRONG* \ud83d\uded2 Bloxburg Roleplay",
       "description": "today's Bloxburg roleplay our family's goes CHRISTMAS SHOPPING! we head out to Target so the kids ca...",
       "source": "YouTube",
@@ -205,33 +232,6 @@
       "source": "YouTube",
       "timestamp": 1766246348.0,
       "url": "https://www.youtube.com/watch?v=sX-UA-jhTOo",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "ps method btw #roblox #robloxbloxburgspeedbuild #minecraft #bloxburg #edit #robloxedit",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766242303.0,
-      "url": "https://www.youtube.com/watch?v=aFynGjjsigU",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Join #roblox #lifeisbutadream #automobile #whowillbemylifepartnerta #robloxedit #bloxburg",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766241856.0,
-      "url": "https://www.youtube.com/watch?v=9YAhlguH5WQ",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Our new morning routine in our new house! (Bloxburg roleplay with voice) Ep. 2",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766238566.0,
-      "url": "https://www.youtube.com/watch?v=Zdii-Nr9oVE",
       "icon": "fa-youtube"
     },
     {
@@ -272,7 +272,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766252970.270266,
+    "generated_at": 1766253569.9531689,
     "mode": "memory",
     "refresh_interval": 2000
   }
