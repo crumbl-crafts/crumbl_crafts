@@ -236,15 +236,6 @@
   "news": [
     {
       "type": "trend",
-      "title": "Bloxburg Elf Hunt 2025 Day 11 - Clip Roblox Bloxburg Indonesia #BloxburgIndonesia #ElfHunt2025",
-      "description": "Bloxburg Elf Hunt 2025 Day 11 - Clip Roblox Bloxburg Indonesia #BloxburgIndonesia #ElfHunt2025 Music...",
-      "source": "YouTube",
-      "timestamp": 1766204555.0,
-      "url": "https://www.youtube.com/watch?v=UmFqvS9tWvs",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
       "title": "#roblox #robloxedit #bloxburg #games #funny #trend",
       "description": "Copyright Disclaimer: Copyright Disclaimer under Section 107 of the Copyright Act 1976, allowance is...",
       "source": "YouTube",
@@ -281,52 +272,52 @@
     },
     {
       "type": "trend",
-      "title": "Cartoon Network Theme Songs (Holiday Remix): My Own Music Visualizer",
-      "description": "It's time to celebrate the holly jolly holiday spirit with an amazing music visualizer with 13 holid...",
+      "title": "moving into my DREAM NYC SoHo apartment at 19 | Bloxburg roleplay | w/voices",
+      "description": "\ufe0eHey Guys! WE ARE MOVING AGAIN! This time with a roommate! SoHo NYC HERE WE COME! What do you think?...",
       "source": "YouTube",
-      "timestamp": 1766187006.0,
-      "url": "https://www.youtube.com/watch?v=64Y-fC_NLOk",
+      "timestamp": 1766187754.0,
+      "url": "https://www.youtube.com/watch?v=4fwbOmxwvbE",
       "icon": "fa-youtube"
     },
     {
-      "type": "trend",
-      "title": "Where to find the 11th &amp; 12th Bloxburg elf in the elf hunt 2025",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766186638.0,
-      "url": "https://www.youtube.com/watch?v=yVKnl26GMvE",
-      "icon": "fa-youtube"
+      "type": "game_update",
+      "title": "New Winter Update Available!",
+      "description": "Explore new winter-themed furniture and decorations",
+      "source": "Bloxburg Official",
+      "timestamp": 1765563563.6636922,
+      "url": "https://twitter.com/BloxburgGame",
+      "icon": "fa-gamepad"
     },
     {
       "type": "trend",
-      "title": "Winter arch! We locked in!! \ud83e\udd79\ud83e\udd0d #roblox #bloxburg #bloxburgrp",
-      "description": "...",
+      "title": "Modern Mansion Builds Trending",
+      "description": "Community showcasing stunning modern architecture",
       "source": "YouTube",
-      "timestamp": 1766185204.0,
-      "url": "https://www.youtube.com/watch?v=36Lh_FKOYPQ",
-      "icon": "fa-youtube"
+      "timestamp": 1765559963.663694,
+      "url": "https://youtube.com/results?search_query=bloxburg+modern+mansion",
+      "icon": "fa-fire"
     },
     {
-      "type": "trend",
-      "title": "&quot;Something is Different&quot; #roblox #bloxburg #funny",
-      "description": "\"Something is Different.\" I noticed the change because I had saved one of my snowmen from last year....",
-      "source": "YouTube",
-      "timestamp": 1766184504.0,
-      "url": "https://www.youtube.com/watch?v=2fdKA68XKSg",
-      "icon": "fa-youtube"
+      "type": "tip",
+      "title": "Money Making Guide 2024",
+      "description": "Best jobs and strategies to earn cash quickly",
+      "source": "Community Guide",
+      "timestamp": 1765556363.6636944,
+      "url": "#",
+      "icon": "fa-lightbulb"
     },
     {
-      "type": "trend",
-      "title": "ELF #11 FOR BLOXBURG&#39;S ELF HUNT! #shorts #roblox #bloxburgupdate #bloxburg #bloxburgelfhunt",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766181017.0,
-      "url": "https://www.youtube.com/watch?v=SQ9RPhUm1LM",
-      "icon": "fa-youtube"
+      "type": "community",
+      "title": "Weekly Build Contest",
+      "description": "Submit your best holiday-themed builds to win prizes!",
+      "source": "Crumbl Crafts",
+      "timestamp": 1765552763.6636949,
+      "url": "#",
+      "icon": "fa-trophy"
     }
   ],
   "meta": {
-    "generated_at": 1766207969.9563577,
+    "generated_at": 1766209169.9554677,
     "mode": "memory",
     "refresh_interval": 2000
   }
