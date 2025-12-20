@@ -176,15 +176,6 @@
       "thread_id": null,
       "server_id": 1301988304279048275,
       "url": "https://discord.com/users/827920005421203499"
-    },
-    {
-      "type": "member_join",
-      "shop_name": "Server",
-      "message": "brucepaul7 joined the server",
-      "timestamp": 1765612352,
-      "thread_id": null,
-      "server_id": 1301988304279048275,
-      "url": "https://discord.com/users/1322019163597701261"
     }
   ],
   "pipeline": [
@@ -317,7 +308,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766216369.9581494,
+    "generated_at": 1766217569.956803,
     "mode": "memory",
     "refresh_interval": 2000
   }
