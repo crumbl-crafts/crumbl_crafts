@@ -182,6 +182,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "Where to find the 12th + 13th Bloxburg elf in the 2025 elf hunt FAST",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766267944.0,
+      "url": "https://www.youtube.com/watch?v=mC6qU9cDiAQ",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "ELF #12 FOR BLOXBURG&#39;S ELF HUNT! #shorts #roblox #bloxburgupdate #bloxburg #bloxburgelfhunt",
       "description": "...",
       "source": "YouTube",
@@ -214,15 +223,6 @@
       "source": "YouTube",
       "timestamp": 1766266419.0,
       "url": "https://www.youtube.com/watch?v=BdIfKGcxXwU",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Bloxburg Elf Hunt Day 12 |  #roblox #bloxburg#elfhunt #elfhuntbloxburg",
-      "description": "SUBSCRIBEEEEEEEEEEEEEE SO WE CAN REACH 400! BY THE END OF THIS YEAR!...",
-      "source": "YouTube",
-      "timestamp": 1766266173.0,
-      "url": "https://www.youtube.com/watch?v=mfGO755KkcY",
       "icon": "fa-youtube"
     },
     {
@@ -263,7 +263,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766270369.9524128,
+    "generated_at": 1766271569.9566114,
     "mode": "memory",
     "refresh_interval": 2000
   }
