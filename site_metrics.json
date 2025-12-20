@@ -182,6 +182,24 @@
   "news": [
     {
       "type": "trend",
+      "title": "ELF #12 FOR BLOXBURG&#39;S ELF HUNT! #shorts #roblox #bloxburgupdate #bloxburg #bloxburgelfhunt",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766267878.0,
+      "url": "https://www.youtube.com/watch?v=x8ZeJyoSoY8",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "like fr\u2026 #roblox #bloxburg #bloxburgrp #relateable #fyp",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766267459.0,
+      "url": "https://www.youtube.com/watch?v=5NtIqSPH9Ec",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Day 12 Elf Location in Bloxburg \ud83c\udf81 #bloxburg #bloxburgupdate #roblox",
       "description": "Thank you for watching. In this short, we're finding Santa's elves for the winter event \"Elf Hunt\" i...",
       "source": "YouTube",
@@ -191,38 +209,20 @@
     },
     {
       "type": "trend",
+      "title": "Twelfth Bloxburg Elf Location! #bloxburgelfhunt",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766266419.0,
+      "url": "https://www.youtube.com/watch?v=BdIfKGcxXwU",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Bloxburg Elf Hunt Day 12 |  #roblox #bloxburg#elfhunt #elfhuntbloxburg",
       "description": "SUBSCRIBEEEEEEEEEEEEEE SO WE CAN REACH 400! BY THE END OF THIS YEAR!...",
       "source": "YouTube",
       "timestamp": 1766266173.0,
       "url": "https://www.youtube.com/watch?v=mfGO755KkcY",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Day 12 elf location #shorts #roblox #bloxburg #elf #christmas ",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766266027.0,
-      "url": "https://www.youtube.com/watch?v=9YTSC-rupN8",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "TWELFTH Elf Location in Bloxburg! \ud83c\udf6a #roblox #christmas #bloxburgelfhunt ",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766265727.0,
-      "url": "https://www.youtube.com/watch?v=KgNsarJz0OA",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "\ufffc Let\u2019s clean a random grave #roblox #robloxedit #brookhavenrp #funny #bloxburg \ufffc",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766265695.0,
-      "url": "https://www.youtube.com/watch?v=WQR8PFxL-k4",
       "icon": "fa-youtube"
     },
     {
@@ -263,7 +263,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766269170.2393405,
+    "generated_at": 1766270369.9524128,
     "mode": "memory",
     "refresh_interval": 2000
   }
