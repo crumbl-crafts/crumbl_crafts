@@ -254,6 +254,15 @@
     },
     {
       "type": "trend",
+      "title": "D\u00eda 20 del Calendario de Adviento de Bloxburg \ud83d\uddd3\ufe0f\ud83c\udf84 #shorts #bloxburg #roblox #christmas",
+      "description": "D\u00eda 20 del Calendario de Adviento de Bloxburg ------------------------------------------------- \u2b50 Mi...",
+      "source": "YouTube",
+      "timestamp": 1766193336.0,
+      "url": "https://www.youtube.com/watch?v=IAqkACrj-D4",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "11TH BLOXBURG ELF LOCATION! #roblox #bloxburg #elfhunt",
       "description": "...",
       "source": "YouTube",
@@ -268,15 +277,6 @@
       "source": "YouTube",
       "timestamp": 1766187006.0,
       "url": "https://www.youtube.com/watch?v=64Y-fC_NLOk",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Where to find the 11th &amp; 12th Bloxburg elf in the elf hunt 2025",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766186638.0,
-      "url": "https://www.youtube.com/watch?v=yVKnl26GMvE",
       "icon": "fa-youtube"
     },
     {
@@ -317,7 +317,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766201969.9547138,
+    "generated_at": 1766203169.9598713,
     "mode": "memory",
     "refresh_interval": 2000
   }
