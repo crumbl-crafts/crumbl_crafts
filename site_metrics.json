@@ -236,6 +236,24 @@
   "news": [
     {
       "type": "trend",
+      "title": "D\u00eda 20 del Calendario de Adviento de Bloxburg \ud83d\uddd3\ufe0f\ud83c\udf84 #shorts #bloxburg #roblox #christmas",
+      "description": "D\u00eda 20 del Calendario de Adviento de Bloxburg ------------------------------------------------- \u2b50 Mi...",
+      "source": "YouTube",
+      "timestamp": 1766193336.0,
+      "url": "https://www.youtube.com/watch?v=IAqkACrj-D4",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "11TH BLOXBURG ELF LOCATION! #roblox #bloxburg #elfhunt",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766193037.0,
+      "url": "https://www.youtube.com/watch?v=DqvDDA83Qcs",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Cartoon Network Theme Songs (Holiday Remix): My Own Music Visualizer",
       "description": "It's time to celebrate the holly jolly holiday spirit with an amazing music visualizer with 13 holid...",
       "source": "YouTube",
@@ -259,24 +277,6 @@
       "source": "YouTube",
       "timestamp": 1766184504.0,
       "url": "https://www.youtube.com/watch?v=2fdKA68XKSg",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Localiza\u00e7\u00e3o Elfo 11 do bloxburg \ud83c\udf85\ud83c\udf84 #bloxburg #bloxburgelfhunt #bloxburgchristmas #roblox",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766182813.0,
-      "url": "https://www.youtube.com/watch?v=keqIxV4wQ50",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "FINALLY I PREDICTED A BLOXBURG ELF HUNT SPOT... AND WATCHING NEW UPDATE WINTER FILMS",
-      "description": "today we find that 11th bloxburg elf from the hunt.. and it's exactly in the spot where I was standi...",
-      "source": "YouTube",
-      "timestamp": 1766181409.0,
-      "url": "https://www.youtube.com/watch?v=58l4OdrjCK8",
       "icon": "fa-youtube"
     },
     {
@@ -317,7 +317,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766194769.955999,
+    "generated_at": 1766195969.9599233,
     "mode": "memory",
     "refresh_interval": 2000
   }
