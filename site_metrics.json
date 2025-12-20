@@ -140,33 +140,6 @@
       "thread_id": null,
       "server_id": 1301988304279048275,
       "url": "https://discord.com/users/930153575475216424"
-    },
-    {
-      "type": "member_leave",
-      "shop_name": "Server",
-      "message": "bee.ts1213 left the server",
-      "timestamp": 1765640145,
-      "thread_id": null,
-      "server_id": 1301988304279048275,
-      "url": "https://discord.com/users/857429083846737940"
-    },
-    {
-      "type": "member_leave",
-      "shop_name": "Server",
-      "message": "jaxon_spirit left the server",
-      "timestamp": 1765640120,
-      "thread_id": null,
-      "server_id": 1301988304279048275,
-      "url": "https://discord.com/users/1231038568994963498"
-    },
-    {
-      "type": "member_join",
-      "shop_name": "Server",
-      "message": "bee.ts1213 joined the server",
-      "timestamp": 1765639980,
-      "thread_id": null,
-      "server_id": 1301988304279048275,
-      "url": "https://discord.com/users/857429083846737940"
     }
   ],
   "pipeline": [
@@ -218,6 +191,24 @@
   "news": [
     {
       "type": "trend",
+      "title": "ps method btw #roblox #robloxbloxburgspeedbuild #minecraft #bloxburg #edit #robloxedit",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766242303.0,
+      "url": "https://www.youtube.com/watch?v=aFynGjjsigU",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Our new morning routine in our new house! (Bloxburg roleplay with voice) Ep. 2",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766238566.0,
+      "url": "https://www.youtube.com/watch?v=Zdii-Nr9oVE",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "\u200b#Roblox #RobloxShorts #RobloxMemes #RobloxEdit #RobloxGaming #RobloxFunny #Bloxburg #AdoptMe #edit",
       "description": "...",
       "source": "YouTube",
@@ -241,24 +232,6 @@
       "source": "YouTube",
       "timestamp": 1766237326.0,
       "url": "https://www.youtube.com/watch?v=FIZ7v3UmEnc",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "#roblox \u062a\u0641\u0627\u0639\u0644\u0648 \u0648 \u0634\u0643\u0631\u0627 #robloxlua #robloxedit #\u0631\u0648\u0628\u0644\u0648\u0643\u0633 #adoptme #bloxburg #robloxmemes #brookhaven",
-      "description": "roblox #\u0631\u0648\u0628\u0644\u0648\u0643\u0633 #shorts #\u062a\u0641\u0627\u0639\u0644\u0648 #\u0644\u0627\u064a\u0643 #\u0627\u0634\u062a\u0631\u0627\u0643 #\u0634\u0627\u064a\u0642 #\u062c\u064a\u0634_\u0634\u0627\u064a\u0642 #\u0643\u0627\u0628\u0648\u062a\u0634\u0627 #\u0627\u0647\u0645\u064a\u0647#Roblox #RobloxGame #Ro...",
-      "source": "YouTube",
-      "timestamp": 1766228751.0,
-      "url": "https://www.youtube.com/watch?v=3YktIk94iKM",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "SCARY NAUGHTY ELF ON THE SHELF! #shorts #roblox #bloxburgroleplay #roleplay #bloxburg #steal #elf",
-      "description": "SCARY NAUGHTY ELF ON THE SHELF! Make sure to like and check out the full video in the link to find o...",
-      "source": "YouTube",
-      "timestamp": 1766224844.0,
-      "url": "https://www.youtube.com/watch?v=N8lh4DMfqZ8",
       "icon": "fa-youtube"
     },
     {
@@ -299,7 +272,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766243969.9538422,
+    "generated_at": 1766245169.9561756,
     "mode": "memory",
     "refresh_interval": 2000
   }
