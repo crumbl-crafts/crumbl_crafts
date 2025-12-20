@@ -236,6 +236,24 @@
   "news": [
     {
       "type": "trend",
+      "title": "#roblox #robloxedit #bloxburg #games #funny #trend",
+      "description": "Copyright Disclaimer: Copyright Disclaimer under Section 107 of the Copyright Act 1976, allowance is...",
+      "source": "YouTube",
+      "timestamp": 1766198833.0,
+      "url": "https://www.youtube.com/watch?v=JQkKmDrTtUY",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Shortsmas Elf Hunt Day 9!! #bloxburgelfhunt #roblox #bloxburg #christmas",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766196812.0,
+      "url": "https://www.youtube.com/watch?v=HUoQUbVQlbE",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Shortsmas Elf Hunt Day 5!! #bloxburgelfhunt #roblox #bloxburg #christmas",
       "description": "...",
       "source": "YouTube",
@@ -259,24 +277,6 @@
       "source": "YouTube",
       "timestamp": 1766193037.0,
       "url": "https://www.youtube.com/watch?v=DqvDDA83Qcs",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Cartoon Network Theme Songs (Holiday Remix): My Own Music Visualizer",
-      "description": "It's time to celebrate the holly jolly holiday spirit with an amazing music visualizer with 13 holid...",
-      "source": "YouTube",
-      "timestamp": 1766187006.0,
-      "url": "https://www.youtube.com/watch?v=64Y-fC_NLOk",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Winter arch! We locked in!! \ud83e\udd79\ud83e\udd0d #roblox #bloxburg #bloxburgrp",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766185204.0,
-      "url": "https://www.youtube.com/watch?v=36Lh_FKOYPQ",
       "icon": "fa-youtube"
     },
     {
@@ -317,7 +317,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766198970.2680306,
+    "generated_at": 1766199569.9549398,
     "mode": "memory",
     "refresh_interval": 2000
   }
