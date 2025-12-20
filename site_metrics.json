@@ -200,15 +200,6 @@
     },
     {
       "type": "trend",
-      "title": "BLOXBURG: Winter Modern House Speedbuild (interior + full tour) Roblox House Build",
-      "description": "Hello builders! In this video i am building a BLOXBURG: Winter Modern House Speedbuild (interior + f...",
-      "source": "YouTube",
-      "timestamp": 1766250072.0,
-      "url": "https://www.youtube.com/watch?v=rnMhiamojq8",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
       "title": "Family Goes CHRISTMAS SHOPPING! *SECRET SANTA GONE WRONG* \ud83d\uded2 Bloxburg Roleplay",
       "description": "today's Bloxburg roleplay our family's goes CHRISTMAS SHOPPING! we head out to Target so the kids ca...",
       "source": "YouTube",
@@ -223,6 +214,15 @@
       "source": "YouTube",
       "timestamp": 1766246348.0,
       "url": "https://www.youtube.com/watch?v=sX-UA-jhTOo",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "ps method btw #roblox #robloxbloxburgspeedbuild #minecraft #bloxburg #edit #robloxedit",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766242303.0,
+      "url": "https://www.youtube.com/watch?v=aFynGjjsigU",
       "icon": "fa-youtube"
     },
     {
@@ -263,7 +263,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766254769.9545064,
+    "generated_at": 1766255969.958662,
     "mode": "memory",
     "refresh_interval": 2000
   }
