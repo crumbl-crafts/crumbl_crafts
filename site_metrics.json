@@ -191,6 +191,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "Family Goes CHRISTMAS SHOPPING! *SECRET SANTA GONE WRONG* \ud83d\uded2 Bloxburg Roleplay",
+      "description": "today's Bloxburg roleplay our family's goes CHRISTMAS SHOPPING! we head out to Target so the kids ca...",
+      "source": "YouTube",
+      "timestamp": 1766246484.0,
+      "url": "https://www.youtube.com/watch?v=l7wDbFVmadE",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Join #roblox #lifeisbutadream #automobile #whowillbemylifepartnerta #robloxedit #bloxburg",
       "description": "...",
       "source": "YouTube",
@@ -223,15 +232,6 @@
       "source": "YouTube",
       "timestamp": 1766237424.0,
       "url": "https://www.youtube.com/watch?v=bgxdD8okWso",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "elf hunt day 11 location #roblox #roleplay #bloxburg #robloxedit #christmas #edit #funnymemes",
-      "description": "bloxbueg elf hunt day 11 location (im sick dont mind my voice)...",
-      "source": "YouTube",
-      "timestamp": 1766237326.0,
-      "url": "https://www.youtube.com/watch?v=FIZ7v3UmEnc",
       "icon": "fa-youtube"
     },
     {
@@ -272,7 +272,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766247570.2429717,
+    "generated_at": 1766248769.9557068,
     "mode": "memory",
     "refresh_interval": 2000
   }
