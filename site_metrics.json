@@ -254,6 +254,15 @@
     },
     {
       "type": "trend",
+      "title": "Where to find the 12th elf for the Bloxburg elf hunt!! #bloxburg #roblox #bloxburgelfhunt",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766294419.0,
+      "url": "https://www.youtube.com/watch?v=6KLBWEuQktc",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "STARTING BRAND NEW IN BLOXBURG (ROBLOX)",
       "description": "STARTING BRAND NEW IN ROBLOX BLOXBURG --------------------------------------------------------------...",
       "source": "YouTube",
@@ -262,62 +271,44 @@
       "icon": "fa-youtube"
     },
     {
-      "type": "trend",
-      "title": "Bloxburg Elf Hunt #12 Twelfth Elf 2025",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766273041.0,
-      "url": "https://www.youtube.com/watch?v=COhN3Pdj0bw",
-      "icon": "fa-youtube"
+      "type": "game_update",
+      "title": "New Winter Update Available!",
+      "description": "Explore new winter-themed furniture and decorations",
+      "source": "Bloxburg Official",
+      "timestamp": 1765563563.6636922,
+      "url": "https://twitter.com/BloxburgGame",
+      "icon": "fa-gamepad"
     },
     {
       "type": "trend",
-      "title": "THE NEW 12TH BLOXBURG ELF HUNT LOCATION..  GOLDEN TROPHY AND BLOCKBUX",
-      "description": "today we find the 12th ever bloxburg elf in the hunt! this one was not as quick for me like yesterda...",
+      "title": "Modern Mansion Builds Trending",
+      "description": "Community showcasing stunning modern architecture",
       "source": "YouTube",
-      "timestamp": 1766268533.0,
-      "url": "https://www.youtube.com/watch?v=_0ID4fPDA8g",
-      "icon": "fa-youtube"
+      "timestamp": 1765559963.663694,
+      "url": "https://youtube.com/results?search_query=bloxburg+modern+mansion",
+      "icon": "fa-fire"
     },
     {
-      "type": "trend",
-      "title": "Ubicaci\u00f3n del ELFO 12 de Bloxburg \ud83c\udf84\u2603\ufe0f #shorts #roblox #bloxburg #robloxshorts",
-      "description": "Ubicaci\u00f3n del ELFO 12 de Bloxburg 2025  \u2603\ufe0f ------------------------------------------------- \u2b50 Mis r...",
-      "source": "YouTube",
-      "timestamp": 1766267244.0,
-      "url": "https://www.youtube.com/watch?v=aAvKv-AiyGM",
-      "icon": "fa-youtube"
+      "type": "tip",
+      "title": "Money Making Guide 2024",
+      "description": "Best jobs and strategies to earn cash quickly",
+      "source": "Community Guide",
+      "timestamp": 1765556363.6636944,
+      "url": "#",
+      "icon": "fa-lightbulb"
     },
     {
-      "type": "trend",
-      "title": "Day 12 Elf Location in Bloxburg \ud83c\udf81 #bloxburg #bloxburgupdate #roblox",
-      "description": "Thank you for watching. In this short, we're finding Santa's elves for the winter event \"Elf Hunt\" i...",
-      "source": "YouTube",
-      "timestamp": 1766266912.0,
-      "url": "https://www.youtube.com/watch?v=Yfj9Sno_bs0",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "The TWELFTH Bloxburg ELF Location! [2025]",
-      "description": "The twelfth elf is here! Time to get the golden trophy Twitter: https://twitter.com/BramPeee Instagr...",
-      "source": "YouTube",
-      "timestamp": 1766265295.0,
-      "url": "https://www.youtube.com/watch?v=NgceuDNSBp8",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "DAISY\u2019S CHRISTMAS SLEEPOVER! *HAUNTED ELF ON THE SHELF?* Roblox Bloxburg Voiced RP Roleplay",
-      "description": "Description: \u2661\ufe0e. \u25dd \u2b50\ufe0fUSE STARCODE 'PEACH' WHEN BUYING ROBUX OR PREMIUM!\u2b50\ufe0f \u029a hey everyone!   Today it...",
-      "source": "YouTube",
-      "timestamp": 1766264406.0,
-      "url": "https://www.youtube.com/watch?v=GLXsvIF_F4o",
-      "icon": "fa-youtube"
+      "type": "community",
+      "title": "Weekly Build Contest",
+      "description": "Submit your best holiday-themed builds to win prizes!",
+      "source": "Crumbl Crafts",
+      "timestamp": 1765552763.6636949,
+      "url": "#",
+      "icon": "fa-trophy"
     }
   ],
   "meta": {
-    "generated_at": 1766335169.959808,
+    "generated_at": 1766336369.9557126,
     "mode": "memory",
     "refresh_interval": 2000
   }
