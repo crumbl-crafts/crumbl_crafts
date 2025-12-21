@@ -185,15 +185,6 @@
       "thread_id": null,
       "server_id": 1301988304279048275,
       "url": "https://discord.com/users/798725028383948820"
-    },
-    {
-      "type": "new_request_thread",
-      "shop_name": "Looking for a builder",
-      "message": "<@933779619595817000> posted a new request titled: Looking for a builder",
-      "timestamp": 1765749470,
-      "thread_id": 1449883108387324048,
-      "server_id": 1301988304279048275,
-      "url": "https://discord.com/channels/1301988304279048275/1449883108387324048"
     }
   ],
   "pipeline": [
@@ -245,47 +236,47 @@
   "news": [
     {
       "type": "trend",
+      "title": "Day 13 Elf Location in Bloxburg \ud83c\udf81 #bloxburg #bloxburgupdate #roblox",
+      "description": "Thank you for watching. In this short, we're finding Santa's elves for the winter event \"Elf Hunt\" i...",
+      "source": "YouTube",
+      "timestamp": 1766352811.0,
+      "url": "https://www.youtube.com/watch?v=C16HjNGOSf8",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Elf #13 2025 Elf hunt  #bloxburg  #elfhunt #2025 #welcometobloxburg",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766352651.0,
+      "url": "https://www.youtube.com/watch?v=vMOg8pP3sXU",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Bloxburg Elf Hunt Day 13 - 2025 #christmas #bloxburgelfhunt #bloxburg",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766352526.0,
+      "url": "https://www.youtube.com/watch?v=Sj_UO5O-C0g",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Elf Hunt Day 13 - 2025 #bloxburgelfhunt #bloxburg #elfhunt #roblox",
+      "description": "Elf Hunt Day 13 - 2025 #bloxburgelfhunt #bloxburg #elfhunt #roblox....",
+      "source": "YouTube",
+      "timestamp": 1766352262.0,
+      "url": "https://www.youtube.com/watch?v=UyXHYl34f1g",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "i found the BEST hotels in bloxburg #bloxburg #roblox #welcometobloxburg #robloxfunny #building",
       "description": "...",
       "source": "YouTube",
       "timestamp": 1766351109.0,
       "url": "https://www.youtube.com/watch?v=jeVRpAA1DZI",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Need at least 500k  #roblox #bloxburg",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766336486.0,
-      "url": "https://www.youtube.com/watch?v=qcT5IaBllqU",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Unlike you, I paid 25 robux for Bloxburg #bloxburg #nostalgia",
-      "description": "rblx #rblxedits #roblox #robloxedits #funny #trending #kangarooz....",
-      "source": "YouTube",
-      "timestamp": 1766336403.0,
-      "url": "https://www.youtube.com/watch?v=1lM-8MT-5Us",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "elf hunt day 12 location #roblox #bloxburg #robloxedit #funny #christmas",
-      "description": "bloxburg elf hunt day 12 location....",
-      "source": "YouTube",
-      "timestamp": 1766326330.0,
-      "url": "https://www.youtube.com/watch?v=MzR1plVdf78",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "What is the best job in Bloxburg? #bloxburg #tipsandtricks #roblox",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766300986.0,
-      "url": "https://www.youtube.com/watch?v=w68x53975z0",
       "icon": "fa-youtube"
     },
     {
@@ -326,7 +317,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766353169.9577808,
+    "generated_at": 1766354369.9552946,
     "mode": "memory",
     "refresh_interval": 2000
   }
