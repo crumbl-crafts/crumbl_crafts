@@ -191,6 +191,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "What is the best job in Bloxburg? #bloxburg #tipsandtricks #roblox",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766300986.0,
+      "url": "https://www.youtube.com/watch?v=w68x53975z0",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "STRARTING BRAND NEW IN BLOXBURG",
       "description": "STRARTING BRAND NEW IN ROBLOX BLOXBURG -------------------------------------------------------------...",
       "source": "YouTube",
@@ -223,15 +232,6 @@
       "source": "YouTube",
       "timestamp": 1766267944.0,
       "url": "https://www.youtube.com/watch?v=mC6qU9cDiAQ",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "ELF #12 FOR BLOXBURG&#39;S ELF HUNT! #shorts #roblox #bloxburgupdate #bloxburg #bloxburgelfhunt",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766267878.0,
-      "url": "https://www.youtube.com/watch?v=x8ZeJyoSoY8",
       "icon": "fa-youtube"
     },
     {
@@ -272,7 +272,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766301570.2554624,
+    "generated_at": 1766302769.9559438,
     "mode": "memory",
     "refresh_interval": 2000
   }
