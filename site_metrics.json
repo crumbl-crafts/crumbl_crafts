@@ -25,6 +25,15 @@
   ],
   "activityLog": [
     {
+      "type": "new_request_thread",
+      "shop_name": "Looking for builder",
+      "message": "<@933779619595817000> posted a new request titled: Looking for builder",
+      "timestamp": 1766356669,
+      "thread_id": 1452429886164697270,
+      "server_id": 1301988304279048275,
+      "url": "https://discord.com/channels/1301988304279048275/1452429886164697270"
+    },
+    {
       "type": "member_leave",
       "shop_name": "Server",
       "message": "lyric_538 left the server",
@@ -236,6 +245,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "Ubicaci\u00f3n del elfo 13 en Bloxburg #roblox #bloxburg",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766353886.0,
+      "url": "https://www.youtube.com/watch?v=mX6tC3Du8m8",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Day 13 Elf Location in Bloxburg \ud83c\udf81 #bloxburg #bloxburgupdate #roblox",
       "description": "Thank you for watching. In this short, we're finding Santa's elves for the winter event \"Elf Hunt\" i...",
       "source": "YouTube",
@@ -268,15 +286,6 @@
       "source": "YouTube",
       "timestamp": 1766352262.0,
       "url": "https://www.youtube.com/watch?v=UyXHYl34f1g",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "i found the BEST hotels in bloxburg #bloxburg #roblox #welcometobloxburg #robloxfunny #building",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766351109.0,
-      "url": "https://www.youtube.com/watch?v=jeVRpAA1DZI",
       "icon": "fa-youtube"
     },
     {
@@ -317,7 +326,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766355570.2743785,
+    "generated_at": 1766356669.8914762,
     "mode": "memory",
     "refresh_interval": 2000
   }
