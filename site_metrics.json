@@ -7,7 +7,7 @@
     "request_completion_ratio": 0.0
   },
   "server": {
-    "total_members": 340,
+    "total_members": 339,
     "joined_today": 0,
     "active_shops": 1,
     "avg_response_time": 3670.75
@@ -24,6 +24,15 @@
     }
   ],
   "activityLog": [
+    {
+      "type": "member_leave",
+      "shop_name": "Server",
+      "message": "dylan_.19 left the server",
+      "timestamp": 1766361520,
+      "thread_id": null,
+      "server_id": 1301988304279048275,
+      "url": "https://discord.com/users/1066181443614687334"
+    },
     {
       "type": "new_request_thread",
       "shop_name": "Looking for builder",
@@ -245,15 +254,6 @@
   "news": [
     {
       "type": "trend",
-      "title": "13TH BLOXBURG ELF LOCATION! #roblox #bloxburg #elfhunt",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766358005.0,
-      "url": "https://www.youtube.com/watch?v=_FTO5-S7lxQ",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
       "title": "Day 13 Elf Location in Bloxburg \ud83c\udf81 #bloxburg #bloxburgupdate #roblox",
       "description": "Thank you for watching. In this short, we're finding Santa's elves for the winter event \"Elf Hunt\" i...",
       "source": "YouTube",
@@ -281,11 +281,20 @@
     },
     {
       "type": "trend",
-      "title": "Elf Hunt Day 13 - 2025 #bloxburgelfhunt #bloxburg #elfhunt #roblox",
-      "description": "Elf Hunt Day 13 - 2025 #bloxburgelfhunt #bloxburg #elfhunt #roblox....",
+      "title": "The THIRTEENTH Bloxburg ELF Location! [2025]",
+      "description": "Finally, the elf is at the lighthouse \ud83c\udfd6\ufe0f Twitter: https://twitter.com/BramPeee Instagram: https://ww...",
       "source": "YouTube",
-      "timestamp": 1766352262.0,
-      "url": "https://www.youtube.com/watch?v=UyXHYl34f1g",
+      "timestamp": 1766351494.0,
+      "url": "https://www.youtube.com/watch?v=EU56bQ6AkbA",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "FAMILY VACATION TO LAPLAND! *STAYING IN A GINGERBREAD HOUSE* Roblox Bloxburg Voiced RP Roleplay",
+      "description": "Description: \u2661\ufe0e. \u25dd \u2b50\ufe0fUSE STARCODE 'PEACH' WHEN BUYING ROBUX OR PREMIUM!\u2b50\ufe0f \u029a hey everyone!   Today it...",
+      "source": "YouTube",
+      "timestamp": 1766350806.0,
+      "url": "https://www.youtube.com/watch?v=xKfEflTh_Z8",
       "icon": "fa-youtube"
     },
     {
@@ -326,7 +335,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766360970.300584,
+    "generated_at": 1766361523.0310643,
     "mode": "memory",
     "refresh_interval": 2000
   }
