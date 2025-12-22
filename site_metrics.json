@@ -326,6 +326,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "I BUILT A MEGA $1M CHRISTMAS TOWN IN BLOXBURG",
+      "description": "roblox #bloxburg #robloxbloxburg I built a Christmas town in Bloxburg with my subscribers...watch to...",
+      "source": "YouTube",
+      "timestamp": 1766433660.0,
+      "url": "https://www.youtube.com/watch?v=tExTcQHLGf8",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "bro please support me #Roblox #RobloxGaming #RobloxMemes #RobloxEdits #Bloxburg #AdoptMe #RobloxStud",
       "description": "...",
       "source": "YouTube",
@@ -358,15 +367,6 @@
       "source": "YouTube",
       "timestamp": 1766380573.0,
       "url": "https://www.youtube.com/watch?v=QABMPjhHeoo",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "What We Want For Christmas! \ud83d\ude31\ud83d\udc40\ud83c\udf85#bloxburg #bloxburgfamily #roblox #shorts",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766373094.0,
-      "url": "https://www.youtube.com/watch?v=Pm7mOg32H8E",
       "icon": "fa-youtube"
     },
     {
@@ -407,7 +407,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766434769.9545271,
+    "generated_at": 1766435969.9590082,
     "mode": "memory",
     "refresh_interval": 2000
   }
