@@ -7,7 +7,7 @@
     "request_completion_ratio": 0.0
   },
   "server": {
-    "total_members": 336,
+    "total_members": 335,
     "joined_today": 3,
     "active_shops": 1,
     "avg_response_time": 3670.75
@@ -24,6 +24,15 @@
     }
   ],
   "activityLog": [
+    {
+      "type": "member_leave",
+      "shop_name": "Server",
+      "message": "butter_fly_2 left the server",
+      "timestamp": 1766418033,
+      "thread_id": null,
+      "server_id": 1301988304279048275,
+      "url": "https://discord.com/users/1415548905466105896"
+    },
     {
       "type": "member_leave",
       "shop_name": "Server",
@@ -389,7 +398,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766417969.9590688,
+    "generated_at": 1766418036.3742342,
     "mode": "memory",
     "refresh_interval": 2000
   }
