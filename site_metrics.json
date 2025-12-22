@@ -335,6 +335,33 @@
   "news": [
     {
       "type": "trend",
+      "title": "Ubicaci\u00f3n del elfo 14 en Bloxburg #bloxburg #roblox",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766439363.0,
+      "url": "https://www.youtube.com/watch?v=BtjaEvy-UtQ",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Day 14 Elf Location in Bloxburg \ud83c\udf81 #bloxburg #bloxburgupdate #roblox",
+      "description": "Thank you for watching. In this short, we're finding Santa's elves for the winter event \"Elf Hunt\" i...",
+      "source": "YouTube",
+      "timestamp": 1766438915.0,
+      "url": "https://www.youtube.com/watch?v=hhg6JCyzL-s",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "HOW TO FIND ELF #14 IN THE BLOXBURG ELF HUNT 2025! #bloxburgelfhunt #bloxburg #roblox",
+      "description": "HOW TO FIND ELF #13 IN THE BLOXBURG ELF HUNT 2025! #bloxburgelfhunt #bloxburg #roblox....",
+      "source": "YouTube",
+      "timestamp": 1766438100.0,
+      "url": "https://www.youtube.com/watch?v=Zu2vxIguXKg",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "I BUILT A MEGA $1M CHRISTMAS TOWN IN BLOXBURG",
       "description": "roblox #bloxburg #robloxbloxburg I built a Christmas town in Bloxburg with my subscribers...watch to...",
       "source": "YouTube",
@@ -379,44 +406,26 @@
       "icon": "fa-youtube"
     },
     {
-      "type": "game_update",
-      "title": "New Winter Update Available!",
-      "description": "Explore new winter-themed furniture and decorations",
-      "source": "Bloxburg Official",
-      "timestamp": 1765563563.6636922,
-      "url": "https://twitter.com/BloxburgGame",
-      "icon": "fa-gamepad"
+      "type": "trend",
+      "title": "What We Want For Christmas! \ud83d\ude31\ud83d\udc40\ud83c\udf85#bloxburg #bloxburgfamily #roblox #shorts",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766373094.0,
+      "url": "https://www.youtube.com/watch?v=Pm7mOg32H8E",
+      "icon": "fa-youtube"
     },
     {
       "type": "trend",
-      "title": "Modern Mansion Builds Trending",
-      "description": "Community showcasing stunning modern architecture",
+      "title": "UBICACI\u00d3N 13\u00ba ELFO EN BLOXBURG \u26f8\ufe0f\ud83c\udf6b#bloxburg #roblox #fyp #robloxfyp #strawqne",
+      "description": "...",
       "source": "YouTube",
-      "timestamp": 1765559963.663694,
-      "url": "https://youtube.com/results?search_query=bloxburg+modern+mansion",
-      "icon": "fa-fire"
-    },
-    {
-      "type": "tip",
-      "title": "Money Making Guide 2024",
-      "description": "Best jobs and strategies to earn cash quickly",
-      "source": "Community Guide",
-      "timestamp": 1765556363.6636944,
-      "url": "#",
-      "icon": "fa-lightbulb"
-    },
-    {
-      "type": "community",
-      "title": "Weekly Build Contest",
-      "description": "Submit your best holiday-themed builds to win prizes!",
-      "source": "Crumbl Crafts",
-      "timestamp": 1765552763.6636949,
-      "url": "#",
-      "icon": "fa-trophy"
+      "timestamp": 1766366168.0,
+      "url": "https://www.youtube.com/watch?v=0GM4B81LTg8",
+      "icon": "fa-youtube"
     }
   ],
   "meta": {
-    "generated_at": 1766439569.959818,
+    "generated_at": 1766440769.9583454,
     "mode": "memory",
     "refresh_interval": 2000
   }
