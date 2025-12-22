@@ -370,53 +370,44 @@
       "icon": "fa-youtube"
     },
     {
-      "type": "trend",
-      "title": "UBICACI\u00d3N 13\u00ba ELFO EN BLOXBURG \u26f8\ufe0f\ud83c\udf6b#bloxburg #roblox #fyp #robloxfyp #strawqne",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766366168.0,
-      "url": "https://www.youtube.com/watch?v=0GM4B81LTg8",
-      "icon": "fa-youtube"
+      "type": "game_update",
+      "title": "New Winter Update Available!",
+      "description": "Explore new winter-themed furniture and decorations",
+      "source": "Bloxburg Official",
+      "timestamp": 1765563563.6636922,
+      "url": "https://twitter.com/BloxburgGame",
+      "icon": "fa-gamepad"
     },
     {
       "type": "trend",
-      "title": "Bloxburg Elf Hunt #13 Thirteenth Elf 2025",
-      "description": "...",
+      "title": "Modern Mansion Builds Trending",
+      "description": "Community showcasing stunning modern architecture",
       "source": "YouTube",
-      "timestamp": 1766364627.0,
-      "url": "https://www.youtube.com/watch?v=T2xx3rBzD7c",
-      "icon": "fa-youtube"
+      "timestamp": 1765559963.663694,
+      "url": "https://youtube.com/results?search_query=bloxburg+modern+mansion",
+      "icon": "fa-fire"
     },
     {
-      "type": "trend",
-      "title": "D\u00eda 22 del Calendario de Adviento de Bloxburg \ud83d\uddd3\ufe0f\ud83c\udf84 #shorts #bloxburg #roblox #christmas",
-      "description": "D\u00eda 22 del Calendario de Adviento de Bloxburg ------------------------------------------------- \u2b50 Mi...",
-      "source": "YouTube",
-      "timestamp": 1766362977.0,
-      "url": "https://www.youtube.com/watch?v=yajThGDrp84",
-      "icon": "fa-youtube"
+      "type": "tip",
+      "title": "Money Making Guide 2024",
+      "description": "Best jobs and strategies to earn cash quickly",
+      "source": "Community Guide",
+      "timestamp": 1765556363.6636944,
+      "url": "#",
+      "icon": "fa-lightbulb"
     },
     {
-      "type": "trend",
-      "title": "inflation in bloxburg: #bloxburg",
-      "description": "bloxburg is too expensive these days....",
-      "source": "YouTube",
-      "timestamp": 1766360583.0,
-      "url": "https://www.youtube.com/watch?v=guwNpT4AoyE",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "BUILDING A COZY BLOXBURG CHRISTMAS CAFE... WILD 13TH ELF LOCATION",
-      "description": "today we quickly find the 13th bloxburg elf in a spot I also thought it would spawn at! only 3 more ...",
-      "source": "YouTube",
-      "timestamp": 1766358037.0,
-      "url": "https://www.youtube.com/watch?v=OBZzN_cucfs",
-      "icon": "fa-youtube"
+      "type": "community",
+      "title": "Weekly Build Contest",
+      "description": "Submit your best holiday-themed builds to win prizes!",
+      "source": "Crumbl Crafts",
+      "timestamp": 1765552763.6636949,
+      "url": "#",
+      "icon": "fa-trophy"
     }
   ],
   "meta": {
-    "generated_at": 1766423969.959149,
+    "generated_at": 1766425169.954768,
     "mode": "memory",
     "refresh_interval": 2000
   }
