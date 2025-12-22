@@ -7,8 +7,8 @@
     "request_completion_ratio": 0.0
   },
   "server": {
-    "total_members": 335,
-    "joined_today": 1,
+    "total_members": 336,
+    "joined_today": 2,
     "active_shops": 1,
     "avg_response_time": 3670.75
   },
@@ -24,6 +24,15 @@
     }
   ],
   "activityLog": [
+    {
+      "type": "member_join",
+      "shop_name": "Server",
+      "message": "diaryof_amie joined the server",
+      "timestamp": 1766414361,
+      "thread_id": null,
+      "server_id": 1301988304279048275,
+      "url": "https://discord.com/users/1382136534987444224"
+    },
     {
       "type": "member_leave",
       "shop_name": "Server",
@@ -281,15 +290,6 @@
   "news": [
     {
       "type": "trend",
-      "title": "i love bloxburg #bloxburg #roblox #bloxburgcontentcreator",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766404854.0,
-      "url": "https://www.youtube.com/watch?v=R6luGBtz_U8",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
       "title": "Ahh but okay i guess @LusidGT @valvergt @GlitchTheGoat_Official",
       "description": "First post kinda L #trend #roblox #robloxmemes #humor #bloxburg #videogamememes #dahood #funnygames ...",
       "source": "YouTube",
@@ -322,6 +322,15 @@
       "source": "YouTube",
       "timestamp": 1766366168.0,
       "url": "https://www.youtube.com/watch?v=0GM4B81LTg8",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Bloxburg Elf Hunt #13 Thirteenth Elf 2025",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766364627.0,
+      "url": "https://www.youtube.com/watch?v=T2xx3rBzD7c",
       "icon": "fa-youtube"
     },
     {
@@ -362,7 +371,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766413169.962592,
+    "generated_at": 1766414364.2738936,
     "mode": "memory",
     "refresh_interval": 2000
   }
