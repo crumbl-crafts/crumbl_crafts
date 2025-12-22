@@ -254,6 +254,24 @@
   "news": [
     {
       "type": "trend",
+      "title": "inflation in bloxburg: #bloxburg",
+      "description": "bloxburg is too expensive these days....",
+      "source": "YouTube",
+      "timestamp": 1766360583.0,
+      "url": "https://www.youtube.com/watch?v=guwNpT4AoyE",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "13TH BLOXBURG ELF LOCATION! #roblox #bloxburg #elfhunt",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766358005.0,
+      "url": "https://www.youtube.com/watch?v=_FTO5-S7lxQ",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Day 13 Elf Location in Bloxburg \ud83c\udf81 #bloxburg #bloxburgupdate #roblox",
       "description": "Thank you for watching. In this short, we're finding Santa's elves for the winter event \"Elf Hunt\" i...",
       "source": "YouTube",
@@ -277,24 +295,6 @@
       "source": "YouTube",
       "timestamp": 1766352526.0,
       "url": "https://www.youtube.com/watch?v=Sj_UO5O-C0g",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "The THIRTEENTH Bloxburg ELF Location! [2025]",
-      "description": "Finally, the elf is at the lighthouse \ud83c\udfd6\ufe0f Twitter: https://twitter.com/BramPeee Instagram: https://ww...",
-      "source": "YouTube",
-      "timestamp": 1766351494.0,
-      "url": "https://www.youtube.com/watch?v=EU56bQ6AkbA",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "FAMILY VACATION TO LAPLAND! *STAYING IN A GINGERBREAD HOUSE* Roblox Bloxburg Voiced RP Roleplay",
-      "description": "Description: \u2661\ufe0e. \u25dd \u2b50\ufe0fUSE STARCODE 'PEACH' WHEN BUYING ROBUX OR PREMIUM!\u2b50\ufe0f \u029a hey everyone!   Today it...",
-      "source": "YouTube",
-      "timestamp": 1766350806.0,
-      "url": "https://www.youtube.com/watch?v=xKfEflTh_Z8",
       "icon": "fa-youtube"
     },
     {
@@ -335,7 +335,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766362769.9541192,
+    "generated_at": 1766363969.954767,
     "mode": "memory",
     "refresh_interval": 2000
   }
