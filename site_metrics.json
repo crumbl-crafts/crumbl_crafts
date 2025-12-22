@@ -245,6 +245,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "my game #roblox #gaming #bloxburg #robloxstudio #robloxedit",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766380573.0,
+      "url": "https://www.youtube.com/watch?v=QABMPjhHeoo",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "What We Want For Christmas! \ud83d\ude31\ud83d\udc40\ud83c\udf85#bloxburg #bloxburgfamily #roblox #shorts",
       "description": "...",
       "source": "YouTube",
@@ -277,15 +286,6 @@
       "source": "YouTube",
       "timestamp": 1766358005.0,
       "url": "https://www.youtube.com/watch?v=_FTO5-S7lxQ",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Day 13 Elf Location in Bloxburg \ud83c\udf81 #bloxburg #bloxburgupdate #roblox",
-      "description": "Thank you for watching. In this short, we're finding Santa's elves for the winter event \"Elf Hunt\" i...",
-      "source": "YouTube",
-      "timestamp": 1766352811.0,
-      "url": "https://www.youtube.com/watch?v=C16HjNGOSf8",
       "icon": "fa-youtube"
     },
     {
@@ -326,7 +326,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766382570.3902094,
+    "generated_at": 1766383169.9613404,
     "mode": "memory",
     "refresh_interval": 2000
   }
