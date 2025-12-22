@@ -194,15 +194,6 @@
       "thread_id": null,
       "server_id": 1301988304279048275,
       "url": "https://discord.com/users/1066181443614687334"
-    },
-    {
-      "type": "member_leave",
-      "shop_name": "Server",
-      "message": "glazzzzer_ left the server",
-      "timestamp": 1765776501,
-      "thread_id": null,
-      "server_id": 1301988304279048275,
-      "url": "https://discord.com/users/1012332835362852967"
     }
   ],
   "pipeline": [
@@ -335,7 +326,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766380769.9551394,
+    "generated_at": 1766381969.954519,
     "mode": "memory",
     "refresh_interval": 2000
   }
