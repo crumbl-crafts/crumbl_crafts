@@ -272,20 +272,20 @@
     },
     {
       "type": "trend",
+      "title": "Bloxburg Elf Hunt #13 Thirteenth Elf 2025",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766364627.0,
+      "url": "https://www.youtube.com/watch?v=T2xx3rBzD7c",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "inflation in bloxburg: #bloxburg",
       "description": "bloxburg is too expensive these days....",
       "source": "YouTube",
       "timestamp": 1766360583.0,
       "url": "https://www.youtube.com/watch?v=guwNpT4AoyE",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "13TH BLOXBURG ELF LOCATION! #roblox #bloxburg #elfhunt",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766358005.0,
-      "url": "https://www.youtube.com/watch?v=_FTO5-S7lxQ",
       "icon": "fa-youtube"
     },
     {
@@ -326,7 +326,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766385569.9547043,
+    "generated_at": 1766386769.955268,
     "mode": "memory",
     "refresh_interval": 2000
   }
