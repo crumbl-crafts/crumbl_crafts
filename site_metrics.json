@@ -344,6 +344,15 @@
     },
     {
       "type": "trend",
+      "title": "ROBLOX \ud83e\udd2f #roblox #lifeisbutadream #robloxedit #funny #bloxburg",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766473051.0,
+      "url": "https://www.youtube.com/watch?v=HaXlqkNWiq4",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "\ud83c\udf84 #fyp #contentcreator #roblox #robloxyoutuber #bloxburg #elfhunt #scavenger #subscribe",
       "description": "...",
       "source": "YouTube",
@@ -367,15 +376,6 @@
       "source": "YouTube",
       "timestamp": 1766439363.0,
       "url": "https://www.youtube.com/watch?v=BtjaEvy-UtQ",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Day 14 Elf Location in Bloxburg \ud83c\udf81 #bloxburg #bloxburgupdate #roblox",
-      "description": "Thank you for watching. In this short, we're finding Santa's elves for the winter event \"Elf Hunt\" i...",
-      "source": "YouTube",
-      "timestamp": 1766438915.0,
-      "url": "https://www.youtube.com/watch?v=hhg6JCyzL-s",
       "icon": "fa-youtube"
     },
     {
@@ -416,7 +416,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766488769.954132,
+    "generated_at": 1766489969.9536674,
     "mode": "memory",
     "refresh_interval": 2000
   }
