@@ -7,8 +7,8 @@
     "request_completion_ratio": 0.0
   },
   "server": {
-    "total_members": 331,
-    "joined_today": 0,
+    "total_members": 332,
+    "joined_today": 1,
     "active_shops": 1,
     "avg_response_time": 3670.75
   },
@@ -24,6 +24,15 @@
     }
   ],
   "activityLog": [
+    {
+      "type": "member_join",
+      "shop_name": "Server",
+      "message": "rattle_heads joined the server",
+      "timestamp": 1766518608,
+      "thread_id": null,
+      "server_id": 1301988304279048275,
+      "url": "https://discord.com/users/1370571225817940101"
+    },
     {
       "type": "member_leave",
       "shop_name": "Server",
@@ -416,7 +425,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766517570.2739062,
+    "generated_at": 1766518611.0757902,
     "mode": "memory",
     "refresh_interval": 2000
   }
