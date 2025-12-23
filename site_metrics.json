@@ -326,6 +326,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "WHY BLOXBURG #bloxburg #realtable #fyp #shorts",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766494077.0,
+      "url": "https://www.youtube.com/watch?v=wbYqt-Svsxk",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Berry Avenue 2 Cutesy Baby Outfit Codes || Bloxburg Brookhaven Berry Avenue #shorts",
       "description": "\ua540 thank you for watching this video! \u02da these outfits work for brookhaven, berry avenue, and bloxburg...",
       "source": "YouTube",
@@ -358,15 +367,6 @@
       "source": "YouTube",
       "timestamp": 1766444450.0,
       "url": "https://www.youtube.com/watch?v=TniITuxr8aE",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "\ud83c\udf84 #fyp #contentcreator #roblox #robloxyoutuber #bloxburg #elfhunt #scavenger #subscribe",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766442608.0,
-      "url": "https://www.youtube.com/watch?v=9JjcNAOV06c",
       "icon": "fa-youtube"
     },
     {
@@ -407,7 +407,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766493569.9531677,
+    "generated_at": 1766494769.954575,
     "mode": "memory",
     "refresh_interval": 2000
   }
