@@ -293,15 +293,6 @@
       "thread_id": null,
       "server_id": 1301988304279048275,
       "url": "https://discord.com/users/1199946954164150364"
-    },
-    {
-      "type": "member_leave",
-      "shop_name": "Server",
-      "message": "sombrsoph left the server",
-      "timestamp": 1765925693,
-      "thread_id": null,
-      "server_id": 1301988304279048275,
-      "url": "https://discord.com/users/794105640993030175"
     }
   ],
   "pipeline": [
@@ -353,20 +344,20 @@
   "news": [
     {
       "type": "trend",
+      "title": "Moving BACK to bloxburg Bloxburg family roleplay *VOICED*",
+      "description": "Music: https://www.epidemicsound.com/music/featured/...",
+      "source": "YouTube",
+      "timestamp": 1766529006.0,
+      "url": "https://www.youtube.com/watch?v=4zl-C2b491o",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Day 15 Elf Location in Bloxburg \ud83c\udf81 #bloxburg #bloxburgupdate #roblox",
       "description": "Thank you for watching. In this short, we're finding Santa's elves for the winter event \"Elf Hunt\" i...",
       "source": "YouTube",
       "timestamp": 1766525538.0,
       "url": "https://www.youtube.com/watch?v=X3Y94glSHBE",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Moving BACK to bloxburg Bloxburg family roleplay *VOICED*",
-      "description": "Music: https://www.epidemicsound.com/music/featured/...",
-      "source": "YouTube",
-      "timestamp": 1766525493.0,
-      "url": "https://www.youtube.com/watch?v=4zl-C2b491o",
       "icon": "fa-youtube"
     },
     {
@@ -434,7 +425,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766529569.9615748,
+    "generated_at": 1766530769.958482,
     "mode": "memory",
     "refresh_interval": 2000
   }
