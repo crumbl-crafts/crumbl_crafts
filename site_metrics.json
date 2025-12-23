@@ -335,6 +335,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "#roblox #edit #robloxedit #robloxedit #bloxburg #bloxburg #music #missyou",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766477947.0,
+      "url": "https://www.youtube.com/watch?v=1OQsDSPOd70",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "\ud83c\udf84 #fyp #contentcreator #roblox #robloxyoutuber #bloxburg #elfhunt #scavenger #subscribe",
       "description": "...",
       "source": "YouTube",
@@ -367,15 +376,6 @@
       "source": "YouTube",
       "timestamp": 1766438915.0,
       "url": "https://www.youtube.com/watch?v=hhg6JCyzL-s",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "HOW TO FIND ELF #14 IN THE BLOXBURG ELF HUNT 2025! #bloxburgelfhunt #bloxburg #roblox",
-      "description": "HOW TO FIND ELF #13 IN THE BLOXBURG ELF HUNT 2025! #bloxburgelfhunt #bloxburg #roblox....",
-      "source": "YouTube",
-      "timestamp": 1766438100.0,
-      "url": "https://www.youtube.com/watch?v=Zu2vxIguXKg",
       "icon": "fa-youtube"
     },
     {
@@ -416,7 +416,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766477969.958307,
+    "generated_at": 1766479169.957394,
     "mode": "memory",
     "refresh_interval": 2000
   }
