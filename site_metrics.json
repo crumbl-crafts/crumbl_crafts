@@ -379,44 +379,53 @@
       "icon": "fa-youtube"
     },
     {
-      "type": "game_update",
-      "title": "New Winter Update Available!",
-      "description": "Explore new winter-themed furniture and decorations",
-      "source": "Bloxburg Official",
-      "timestamp": 1765563563.6636922,
-      "url": "https://twitter.com/BloxburgGame",
-      "icon": "fa-gamepad"
+      "type": "trend",
+      "title": "I BUILT A $1M CHRISTMAS TOWN IN BLOXBURG",
+      "description": "roblox #bloxburg #robloxbloxburg I built a Christmas town in Bloxburg with my subscribers...watch to...",
+      "source": "YouTube",
+      "timestamp": 1766433660.0,
+      "url": "https://www.youtube.com/watch?v=tExTcQHLGf8",
+      "icon": "fa-youtube"
     },
     {
       "type": "trend",
-      "title": "Modern Mansion Builds Trending",
-      "description": "Community showcasing stunning modern architecture",
+      "title": "bro please support me #Roblox #RobloxGaming #RobloxMemes #RobloxEdits #Bloxburg #AdoptMe #RobloxStud",
+      "description": "...",
       "source": "YouTube",
-      "timestamp": 1765559963.663694,
-      "url": "https://youtube.com/results?search_query=bloxburg+modern+mansion",
-      "icon": "fa-fire"
+      "timestamp": 1766426059.0,
+      "url": "https://www.youtube.com/watch?v=_pExN351wds",
+      "icon": "fa-youtube"
     },
     {
-      "type": "tip",
-      "title": "Money Making Guide 2024",
-      "description": "Best jobs and strategies to earn cash quickly",
-      "source": "Community Guide",
-      "timestamp": 1765556363.6636944,
-      "url": "#",
-      "icon": "fa-lightbulb"
+      "type": "trend",
+      "title": "\ud83c\udf6a 2025 bloxburg elf location day 13 #bloxburg #roblox #christmas #welcometobloxburg",
+      "description": "2025 bloxburg elf location day 13 #bloxburg #roblox #christmas #welcometobloxburg \u273f ~\ua4b0Tags\ua4b1: #bloxbu...",
+      "source": "YouTube",
+      "timestamp": 1766415637.0,
+      "url": "https://www.youtube.com/watch?v=Ie-L5eOFky0",
+      "icon": "fa-youtube"
     },
     {
-      "type": "community",
-      "title": "Weekly Build Contest",
-      "description": "Submit your best holiday-themed builds to win prizes!",
-      "source": "Crumbl Crafts",
-      "timestamp": 1765552763.6636949,
-      "url": "#",
-      "icon": "fa-trophy"
+      "type": "trend",
+      "title": "i love bloxburg #bloxburg #roblox #bloxburgcontentcreator",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766404854.0,
+      "url": "https://www.youtube.com/watch?v=R6luGBtz_U8",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Ahh but okay i guess @LusidGT @valvergt @GlitchTheGoat_Official",
+      "description": "First post kinda L #trend #roblox #robloxmemes #humor #bloxburg #videogamememes #dahood #funnygames ...",
+      "source": "YouTube",
+      "timestamp": 1766382466.0,
+      "url": "https://www.youtube.com/watch?v=zUv5fjl5tDY",
+      "icon": "fa-youtube"
     }
   ],
   "meta": {
-    "generated_at": 1766474370.263432,
+    "generated_at": 1766475569.9589033,
     "mode": "memory",
     "refresh_interval": 2000
   }
