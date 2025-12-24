@@ -388,44 +388,53 @@
       "icon": "fa-youtube"
     },
     {
-      "type": "game_update",
-      "title": "New Winter Update Available!",
-      "description": "Explore new winter-themed furniture and decorations",
-      "source": "Bloxburg Official",
-      "timestamp": 1765563563.6636922,
-      "url": "https://twitter.com/BloxburgGame",
-      "icon": "fa-gamepad"
+      "type": "trend",
+      "title": "Elf Hunt Day 15 - 2025 #bloxburgelfhunt #bloxburg #elfhunt #roblox",
+      "description": "Elf Hunt Day 15 - 2025 #bloxburgelfhunt #bloxburg #elfhunt #roblox....",
+      "source": "YouTube",
+      "timestamp": 1766524834.0,
+      "url": "https://www.youtube.com/watch?v=CxayG83wmQY",
+      "icon": "fa-youtube"
     },
     {
       "type": "trend",
-      "title": "Modern Mansion Builds Trending",
-      "description": "Community showcasing stunning modern architecture",
+      "title": "The FIFTEENTH Bloxburg ELF Location! [2025]",
+      "description": "Probably my favorite elf so far Twitter: https://twitter.com/BramPeee Instagram: https://www.instagr...",
       "source": "YouTube",
-      "timestamp": 1765559963.663694,
-      "url": "https://youtube.com/results?search_query=bloxburg+modern+mansion",
-      "icon": "fa-fire"
+      "timestamp": 1766524289.0,
+      "url": "https://www.youtube.com/watch?v=NUItShBT0y4",
+      "icon": "fa-youtube"
     },
     {
-      "type": "tip",
-      "title": "Money Making Guide 2024",
-      "description": "Best jobs and strategies to earn cash quickly",
-      "source": "Community Guide",
-      "timestamp": 1765556363.6636944,
-      "url": "#",
-      "icon": "fa-lightbulb"
+      "type": "trend",
+      "title": "Welcome bloxburg movie  timemachine   in 2027",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766518500.0,
+      "url": "https://www.youtube.com/watch?v=k7IurZ-eXUE",
+      "icon": "fa-youtube"
     },
     {
-      "type": "community",
-      "title": "Weekly Build Contest",
-      "description": "Submit your best holiday-themed builds to win prizes!",
-      "source": "Crumbl Crafts",
-      "timestamp": 1765552763.6636949,
-      "url": "#",
-      "icon": "fa-trophy"
+      "type": "trend",
+      "title": "I Found the BEST Bloxburg Builder",
+      "description": "today i build a castle with the BEST BUILDER EVER aka @BL-CK join the discord - https://discord.gg/R...",
+      "source": "YouTube",
+      "timestamp": 1766512825.0,
+      "url": "https://www.youtube.com/watch?v=CWbX8GXr1Hk",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Decorating for Christmas\u2026 While Being Broke\ud83c\udf84#christmas #relatable #bloxburg",
+      "description": "Commonly asked questions: 1. What do you use to record? - I use OBS or something my regular iPad. 2....",
+      "source": "YouTube",
+      "timestamp": 1766505631.0,
+      "url": "https://www.youtube.com/watch?v=CuaMmugch2I",
+      "icon": "fa-youtube"
     }
   ],
   "meta": {
-    "generated_at": 1766561969.953578,
+    "generated_at": 1766563169.9588392,
     "mode": "memory",
     "refresh_interval": 2000
   }
