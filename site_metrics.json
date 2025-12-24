@@ -347,15 +347,6 @@
       "thread_id": null,
       "server_id": 1301988304279048275,
       "url": "https://discord.com/users/1240908995208937487"
-    },
-    {
-      "type": "member_leave",
-      "shop_name": "Server",
-      "message": "bella6554 left the server",
-      "timestamp": 1766004602,
-      "thread_id": null,
-      "server_id": 1301988304279048275,
-      "url": "https://discord.com/users/1199946954164150364"
     }
   ],
   "pipeline": [
@@ -407,6 +398,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "PEACH FAMILY CHRISTMAS EVE SPECIAL! *CATCHING SANTA* Roblox Bloxburg Voiced RP Roleplay",
+      "description": "Description: \u2661\ufe0e. \u25dd \u2b50\ufe0fUSE STARCODE 'PEACH' WHEN BUYING ROBUX OR PREMIUM!\u2b50\ufe0f \u029a hey everyone!   Today it...",
+      "source": "YouTube",
+      "timestamp": 1766606406.0,
+      "url": "https://www.youtube.com/watch?v=fKkZLJUKLRc",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "OUR CHRISTMAS EVE FAMILY ROUTINE | Bloxburg Family Roleplay",
       "description": "bloxburg #roblox #robloxbloxburg Merry Christmas...enjoy my chaotic family routine on Christmas Eve....",
       "source": "YouTube",
@@ -439,15 +439,6 @@
       "source": "YouTube",
       "timestamp": 1766592751.0,
       "url": "https://www.youtube.com/watch?v=Fx5hl5Gkbjo",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Zapraszam na kolejny \u015bwi\u0105teczny odcinek",
-      "description": "subskrybujcie m\u00f3j kana\u0142 I lajkujcie....",
-      "source": "YouTube",
-      "timestamp": 1766591106.0,
-      "url": "https://www.youtube.com/watch?v=4ACwYcqiUXs",
       "icon": "fa-youtube"
     },
     {
@@ -488,7 +479,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766609370.2434533,
+    "generated_at": 1766609969.9531107,
     "mode": "memory",
     "refresh_interval": 2000
   }
