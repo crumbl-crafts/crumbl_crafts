@@ -344,15 +344,6 @@
   "news": [
     {
       "type": "trend",
-      "title": "Me 247 since I found out I could sled down my driveway #fyp\u30b7\u309aviral #bloxburg #bloxburgcontentcreator",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766578034.0,
-      "url": "https://www.youtube.com/watch?v=ZJKbKpxO_7A",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
       "title": "POV: Christmas Eve Night\ud83c\udf85\ud83c\udf84 #christmas #relatable #bloxburg",
       "description": "Commonly asked questions: 1. What do you use to record? - I use OBS or something my regular iPad. 2....",
       "source": "YouTube",
@@ -385,6 +376,15 @@
       "source": "YouTube",
       "timestamp": 1766552405.0,
       "url": "https://www.youtube.com/watch?v=TOG_MXzlnFc",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "100K HOUSE BUILD BATTLE\u2764\ufe0f #bloxburg #roblox #robloxbloxburgspeedbuild #robloxshorts #robloxmemes",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766542797.0,
+      "url": "https://www.youtube.com/watch?v=lymAqhmQ5gM",
       "icon": "fa-youtube"
     },
     {
@@ -425,7 +425,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766579969.9545112,
+    "generated_at": 1766581169.9579704,
     "mode": "memory",
     "refresh_interval": 2000
   }
