@@ -2753,26 +2753,39 @@
             transform: translateY(0);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         }
-        /* Compact header stats (small, efficient, reuses existing visual language) */
+        /* Compact header stats (very subtle / small) */
         .header-stats {
             display: flex;
-            gap: 8px;
+            gap: 6px;
             align-items: center;
+            opacity: 0.6; /* make stats less noticeable by default */
+            font-size: 0.75rem;
         }
         .header-stat {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            padding: 8px 10px;
-            border-radius: 10px;
-            background: rgba(255,255,255,0.03);
-            border: 2px solid rgba(255,255,255,0.06);
-            min-width: 96px;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.02);
-            transition: transform 160ms ease, box-shadow 160ms ease;
+            gap: 6px;
+            padding: 4px 8px;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.01);
+            border: 1px solid rgba(255,255,255,0.02);
+            min-width: 72px;
+            justify-content: center;
+            transition: transform 140ms ease, opacity 140ms ease;
+            color: var(--text-muted);
             font-weight: 700;
+            pointer-events: none; /* non-interactive by default, very subtle */
         }
-        .header-stat:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(0,0,0,0.6); }
+        .header-stat:hover { transform: none; box-shadow: none; }
+        .header-stat .label { font-size: 0.55rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; display: block; }
+        .header-stat .value { font-size: 0.8rem; font-weight: 800; color: var(--text-bright); display: block; }
+        .header-stat .icon { width: 18px; height: 18px; display: grid; place-items: center; font-size: 12px; color: var(--text-muted); }
+
+        /* Ensure podium / builder badges and hover decorations are not clipped by parents */
+        .podium-container, .builders-grid { overflow: visible !important; }
+        .podium-card, .builder-card { position: relative; overflow: visible !important; z-index: 2; }
+        .podium-card:hover, .builder-card:hover { z-index: 100 !important; }
+        .podium-card.rank-1::after, .podium-card.rank-1::before { z-index: 105 !important; }
         .header-stat .label { font-size: 0.65rem; color: var(--text-muted); font-weight: 700; }
         .header-stat .value { font-size: 0.95rem; color: var(--text-bright); font-weight: 900; }
     </style>
@@ -6328,19 +6341,36 @@
                     { key: 'total_completed', label: 'Completed', icon: 'fa-check-circle' }
                 ];
 
+                // Allow a small custom icon map via `window.HEADER_STAT_ICONS` (key -> fa-class)
+                const headerIcons = Object.assign({
+                    builder_count: 'fa-users',
+                    total_requests: 'fa-paper-plane',
+                    total_completed: 'fa-check-circle',
+                    total_views: 'fa-eye',
+                    unique_visitors: 'fa-user-check',
+                    page_views: 'fa-eye'
+                }, (window.HEADER_STAT_ICONS || {}));
+
+                // Auto-append light site-wide metrics (views/visitors/pages) when present
+                const autoSiteKeys = Object.keys(summary || {}).filter(k => !headerConfig.some(h => h.key === k) && /view|visitor|page|session|unique/i.test(k));
+                autoSiteKeys.forEach(k => {
+                    const label = k.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+                    const icon = headerIcons[k] || (/view/i.test(k) ? 'fa-eye' : (/visitor|unique/i.test(k) ? 'fa-user-check' : 'fa-chart-line'));
+                    headerConfig.push({ key: k, label, icon });
+                });
+
                 headerConfig.forEach(stat => {
                     const value = stat.format === 'duration' ? formatDuration(summary[stat.key]) : formatNumber(summary[stat.key] ?? 0);
                     let el = header.querySelector(`[data-stat="${stat.key}"]`);
+                    const iconClass = (window.HEADER_STAT_ICONS && window.HEADER_STAT_ICONS[stat.key]) || headerIcons[stat.key] || stat.icon || 'fa-eye';
                     if (!el) {
                         el = document.createElement('div');
                         el.className = 'header-stat';
                         el.setAttribute('data-stat', stat.key);
                         el.innerHTML = `
-                            <div style="display:flex; align-items:center; gap:8px;">
-                                <div style="width:28px; height:28px; border-radius:8px; display:grid; place-items:center; background: rgba(255,255,255,0.02); color: inherit; font-size:14px;">
-                                    <i class="fas ${stat.icon}"></i>
-                                </div>
-                                <div style="display:flex; flex-direction:column; min-width:0;">
+                            <div style="display:flex; align-items:center; gap:6px; min-width:0;">
+                                <div class="icon"><i class="fas ${iconClass}"></i></div>
+                                <div style="display:flex; flex-direction:column; min-width:0; line-height:1;">
                                     <span class="label">${stat.label}</span>
                                     <span class="value">${value}</span>
                                 </div>
@@ -6349,11 +6379,15 @@
                         header.appendChild(el);
                     } else {
                         const valEl = el.querySelector('.value');
+                        const iconEl = el.querySelector('.icon i');
                         if (valEl && valEl.textContent !== value) {
                             valEl.textContent = value;
                             valEl.classList.remove('count-up');
                             void valEl.offsetWidth;
                             valEl.classList.add('count-up');
+                        }
+                        if (iconEl && !iconEl.classList.contains(iconClass)) {
+                            iconEl.className = `fas ${iconClass}`;
                         }
                     }
                 });
