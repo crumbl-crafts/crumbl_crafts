@@ -425,20 +425,29 @@
   "news": [
     {
       "type": "trend",
+      "title": "WHERE IS ELF #2? Bloxburg Christmas Event #bloxburg #roblox",
+      "description": "Can we find them all? \ud83d\udd75\ufe0f\u200d\u2640\ufe0f Today I'm showing you how to find ELF #2 in the Bloxburg Elf Hunt! \u200d\u2640\ufe0f\u2728 ...",
+      "source": "YouTube",
+      "timestamp": 1766617165.0,
+      "url": "https://www.youtube.com/watch?v=r6_JuqtTKdc",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Localiza\u00e7\u00e3o Elfo 16 do bloxburg \ud83c\udf85\ud83c\udf84 #bloxburg #bloxburgelfhunt #bloxburgchristmas #roblox",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766615151.0,
+      "url": "https://www.youtube.com/watch?v=pNj-GTuljjI",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "SIXTEENTH Elf Location in Bloxburg! \ud83c\udf6a ",
       "description": "...",
       "source": "YouTube",
       "timestamp": 1766614049.0,
       "url": "https://www.youtube.com/watch?v=rmY6V6YMkpY",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "SAYING GOODBYE TO THE BLOXBURG ELF HUNT... 16TH FINAL ELF LOCATION AND NEW FINAL TROPHY",
-      "description": "MERRY CHRIMUS EVE BREADFAM! well it's officially the end of the annual bloxburg elf hunt! we found t...",
-      "source": "YouTube",
-      "timestamp": 1766614010.0,
-      "url": "https://www.youtube.com/watch?v=qrFpAQWPr2k",
       "icon": "fa-youtube"
     },
     {
@@ -460,62 +469,44 @@
       "icon": "fa-youtube"
     },
     {
-      "type": "trend",
-      "title": "Ultimo Elfo Descubierto \ud83c\udf6a\u2728  #roblox  #teamchismetv #bloxburg #elf #navidad  #parati",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766612385.0,
-      "url": "https://www.youtube.com/watch?v=jxJrxzuwDd8",
-      "icon": "fa-youtube"
+      "type": "game_update",
+      "title": "New Winter Update Available!",
+      "description": "Explore new winter-themed furniture and decorations",
+      "source": "Bloxburg Official",
+      "timestamp": 1765563563.6636922,
+      "url": "https://twitter.com/BloxburgGame",
+      "icon": "fa-gamepad"
     },
     {
       "type": "trend",
-      "title": "Day 16 Elf Location in Bloxburg \ud83c\udf81 #bloxburg #bloxburgupdate #roblox",
-      "description": "Thank you for watching. In this short, we're finding Santa's elves for the winter event \"Elf Hunt\" i...",
+      "title": "Modern Mansion Builds Trending",
+      "description": "Community showcasing stunning modern architecture",
       "source": "YouTube",
-      "timestamp": 1766612214.0,
-      "url": "https://www.youtube.com/watch?v=qydPOKX5aUI",
-      "icon": "fa-youtube"
+      "timestamp": 1765559963.663694,
+      "url": "https://youtube.com/results?search_query=bloxburg+modern+mansion",
+      "icon": "fa-fire"
     },
     {
-      "type": "trend",
-      "title": "Where to find the FINAL 16th BLOXBURG ELF in the 2025 elf hunt",
-      "description": "Where the last and final 16th bloxburg elf is located in the 2025 elf hunt....",
-      "source": "YouTube",
-      "timestamp": 1766612214.0,
-      "url": "https://www.youtube.com/watch?v=UOIPT6BxYgY",
-      "icon": "fa-youtube"
+      "type": "tip",
+      "title": "Money Making Guide 2024",
+      "description": "Best jobs and strategies to earn cash quickly",
+      "source": "Community Guide",
+      "timestamp": 1765556363.6636944,
+      "url": "#",
+      "icon": "fa-lightbulb"
     },
     {
-      "type": "trend",
-      "title": "16TH ELF LOCATION IN BLOXBURG | BLOXBURG ELF HUNT 2025 DAY 16",
-      "description": "IN THIS VIDEO: 16TH ELF LOCATION IN BLOXBURG | BLOXBURG ELF HUNT 2025 DAY 16....",
-      "source": "YouTube",
-      "timestamp": 1766610575.0,
-      "url": "https://www.youtube.com/watch?v=chQMabVxAwk",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "PEACH FAMILY CHRISTMAS EVE SPECIAL! *CATCHING SANTA* Roblox Bloxburg Voiced RP Roleplay",
-      "description": "Description: \u2661\ufe0e. \u25dd \u2b50\ufe0fUSE STARCODE 'PEACH' WHEN BUYING ROBUX OR PREMIUM!\u2b50\ufe0f \u029a hey everyone!   Today it...",
-      "source": "YouTube",
-      "timestamp": 1766606406.0,
-      "url": "https://www.youtube.com/watch?v=fKkZLJUKLRc",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "OUR CHRISTMAS EVE FAMILY ROUTINE | Bloxburg Family Roleplay",
-      "description": "bloxburg #roblox #robloxbloxburg Merry Christmas...enjoy my chaotic family routine on Christmas Eve....",
-      "source": "YouTube",
-      "timestamp": 1766606402.0,
-      "url": "https://www.youtube.com/watch?v=2Qnspr-P41E",
-      "icon": "fa-youtube"
+      "type": "community",
+      "title": "Weekly Build Contest",
+      "description": "Submit your best holiday-themed builds to win prizes!",
+      "source": "Crumbl Crafts",
+      "timestamp": 1765552763.6636949,
+      "url": "#",
+      "icon": "fa-trophy"
     }
   ],
   "meta": {
-    "generated_at": 1766618369.958194,
+    "generated_at": 1766619569.9538913,
     "mode": "memory",
     "refresh_interval": 2000
   }
