@@ -636,6 +636,7 @@
             justify-content: center;
             gap: 12px;
             margin-bottom: 16px;
+            overflow: visible; /* ensure badges and pseudo-elements aren't clipped */
         }
         .podium-card {
             background: 
@@ -667,10 +668,12 @@
                         inset 0 2px 0 rgba(255, 255, 255, 0.15),
                         inset 0 -2px 0 rgba(0, 0, 0, 0.2);
             transform: perspective(1000px) rotateX(0deg);
+            overflow: visible; /* allow pseudo elements to render outside card */
+            z-index: 1;
         }
         .podium-card.rank-1 {
             order: 2;
-            padding-top: 20px;
+            padding-top: 28px; /* give extra space so champion badge/star doesn't overlap clipping */
         }
         .podium-card.rank-1::after {
             content: '⭐';
@@ -681,6 +684,7 @@
             font-size: 30px;
             filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.8));
             transition: transform 0.3s ease;
+            z-index: 5;
         }
         .podium-card.rank-1:hover::after {
             transform: translateX(-50%) scale(1.1);
@@ -700,6 +704,7 @@
             border-radius: 6px;
             box-shadow: 0 4px 16px rgba(255, 215, 0, 0.8);
             border: 2px solid rgba(255, 255, 255, 0.5);
+            z-index: 4;
         }
         .podium-card.rank-2 {
             order: 1;
@@ -2748,6 +2753,28 @@
             transform: translateY(0);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         }
+        /* Compact header stats (small, efficient, reuses existing visual language) */
+        .header-stats {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        .header-stat {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 10px;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.03);
+            border: 2px solid rgba(255,255,255,0.06);
+            min-width: 96px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.02);
+            transition: transform 160ms ease, box-shadow 160ms ease;
+            font-weight: 700;
+        }
+        .header-stat:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(0,0,0,0.6); }
+        .header-stat .label { font-size: 0.65rem; color: var(--text-muted); font-weight: 700; }
+        .header-stat .value { font-size: 0.95rem; color: var(--text-bright); font-weight: 900; }
     </style>
     <script>
         // Make upload modal function available immediately
@@ -3025,6 +3052,8 @@
                         <p class="tagline" style="font-size: 0.8rem;">Premium Bloxburg Builder Network</p>
                     </div>
                 </div>
+                <!-- Compact header stats (keeps header light-weight and optimized) -->
+                <div id="headerStats" class="header-stats" style="display:flex; gap:8px; align-items:center; margin-left:12px;"></div>
                 
                 <div style="display: flex; align-items: center; gap: 12px; flex-shrink: 0;">
                     <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 4px;">
@@ -3094,7 +3123,7 @@
                 <div class="stats-grid" id="statsGrid"></div>
             </section>
 
-            <section class="glass" style="margin-bottom: 16px;">
+            <section class="glass" style="margin-bottom: 16px; overflow: visible;">
                 <h2 class="section-title">
                     <i class="fas fa-trophy"></i>
                     Top Builders
@@ -6287,6 +6316,52 @@
             });
         }
         
+        function renderHeaderStats(data) {
+            try {
+                const summary = { ...(data.summary || {}), ...(data.server || {}) };
+                const header = document.getElementById('headerStats');
+                if (!header) return;
+
+                const headerConfig = [
+                    { key: 'builder_count', label: 'Builders', icon: 'fa-users' },
+                    { key: 'total_requests', label: 'Requests', icon: 'fa-paper-plane' },
+                    { key: 'total_completed', label: 'Completed', icon: 'fa-check-circle' }
+                ];
+
+                headerConfig.forEach(stat => {
+                    const value = stat.format === 'duration' ? formatDuration(summary[stat.key]) : formatNumber(summary[stat.key] ?? 0);
+                    let el = header.querySelector(`[data-stat="${stat.key}"]`);
+                    if (!el) {
+                        el = document.createElement('div');
+                        el.className = 'header-stat';
+                        el.setAttribute('data-stat', stat.key);
+                        el.innerHTML = `
+                            <div style="display:flex; align-items:center; gap:8px;">
+                                <div style="width:28px; height:28px; border-radius:8px; display:grid; place-items:center; background: rgba(255,255,255,0.02); color: inherit; font-size:14px;">
+                                    <i class="fas ${stat.icon}"></i>
+                                </div>
+                                <div style="display:flex; flex-direction:column; min-width:0;">
+                                    <span class="label">${stat.label}</span>
+                                    <span class="value">${value}</span>
+                                </div>
+                            </div>
+                        `;
+                        header.appendChild(el);
+                    } else {
+                        const valEl = el.querySelector('.value');
+                        if (valEl && valEl.textContent !== value) {
+                            valEl.textContent = value;
+                            valEl.classList.remove('count-up');
+                            void valEl.offsetWidth;
+                            valEl.classList.add('count-up');
+                        }
+                    }
+                });
+            } catch (e) {
+                console.warn('renderHeaderStats error', e);
+            }
+        }
+
         function renderBuilders(builders) {
             const grid = document.getElementById('buildersGrid');
             const topBuilders = (builders || []).slice(0, 10);
@@ -7011,6 +7086,7 @@
                 requestAnimationFrame(() => {
                     // Render in order of visual priority
                     renderStats(data);
+                    renderHeaderStats(data);
                     renderBuilders(data.topBuilders);
                     renderActivityFeed(data.activityLog);
                     renderNews(data.news);
