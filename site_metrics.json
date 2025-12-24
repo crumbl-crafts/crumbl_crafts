@@ -407,47 +407,47 @@
   "news": [
     {
       "type": "trend",
+      "title": "V\u00e9spera de Natal e trabalhando \ud83d\ude2d\ud83c\udf84",
+      "description": "Trabalhar na v\u00e9spera de Natal ningu\u00e9m merece #Brookhaven #Natal #Roblox #FelizNatal #Shorts #Brookha...",
+      "source": "YouTube",
+      "timestamp": 1766612606.0,
+      "url": "https://www.youtube.com/watch?v=3YbLEfzmWYQ",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Ultimo Elfo Descubierto \ud83c\udf6a\u2728  #roblox  #teamchismetv #bloxburg #elf #navidad  #parati",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766612385.0,
+      "url": "https://www.youtube.com/watch?v=jxJrxzuwDd8",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Day 16 Elf Location in Bloxburg \ud83c\udf81 #bloxburg #bloxburgupdate #roblox",
+      "description": "Thank you for watching. In this short, we're finding Santa's elves for the winter event \"Elf Hunt\" i...",
+      "source": "YouTube",
+      "timestamp": 1766612214.0,
+      "url": "https://www.youtube.com/watch?v=qydPOKX5aUI",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Where to find the FINAL 16th BLOXBURG ELF in the 2025 elf hunt",
+      "description": "Where the last and final 16th bloxburg elf is located in the 2025 elf hunt....",
+      "source": "YouTube",
+      "timestamp": 1766612214.0,
+      "url": "https://www.youtube.com/watch?v=UOIPT6BxYgY",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "16TH ELF LOCATION IN BLOXBURG | BLOXBURG ELF HUNT 2025 DAY 16",
       "description": "IN THIS VIDEO: 16TH ELF LOCATION IN BLOXBURG | BLOXBURG ELF HUNT 2025 DAY 16....",
       "source": "YouTube",
       "timestamp": 1766610575.0,
       "url": "https://www.youtube.com/watch?v=chQMabVxAwk",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "PEACH FAMILY CHRISTMAS EVE SPECIAL! *CATCHING SANTA* Roblox Bloxburg Voiced RP Roleplay",
-      "description": "Description: \u2661\ufe0e. \u25dd \u2b50\ufe0fUSE STARCODE 'PEACH' WHEN BUYING ROBUX OR PREMIUM!\u2b50\ufe0f \u029a hey everyone!   Today it...",
-      "source": "YouTube",
-      "timestamp": 1766606406.0,
-      "url": "https://www.youtube.com/watch?v=fKkZLJUKLRc",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "OUR CHRISTMAS EVE FAMILY ROUTINE | Bloxburg Family Roleplay",
-      "description": "bloxburg #roblox #robloxbloxburg Merry Christmas...enjoy my chaotic family routine on Christmas Eve....",
-      "source": "YouTube",
-      "timestamp": 1766606402.0,
-      "url": "https://www.youtube.com/watch?v=2Qnspr-P41E",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Big Family CHRISTMAS \ud83c\udf84 Bloxburg Roleplay",
-      "description": "today's bloxburg roleplay is our big family's Christmas Eve and Day! we spend the night together hav...",
-      "source": "YouTube",
-      "timestamp": 1766595634.0,
-      "url": "https://www.youtube.com/watch?v=HVqeKmlbOkM",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "GRWM to go to the Gym  (Bloxburg) #bloxburg #vlog #roblox #gym",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766593621.0,
-      "url": "https://www.youtube.com/watch?v=xU2J9kKMOx0",
       "icon": "fa-youtube"
     },
     {
@@ -488,7 +488,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766612372.2556646,
+    "generated_at": 1766613569.955441,
     "mode": "memory",
     "refresh_interval": 2000
   }
