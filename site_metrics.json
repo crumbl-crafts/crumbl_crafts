@@ -344,6 +344,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "GRWM to go to the Gym  (Bloxburg) #bloxburg #vlog #roblox #gym",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766593621.0,
+      "url": "https://www.youtube.com/watch?v=xU2J9kKMOx0",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Have you played this OG Roblox game?",
       "description": "ogroblox #roblox #memories #bloxburg #youtubeshorts....",
       "source": "YouTube",
@@ -362,11 +371,11 @@
     },
     {
       "type": "trend",
-      "title": "Best Roblox Group!?!? #phonk #edit #bass #bloxburg #roblox #gaming #fy #games #pocoyo",
-      "description": "...",
+      "title": "Happy christmas #roblox#robloxmemes#robloxedit#robloxgameplay#robloxstory#robloxtutorial#bloxburg",
+      "description": "roblox #robloxmemes #robloxedit #robloxgameplay #robloxstory #robloxtutorial #bloxburg steal a brain...",
       "source": "YouTube",
-      "timestamp": 1766579014.0,
-      "url": "https://www.youtube.com/watch?v=A2WsirAuGBw",
+      "timestamp": 1766585402.0,
+      "url": "https://www.youtube.com/watch?v=PDM-Z2FerZg",
       "icon": "fa-youtube"
     },
     {
@@ -376,15 +385,6 @@
       "source": "YouTube",
       "timestamp": 1766578034.0,
       "url": "https://www.youtube.com/watch?v=ZJKbKpxO_7A",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "POV: Christmas Eve Night\ud83c\udf85\ud83c\udf84 #christmas #relatable #bloxburg",
-      "description": "Commonly asked questions: 1. What do you use to record? - I use OBS or something my regular iPad. 2....",
-      "source": "YouTube",
-      "timestamp": 1766577715.0,
-      "url": "https://www.youtube.com/watch?v=sVxM8sZiMe0",
       "icon": "fa-youtube"
     },
     {
@@ -425,7 +425,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766594369.9553232,
+    "generated_at": 1766595569.9551585,
     "mode": "memory",
     "refresh_interval": 2000
   }
