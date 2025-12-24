@@ -407,6 +407,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "OUR CHRISTMAS EVE FAMILY ROUTINE | Bloxburg Family Roleplay",
+      "description": "bloxburg #roblox #robloxbloxburg Merry Christmas...enjoy my chaotic family routine on Christmas Eve....",
+      "source": "YouTube",
+      "timestamp": 1766606402.0,
+      "url": "https://www.youtube.com/watch?v=2Qnspr-P41E",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Big Family CHRISTMAS \ud83c\udf84 Bloxburg Roleplay",
       "description": "today's bloxburg roleplay is our big family's Christmas Eve and Day! we spend the night together hav...",
       "source": "YouTube",
@@ -439,15 +448,6 @@
       "source": "YouTube",
       "timestamp": 1766591106.0,
       "url": "https://www.youtube.com/watch?v=4ACwYcqiUXs",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "POV: Your BLOXBURG House Is On Fire",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766590921.0,
-      "url": "https://www.youtube.com/watch?v=zpziCZpFBp8",
       "icon": "fa-youtube"
     },
     {
@@ -488,7 +488,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766607569.9557095,
+    "generated_at": 1766608769.9537265,
     "mode": "memory",
     "refresh_interval": 2000
   }
