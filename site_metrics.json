@@ -362,6 +362,15 @@
     },
     {
       "type": "trend",
+      "title": "The FIFTEENTH Bloxburg ELF Location! [2025]",
+      "description": "Probably my favorite elf so far Twitter: https://twitter.com/BramPeee Instagram: https://www.instagr...",
+      "source": "YouTube",
+      "timestamp": 1766524289.0,
+      "url": "https://www.youtube.com/watch?v=NUItShBT0y4",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Welcome bloxburg movie  timemachine   in 2027",
       "description": "...",
       "source": "YouTube",
@@ -376,15 +385,6 @@
       "source": "YouTube",
       "timestamp": 1766505631.0,
       "url": "https://www.youtube.com/watch?v=CuaMmugch2I",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "unexpectedly #roblox#robloxmemes#robloxedit#robloxgameplay#robloxstory#robloxtutorial#bloxburg",
-      "description": "steal a brainrot #fyp #robloxedit #stealabrainrot #tungtungtungsahur....",
-      "source": "YouTube",
-      "timestamp": 1766499002.0,
-      "url": "https://www.youtube.com/watch?v=zbLKA8vhxx8",
       "icon": "fa-youtube"
     },
     {
@@ -425,7 +425,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766544570.3315978,
+    "generated_at": 1766545169.9536648,
     "mode": "memory",
     "refresh_interval": 2000
   }
