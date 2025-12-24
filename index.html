@@ -7386,6 +7386,15 @@
             async function loadSiteStats(){
                 const totalEl = document.getElementById('statTotalVisits');
                 const avgEl = document.getElementById('statAvgVisits');
+                // debug/source label
+                let sourceEl = document.getElementById('statSource');
+                if (!sourceEl) {
+                    sourceEl = document.createElement('div');
+                    sourceEl.id = 'statSource';
+                    sourceEl.style.cssText = 'font-size:0.6rem;color:var(--text-muted);margin-left:6px;';
+                    const headerStats = document.getElementById('headerStats');
+                    if (headerStats) headerStats.appendChild(sourceEl);
+                }
                 if (!totalEl || !avgEl) return;
 
                 let fetched = false;
@@ -7408,6 +7417,9 @@
                             avgEl.textContent = (avgPerDay >= 100 ? formatNumber(Math.round(avgPerDay)) : Number(avgPerDay).toFixed(1));
                             // persist totalVisits and periodDays (best-effort)
                             persistSiteStats({ totalVisits: Number(totalVisits)||0, periodDays: days });
+                            if (sourceEl) sourceEl.textContent = 'local';
+                            // try to count this visit once per session
+                            tryCountVisit(Number(totalVisits)||0, days, totalEl, avgEl);
                             fetched = true;
                         }
                     }
@@ -7428,6 +7440,8 @@
                         const avgPerDay = days > 0 ? (Number(totalVisits) / days) : 0;
                         totalEl.textContent = formatNumber(totalVisits);
                         avgEl.textContent = (avgPerDay >= 100 ? formatNumber(Math.round(avgPerDay)) : Number(avgPerDay).toFixed(1));
+                        if (sourceEl) sourceEl.textContent = 'db';
+                        tryCountVisit(Number(totalVisits)||0, days, totalEl, avgEl);
                         return;
                     }
                 }catch(e){ console.warn('Firebase fallback failed', e); }
@@ -7442,6 +7456,34 @@
                 // refresh periodically but not too often
                 setInterval(() => loadSiteStats().catch(()=>{}), 60000);
             });
+            
+            // Attempt to count a site visit once per session (avoid duplicate counts across reloads)
+            function tryCountVisit(currentTotal, days, totalEl, avgEl){
+                try {
+                    if (sessionStorage.getItem('site_visit_counted')) return; // already counted this session
+                    // mark counted for this session
+                    sessionStorage.setItem('site_visit_counted', '1');
+
+                    // read last persisted, fallback to provided currentTotal
+                    let last = {};
+                    try { last = JSON.parse(localStorage.getItem('siteStats_lastPersist') || '{}') || {}; } catch(e){ last = {}; }
+                    const lastTotal = Number(last.totalVisits) || Number(currentTotal) || 0;
+                    const newTotal = lastTotal + 1;
+
+                    // update UI immediately for responsiveness
+                    if (totalEl) totalEl.textContent = formatNumber(newTotal);
+                    if (avgEl) {
+                        const useDays = days || Number(last.periodDays) || 30;
+                        const newAvg = useDays > 0 ? (newTotal / useDays) : newTotal;
+                        avgEl.textContent = (newAvg >= 100 ? formatNumber(Math.round(newAvg)) : Number(newAvg).toFixed(1));
+                    }
+
+                    // persist in a batched way
+                    persistSiteStats({ totalVisits: newTotal });
+                } catch (e) {
+                    console.warn('Count visit failed', e);
+                }
+            }
         })();
     </script>
 </body>
