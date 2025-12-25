@@ -92,4 +92,19 @@
 
   // expose API
   window.UITransitions = { showPremiumPromo, hidePremiumPromo, showCookieBanner, hideCookieBanner, showTransitionOverlay };
+  // Play a short page-enter overlay when the page is shown (including back/forward via bfcache)
+  function playPageEnter(ms = 220){
+    try{
+      if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const overlay = document.getElementById('ptOverlay');
+      if(!overlay) return;
+      overlay.classList.add('show');
+      // hide after ms (small buffer)
+      setTimeout(()=>{ overlay.classList.remove('show'); }, ms);
+    }catch(e){}
+  }
+
+  // Run on DOMContentLoaded and pageshow (handles back/forward and bfcache restores)
+  document.addEventListener('DOMContentLoaded', ()=>{ setTimeout(()=>playPageEnter(220), 20); });
+  window.addEventListener('pageshow', (ev)=>{ setTimeout(()=>playPageEnter(220), 20); });
 })();
