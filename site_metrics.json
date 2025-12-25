@@ -434,6 +434,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "Bloxburg Final Elf Hunt #16 Sixteenth Elf 2025",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766628005.0,
+      "url": "https://www.youtube.com/watch?v=6kTS3O_NS4I",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "How to Find Elf #12 | Bloxburg  #bloxburg #welcometobloxburg  #bloxburgideas #bloxburgelfhunt",
       "description": "...",
       "source": "YouTube",
@@ -466,15 +475,6 @@
       "source": "YouTube",
       "timestamp": 1766621998.0,
       "url": "https://www.youtube.com/watch?v=0Tx70izgHGI",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "How to Find Elf #2 &amp; #3 | Bloxburg #bloxburg #welcometobloxburg  #bloxburgideas #bloxburgelfhunt",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766621498.0,
-      "url": "https://www.youtube.com/watch?v=ddZ5I1jbioE",
       "icon": "fa-youtube"
     },
     {
@@ -515,7 +515,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766630970.2410047,
+    "generated_at": 1766631569.9547937,
     "mode": "memory",
     "refresh_interval": 2000
   }
