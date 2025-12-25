@@ -524,6 +524,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "Let&#39;s tour a Santa&#39;s Toy Workshop in BLOXBURG with me \ud83c\udf85 #bloxburgbuild #bloxburg #roblox",
+      "description": "Thank you for watching. In this short, I'm touring my favorite view from the santa's toy workshop bu...",
+      "source": "YouTube",
+      "timestamp": 1766702413.0,
+      "url": "https://www.youtube.com/watch?v=b6bGSzo3nwE",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "PEACH FAMILY CHRISTMAS DAY SPECIAL! *THEY GOT SO MANY GIFTS* Roblox Bloxburg Voiced RP Roleplay",
       "description": "Description: \u2661\ufe0e. \u25dd \u2b50\ufe0fUSE STARCODE 'PEACH' WHEN BUYING ROBUX OR PREMIUM!\u2b50\ufe0f \u029a hey everyone!   Today it...",
       "source": "YouTube",
@@ -533,11 +542,11 @@
     },
     {
       "type": "trend",
-      "title": "Christmas Day with the Family! \u2744\ufe0f\ud83d\udc96 #berryave #berryavenue #roblox #robloxrp #bloxburg #brookhaven",
-      "description": "...",
+      "title": "\ud83c\udf85CHRISTMAS DAY Family Roleplay on Bloxburg!\ud83c\udf84",
+      "description": "MERRY CHRISTMAS MY SUBSCRIBERRIES! I LOVE YOU ALL SO SO MUCH!     Thank you BERRY much for watching ...",
       "source": "YouTube",
-      "timestamp": 1766682260.0,
-      "url": "https://www.youtube.com/watch?v=kuhEyCnz-y0",
+      "timestamp": 1766683806.0,
+      "url": "https://www.youtube.com/watch?v=7Yp007Qi55E",
       "icon": "fa-youtube"
     },
     {
@@ -556,15 +565,6 @@
       "source": "YouTube",
       "timestamp": 1766677292.0,
       "url": "https://www.youtube.com/watch?v=mu6wnDsr3vs",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "@wolfen_wolfclaw \u2022||ROBLOX BLOXBURG||\u2022 (PT5)",
-      "description": "wolfen_wolfclaw #AuraWulf #fyp\u30b7 #Roblox #gameplay #bloxburg....",
-      "source": "YouTube",
-      "timestamp": 1766674806.0,
-      "url": "https://www.youtube.com/watch?v=ugXcvsNDjJY",
       "icon": "fa-youtube"
     },
     {
@@ -605,7 +605,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766702369.9573803,
+    "generated_at": 1766703569.9539473,
     "mode": "memory",
     "refresh_interval": 2000
   }
