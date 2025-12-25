@@ -470,6 +470,15 @@
     },
     {
       "type": "trend",
+      "title": "My 50,000 Robux Balcony BROKE! \ud83c\udfe0 (Bloxburg Glitch) #Roblox",
+      "description": "I spent 50000 Robux on a new balcony in Bloxburg, but the floor had other plans! Watch this story to...",
+      "source": "YouTube",
+      "timestamp": 1766666674.0,
+      "url": "https://www.youtube.com/watch?v=paaGu7kSal4",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "#minecraft #roblox #bloxburg",
       "description": "...",
       "source": "YouTube",
@@ -484,15 +493,6 @@
       "source": "YouTube",
       "timestamp": 1766664101.0,
       "url": "https://www.youtube.com/watch?v=lnHvmS1I2_w",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "elf hunt day 16 location #roblox #bloxburg #funnyimages #funnymemes #roleplay #christmas",
-      "description": "bloxburg elf hunt day 16 location no more links sorry :(...",
-      "source": "YouTube",
-      "timestamp": 1766660739.0,
-      "url": "https://www.youtube.com/watch?v=M4R136TtggY",
       "icon": "fa-youtube"
     },
     {
@@ -533,7 +533,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766674170.2909706,
+    "generated_at": 1766674769.9549224,
     "mode": "memory",
     "refresh_interval": 2000
   }
