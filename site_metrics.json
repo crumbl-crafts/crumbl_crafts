@@ -515,6 +515,24 @@
   "news": [
     {
       "type": "trend",
+      "title": "PEACH FAMILY CHRISTMAS DAY SPECIAL! *THEY GOT SO MANY GIFTS* Roblox Bloxburg Voiced RP Roleplay",
+      "description": "Description: \u2661\ufe0e. \u25dd \u2b50\ufe0fUSE STARCODE 'PEACH' WHEN BUYING ROBUX OR PREMIUM!\u2b50\ufe0f \u029a hey everyone!   Today it...",
+      "source": "YouTube",
+      "timestamp": 1766692806.0,
+      "url": "https://www.youtube.com/watch?v=gj6a6xrxAYY",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Christmas Day with the Family! \u2744\ufe0f\ud83d\udc96 #berryave #berryavenue #roblox #robloxrp #bloxburg #brookhaven",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766682260.0,
+      "url": "https://www.youtube.com/watch?v=kuhEyCnz-y0",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Touring a 1.4MIL Bloxburg Mansion#roblox #bloxburg",
       "description": "...",
       "source": "YouTube",
@@ -538,24 +556,6 @@
       "source": "YouTube",
       "timestamp": 1766674806.0,
       "url": "https://www.youtube.com/watch?v=ugXcvsNDjJY",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "WHERE IS ELF #7? Bloxburg Christmas Event #bloxburg #roblox",
-      "description": "Can we find them all? \ud83d\udd75\ufe0f\u200d\u2640\ufe0f Today I'm showing you how to find ELF #7 in the Bloxburg Elf Hunt! \u200d\u2640\ufe0f\u2728 ...",
-      "source": "YouTube",
-      "timestamp": 1766674392.0,
-      "url": "https://www.youtube.com/watch?v=w1NIvEgHD0s",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "ENVIA ISSO PRA ALGU\u00c9M\u2620\ufe0f\u2620\ufe0f",
-      "description": "ENVIA ISSO PRA ALGUMA PESSOA #roblox #viral #edit #stealabrainrot #bloxfruits #brookhaven #bloxburg ...",
-      "source": "YouTube",
-      "timestamp": 1766671812.0,
-      "url": "https://www.youtube.com/watch?v=daqtMlvkjX4",
       "icon": "fa-youtube"
     },
     {
@@ -596,7 +596,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766695770.2584136,
+    "generated_at": 1766696369.9601061,
     "mode": "memory",
     "refresh_interval": 2000
   }
