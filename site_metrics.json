@@ -461,15 +461,6 @@
     },
     {
       "type": "trend",
-      "title": "\u201cWhen your stealing urge backfires \ud83d\ude02\u201d #roblox #bloxburg #robloxedit #edit #shorts#",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766665519.0,
-      "url": "https://www.youtube.com/watch?v=garLL-gPrJI",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
       "title": "POV: Christmas Morning\ud83c\udf84\ud83c\udf81 #xmas #relatable #bloxburg",
       "description": "Commonly asked questions: 1. What do you use to record? - I use OBS or something my regular iPad. 2....",
       "source": "YouTube",
@@ -493,6 +484,15 @@
       "source": "YouTube",
       "timestamp": 1766647705.0,
       "url": "https://www.youtube.com/watch?v=BdArpXlSjuc",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "GA SADAR MOBIL KITA HILANG WAKTU LIBURAN KE PANTAI | BLOXBURG\ud83c\udfe1RP",
+      "description": "HAI TERIMAKASIH SUDAH MENONTON JANGAN LUPA SUBSCRIBE DAN LIKE YA KALO KAMU SUDAH SUBSCRIBE, ......",
+      "source": "YouTube",
+      "timestamp": 1766639766.0,
+      "url": "https://www.youtube.com/watch?v=Pyxffy1_M5k",
       "icon": "fa-youtube"
     },
     {
@@ -533,7 +533,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766668770.2643661,
+    "generated_at": 1766669969.9608738,
     "mode": "memory",
     "refresh_interval": 2000
   }
