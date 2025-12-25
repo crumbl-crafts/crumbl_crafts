@@ -7,18 +7,41 @@
   <meta name="description" content="Crumbl Crafts — Departments hub: Building, Crumbl Delights (coming soon), Role Play (coming soon)">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🍪</text></svg>">
   <style>
-    :root{
+    :root {
       color-scheme: dark;
       --bg-primary: #0a0f1a;
       --bg-secondary: #1a2030;
-      --glass: rgba(30,40,60,0.6);
-      --accent: #ff1744;
-      --muted: #b0b8d0;
-      --border: rgba(255,255,255,0.12);
+      --bg-tertiary: #2a3040;
+      --panel: rgba(30, 40, 60, 0.5);
+      --panel-hover: rgba(40, 50, 70, 0.7);
+      --card: rgba(40, 50, 70, 0.4);
+      --card-hover: rgba(50, 60, 80, 0.6);
+      --primary: #ff1744;
+      --primary-glow: rgba(255, 23, 68, 0.6);
+      --secondary: #2979ff;
+      --accent: #ffd700;
+      --success: #00e676;
+      --warning: #ff9100;
+      --danger: #ff1744;
+      --text: #ffffff;
+      --text-bright: #ffffff;
+      --text-muted: #b0b8d0;
+      --border: rgba(255, 255, 255, 0.15);
+      --glow: rgba(255, 23, 68, 0.3);
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{margin:0;font-family:Fredoka, Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial; background:var(--bg-primary); color:#fff; -webkit-font-smoothing:antialiased; overflow:hidden}
+
+    body {
+      font-family: 'Fredoka', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 0;
+      overflow-x: hidden;
+      position: relative;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeSpeed;
+    }
 
     /* Background texture + happy.gif layer (matching site) */
     .bg{position:fixed;inset:0;background-image:url('happy.gif');background-size:cover;background-position:center;opacity:0.45;mix-blend-mode:screen;filter:saturate(1.05);pointer-events:none;z-index:0}
@@ -27,14 +50,16 @@
     .wrap{position:relative;z-index:2;width:min(1100px,96%);padding:28px;display:grid;grid-template-columns:1fr;gap:18px}
 
     /* Re-usable glass surface to match existing site visuals */
-    .glass-like{
-      background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.06) 1px, transparent 1px),
-                  radial-gradient(circle at 80% 80%, rgba(255,255,255,0.06) 1px, transparent 1px),
+    .glass{
+      background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.08) 1px, transparent 1px),
+                  radial-gradient(circle at 80% 80%, rgba(255,255,255,0.08) 1px, transparent 1px),
+                  radial-gradient(circle at 50% 50%, rgba(255,255,255,0.05) 0.8px, transparent 0.8px),
                   rgba(30,40,60,0.6);
-      background-size:8px 8px,8px 8px,100% 100%;
-      border:2px solid var(--border);
-      border-radius:14px;
-      padding:14px;
+      background-size: 8px 8px, 8px 8px, 4px 4px, 100% 100%;
+      background-position: 0 0, 4px 4px, 2px 2px, 0 0;
+      border: 2px solid rgba(255, 255, 255, 0.15);
+      border-radius: 16px;
+      padding: 16px;
       box-shadow: 0 12px 40px rgba(255,23,68,0.18), inset 0 2px 0 rgba(255,255,255,0.06);
       backdrop-filter: blur(14px) saturate(1.1);
     }
@@ -64,13 +89,12 @@
     /* header-stats removed per UX preference */
 
     main{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .dept{position:relative;min-height:160px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;border-radius:12px;cursor:pointer;transition:transform .28s cubic-bezier(.2,.9,.2,1),box-shadow .24s}
+    .dept{position:relative;min-height:160px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;border-radius:12px;cursor:pointer;transition:transform .28s cubic-bezier(.2,.9,.2,1),box-shadow .24s;background:var(--card)}
     .dept.glass-like{padding:18px}
     .dept:hover{transform:translateY(-8px) scale(1.02);box-shadow:0 18px 48px rgba(0,0,0,0.6),0 0 40px rgba(255,23,68,0.06);z-index:40}
     .dept .title{font-weight:800;font-size:1.05rem}
-    .dept .desc{color:var(--muted);font-size:0.88rem;text-align:center}
-    .dept .cta{margin-top:8px;padding:8px 12px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#ff6b9d);color:#fff;font-weight:800;border:none;cursor:pointer}
-    .dept .badge{position:absolute;top:12px;right:12px;padding:6px 10px;border-radius:999px;font-weight:800;font-size:0.7rem;background:rgba(255,255,255,0.05);color:var(--muted);border:1px solid rgba(255,255,255,0.03)}
+    .dept .desc{color:var(--text-muted);font-size:0.88rem;text-align:center}
+    .dept .cta{margin-top:8px;padding:8px 12px;border-radius:10px;background:linear-gradient(90deg,var(--primary),#ff6b9d);color:#fff;font-weight:800;border:none;cursor:pointer}
 
     .coming-soon{filter:grayscale(.05) contrast(.95);opacity:.98}
     .dim{opacity:.7}
@@ -92,14 +116,76 @@
     @media (max-width:980px){main{grid-template-columns:1fr}}
     @media (prefers-reduced-motion:reduce){.floater,.pt-overlay .spinner{animation:none;transition:none}}
 
+    /* Home button styling to match index.html theme */
+    .home-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 10px;
+      border-radius: 12px;
+      background: linear-gradient(90deg, rgba(255,23,68,0.06), rgba(41,121,255,0.03));
+      border: 2px solid rgba(255,255,255,0.06);
+      box-shadow: 0 8px 22px var(--primary-glow);
+      color: var(--text-bright);
+      text-decoration: none;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
+    }
+    .home-nav-btn:hover { transform: translateY(-3px); box-shadow: 0 14px 36px var(--primary-glow); }
+    .home-nav-btn .home-label { font-weight: 800; font-size: 0.95rem; }
+
+    /* Manga-style accents */
+    .halftone{
+      position:fixed;inset:0;pointer-events:none;z-index:1;mix-blend-mode:overlay;opacity:0.08;
+      background-image: radial-gradient(circle at 10% 20%, rgba(255,255,255,0.02) 0 2px, transparent 3px),
+                        radial-gradient(circle at 50% 70%, rgba(255,255,255,0.02) 0 2px, transparent 3px);
+      background-size:8px 8px,12px 12px;
+      filter:contrast(1.05) saturate(1.05);
+    }
+
+    /* Strong manga-like title stroke */
+    .logo-text h1{
+      font-size:1.6rem;
+      font-weight:900;
+      line-height:1;
+      color: #fff;
+      -webkit-text-stroke: 2px rgba(10,12,18,0.7);
+      text-shadow: 0 4px 18px rgba(0,0,0,0.6), 0 0 8px rgba(255,23,68,0.06);
+    }
+
+    /* Hero stronger outline and inner halftone highlight */
+    header.glass.hero {
+      border-image: linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,23,68,0.06)) 1;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.7), 0 6px 28px rgba(255,23,68,0.06);
+      position:relative;
+      overflow:visible;
+    }
+    header.glass.hero::after{
+      content:'';position:absolute;inset:0;border-radius:18px;pointer-events:none;box-shadow:inset 0 1px 0 rgba(255,255,255,0.03);
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent 40%);
+      mix-blend-mode:screen;opacity:0.9;
+    }
+
+    /* CTA beefed up with comic-style border */
+    .dept .cta{
+      padding:10px 16px;border-radius:14px;font-size:0.98rem;letter-spacing:0.02em;
+      border:3px solid rgba(255,255,255,0.06);box-shadow:0 8px 30px rgba(0,0,0,0.55), 0 0 30px rgba(255,23,68,0.05);
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .dept .cta:active{transform:translateY(1px) scale(.995)}
+    .dept .cta:hover{transform:translateY(-4px);box-shadow:0 18px 48px rgba(0,0,0,0.6),0 0 48px rgba(255,23,68,0.12)}
+
+    /* Bolder badges */
+    .badge{font-weight:900;background:linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));border:2px solid rgba(255,255,255,0.04);box-shadow:0 8px 20px rgba(0,0,0,0.45)}
+
   </style>
 </head>
 <body>
   <div class="bg" aria-hidden></div>
+  <div class="halftone" aria-hidden></div>
   <div class="wrap">
   <header class="glass hero" role="banner">
-      <div class="logo-container">
-        <div class="logo-icon" aria-hidden>🍪</div>
+      <div class="logo-container" style="display:flex;align-items:center;gap:12px">
+        <a href="home.html" class="home-nav-btn" aria-label="Home" title="Home"><span class="home-label">🏠 Home</span></a>
         <div class="logo-text">
           <h1>Crumbl Crafts</h1>
           <div class="tagline">Premium Bloxburg Builder Network</div>
