@@ -875,7 +875,7 @@
       <div class="speech-bubble" id="speechBubble"></div>
       
       <!-- Mascot Image with fallback -->
-      <img src="https://i.imgur.com/VkT7P2s.png" alt="Crumbl Mascot" class="mascot-image" id="mascotImage" 
+      <img src="mascot.png" alt="Crumbl Mascot" class="mascot-image" id="mascotImage" 
            onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"180\" height=\"250\" viewBox=\"0 0 180 250\"><defs><linearGradient id=\"grad\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\"><stop offset=\"0%\" style=\"stop-color:#FF3366;stop-opacity:1\" /><stop offset=\"100%\" style=\"stop-color:#33A1FF;stop-opacity:1\" /></linearGradient></defs><rect width=\"180\" height=\"250\" fill=\"url(%23grad)\" rx=\"20\"/><circle cx=\"90\" cy=\"80\" r=\"50\" fill=\"%23FFDAC5\"/><circle cx=\"70\" cy=\"70\" r=\"12\" fill=\"%230A0A1A\"/><circle cx=\"110\" cy=\"70\" r=\"12\" fill=\"%230A0A1A\"/><path d=\"M 65 105 Q 90 115 115 105\" stroke=\"%230A0A1A\" stroke-width=\"5\" fill=\"none\"/></svg>'">
     </div>
   </div>
@@ -1011,14 +1011,14 @@
         // Click on logo
         document.getElementById('logoTrigger').addEventListener('click', () => {
           this.createSparkleEffect();
-          this.showMessage("Hey there! I'm your guide around here! Need anything? Just hover around! 😄", 4000);
+          this.showMessage("Hey there! I'm your guide around here! Need anything? Just hover around! 😄", 8000);
         });
         
         // Hover on building button
         const buildingBtn = document.getElementById('buildingDeptBtn');
         buildingBtn.addEventListener('mouseenter', () => {
           this.moveToElement(buildingBtn);
-          this.showMessage("This button takes you straight to the Building Department! That's where the magic happens! 🏗️", 3500);
+          this.showMessage("This button takes you straight to the Building Department! That's where the magic happens! 🏗️", 7000);
         });
         
         buildingBtn.addEventListener('mouseleave', () => {
@@ -1028,7 +1028,7 @@
         // Click on building button
         buildingBtn.addEventListener('click', (e) => {
           e.preventDefault();
-          this.showMessage("Alright, let's go build something awesome! See you there! 🚀", 1800);
+          this.showMessage("Alright, let's go build something awesome! See you there! 🚀", 3600);
           this.createSparkleEffect();
           setTimeout(() => {
             window.location.href = 'index.html';
@@ -1046,7 +1046,7 @@
             "Yes, I'm real! Well, as real as a cartoon can be! 🤖"
           ];
           const randomDialogue = clickDialogues[Math.floor(Math.random() * clickDialogues.length)];
-          this.showMessage(randomDialogue, 3000);
+          this.showMessage(randomDialogue, 6000);
         });
       }
       
@@ -1061,9 +1061,9 @@
         
         if (!card.classList.contains('disabled')) {
           this.walkToElement(card);
-          this.showMessage(message, 5000);
+          this.showMessage(message, 10000);
         } else {
-          this.showMessage(message, 4500);
+          this.showMessage(message, 9000);
         }
         
         // Add hover glow effect
@@ -1097,14 +1097,14 @@
             "I peeked at the plans... It's gonna be awesome! 🤫"
           ];
           const randomDialogue = sorryDialogues[Math.floor(Math.random() * sorryDialogues.length)];
-          this.showMessage(randomDialogue, 2500);
+          this.showMessage(randomDialogue, 5000);
           this.createSparkleEffect();
           return;
         }
         
         const target = card.getAttribute('data-target');
         if (target) {
-          this.showMessage("Excellent choice! Let's see what we can create! 🎮", 2000);
+          this.showMessage("Excellent choice! Let's see what we can create! 🎮", 4000);
           this.createSparkleEffect();
           setTimeout(() => {
             window.location.href = target;
@@ -1198,7 +1198,7 @@
       
       showWelcomeMessage() {
         setTimeout(() => {
-          this.showMessage("Hey there! I'm your mascot guide! Just hanging out in the corner here... 😊", 4000);
+          this.showMessage("Hey there! I'm your mascot guide! Just hanging out in the corner here... 😊", 8000);
         }, 1500);
       }
       
@@ -1206,10 +1206,10 @@
         if (!this.isIdle || this.isWalking || this.isExplaining || this.currentTarget) return;
         
         const randomDialogue = this.idleDialogues[Math.floor(Math.random() * this.idleDialogues.length)];
-        this.showMessage(randomDialogue, 4000 + Math.random() * 2000);
+        this.showMessage(randomDialogue, 8000 + Math.random() * 4000);
       }
       
-      showMessage(text, duration = 4000) {
+      showMessage(text, duration = 8000) {
         this.speechBubble.classList.add('show');
         this.typeText(text);
         
