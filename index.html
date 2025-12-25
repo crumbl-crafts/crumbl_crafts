@@ -6,6 +6,9 @@
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <title>Crumbl Crafts · Live Dashboard</title>
+    <!-- Redirect root to standalone homepage (home.html). Meta + JS fallback. -->
+    <meta http-equiv="refresh" content="0;URL=home.html">
+    <script>/* JS fallback in case meta is ignored */(function(){try{if(location.pathname.endsWith('/home.html')||/home\.html$/.test(location.pathname))return; setTimeout(function(){location.replace('home.html');},120);}catch(e){/* ignore */}})();</script>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🍪</text></svg>" />
     <!-- Critical resource hints -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
@@ -7483,8 +7486,5 @@
             }
         })();
     </script>
-</script>
-    <!-- Home button snippet: floating Home button with transition overlay -->
-    <script src="home-nav-snippet.js"></script>
 </body>
 </html>
