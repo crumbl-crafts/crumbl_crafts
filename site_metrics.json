@@ -452,6 +452,24 @@
   "news": [
     {
       "type": "trend",
+      "title": "@wolfen_wolfclaw \u2022||ROBLOX BLOXBURG||\u2022 (PT5)",
+      "description": "wolfen_wolfclaw #AuraWulf #fyp\u30b7 #Roblox #gameplay #bloxburg....",
+      "source": "YouTube",
+      "timestamp": 1766674806.0,
+      "url": "https://www.youtube.com/watch?v=ugXcvsNDjJY",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "WHERE IS ELF #7? Bloxburg Christmas Event #bloxburg #roblox",
+      "description": "Can we find them all? \ud83d\udd75\ufe0f\u200d\u2640\ufe0f Today I'm showing you how to find ELF #7 in the Bloxburg Elf Hunt! \u200d\u2640\ufe0f\u2728 ...",
+      "source": "YouTube",
+      "timestamp": 1766674392.0,
+      "url": "https://www.youtube.com/watch?v=w1NIvEgHD0s",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "ENVIA ISSO PRA ALGU\u00c9M\u2620\ufe0f\u2620\ufe0f",
       "description": "ENVIA ISSO PRA ALGUMA PESSOA #roblox #viral #edit #stealabrainrot #bloxfruits #brookhaven #bloxburg ...",
       "source": "YouTube",
@@ -475,24 +493,6 @@
       "source": "YouTube",
       "timestamp": 1766666674.0,
       "url": "https://www.youtube.com/watch?v=paaGu7kSal4",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "#minecraft #roblox #bloxburg",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766665665.0,
-      "url": "https://www.youtube.com/watch?v=UlHDtk7JZ04",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "POV: Christmas Morning\ud83c\udf84\ud83c\udf81 #xmas #relatable #bloxburg",
-      "description": "Commonly asked questions: 1. What do you use to record? - I use OBS or something my regular iPad. 2....",
-      "source": "YouTube",
-      "timestamp": 1766664101.0,
-      "url": "https://www.youtube.com/watch?v=lnHvmS1I2_w",
       "icon": "fa-youtube"
     },
     {
@@ -533,7 +533,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766675969.9574172,
+    "generated_at": 1766677169.9549387,
     "mode": "memory",
     "refresh_interval": 2000
   }
