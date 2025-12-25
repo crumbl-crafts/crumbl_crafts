@@ -4,10 +4,25 @@
 */
 (function(){
   const btn = document.createElement('button');
-  btn.textContent = 'Home';
+  btn.innerHTML = '🏠&nbsp;<span style="font-weight:800">Home</span>';
   btn.setAttribute('aria-label','Back to Home');
-  Object.assign(btn.style,{position:'fixed',right:'18px',bottom:'18px',padding:'10px 14px',borderRadius:'12px',background:'linear-gradient(90deg,#ff1744,#ff6b9d)',color:'#fff',border:'none',fontWeight:800,boxShadow:'0 8px 24px rgba(0,0,0,0.5)',cursor:'pointer',zIndex:99999});
-  document.body.appendChild(btn);
+  // Base styles; we'll adjust placement depending on header presence
+  Object.assign(btn.style,{padding:'8px 12px',borderRadius:'10px',background:'linear-gradient(90deg,#ff1744,#ff6b9d)',color:'#fff',border:'none',fontWeight:800,boxShadow:'0 8px 24px rgba(0,0,0,0.45)',cursor:'pointer',zIndex:99999});
+
+  // Try to place inside the page header (aligned right) if present
+  const header = document.querySelector('header') || document.querySelector('.glass.hero') || document.querySelector('.glass');
+  if (header) {
+    // ensure header is flex (most pages already are) and place button on right
+    try { header.style.display = header.style.display || getComputedStyle(header).display; } catch(e) {}
+    btn.style.marginLeft = 'auto';
+    btn.style.alignSelf = 'center';
+    btn.style.height = '40px';
+    header.appendChild(btn);
+  } else {
+    // fallback to floating button bottom-right
+    Object.assign(btn.style,{position:'fixed',right:'18px',bottom:'18px'});
+    document.body.appendChild(btn);
+  }
 
   // create simple overlay if not present
   let overlay = document.getElementById('ptOverlay');
