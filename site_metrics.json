@@ -2,7 +2,7 @@
   "summary": {
     "builder_count": 1,
     "total_completed": 0,
-    "total_requests": 4,
+    "total_requests": 5,
     "total_ratings": 1,
     "request_completion_ratio": 0.0
   },
@@ -24,6 +24,15 @@
     }
   ],
   "activityLog": [
+    {
+      "type": "sent",
+      "shop_name": "Hidenori's Shop",
+      "message": "Request sent by highoff1",
+      "timestamp": 1766686904,
+      "thread_id": 1446931774826610790,
+      "server_id": 1301988304279048275,
+      "url": "https://discord.com/channels/1301988304279048275/1446931774826610790"
+    },
     {
       "type": "member_join",
       "shop_name": "Server",
@@ -433,8 +442,8 @@
   "pipeline": [
     {
       "label": "Pending Requests",
-      "value": 0,
-      "trend": "0 new today \u00b7 4 responded",
+      "value": 1,
+      "trend": "1 new today \u00b7 4 responded",
       "max": 50
     },
     {
@@ -445,7 +454,7 @@
     },
     {
       "label": "Requests (7d)",
-      "value": 1,
+      "value": 2,
       "trend": "3 accepted \u00b7 1 rejected",
       "max": 100
     }
@@ -471,7 +480,7 @@
     },
     {
       "title": "Queue Health",
-      "detail": "0 requests awaiting response",
+      "detail": "1 requests awaiting response",
       "score": "Manageable",
       "status": "good"
     }
@@ -560,7 +569,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766686903.5130563,
+    "generated_at": 1766686906.5857484,
     "mode": "memory",
     "refresh_interval": 2000
   }
