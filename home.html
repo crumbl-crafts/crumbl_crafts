@@ -1,232 +1,201 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Crumbl Crafts · Home</title>
-  <meta name="description" content="Crumbl Crafts — Departments hub: Building, Crumbl Delights (coming soon), Role Play (coming soon)">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🍪</text></svg>">
-  <style>
-    /* Premium cartoony redesign - imports */
-    @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;800&family=Luckiest+Guy&display=swap');
-    :root{
-      color-scheme: dark;
-      --bg-primary: #0a0f1a;
-      --bg-secondary: #1a2030;
-      --bg-tertiary: #2a3040;
-      --panel: rgba(30, 40, 60, 0.5);
-      --panel-hover: rgba(40, 50, 70, 0.7);
-      --card: rgba(40, 50, 70, 0.4);
-      --card-hover: rgba(50, 60, 80, 0.6);
-      --primary: #ff1744;
-      --primary-glow: rgba(255, 23, 68, 0.6);
-      --secondary: #2979ff;
-      --accent: #ffd700;
-      --success: #00e676;
-      --warning: #ff9100;
-      --danger: #ff1744;
-      --text: #ffffff;
-      --text-bright: #ffffff;
-      --text-muted: #b0b8d0;
-      --border: rgba(255, 255, 255, 0.15);
-      --glow: rgba(255, 23, 68, 0.3);
-    }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Crumble Crafts · Home</title>
 
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:'Fredoka', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg-primary);color:var(--text);min-height:100vh;overflow-x:hidden;position:relative;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;text-rendering: optimizeSpeed}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    body::after {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image: url('happy.gif');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      opacity: 0.5;
-      pointer-events: none;
-      z-index: 0;
-      mix-blend-mode: screen;
-    }
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image: 
-        repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255, 215, 0, 0.02) 2px, rgba(255, 215, 0, 0.02) 4px),
-        repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(0, 212, 255, 0.02) 2px, rgba(0, 212, 255, 0.02) 4px);
-      pointer-events: none;
-      z-index: 0;
-      opacity: 0.3;
-    }
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap');
 
-    .wrap{position:relative;z-index:2;max-width:1100px;margin:0 auto;padding:28px;display:grid;grid-template-columns:1fr;gap:20px}
+:root{
+  --bg:#0f1420;
+  --surface:#1b2133;
+  --card:#232a40;
+  --border:rgba(255,255,255,.08);
 
-    /* Cartoon header */
-    header{display:flex;align-items:center;justify-content:space-between;gap:12px}
-    .brand {display:flex;align-items:center;gap:14px}
-    .mascot{width:78px;height:78px;border-radius:18px;background:linear-gradient(135deg,var(--primary),var(--secondary));display:grid;place-items:center;font-size:40px;border:2px solid var(--border);box-shadow:0 8px 32px var(--glow)}
-    .mascot img{width:100%;height:100%;object-fit:cover;border-radius:12px;display:block}
-    .masc-crumb{position:absolute;width:8px;height:8px;border-radius:50%;background:rgba(255,215,140,0.95);box-shadow:0 2px 6px rgba(0,0,0,0.45);opacity:0;transform:translateY(0);animation:mascCrumb 1s ease forwards}
-    @keyframes mascCrumb{0%{opacity:0;transform:translateY(6px) scale(.6)}30%{opacity:1;transform:translateY(-6px) scale(1)}100%{opacity:0;transform:translateY(-18px) scale(.6)}}
-    .logo-text h1{font-family:'Luckiest Guy',Fredoka, sans-serif;font-size:2.1rem;color:var(--text-bright);text-shadow:0 2px 4px rgba(0,0,0,0.5);}
-    .logo-text .tagline{font-size:0.82rem;color:var(--text-muted);margin-top:2px}
+  --primary:#ff8a65;
+  --secondary:#7aa2ff;
+  --muted:#b7c0e0;
+  --text:#ffffff;
+}
 
-    /* Premium ribbon */
-    .ribbon{position:relative;padding:8px 12px;border-radius:12px;background:linear-gradient(90deg,var(--accent),#ffd199);color:#111;font-weight:800;border:2px solid var(--border);box-shadow:0 4px 16px rgba(0,0,0,0.3)}
+*{box-sizing:border-box;margin:0;padding:0}
 
-    /* Main cards - glass panels */
-    main{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:6px}
-    .card{
-      background: 
-        radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 0.8px, transparent 0.8px),
-        rgba(30, 40, 60, 0.6);
-      background-size: 8px 8px, 8px 8px, 4px 4px, 100% 100%;
-      background-position: 0 0, 4px 4px, 2px 2px, 0 0;
-      border: 2px solid var(--border);
-      border-radius: 16px;
-      padding:18px;
-      min-height:200px;
-      position:relative;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-      transition: all 0.3s ease;
-    }
-    .card:hover {
-      background: 
-        radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.07) 0.8px, transparent 0.8px),
-        rgba(40, 50, 70, 0.7);
-      transform: translateY(-2px);
-      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
-    }
-    .card .title{font-family:'Luckiest Guy',Fredoka,sans-serif;font-size:1.15rem;color:var(--text-bright);}
-    .card .desc{color:var(--text-muted);margin-top:8px;font-size:0.95rem}
+body{
+  font-family:'Fredoka',system-ui,sans-serif;
+  background:linear-gradient(180deg,#0f1420,#0b0f18);
+  color:var(--text);
+  min-height:100vh;
+}
 
-    /* Speech-bubble CTA */
-    .cta{display:inline-block;margin-top:12px;padding:12px 18px;border-radius:999px;background:linear-gradient(90deg,var(--primary),var(--secondary));color:#ffffff;font-weight:600;border:2px solid var(--border);box-shadow:0 4px 16px var(--glow);cursor:pointer;transition: all 0.3s ease;}
-    .cta:hover { transform: translateY(-1px); box-shadow: 0 6px 20px var(--glow); }
-    .cta:active{transform:translateY(1px)}
+/* Layout */
+.wrapper{
+  max-width:1100px;
+  margin:auto;
+  padding:32px 20px 48px;
+}
 
-    /* Comic badge */
-    .badge{position:absolute;top:14px;right:14px;background:var(--accent);color:#111;padding:6px 10px;border-radius:10px;font-weight:600;border:2px solid var(--border)}
+/* Header */
+.hero{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:36px;
+}
 
-    /* Floating icon style */
-    .floater{position:absolute;pointer-events:none;opacity:0.95}
-    .f1{right:6%;top:4%;width:88px;height:88px;font-size:44px}
-    .f2{left:8%;bottom:8%;width:72px;height:72px;font-size:36px}
+.brand{
+  display:flex;
+  gap:14px;
+  align-items:center;
+}
 
-    /* overlay transition */
-    .pt-overlay{position:fixed;inset:0;display:grid;place-items:center;background:rgba(0,0,0,0.6);z-index:9999;opacity:0;pointer-events:none;transition:opacity .28s ease}
-    .pt-overlay.show{opacity:1;pointer-events:auto}
+.brand-icon{
+  width:56px;
+  height:56px;
+  border-radius:14px;
+  background:var(--card);
+  display:grid;
+  place-items:center;
+  font-size:28px;
+  border:1px solid var(--border);
+}
 
-    @media (max-width:980px){main{grid-template-columns:1fr} .mascot{width:60px;height:60px;font-size:30px}}
-    @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
-  </style>
+.brand h1{
+  font-size:1.8rem;
+  font-weight:600;
+}
+
+.brand p{
+  font-size:.85rem;
+  color:var(--muted);
+}
+
+/* Cards */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.04),rgba(0,0,0,.05)),
+    var(--card);
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:22px;
+  cursor:pointer;
+  transition:.25s ease;
+  position:relative;
+}
+
+.card:hover{
+  transform:translateY(-4px);
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.06),rgba(0,0,0,.06)),
+    var(--card);
+}
+
+.card.disabled{
+  opacity:.55;
+  pointer-events:none;
+}
+
+/* Card content */
+.card-icon{
+  width:46px;
+  height:46px;
+  border-radius:12px;
+  background:rgba(255,255,255,.06);
+  display:grid;
+  place-items:center;
+  font-size:20px;
+  margin-bottom:14px;
+}
+
+.card h3{
+  font-size:1.15rem;
+  margin-bottom:6px;
+}
+
+.card p{
+  font-size:.9rem;
+  color:var(--muted);
+  line-height:1.4;
+}
+
+/* Status */
+.status{
+  margin-top:16px;
+  display:inline-block;
+  font-size:.8rem;
+  padding:6px 12px;
+  border-radius:999px;
+  background:rgba(255,255,255,.06);
+}
+
+.status.active{
+  background:rgba(255,138,101,.15);
+  color:var(--primary);
+}
+
+/* Footer note */
+.footer-note{
+  text-align:center;
+  margin-top:28px;
+  font-size:.9rem;
+  color:var(--muted);
+}
+</style>
 </head>
+
 <body>
-  <div class="wrap">
-    <header>
-      <div class="brand">
-        <div class="mascot" id="mascot" aria-hidden style="position:relative;overflow:visible">
-          <img src="transition.gif" alt="cookie mascot">
-          <span class="masc-crumb" style="left:8px;top:8px"></span>
-          <span class="masc-crumb" style="left:36px;top:18px;animation-delay:.12s"></span>
-        </div>
-        <div class="logo-text">
-          <h1>Crumbl Crafts</h1>
-          <div class="tagline">Premium Bloxburg Builder Network</div>
-        </div>
+<div class="wrapper">
+
+  <header class="hero">
+    <div class="brand">
+      <div class="brand-icon">🍪</div>
+      <div>
+        <h1>Crumble Crafts</h1>
+        <p>Premium Bloxburg Builder Network</p>
       </div>
-      <div style="display:flex;align-items:center;gap:12px">
-        <div class="ribbon">Premium</div>
-        <div style="display:flex;flex-direction:column;align-items:flex-end">
-          <div class="status-badge" id="statusBadge" title="System status">
-            <span class="status-dot" id="statusDot"></span>
-            <span id="statusText">LIVE</span>
-          </div>
-          <a href="index.html" style="text-decoration:none;color:var(--text-muted);font-weight:800;padding:6px 10px;border-radius:8px;background:transparent;border:2px solid var(--border);margin-top:6px">Go to Building Dept</a>
-        </div>
-      </div>
-    </header>
+    </div>
 
-    <main>
-      <article class="card" data-target="index.html" title="Building Dept — current site">
-        <div class="badge">LIVE</div>
-        <div class="title">Building Dept</div>
-        <div class="desc">Explore the main building tools and dashboards — your workspace awaits.</div>
-        <button class="cta" data-target="index.html">Enter the Workshop</button>
-      </article>
+    <a href="index.html" style="color:var(--muted);text-decoration:none;font-weight:600">
+      Building Dept →
+    </a>
+  </header>
 
-      <article class="card" aria-disabled="true" title="Crumbl Delights (coming soon)">
-        <div class="badge">COMING SOON</div>
-        <div class="title">Crumbl Delights</div>
-        <div class="desc">Sweet builds & recipes — launching soon. Stay tuned for tasty drops!</div>
-        <button class="cta" disabled style="opacity:.7;cursor:default">Notify Me</button>
-      </article>
+  <main class="grid">
+    <div class="card" onclick="location.href='index.html'">
+      <div class="card-icon"><i class="fas fa-hammer"></i></div>
+      <h3>Building Department</h3>
+      <p>Main tools, builder dashboards, and curated project spaces.</p>
+      <span class="status active">Active</span>
+    </div>
 
-      <article class="card" aria-disabled="true" title="Role Play Dept (coming soon)">
-        <div class="badge">COMING SOON</div>
-        <div class="title">Role Play Dept</div>
-        <div class="desc">Immersive role play experiences — coming soon. Prepare your character!</div>
-        <button class="cta" disabled style="opacity:.7;cursor:default">Learn More</button>
-      </article>
-    </main>
+    <div class="card disabled">
+      <div class="card-icon"><i class="fas fa-birthday-cake"></i></div>
+      <h3>Crumble Delights</h3>
+      <p>Cooking content, recipes, and creative food builds.</p>
+      <span class="status">Coming Soon</span>
+    </div>
 
-    <p style="color:var(--muted);font-size:0.95rem;margin-top:12px;text-align:center">Welcome to the premium network — click a panel to enter. Enjoy the cartoony premium experience.</p>
+    <div class="card disabled">
+      <div class="card-icon"><i class="fas fa-theater-masks"></i></div>
+      <h3>Role Play</h3>
+      <p>Story-driven RP experiences inside the Crumble universe.</p>
+      <span class="status">Coming Soon</span>
+    </div>
+  </main>
+
+  <div class="footer-note">
+    Select a department card to continue.
   </div>
 
-  <!-- Floating cartoon-y icons -->
-  <div class="floater f1">🍪</div>
-  <div class="floater f2">🥐</div>
-
-  <!-- Page transition overlay -->
-  <div id="ptOverlay" class="pt-overlay" aria-hidden>
-    <div class="spinner" aria-hidden></div>
-  </div>
-
-  <script>
-    /* Lightweight page transition: show overlay then navigate. Keep minimal for performance. */
-    (function(){
-      const overlay = document.getElementById('ptOverlay');
-      let navigating = false;
-      function navigateTo(url){
-        if(navigating) return;
-        navigating = true;
-        overlay.classList.add('show');
-        // subtle and quick transition
-        setTimeout(()=>{ window.location.href = url; }, 220);
-      }
-
-      // Attach to clickable panels and CTAs
-      document.querySelectorAll('[data-target]').forEach(el => {
-        el.addEventListener('click', e => {
-          const t = e.currentTarget.getAttribute('data-target');
-          if(!t) return;
-          navigateTo(t);
-        });
-      });
-
-      // Respect reduced motion
-      const motion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if(motion){ document.querySelectorAll('.floater').forEach(f=>f.style.display='none'); }
-
-      // play fullscreen transition when mascot is clicked (respect reduced motion)
-      (function(){
-        const mascot = document.getElementById('mascot');
-        if(mascot && !motion && window.UITransitions && window.UITransitions.showTransitionOverlay){
-          mascot.style.cursor = 'pointer';
-          mascot.addEventListener('click', ()=>{ window.UITransitions.showTransitionOverlay('transition.gif', 1400); });
-        }
-      })();
-
-    })();
-  </script>
-  <!-- Use shared ui-sounds manager (enabled by default, no toggle exposed) -->
-  <script src="ui-sounds.js"></script>
-  <!-- Shared UI transitions: premium promo & cookie banner -->
-  <script src="ui-transitions.js"></script>
+</div>
 </body>
 </html>
