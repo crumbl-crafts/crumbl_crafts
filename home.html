@@ -34,6 +34,9 @@
     header{display:flex;align-items:center;justify-content:space-between;gap:12px}
     .brand {display:flex;align-items:center;gap:14px}
     .mascot{width:78px;height:78px;border-radius:18px;background:linear-gradient(135deg,var(--accent1),#ffb3d6);display:grid;place-items:center;font-size:40px;border:6px solid var(--comic-outline);box-shadow:8px 16px 40px rgba(0,0,0,0.6)}
+    .mascot img{width:100%;height:100%;object-fit:cover;border-radius:12px;display:block}
+    .masc-crumb{position:absolute;width:8px;height:8px;border-radius:50%;background:rgba(255,215,140,0.95);box-shadow:0 2px 6px rgba(0,0,0,0.45);opacity:0;transform:translateY(0);animation:mascCrumb 1s ease forwards}
+    @keyframes mascCrumb{0%{opacity:0;transform:translateY(6px) scale(.6)}30%{opacity:1;transform:translateY(-6px) scale(1)}100%{opacity:0;transform:translateY(-18px) scale(.6)}}
     .logo-text h1{font-family:'Luckiest Guy',Fredoka, sans-serif;font-size:2.1rem;color:var(--white);text-shadow:0 6px 0 var(--comic-outline);}
     .logo-text .tagline{font-size:0.82rem;color:var(--muted);margin-top:2px}
 
@@ -72,7 +75,11 @@
   <div class="wrap">
     <header>
       <div class="brand">
-        <div class="mascot" aria-hidden>🍪</div>
+        <div class="mascot" id="mascot" aria-hidden style="position:relative;overflow:visible">
+          <img src="transition.gif" alt="cookie mascot">
+          <span class="masc-crumb" style="left:8px;top:8px"></span>
+          <span class="masc-crumb" style="left:36px;top:18px;animation-delay:.12s"></span>
+        </div>
         <div class="logo-text">
           <h1>Crumbl Crafts</h1>
           <div class="tagline">Premium Bloxburg Builder Network</div>
@@ -150,6 +157,15 @@
       // Respect reduced motion
       const motion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       if(motion){ document.querySelectorAll('.floater').forEach(f=>f.style.display='none'); }
+
+      // play fullscreen transition when mascot is clicked (respect reduced motion)
+      (function(){
+        const mascot = document.getElementById('mascot');
+        if(mascot && !motion && window.UITransitions && window.UITransitions.showTransitionOverlay){
+          mascot.style.cursor = 'pointer';
+          mascot.addEventListener('click', ()=>{ window.UITransitions.showTransitionOverlay('transition.gif', 1400); });
+        }
+      })();
 
     })();
   </script>
