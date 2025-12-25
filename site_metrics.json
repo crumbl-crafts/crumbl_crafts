@@ -461,6 +461,15 @@
     },
     {
       "type": "trend",
+      "title": "Bloxburg Final Elf Hunt #16 Sixteenth Elf 2025",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766628005.0,
+      "url": "https://www.youtube.com/watch?v=6kTS3O_NS4I",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "How to Find Elf #12 | Bloxburg  #bloxburg #welcometobloxburg  #bloxburgideas #bloxburgelfhunt",
       "description": "...",
       "source": "YouTube",
@@ -478,62 +487,44 @@
       "icon": "fa-youtube"
     },
     {
-      "type": "trend",
-      "title": "How to Find Elf #8 &amp; #9 | Bloxburg  #bloxburg #welcometobloxburg  #bloxburgideas #bloxburgelfhunt",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766623220.0,
-      "url": "https://www.youtube.com/watch?v=bXwOA5CVE3w",
-      "icon": "fa-youtube"
+      "type": "game_update",
+      "title": "New Winter Update Available!",
+      "description": "Explore new winter-themed furniture and decorations",
+      "source": "Bloxburg Official",
+      "timestamp": 1765563563.6636922,
+      "url": "https://twitter.com/BloxburgGame",
+      "icon": "fa-gamepad"
     },
     {
       "type": "trend",
-      "title": "How to Find Elf #4 &amp; #5 | Bloxburg #bloxburg #bloxburgchristmas  #bloxburgideas #bloxburgelfhunt",
-      "description": "...",
+      "title": "Modern Mansion Builds Trending",
+      "description": "Community showcasing stunning modern architecture",
       "source": "YouTube",
-      "timestamp": 1766621998.0,
-      "url": "https://www.youtube.com/watch?v=0Tx70izgHGI",
-      "icon": "fa-youtube"
+      "timestamp": 1765559963.663694,
+      "url": "https://youtube.com/results?search_query=bloxburg+modern+mansion",
+      "icon": "fa-fire"
     },
     {
-      "type": "trend",
-      "title": "How to Find Elf #2 &amp; #3 | Bloxburg #bloxburg #welcometobloxburg  #bloxburgideas #bloxburgelfhunt",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766621498.0,
-      "url": "https://www.youtube.com/watch?v=ddZ5I1jbioE",
-      "icon": "fa-youtube"
+      "type": "tip",
+      "title": "Money Making Guide 2024",
+      "description": "Best jobs and strategies to earn cash quickly",
+      "source": "Community Guide",
+      "timestamp": 1765556363.6636944,
+      "url": "#",
+      "icon": "fa-lightbulb"
     },
     {
-      "type": "trend",
-      "title": "How to Find Elf #1 | Bloxburg  #bloxburg #welcometobloxburg  #bloxburgideas #bloxburgelfhunt",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766621490.0,
-      "url": "https://www.youtube.com/watch?v=KxHjupZeyJw",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "WHERE IS ELF #2? Bloxburg Christmas Event #bloxburg #roblox",
-      "description": "Can we find them all? \ud83d\udd75\ufe0f\u200d\u2640\ufe0f Today I'm showing you how to find ELF #2 in the Bloxburg Elf Hunt! \u200d\u2640\ufe0f\u2728 ...",
-      "source": "YouTube",
-      "timestamp": 1766617165.0,
-      "url": "https://www.youtube.com/watch?v=r6_JuqtTKdc",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Localiza\u00e7\u00e3o Elfo 16 do bloxburg \ud83c\udf85\ud83c\udf84 #bloxburg #bloxburgelfhunt #bloxburgchristmas #roblox",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766615151.0,
-      "url": "https://www.youtube.com/watch?v=pNj-GTuljjI",
-      "icon": "fa-youtube"
+      "type": "community",
+      "title": "Weekly Build Contest",
+      "description": "Submit your best holiday-themed builds to win prizes!",
+      "source": "Crumbl Crafts",
+      "timestamp": 1765552763.6636949,
+      "url": "#",
+      "icon": "fa-trophy"
     }
   ],
   "meta": {
-    "generated_at": 1766639969.9570422,
+    "generated_at": 1766641169.9549494,
     "mode": "memory",
     "refresh_interval": 2000
   }
