@@ -1057,19 +1057,37 @@
           this.showMessage("Hey there! I'm your guide around here! Need anything? Just hover around! 😄", 8000);
         });
         
-        // Hover on building button
-        const buildingBtn = document.getElementById('buildingDeptBtn');
-        buildingBtn.addEventListener('mouseenter', () => {
-          this.showMessage("This button takes you straight to the Building Department! That's where the magic happens! 🏗️", 7000);
-        });
-        
-        // Click on building button
-        buildingBtn.addEventListener('click', (e) => {
-          e.preventDefault();
-          this.showMessage("Alright, let's go build something awesome! See you there! 🚀", 3600);
-          this.createSparkleEffect();
-          window.location.href = 'index.html';
-        });
+        // Hover + Click on building button (defensive)
+        let buildingBtn = document.getElementById('buildingDeptBtn');
+        if (!buildingBtn) {
+          // fallback selector
+          buildingBtn = document.querySelector('a.header-cta');
+        }
+
+        if (buildingBtn) {
+          buildingBtn.addEventListener('mouseenter', () => {
+            this.showMessage("This button takes you straight to the Building Department! That's where the magic happens! 🏗️", 7000);
+          });
+
+          // Click on building button — avoid throwing if element missing
+          buildingBtn.addEventListener('click', (e) => {
+            try {
+              console.log('Building Dept button clicked');
+              // Let default navigation happen for progressive enhancement
+              // but also trigger effects and explicit navigation for reliability
+              this.showMessage("Alright, let's go build something awesome! See you there! 🚀", 3600);
+              this.createSparkleEffect();
+              // small delay to allow the sparkle/message to start, then navigate
+              setTimeout(() => { window.location.href = buildingBtn.getAttribute('href') || 'index.html'; }, 150);
+            } catch (err) {
+              console.error('Error handling building button click', err);
+              // fallback navigation
+              window.location.href = 'index.html';
+            }
+          });
+        } else {
+          console.warn('Building Dept button not found: #buildingDeptBtn');
+        }
         
         // Click on mascot
         this.mascotImage.addEventListener('click', () => {
@@ -1257,8 +1275,20 @@
       }
       
       showMessage(text, duration = 8000) {
+        // defensive: ensure bubble element exists
+        if (!this.speechBubble) this.speechBubble = document.getElementById('speechBubble');
+        if (!this.speechBubble) return;
+
         this.speechBubble.classList.add('show');
-        
+        // force visible and interactive while speaking
+        this.speechBubble.style.display = 'block';
+        this.speechBubble.style.pointerEvents = 'auto';
+        this.speechBubble.style.opacity = '1';
+        this.speechBubble.style.transform = 'translateY(0) scale(1)';
+
+        // debug aid
+        try { console.log('Mascot showMessage:', text.slice(0,120)); } catch (e) {}
+
         // SPECIAL DELIVERY: Vary typing speed and effects based on dialogue
         const isQuestion = text.includes('?');
         const isExcited = text.includes('!') && text.length < 50;
@@ -1279,7 +1309,10 @@
         
         this.typeText(text, typingSpeed);
         
+        // position after we've inserted content so sizes are correct
+        // run twice (immediate + next tick) to handle layout
         this.adjustSpeechBubblePosition();
+        setTimeout(() => this.adjustSpeechBubblePosition(), 30);
         
         clearTimeout(this.messageTimeout);
         this.messageTimeout = setTimeout(() => {
@@ -1288,7 +1321,14 @@
       }
       
       showMessageWithMood(text, mood) {
+        if (!this.speechBubble) this.speechBubble = document.getElementById('speechBubble');
+        if (!this.speechBubble) return;
+
         this.speechBubble.classList.add('show');
+        this.speechBubble.style.display = 'block';
+        this.speechBubble.style.pointerEvents = 'auto';
+        this.speechBubble.style.opacity = '1';
+        this.speechBubble.style.transform = 'translateY(0) scale(1)';
         
         // MOOD-SPECIFIC DELIVERY STYLES
         let typingSpeed = 30;
@@ -1345,6 +1385,7 @@
         this.typeText(text, typingSpeed);
         
         this.adjustSpeechBubblePosition();
+        setTimeout(() => this.adjustSpeechBubblePosition(), 30);
         
         clearTimeout(this.messageTimeout);
         this.messageTimeout = setTimeout(() => {
@@ -1389,8 +1430,9 @@
       adjustSpeechBubblePosition() {
         const mascotRect = this.mascotWrapper.getBoundingClientRect();
         const bubble = this.speechBubble;
-        const bubbleWidth = 300; // approximate max width
-        const bubbleHeight = 300; // approximate max height
+        // prefer actual measured size so we position correctly
+        const bubbleWidth = (bubble && bubble.offsetWidth) ? bubble.offsetWidth : 300;
+        const bubbleHeight = (bubble && bubble.offsetHeight) ? bubble.offsetHeight : 150;
         const margin = 20;
         
         // Reset classes
@@ -1480,8 +1522,11 @@
           
           const angle = Math.random() * Math.PI * 2;
           const distance = 60 + Math.random() * 120;
-          const vx = Math.cos(angle) * (Math.random() * 3 + 2);
-          const vy = Math.sin(angle) * (Math.random() * 3 + 2);
+          let vx = Math.cos(angle) * (Math.random() * 3 + 2);
+          let vy = Math.sin(angle) * (Math.random() * 3 + 2);
+          // use an adjustable accumulator for vertical velocity so we never reassign
+          // a value that might be declared `const` in a reverted file version
+          let accVy = vy;
           
           let posX = startX;
           let posY = startY;
@@ -1491,8 +1536,8 @@
           
           function animate() {
             posX += vx;
-            posY += vy;
-            vy += 0.05;
+            posY += accVy;
+            accVy += 0.05;
             opacity = Math.min(1, opacity + 0.05);
             scale = Math.min(1, scale + 0.1);
             life -= 0.02;
