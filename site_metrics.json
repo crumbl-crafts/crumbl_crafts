@@ -541,6 +541,15 @@
   ],
   "news": [
     {
+      "type": "trend",
+      "title": "3 Things You Should Never do in bloxburg #bloxburg #roblox #viral",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766756558.0,
+      "url": "https://www.youtube.com/watch?v=uFmuZb8y-SE",
+      "icon": "fa-youtube"
+    },
+    {
       "type": "game_update",
       "title": "New Winter Update Available!",
       "description": "Explore new winter-themed furniture and decorations",
@@ -577,6 +586,15 @@
       "icon": "fa-youtube"
     },
     {
+      "type": "trend",
+      "title": "AKU JUMPA BALIK TEAM GAMEONZZ LAMA DEKAT BLOXBURG \ud83d\ude2d [KENANGAN] (Roblox Malaysia)",
+      "description": "Selamat Datang Ke Channel GameOnzz!    \u200d\u2642\ufe0f Terima kasih kerana sudi meluangkan masa anda semua untuk...",
+      "source": "YouTube",
+      "timestamp": 1766736006.0,
+      "url": "https://www.youtube.com/watch?v=tvOFnp7Ng5E",
+      "icon": "fa-youtube"
+    },
+    {
       "type": "community",
       "title": "Weekly Build Contest",
       "description": "Submit your best holiday-themed builds to win prizes!",
@@ -602,28 +620,10 @@
       "timestamp": 1766719152.0,
       "url": "https://www.youtube.com/watch?v=INL-Fn8EtyU",
       "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Let&#39;s tour a Santa&#39;s Toy Workshop in BLOXBURG with me \ud83c\udf85 #bloxburgbuild #bloxburg #roblox",
-      "description": "Thank you for watching. In this short, I'm touring my favorite view from the santa's toy workshop bu...",
-      "source": "YouTube",
-      "timestamp": 1766702413.0,
-      "url": "https://www.youtube.com/watch?v=b6bGSzo3nwE",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "PEACH FAMILY CHRISTMAS DAY SPECIAL! *THEY GOT SO MANY GIFTS* Roblox Bloxburg Voiced RP Roleplay",
-      "description": "Description: \u2661\ufe0e. \u25dd \u2b50\ufe0fUSE STARCODE 'PEACH' WHEN BUYING ROBUX OR PREMIUM!\u2b50\ufe0f \u029a hey everyone!   Today it...",
-      "source": "YouTube",
-      "timestamp": 1766692806.0,
-      "url": "https://www.youtube.com/watch?v=gj6a6xrxAYY",
-      "icon": "fa-youtube"
     }
   ],
   "meta": {
-    "generated_at": 1766758808.6486313,
+    "generated_at": 1766760009.1359591,
     "mode": "memory",
     "refresh_interval": 2000
   }
