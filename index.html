@@ -410,7 +410,7 @@
       position: fixed;
       background: linear-gradient(145deg, rgba(30, 30, 60, 0.95), rgba(40, 40, 80, 0.95));
       border: 2px solid var(--primary);
-      border-radius: 24px 24px 24px 8px;
+      border-radius: 20px;
       /* slightly smaller padding so small messages don't look empty */
       padding: 14px 16px;
       /* allow width to size to content but clamp with max/min */
@@ -464,6 +464,7 @@
       border-radius: 24px 24px 8px 24px;
     }
 
+    /* Classic CSS tail using pseudo-elements so it visually attaches to the bubble */
     .speech-bubble::before {
       content: '';
       position: absolute;
@@ -471,21 +472,11 @@
       height: 0;
       border-left: 15px solid transparent;
       border-right: 15px solid transparent;
-      border-top: 15px solid;
-      border-top-color: var(--primary);
+      border-top: 15px solid var(--primary);
       bottom: -15px;
       left: 50%;
       transform: translateX(-50%);
       filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.3));
-    }
-
-    .speech-bubble.below-mascot::before {
-      border-top: none;
-      border-bottom: 15px solid;
-      border-bottom-color: var(--primary);
-      bottom: auto;
-      top: -15px;
-      filter: drop-shadow(0 -5px 5px rgba(0, 0, 0, 0.3));
     }
 
     .speech-bubble::after {
@@ -502,11 +493,56 @@
       z-index: 2;
     }
 
+    .speech-bubble.left-side::before {
+      border-left: 15px solid var(--primary);
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      right: -15px;
+      left: auto;
+      top: 50%;
+      bottom: auto;
+      transform: translateY(-50%);
+    }
+    .speech-bubble.left-side::after {
+      border-left: 12px solid rgba(40, 40, 80, 0.95);
+      right: -12px;
+      left: auto;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+    }
+
+    .speech-bubble.right-side::before {
+      border-right: 15px solid var(--primary);
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      left: -15px;
+      top: 50%;
+      bottom: auto;
+      transform: translateY(-50%);
+    }
+    .speech-bubble.right-side::after {
+      border-right: 12px solid rgba(40, 40, 80, 0.95);
+      left: -12px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+    }
+
+    .speech-bubble.below-mascot::before {
+      border-top: none;
+      border-bottom: 15px solid var(--primary);
+      bottom: auto;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
     .speech-bubble.below-mascot::after {
       border-top: none;
-      border-bottom: 12px solid rgba(40, 40, 80, 0.95);
-      bottom: auto;
+      border-bottom: 12px solid rgba(40,40,80,0.95);
       top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     .speech-bubble.show {
@@ -1012,6 +1048,16 @@
           if (this.speechBubble) {
             this.speechBubble.style.pointerEvents = this.speechBubble.style.pointerEvents || 'auto';
           }
+          // ensure content container exists so text updates don't remove UI chrome
+          try {
+            if (this.speechBubble && !this.speechBubble.querySelector('.bubble-content')) {
+              const content = document.createElement('div');
+              content.className = 'bubble-content';
+              this.speechBubble.appendChild(content);
+            }
+          } catch (err) {
+            console.warn('Could not create bubble content:', err);
+          }
         } catch (err) {
           console.warn('Could not reparent speechBubble:', err);
         }
@@ -1140,7 +1186,7 @@
 
         if (buildingBtn) {
           buildingBtn.addEventListener('mouseenter', () => {
-            this.showMessage("This button takes you straight to the Building Department! That's where the magic happens! 🏗️", 7000);
+            this.showMessage("This button takes you straight to the Building Department! That's where the magic happens! 🏗️", 7000, true);
           });
 
           // Click on building button — avoid throwing if element missing
@@ -1189,9 +1235,9 @@
         const message = card.getAttribute('data-message');
         
         if (!card.classList.contains('disabled')) {
-          this.showMessage(message, 10000);
+          this.showMessage(message, 10000, true);
         } else {
-          this.showMessage(message, 9000);
+          this.showMessage(message, 9000, true);
         }
         
         // Add hover glow effect
@@ -1352,7 +1398,7 @@
         this.showMessageWithMood(randomDialogue, randomMood);
       }
       
-      showMessage(text, duration = 8000) {
+      showMessage(text, duration = 8000, instant = false) {
         // defensive: ensure bubble element exists
         if (!this.speechBubble) this.speechBubble = document.getElementById('speechBubble');
         if (!this.speechBubble) return;
@@ -1385,25 +1431,47 @@
         // debug aid
         try { console.log('Mascot showMessage:', text.slice(0,120)); } catch (e) {}
 
-        // SPECIAL DELIVERY: Vary typing speed and effects based on dialogue
-        const isQuestion = text.includes('?');
-        const isExcited = text.includes('!') && text.length < 50;
-        const isLong = text.length > 80;
+        // Cancel any ongoing typing
+        this._typingCancelled = true;
+        this.isTyping = false;
         
-        let typingSpeed = 30; // default
-        if (isQuestion) typingSpeed = 20; // faster for questions
-        else if (isLong) typingSpeed = 40; // slower for long messages
-        else if (isExcited) typingSpeed = 25; // medium for excited
-        
-        // Random variation
-        typingSpeed += Math.random() * 10 - 5;
-        
-        // Special effects for exciting dialogues
-        if (isExcited && Math.random() < 0.3) {
-          setTimeout(() => this.createSparkleEffect(), 500);
+        // ensure content container
+        let contentEl = this.speechBubble.querySelector('.bubble-content');
+        if (!contentEl) {
+          contentEl = document.createElement('div');
+          contentEl.className = 'bubble-content';
+          this.speechBubble.appendChild(contentEl);
         }
-        
-        this.typeText(text, typingSpeed);
+
+        if (instant) {
+          // Show text instantly without typing animation
+          contentEl.innerHTML = `<span class="typing-text">${text}</span>`;
+          const typingElement = contentEl.querySelector('.typing-text');
+          if (typingElement) {
+            typingElement.style.animation = 'none';
+            typingElement.style.borderRight = 'none';
+          }
+        } else {
+          // SPECIAL DELIVERY: Vary typing speed and effects based on dialogue
+          const isQuestion = text.includes('?');
+          const isExcited = text.includes('!') && text.length < 50;
+          const isLong = text.length > 80;
+          
+          let typingSpeed = 30; // default
+          if (isQuestion) typingSpeed = 20; // faster for questions
+          else if (isLong) typingSpeed = 40; // slower for long messages
+          else if (isExcited) typingSpeed = 25; // medium for excited
+          
+          // Random variation
+          typingSpeed += Math.random() * 10 - 5;
+          
+          // Special effects for exciting dialogues
+          if (isExcited && Math.random() < 0.3) {
+            setTimeout(() => this.createSparkleEffect(), 500);
+          }
+          
+          this.typeText(text, typingSpeed, contentEl);
+        }
         
         // position after we've inserted content so sizes are correct
         // run twice (immediate + next tick) to handle layout
@@ -1507,7 +1575,8 @@
         setTimeout(() => {
           try {
             if (this.speechBubble) {
-              this.speechBubble.innerHTML = '';
+              const content = this.speechBubble.querySelector('.bubble-content');
+              if (content) content.innerHTML = '';
               this.speechBubble.style.display = 'none';
             }
           } catch (e) {}
@@ -1515,15 +1584,19 @@
         }, 350);
       }
       
-      typeText(text, speed = 30) {
+      typeText(text, speed = 30, container = null) {
         if (this.isTyping) return;
 
         this._typingCancelled = false;
         this.isTyping = true;
-        this.speechBubble.innerHTML = '';
+        const target = container || this.speechBubble;
+        // clear only the content container
+        if (container) container.innerHTML = '';
+        else if (this.speechBubble) this.speechBubble.querySelectorAll('.bubble-content').forEach(c=>c.innerHTML='');
+
         const typingElement = document.createElement('span');
         typingElement.className = 'typing-text';
-        this.speechBubble.appendChild(typingElement);
+        target.appendChild(typingElement);
 
         let i = 0;
 
@@ -1559,46 +1632,51 @@
         const margin = 20;
         
         // Reset classes
-        bubble.classList.remove('right-side', 'below-mascot');
+        bubble.classList.remove('right-side', 'below-mascot', 'left-side');
         
-        // Calculate mascot center
-        const mascotCenterX = mascotRect.left + mascotRect.width / 2;
-        const mascotTop = mascotRect.top;
-        const mascotBottom = mascotRect.bottom;
+        // Prefer positioning to the left of the mascot
+        let bubbleLeft = mascotRect.left - bubbleWidth - margin;
+        let bubbleTop = mascotRect.top - bubbleHeight / 2; // Center vertically on mascot
+        let positionClass = 'left-side';
         
-        // Try to position above first
-        let bubbleTop = mascotTop - bubbleHeight - margin;
-        let isBelow = false;
-        
-        if (bubbleTop < margin) {
-          // Position below
-          bubbleTop = mascotBottom + margin;
-          isBelow = true;
-        }
-        
-        // Center horizontally on mascot
-        let bubbleLeft = mascotCenterX - bubbleWidth / 2;
-        
-        // Ensure doesn't go off screen horizontally
+        // Check if fits on left
         if (bubbleLeft < margin) {
-          bubbleLeft = margin;
-        } else if (bubbleLeft + bubbleWidth > window.innerWidth - margin) {
-          bubbleLeft = window.innerWidth - bubbleWidth - margin;
+          // Try right side
+          bubbleLeft = mascotRect.right + margin;
+          positionClass = 'right-side';
+          if (bubbleLeft + bubbleWidth > window.innerWidth - margin) {
+            // Doesn't fit right either, position above
+            bubbleLeft = mascotRect.left + mascotRect.width / 2 - bubbleWidth / 2;
+            bubbleTop = mascotRect.top - bubbleHeight - margin;
+            positionClass = 'above';
+            if (bubbleTop < margin) {
+              // Position below
+              bubbleTop = mascotRect.bottom + margin;
+              positionClass = 'below-mascot';
+            }
+          }
         }
         
-        // Ensure doesn't go off bottom
-        if (bubbleTop + bubbleHeight > window.innerHeight - margin) {
-          bubbleTop = window.innerHeight - bubbleHeight - margin;
-        }
+        // Ensure doesn't go off screen
+        if (bubbleLeft < margin) bubbleLeft = margin;
+        if (bubbleLeft + bubbleWidth > window.innerWidth - margin) bubbleLeft = window.innerWidth - bubbleWidth - margin;
+        if (bubbleTop < margin) bubbleTop = margin;
+        if (bubbleTop + bubbleHeight > window.innerHeight - margin) bubbleTop = window.innerHeight - bubbleHeight - margin;
         
         // Apply positions
         bubble.style.left = `${bubbleLeft}px`;
         bubble.style.top = `${bubbleTop}px`;
         
-        // Add class for tail direction
-        if (isBelow) {
+        // Add position class for tail
+        if (positionClass === 'below-mascot') {
           bubble.classList.add('below-mascot');
+        } else if (positionClass === 'right-side') {
+          bubble.classList.add('right-side');
+        } else if (positionClass === 'left-side') {
+          bubble.classList.add('left-side');
         }
+
+        // Old dynamic tail positioning removed; tail is handled with CSS pseudo-elements
       }
       
       createParticles() {
