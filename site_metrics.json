@@ -524,6 +524,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "Going To An Ugly Christmas Sweater Party \ud83d\ude2d\ud83d\ude21 #bloxburg #bloxburgfamily #roblox #shorts",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766719152.0,
+      "url": "https://www.youtube.com/watch?v=INL-Fn8EtyU",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Robbing houses \u2728\u2728\u2728\ud83e\udd29 #giveusourstolenmoneyback #roblox #bloxburg #whydidntmyexcomeback #edit",
       "description": "...",
       "source": "YouTube",
@@ -542,29 +551,20 @@
     },
     {
       "type": "trend",
+      "title": "black and yellow\ud83d\udc9b\ud83d\udda4 #roblox #dance #outfitideas #bloxburg",
+      "description": "youbli3k....",
+      "source": "YouTube",
+      "timestamp": 1766696643.0,
+      "url": "https://www.youtube.com/watch?v=4DFVlDnW22o",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "PEACH FAMILY CHRISTMAS DAY SPECIAL! *THEY GOT SO MANY GIFTS* Roblox Bloxburg Voiced RP Roleplay",
       "description": "Description: \u2661\ufe0e. \u25dd \u2b50\ufe0fUSE STARCODE 'PEACH' WHEN BUYING ROBUX OR PREMIUM!\u2b50\ufe0f \u029a hey everyone!   Today it...",
       "source": "YouTube",
       "timestamp": 1766692806.0,
       "url": "https://www.youtube.com/watch?v=gj6a6xrxAYY",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "VAZAMENTO da Atualiza\u00e7\u00e3o ANO NOVO no Bloxburg #shorts #roblox #natal  #games #bloxburg #anonovo",
-      "description": "Finalmente, veio vazamento da pr\u00f3xima atualiza\u00e7\u00e3o no Bloxburg, especificamente, de Ano Novo, com foc...",
-      "source": "YouTube",
-      "timestamp": 1766689800.0,
-      "url": "https://www.youtube.com/watch?v=9HWJb7kblVU",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Touring a 1.4MIL Bloxburg Mansion#roblox #bloxburg",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766677310.0,
-      "url": "https://www.youtube.com/watch?v=EEuiM1SahTQ",
       "icon": "fa-youtube"
     },
     {
@@ -605,7 +605,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766720369.9537716,
+    "generated_at": 1766721569.9532623,
     "mode": "memory",
     "refresh_interval": 2000
   }
