@@ -515,7 +515,7 @@
     {
       "label": "Pending Requests",
       "value": 0,
-      "trend": "1 new today \u00b7 5 responded",
+      "trend": "0 new today \u00b7 5 responded",
       "max": 50
     },
     {
@@ -641,7 +641,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766773208.6519098,
+    "generated_at": 1766774408.6529899,
     "mode": "memory",
     "refresh_interval": 2000
   }
