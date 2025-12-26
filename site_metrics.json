@@ -620,10 +620,19 @@
       "timestamp": 1766692806.0,
       "url": "https://www.youtube.com/watch?v=gj6a6xrxAYY",
       "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "BLOXBURG NEW TAXI JOB UPDATE TEASER? AND ALL 16 ELVES HUNT ROUTE GUIDE",
+      "description": "MERRY CHRISTMAS BREADFAM! Today Bloxburg posted a brand new update teaser photo that could be hintin...",
+      "source": "YouTube",
+      "timestamp": 1766690211.0,
+      "url": "https://www.youtube.com/watch?v=BPU_7DLOgwo",
+      "icon": "fa-youtube"
     }
   ],
   "meta": {
-    "generated_at": 1766751608.6618698,
+    "generated_at": 1766752808.6499743,
     "mode": "memory",
     "refresh_interval": 2000
   }
