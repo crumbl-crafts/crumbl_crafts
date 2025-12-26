@@ -1,6 +1,6 @@
 {
   "summary": {
-    "builder_count": 1,
+    "builder_count": 2,
     "total_completed": 0,
     "total_requests": 5,
     "total_ratings": 1,
@@ -21,6 +21,15 @@
       "avatar_url": "https://cdn.discordapp.com/avatars/1098992055272878081/3d5587425a502f14a7fbf5cfaaa493a1.png?size=1024",
       "server_id": 1301988304279048275,
       "url": "https://discord.com/channels/1301988304279048275/1446931774826610790"
+    },
+    {
+      "shop_name": "itzcrystallil's Shop",
+      "completed_projects": 0,
+      "average_rating": 0.0,
+      "thread_id": 1454182417534288017,
+      "avatar_url": null,
+      "server_id": 1301988304279048275,
+      "url": "https://discord.com/channels/1301988304279048275/1454182417534288017"
     }
   ],
   "activityLog": [
@@ -641,7 +650,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766774408.6529899,
+    "generated_at": 1766774509.7490098,
     "mode": "memory",
     "refresh_interval": 2000
   }
