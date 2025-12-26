@@ -9,7 +9,7 @@
   "server": {
     "total_members": 341,
     "joined_today": 1,
-    "active_shops": 1,
+    "active_shops": 2,
     "avg_response_time": 4930.0
   },
   "topBuilders": [
@@ -529,8 +529,8 @@
     },
     {
       "label": "Active Shops",
-      "value": 1,
-      "trend": "0 open \u00b7 1 limited \u00b7 0 24/7",
+      "value": 2,
+      "trend": "1 open \u00b7 1 limited \u00b7 0 24/7",
       "max": 20
     },
     {
@@ -555,7 +555,7 @@
     },
     {
       "title": "Live Shops",
-      "detail": "1 shops currently accepting commissions",
+      "detail": "2 shops currently accepting commissions",
       "score": "Healthy",
       "status": "good"
     },
@@ -650,7 +650,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766774509.7490098,
+    "generated_at": 1766774526.5951257,
     "mode": "memory",
     "refresh_interval": 2000
   }
