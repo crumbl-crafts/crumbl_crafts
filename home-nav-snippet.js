@@ -45,8 +45,8 @@
   }
 
   let navigating=false;
-  function goHome(){ if(navigating) return; navigating=true; overlay.classList.add('show'); overlay.style.opacity=1; overlay.style.pointerEvents='auto'; setTimeout(()=>{ window.location.href='home.html'; },340); }
-  btn.addEventListener('click',()=>{ try{ goHome(); }catch(e){ window.location.href='home.html'; } });
+  function goHome(){ if(navigating) return; navigating=true; overlay.classList.add('show'); overlay.style.opacity=1; overlay.style.pointerEvents='auto'; setTimeout(()=>{ window.location.href='https://crumbl-crafts.github.io/Bloxburg'; },340); }
+  btn.addEventListener('click',()=>{ try{ goHome(); }catch(e){ window.location.href='https://crumbl-crafts.github.io/Bloxburg'; } });
 
   // H keyboard shortcut (case-insensitive) — avoid firing when typing in inputs
   document.addEventListener('keydown',e=>{ const t = e.target; const tag = t && t.tagName && t.tagName.toLowerCase(); if(tag==='input' || tag==='textarea' || t.isContentEditable) return; if(e.key==='h' || e.key==='H') goHome(); });
