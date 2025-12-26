@@ -560,6 +560,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "TAXI JOB coming to BLOXBURG #bloxburg #bloxburgupdate #roblox #bloxburgnews",
+      "description": "TAXI JOB coming to BLOXBURG #bloxburg #bloxburgupdate #roblox #bloxburgnews....",
+      "source": "YouTube",
+      "timestamp": 1766771888.0,
+      "url": "https://www.youtube.com/watch?v=oma5G1j4fWI",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "NOVO EMPREGO no Bloxburg? #shorts #roblox #bloxburg #novoemprego #roleplay #games",
       "description": "Mais um vazamento? Nesse v\u00eddeo, eu mostro de fato o que vai vir no Bloxburg, mudando totalmente, a e...",
       "source": "YouTube",
@@ -622,15 +631,6 @@
       "icon": "fa-lightbulb"
     },
     {
-      "type": "trend",
-      "title": "I will break into your house in bloxburg #bloxburg #roblox #comedy #funny",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766737026.0,
-      "url": "https://www.youtube.com/watch?v=0E_BNd4CYjo",
-      "icon": "fa-youtube"
-    },
-    {
       "type": "community",
       "title": "Weekly Build Contest",
       "description": "Submit your best holiday-themed builds to win prizes!",
@@ -641,7 +641,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766772008.6512291,
+    "generated_at": 1766773208.6519098,
     "mode": "memory",
     "refresh_interval": 2000
   }
