@@ -560,6 +560,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "#roblox #robloxedit #memes #bloxburg #edit",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766763804.0,
+      "url": "https://www.youtube.com/watch?v=gZzpipaNFMQ",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "STILL LOOKING #roblox#robloxmemes#robloxedit#robloxgameplay#robloxstory#robloxtutorial#bloxburg",
       "description": "Messi ronaldo tung tung shaur giveaway subscribe me #roblox #robloxmemes #robloxedit #robloxgameplay...",
       "source": "YouTube",
@@ -629,19 +638,10 @@
       "timestamp": 1766734802.550761,
       "url": "#",
       "icon": "fa-trophy"
-    },
-    {
-      "type": "trend",
-      "title": "Reaction to cringe Roblox.. #roblox #relatable #rant #rblox #bloxburg",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766723310.0,
-      "url": "https://www.youtube.com/watch?v=geKopS-9hec",
-      "icon": "fa-youtube"
     }
   ],
   "meta": {
-    "generated_at": 1766768408.6507332,
+    "generated_at": 1766769608.6483493,
     "mode": "memory",
     "refresh_interval": 2000
   }
