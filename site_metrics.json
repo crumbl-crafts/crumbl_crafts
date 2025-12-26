@@ -605,6 +605,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "Progress on my cozy Bloxburg house \u2661 | Roblox bloxburg #bloxburg #roblox #explore",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766788387.0,
+      "url": "https://www.youtube.com/watch?v=kUw1r4ErHoc",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "TAXI JOB coming to BLOXBURG #bloxburg #bloxburgupdate #roblox #bloxburgnews",
       "description": "TAXI JOB coming to BLOXBURG #bloxburg #bloxburgupdate #roblox #bloxburgnews....",
       "source": "YouTube",
@@ -637,15 +646,6 @@
       "source": "YouTube",
       "timestamp": 1766760602.0,
       "url": "https://www.youtube.com/watch?v=oPEowneyPAI",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "3 Things You Should Never do in bloxburg #bloxburg #roblox #viral",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766756558.0,
-      "url": "https://www.youtube.com/watch?v=uFmuZb8y-SE",
       "icon": "fa-youtube"
     },
     {
@@ -686,7 +686,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766788808.6539712,
+    "generated_at": 1766790008.6498682,
     "mode": "memory",
     "refresh_interval": 2000
   }
