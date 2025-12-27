@@ -731,6 +731,15 @@
     },
     {
       "type": "trend",
+      "title": "MORE NEW BLOXBURG TAXI JOB AND NEW YEARS UPDATE TEASERS! FURNITURE AND NEW VEHICLE COMING?",
+      "description": "ok I was originally going to take a break today but bloxburg posted a brand new teaser for the upcom...",
+      "source": "YouTube",
+      "timestamp": 1766783203.0,
+      "url": "https://www.youtube.com/watch?v=8cRTnBNety4",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "TAXI JOB coming to BLOXBURG #bloxburg #bloxburgupdate #roblox #bloxburgnews",
       "description": "TAXI JOB coming to BLOXBURG #bloxburg #bloxburgupdate #roblox #bloxburgnews....",
       "source": "YouTube",
@@ -746,19 +755,10 @@
       "timestamp": 1766769600.0,
       "url": "https://www.youtube.com/watch?v=aroWmlTqcu8",
       "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "BLOXBURG TAXI JOB REVEALED + TOWN BUILDING AND NEW ITEMS!!",
-      "description": "EEEEEEEK FINALLU OPEN ME FOR SOCIALS, MERCH & MORE! \u0c68\u09ce hey glossettes! In today's video I look at th...",
-      "source": "YouTube",
-      "timestamp": 1766765028.0,
-      "url": "https://www.youtube.com/watch?v=Edpr7C6lAG0",
-      "icon": "fa-youtube"
     }
   ],
   "meta": {
-    "generated_at": 1766842137.0531554,
+    "generated_at": 1766843337.048535,
     "mode": "memory",
     "refresh_interval": 2000
   }
