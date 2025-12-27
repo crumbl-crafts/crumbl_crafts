@@ -731,6 +731,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "I BUILT LIDL IN BLOXBURG",
+      "description": "bloxburg #roblox #robloxbloxburg Bloxburg needed a new store so I built lidl...and then i worked the...",
+      "source": "YouTube",
+      "timestamp": 1766865639.0,
+      "url": "https://www.youtube.com/watch?v=lfld6Cu5gvc",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "judging YOUR bloxburg builds... (16)",
       "description": "JOIN ME ON ROBLOX: https://www.roblox.com/join/isaacfaulty \u2b50 \ud83d\udecd\ufe0f SHOP MY UGC: https://www.roblox.com/...",
       "source": "YouTube",
@@ -800,19 +809,10 @@
       "timestamp": 1766788387.0,
       "url": "https://www.youtube.com/watch?v=kUw1r4ErHoc",
       "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "MORE NEW BLOXBURG TAXI JOB AND NEW YEARS UPDATE TEASERS! FURNITURE AND NEW VEHICLE COMING?",
-      "description": "ok I was originally going to take a break today but bloxburg posted a brand new teaser for the upcom...",
-      "source": "YouTube",
-      "timestamp": 1766783203.0,
-      "url": "https://www.youtube.com/watch?v=8cRTnBNety4",
-      "icon": "fa-youtube"
     }
   ],
   "meta": {
-    "generated_at": 1766867337.0450282,
+    "generated_at": 1766868537.0478373,
     "mode": "memory",
     "refresh_interval": 2000
   }
