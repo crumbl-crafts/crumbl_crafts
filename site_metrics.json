@@ -34,6 +34,15 @@
   ],
   "activityLog": [
     {
+      "type": "new_request_thread",
+      "shop_name": "test",
+      "message": "<@1098992055272878081> posted a new request titled: test",
+      "timestamp": 1766810767,
+      "thread_id": 1454334508529745923,
+      "server_id": 1301988304279048275,
+      "url": "https://discord.com/channels/1301988304279048275/1454334508529745923"
+    },
+    {
       "type": "member_leave",
       "shop_name": "Server",
       "message": "dynastyzr left the server",
@@ -713,7 +722,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766810733.4590971,
+    "generated_at": 1766810767.280354,
     "mode": "memory",
     "refresh_interval": 2000
   }
