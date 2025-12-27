@@ -658,15 +658,6 @@
   ],
   "news": [
     {
-      "type": "trend",
-      "title": "#roblox #bloxburg #aldc #dancemoms #robloxedit #robloxshorts #999 #aura #games",
-      "description": "hi friends....",
-      "source": "YouTube",
-      "timestamp": 1766813425.0,
-      "url": "https://www.youtube.com/watch?v=Pm--7TXJr-g",
-      "icon": "fa-youtube"
-    },
-    {
       "type": "game_update",
       "title": "New Winter Update Available!",
       "description": "Explore new winter-themed furniture and decorations",
@@ -737,10 +728,19 @@
       "timestamp": 1766769600.0,
       "url": "https://www.youtube.com/watch?v=aroWmlTqcu8",
       "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "BLOXBURG TAXI JOB REVEALED + TOWN BUILDING AND NEW ITEMS!!",
+      "description": "EEEEEEEK FINALLU OPEN ME FOR SOCIALS, MERCH & MORE! \u0c68\u09ce hey glossettes! In today's video I look at th...",
+      "source": "YouTube",
+      "timestamp": 1766765028.0,
+      "url": "https://www.youtube.com/watch?v=Edpr7C6lAG0",
+      "icon": "fa-youtube"
     }
   ],
   "meta": {
-    "generated_at": 1766831337.0470319,
+    "generated_at": 1766832537.0508683,
     "mode": "memory",
     "refresh_interval": 2000
   }
