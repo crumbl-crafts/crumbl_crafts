@@ -731,6 +731,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "FAMILY VACATION TO A HUGE SKI RESORT! *INJURED?* Roblox Bloxburg Voiced RP Roleplay",
+      "description": "Description: \u2661\ufe0e. \u25dd \u2b50\ufe0fUSE STARCODE 'PEACH' WHEN BUYING ROBUX OR PREMIUM!\u2b50\ufe0f \u029a hey everyone!   Today it...",
+      "source": "YouTube",
+      "timestamp": 1766869206.0,
+      "url": "https://www.youtube.com/watch?v=hxAE7XuSjq8",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "judging YOUR bloxburg builds... (16)",
       "description": "JOIN ME ON ROBLOX: https://www.roblox.com/join/isaacfaulty \u2b50 \ud83d\udecd\ufe0f SHOP MY UGC: https://www.roblox.com/...",
       "source": "YouTube",
@@ -800,19 +809,10 @@
       "timestamp": 1766790176.0,
       "url": "https://www.youtube.com/watch?v=ZUPpRL6oMIs",
       "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Progress on my cozy Bloxburg house \u2661 | Roblox bloxburg #bloxburg #roblox #explore",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1766788387.0,
-      "url": "https://www.youtube.com/watch?v=kUw1r4ErHoc",
-      "icon": "fa-youtube"
     }
   ],
   "meta": {
-    "generated_at": 1766874537.0458953,
+    "generated_at": 1766875737.0477552,
     "mode": "memory",
     "refresh_interval": 2000
   }
