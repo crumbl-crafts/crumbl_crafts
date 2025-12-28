@@ -7,7 +7,7 @@
     "request_completion_ratio": 0.0
   },
   "server": {
-    "total_members": 343,
+    "total_members": 342,
     "joined_today": 2,
     "active_shops": 3,
     "avg_response_time": 6137.833333333333
@@ -42,6 +42,15 @@
     }
   ],
   "activityLog": [
+    {
+      "type": "member_leave",
+      "shop_name": "Server",
+      "message": "pomfrit. left the server",
+      "timestamp": 1766937309,
+      "thread_id": null,
+      "server_id": 1301988304279048275,
+      "url": "https://discord.com/users/447406443759534092"
+    },
     {
       "type": "member_leave",
       "shop_name": "Server",
@@ -785,7 +794,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766937104.1375012,
+    "generated_at": 1766937311.9426138,
     "mode": "memory",
     "refresh_interval": 2000
   }
