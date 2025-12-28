@@ -695,6 +695,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "Ojo al directo del 29 #roblox #teamchismetv #parati #bloxburg",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766932255.0,
+      "url": "https://www.youtube.com/watch?v=u5SMC1NnCXs",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "me during exams.\ud83d\udcda #funny #roblox #memes #haveitoldyoulatelythatiloveyou #bloxburg #memes #nostalgia",
       "description": "me during exams.   #funny #roblox #memes #haveitoldyoulatelythatiloveyou #bloxburg #memes #nostalgia...",
       "source": "YouTube",
@@ -727,15 +736,6 @@
       "source": "YouTube",
       "timestamp": 1766877904.0,
       "url": "https://www.youtube.com/watch?v=L1VHM-8wswU",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Trading sab",
-      "description": "roblox #trading #sab #stealabrainrot....",
-      "source": "YouTube",
-      "timestamp": 1766872824.0,
-      "url": "https://www.youtube.com/watch?v=Po1FOt97G9Q",
       "icon": "fa-youtube"
     },
     {
@@ -776,7 +776,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766932137.0521667,
+    "generated_at": 1766933337.0475852,
     "mode": "memory",
     "refresh_interval": 2000
   }
