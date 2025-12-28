@@ -713,6 +713,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "#roblox #bloxburg #robloxgames #brookhavenrp #robloxstory #natal #navidad #santaclaus #grinch",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1766945728.0,
+      "url": "https://www.youtube.com/watch?v=zebhXEV3jFI",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Ojo al directo del 29 #roblox #teamchismetv #parati #bloxburg",
       "description": "...",
       "source": "YouTube",
@@ -745,15 +754,6 @@
       "source": "YouTube",
       "timestamp": 1766891430.0,
       "url": "https://www.youtube.com/watch?v=hCzT_jgfArw",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "BLOX FRUITS Dragon \ud83d\udd25#bloxfruits #roblox #edit #robloxfyp #bloxburg",
-      "description": "bloxfruits #roblox #edit #robloxfyp #bloxburg #viral #shots....",
-      "source": "YouTube",
-      "timestamp": 1766877904.0,
-      "url": "https://www.youtube.com/watch?v=L1VHM-8wswU",
       "icon": "fa-youtube"
     },
     {
@@ -794,7 +794,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766947137.3914611,
+    "generated_at": 1766947737.046231,
     "mode": "memory",
     "refresh_interval": 2000
   }
