@@ -662,15 +662,6 @@
       "server_id": 1301988304279048275,
       "url": "https://discord.com/users/804579208448704523",
       "thread_id": null
-    },
-    {
-      "type": "accepted",
-      "shop_name": "Hidenori's Shop",
-      "message": "Request from kaydenwerner accepted",
-      "timestamp": 1766294094,
-      "thread_id": 1446931774826610790,
-      "server_id": 1301988304279048275,
-      "url": "https://discord.com/channels/1301988304279048275/1452167416514875522"
     }
   ],
   "pipeline": [
@@ -803,7 +794,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766898537.3306153,
+    "generated_at": 1766899737.0456076,
     "mode": "memory",
     "refresh_interval": 2000
   }
