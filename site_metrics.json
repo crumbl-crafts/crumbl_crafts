@@ -722,6 +722,24 @@
   "news": [
     {
       "type": "trend",
+      "title": "me during exams.\ud83d\udcda #funny #roblox #memes #haveitoldyoulatelythatiloveyou #bloxburg #memes #nostalgia",
+      "description": "me during exams.   #funny #roblox #memes #haveitoldyoulatelythatiloveyou #bloxburg #memes #nostalgia...",
+      "source": "YouTube",
+      "timestamp": 1766905061.0,
+      "url": "https://www.youtube.com/watch?v=AakfA26v0Uo",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "why I hate Hindi subject #memes #funny #roblox #bloxburg #memes #edit #memeschallenge #funnycomment",
+      "description": "why I hate Hindi subject #memes #funny #roblox #bloxburg #memes #edit #memeschallenge #funnycomment ...",
+      "source": "YouTube",
+      "timestamp": 1766904639.0,
+      "url": "https://www.youtube.com/watch?v=BaATFXigGJY",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "custom spa in bloxburg:) please subscribe #bloxburg #bloxburg #bloxburgroleplay",
       "description": "...",
       "source": "YouTube",
@@ -745,24 +763,6 @@
       "source": "YouTube",
       "timestamp": 1766869206.0,
       "url": "https://www.youtube.com/watch?v=hxAE7XuSjq8",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "I BUILT LIDL IN BLOXBURG",
-      "description": "bloxburg #roblox #robloxbloxburg Bloxburg needed a new store so I built lidl...and then i worked the...",
-      "source": "YouTube",
-      "timestamp": 1766865639.0,
-      "url": "https://www.youtube.com/watch?v=lfld6Cu5gvc",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "judging YOUR bloxburg builds... (16)",
-      "description": "JOIN ME ON ROBLOX: https://www.roblox.com/join/isaacfaulty \u2b50 \ud83d\udecd\ufe0f SHOP MY UGC: https://www.roblox.com/...",
-      "source": "YouTube",
-      "timestamp": 1766854917.0,
-      "url": "https://www.youtube.com/watch?v=zzX2sDoX0Xc",
       "icon": "fa-youtube"
     },
     {
@@ -803,7 +803,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766905737.048795,
+    "generated_at": 1766906937.046562,
     "mode": "memory",
     "refresh_interval": 2000
   }
