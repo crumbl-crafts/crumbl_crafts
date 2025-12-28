@@ -644,24 +644,6 @@
       "server_id": 1301988304279048275,
       "url": "https://discord.com/users/804579208448704523",
       "thread_id": null
-    },
-    {
-      "type": "new_request_thread",
-      "shop_name": "need a builder i will pay 100k",
-      "message": "<@1390974020211708076> posted a new request titled: need a builder i will pay 100k",
-      "timestamp": 1766325411,
-      "thread_id": 1452298779108708372,
-      "server_id": 1301988304279048275,
-      "url": "https://discord.com/channels/1301988304279048275/1452298779108708372"
-    },
-    {
-      "type": "member_join",
-      "shop_name": "Server",
-      "message": "kxiava joined the server",
-      "timestamp": 1766325255,
-      "server_id": 1301988304279048275,
-      "url": "https://discord.com/users/1390974020211708076",
-      "thread_id": null
     }
   ],
   "pipeline": [
@@ -794,7 +776,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766929737.048578,
+    "generated_at": 1766930937.0528615,
     "mode": "memory",
     "refresh_interval": 2000
   }
