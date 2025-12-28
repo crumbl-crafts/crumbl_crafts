@@ -36,7 +36,7 @@
       "completed_projects": 0,
       "average_rating": 0.0,
       "thread_id": 1454552711843545170,
-      "avatar_url": null,
+      "avatar_url": "https://cdn.discordapp.com/avatars/1438566361889767486/629c969b72ed1638cb33a92f70212a1b.png?size=1024",
       "server_id": 1301988304279048275,
       "url": "https://discord.com/channels/1301988304279048275/1454552711843545170"
     }
@@ -671,15 +671,6 @@
       "thread_id": 1446931774826610790,
       "server_id": 1301988304279048275,
       "url": "https://discord.com/channels/1301988304279048275/1452167416514875522"
-    },
-    {
-      "type": "sent",
-      "shop_name": "Hidenori's Shop",
-      "message": "Request sent by kaydenwerner",
-      "timestamp": 1766292763,
-      "thread_id": 1446931774826610790,
-      "url": "https://discord.com/channels/1301988304279048275/1446931774826610790",
-      "server_id": 1301988304279048275
     }
   ],
   "pipeline": [
@@ -697,7 +688,7 @@
     },
     {
       "label": "Requests (7d)",
-      "value": 3,
+      "value": 2,
       "trend": "4 accepted \u00b7 2 rejected",
       "max": 100
     }
@@ -812,7 +803,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1766897337.0509014,
+    "generated_at": 1766898537.0458572,
     "mode": "memory",
     "refresh_interval": 2000
   }
