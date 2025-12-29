@@ -644,15 +644,6 @@
       "server_id": 1301988304279048275,
       "url": "https://discord.com/users/1390974020211708076",
       "thread_id": null
-    },
-    {
-      "type": "member_leave",
-      "shop_name": "Server",
-      "message": "swagmasterducky69 left the server",
-      "timestamp": 1766407926,
-      "server_id": 1301988304279048275,
-      "url": "https://discord.com/users/1377705256326004891",
-      "thread_id": null
     }
   ],
   "pipeline": [
@@ -785,7 +776,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1767012593.1445084,
+    "generated_at": 1767013737.0614307,
     "mode": "memory",
     "refresh_interval": 2000
   }
