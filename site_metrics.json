@@ -7,7 +7,7 @@
     "request_completion_ratio": 0.0
   },
   "server": {
-    "total_members": 341,
+    "total_members": 340,
     "joined_today": 3,
     "active_shops": 2,
     "avg_response_time": 6137.833333333333
@@ -33,6 +33,15 @@
     }
   ],
   "activityLog": [
+    {
+      "type": "member_leave",
+      "shop_name": "Server",
+      "message": "elitextt left the server",
+      "timestamp": 1767015259,
+      "thread_id": null,
+      "server_id": 1301988304279048275,
+      "url": "https://discord.com/users/1120058292845150218"
+    },
     {
       "type": "member_leave",
       "shop_name": "Server",
@@ -785,7 +794,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1767014937.0523283,
+    "generated_at": 1767015261.750393,
     "mode": "memory",
     "refresh_interval": 2000
   }
