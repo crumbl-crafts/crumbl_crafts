@@ -659,6 +659,24 @@
   "news": [
     {
       "type": "trend",
+      "title": "I SPIED ON A BLOXBURG HUSBAND CHEATING",
+      "description": "bloxburg #roblox #robloxbloxburg I put hidden cameras inside this bloxburg mansion...and caught the ...",
+      "source": "YouTube",
+      "timestamp": 1767038438.0,
+      "url": "https://www.youtube.com/watch?v=gL8xXHt46GY",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Mini chistmas vlog bloxburg\ud83c\udf84\ud83e\udef6\ud83c\udffe#roblox #aesthetic #roleplay #relatable #bloxburg",
+      "description": "Like for a ! #recommended\u200b #berryavenue\u200b #berryave\u200b #preppy\u200b #aesthetic\u200b #roleplay\u200b #berry\u200b #avenue\u200b...",
+      "source": "YouTube",
+      "timestamp": 1767035681.0,
+      "url": "https://www.youtube.com/watch?v=peoqlGXRJ0o",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "ATUALIZA\u00c7\u00c3O DE ANO NOVO - T\u00c1XI, CARROS, E MUITO MAIS | BLOXBURG #shorts #roblox #bloxburg #games",
       "description": "A nova atualiza\u00e7\u00e3o chegou, com emprego novo, carros, m\u00f3veis, comidas, decora\u00e7\u00e3o para 2026. Bora apro...",
       "source": "YouTube",
@@ -682,24 +700,6 @@
       "source": "YouTube",
       "timestamp": 1767025980.0,
       "url": "https://www.youtube.com/watch?v=igYa8A5jPQY",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Working the new bloxburg job #roblox #bloxburg #foryou",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1767024700.0,
-      "url": "https://www.youtube.com/watch?v=5EWHQI8k4Ok",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "NEW TAXI JOB IN BLOXBURG! \ud83d\ude95 + NEW YEAR&#39;S UPDATE \ud83e\udd73",
-      "description": "HEY EVERYONE! \u2b50 PLAY WELCOME TO BLOXBURG HERE ......",
-      "source": "YouTube",
-      "timestamp": 1767023652.0,
-      "url": "https://www.youtube.com/watch?v=NIcMRPB2YfA",
       "icon": "fa-youtube"
     },
     {
@@ -740,7 +740,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1767038937.3988037,
+    "generated_at": 1767040137.0540164,
     "mode": "memory",
     "refresh_interval": 2000
   }
