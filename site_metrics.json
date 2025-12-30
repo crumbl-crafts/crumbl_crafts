@@ -668,20 +668,20 @@
     },
     {
       "type": "trend",
+      "title": "CARI KERJA BUAT KEHIDUPAN KELUARGA | \ud83d\udc96 Bloxburg Family Roleplay Roblox Indonesia",
+      "description": "Poppy harus cari kerja buat kita hidup lebih baik Hai teman teman~ Keluarga Bokir disini \u2728 Jangan lu...",
+      "source": "YouTube",
+      "timestamp": 1767095551.0,
+      "url": "https://www.youtube.com/watch?v=t1EKPj1tmw0",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Alex TBM 2 di Bloxburg #bloxburg #roblox #troublemaker #troublemaker2",
       "description": "...",
       "source": "YouTube",
       "timestamp": 1767093032.0,
       "url": "https://www.youtube.com/watch?v=buEFx54D6rA",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "#roblox #funny #funny #robloxedit #bloxburg #bloxburg",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1767089993.0,
-      "url": "https://www.youtube.com/watch?v=39RBZpyoWU0",
       "icon": "fa-youtube"
     },
     {
@@ -722,7 +722,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1767110937.0535762,
+    "generated_at": 1767112137.0551007,
     "mode": "memory",
     "refresh_interval": 2000
   }
