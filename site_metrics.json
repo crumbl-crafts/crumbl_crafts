@@ -641,6 +641,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "Bloxburg | Winter Bedroom Idea #shorts #bloxburg #bloxburgbedroom #roblox #bloxburgbuilds",
+      "description": "Winter Bedroom Idea #shorts #bloxburgbuild #bloxburghouse....",
+      "source": "YouTube",
+      "timestamp": 1767136219.0,
+      "url": "https://www.youtube.com/watch?v=6w6PV64q9Xs",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Have Yall Seen The New Job ?? #robloxtrend #bloxburg",
       "description": "...",
       "source": "YouTube",
@@ -719,19 +728,10 @@
       "timestamp": 1767089993.0,
       "url": "https://www.youtube.com/watch?v=39RBZpyoWU0",
       "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Who hates lag too? #roblox #annoying #grief #lag #stealabrainrot",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1767083342.0,
-      "url": "https://www.youtube.com/watch?v=VhSlMPq71zQ",
-      "icon": "fa-youtube"
     }
   ],
   "meta": {
-    "generated_at": 1767137337.0591495,
+    "generated_at": 1767138537.0490737,
     "mode": "memory",
     "refresh_interval": 2000
   }
