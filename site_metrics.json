@@ -590,15 +590,6 @@
       "server_id": 1301988304279048275,
       "url": "https://discord.com/users/713515219946831962",
       "thread_id": null
-    },
-    {
-      "type": "member_leave",
-      "shop_name": "Server",
-      "message": "xnotisabx left the server",
-      "timestamp": 1766458351,
-      "server_id": 1301988304279048275,
-      "url": "https://discord.com/users/1276459067652575245",
-      "thread_id": null
     }
   ],
   "pipeline": [
@@ -731,7 +722,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1767062937.0530155,
+    "generated_at": 1767064137.0464022,
     "mode": "memory",
     "refresh_interval": 2000
   }
