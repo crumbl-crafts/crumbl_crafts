@@ -650,6 +650,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "\u0440\u0435\u043c\u043e\u0442",
+      "description": "RobloxEdit #RobloxMemes #AdoptMe #Bloxburg #RoyaleHigh #RobloxFunny #RobloxGameplay #RobloxObby #Rob...",
+      "source": "YouTube",
+      "timestamp": 1767099919.0,
+      "url": "https://www.youtube.com/watch?v=IRQKZZkq6n8",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Nova atualiza\u00e7\u00e3o do Bloxburg! #bloxburg #bloxburgupdate #bloxburgnewyears #roblox",
       "description": "...",
       "source": "YouTube",
@@ -682,15 +691,6 @@
       "source": "YouTube",
       "timestamp": 1767069107.0,
       "url": "https://www.youtube.com/watch?v=se4xaC1SRTc",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "BERESIN RUMAH PENUH DRAMA DAN TANGISAN BIBI | BLOXBURG RP",
-      "description": "Terimakasiih adik-adik udah nonton video ini sampai akhirr, lup yu all -----------   -Tags  - #roblo...",
-      "source": "YouTube",
-      "timestamp": 1767067212.0,
-      "url": "https://www.youtube.com/watch?v=B7oGZ7verN0",
       "icon": "fa-youtube"
     },
     {
@@ -731,7 +731,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1767100137.047048,
+    "generated_at": 1767101337.0532303,
     "mode": "memory",
     "refresh_interval": 2000
   }
