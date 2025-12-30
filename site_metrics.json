@@ -641,6 +641,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "test-2 #roblox #bloxburg #robloxedit #robloxstory #christmas #relatable #crazily #robloxrant #rblx",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1767069107.0,
+      "url": "https://www.youtube.com/watch?v=se4xaC1SRTc",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "bloxburg grotto build #bloxburg #roblox #robloxbloxburgspeedbuild",
       "description": "...",
       "source": "YouTube",
@@ -673,15 +682,6 @@
       "source": "YouTube",
       "timestamp": 1767038438.0,
       "url": "https://www.youtube.com/watch?v=gL8xXHt46GY",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Mini chistmas vlog bloxburg\ud83c\udf84\ud83e\udef6\ud83c\udffe#roblox #aesthetic #roleplay #relatable #bloxburg",
-      "description": "Like for a ! #recommended\u200b #berryavenue\u200b #berryave\u200b #preppy\u200b #aesthetic\u200b #roleplay\u200b #berry\u200b #avenue\u200b...",
-      "source": "YouTube",
-      "timestamp": 1767035681.0,
-      "url": "https://www.youtube.com/watch?v=peoqlGXRJ0o",
       "icon": "fa-youtube"
     },
     {
@@ -722,7 +722,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1767068937.0463467,
+    "generated_at": 1767070137.0510256,
     "mode": "memory",
     "refresh_interval": 2000
   }
