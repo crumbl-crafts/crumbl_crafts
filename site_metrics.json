@@ -694,44 +694,53 @@
       "icon": "fa-youtube"
     },
     {
-      "type": "game_update",
-      "title": "New Winter Update Available!",
-      "description": "Explore new winter-themed furniture and decorations",
-      "source": "Bloxburg Official",
-      "timestamp": 1766808530.7293773,
-      "url": "https://twitter.com/BloxburgGame",
-      "icon": "fa-gamepad"
+      "type": "trend",
+      "title": "BERESIN RUMAH PENUH DRAMA DAN TANGISAN BIBI | BLOXBURG RP",
+      "description": "Terimakasiih adik-adik udah nonton video ini sampai akhirr, lup yu all -----------   -Tags  - #roblo...",
+      "source": "YouTube",
+      "timestamp": 1767067212.0,
+      "url": "https://www.youtube.com/watch?v=B7oGZ7verN0",
+      "icon": "fa-youtube"
     },
     {
       "type": "trend",
-      "title": "Modern Mansion Builds Trending",
-      "description": "Community showcasing stunning modern architecture",
+      "title": "bloxburg grotto build #bloxburg #roblox #robloxbloxburgspeedbuild",
+      "description": "...",
       "source": "YouTube",
-      "timestamp": 1766804930.7293797,
-      "url": "https://youtube.com/results?search_query=bloxburg+modern+mansion",
-      "icon": "fa-fire"
+      "timestamp": 1767064850.0,
+      "url": "https://www.youtube.com/watch?v=jj6CFmSSZAQ",
+      "icon": "fa-youtube"
     },
     {
-      "type": "tip",
-      "title": "Money Making Guide 2024",
-      "description": "Best jobs and strategies to earn cash quickly",
-      "source": "Community Guide",
-      "timestamp": 1766801330.7293808,
-      "url": "#",
-      "icon": "fa-lightbulb"
+      "type": "trend",
+      "title": "Checking out the new taxi update in Bloxburg!! #roblox #bloxburgcontentcreator #bloxburg",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1767061358.0,
+      "url": "https://www.youtube.com/watch?v=yTWikN-zBTE",
+      "icon": "fa-youtube"
     },
     {
-      "type": "community",
-      "title": "Weekly Build Contest",
-      "description": "Submit your best holiday-themed builds to win prizes!",
-      "source": "Crumbl Crafts",
-      "timestamp": 1766797730.729382,
-      "url": "#",
-      "icon": "fa-trophy"
+      "type": "trend",
+      "title": "a murder mystery or misery\u2026?\ud83d\ude33 #roblox #robloxstory #robloxshorts #bloxburg #robloxedit #dtiroblox",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1767048231.0,
+      "url": "https://www.youtube.com/watch?v=Vq58tFyVpKg",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Not Rich. Just Kind. | Roblox Bloxburg Story",
+      "description": "In Roblox Bloxburg, one player chose kindness over riches. While others showed off big houses, Alex ...",
+      "source": "YouTube",
+      "timestamp": 1767040469.0,
+      "url": "https://www.youtube.com/watch?v=3vDkD485LpI",
+      "icon": "fa-youtube"
     }
   ],
   "meta": {
-    "generated_at": 1767104937.046773,
+    "generated_at": 1767106137.0507393,
     "mode": "memory",
     "refresh_interval": 2000
   }
