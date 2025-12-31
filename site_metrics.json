@@ -659,6 +659,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "Bloxburg news report\ud83d\udc80. #roblox #bloxburg",
+      "description": "Bloxburg news report  . #roblox #bloxburg....",
+      "source": "YouTube",
+      "timestamp": 1767175285.0,
+      "url": "https://www.youtube.com/watch?v=l3JBNDC2J6E",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Prediction for 2026 Bloxburg #bloxburg #bloxburghouse",
       "description": "...",
       "source": "YouTube",
@@ -691,15 +700,6 @@
       "source": "YouTube",
       "timestamp": 1767137493.0,
       "url": "https://www.youtube.com/watch?v=cUvMNZDnQ10",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "ALL NEW UPDATED BLOXBURG VEHICLE SOUNDS... NEW YEARS UPDATE HIDDEN CHANGES",
-      "description": "yesterday's new years bloxburg update brought a lot of interesting things! not too much on the hidde...",
-      "source": "YouTube",
-      "timestamp": 1767137112.0,
-      "url": "https://www.youtube.com/watch?v=QR1BmZzDi5I",
       "icon": "fa-youtube"
     },
     {
@@ -740,7 +740,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1767175737.0495346,
+    "generated_at": 1767176937.0491462,
     "mode": "memory",
     "refresh_interval": 2000
   }
