@@ -641,11 +641,29 @@
   "news": [
     {
       "type": "trend",
+      "title": "WE GOT INTO A FIGHT! \ud83e\udd2c\ud83d\ude31#bloxburg #bloxburgfamily #roblox #shorts",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1767137493.0,
+      "url": "https://www.youtube.com/watch?v=cUvMNZDnQ10",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Bloxburg | Winter Bedroom Idea #shorts #bloxburg #bloxburgbedroom #roblox #bloxburgbuilds",
       "description": "Winter Bedroom Idea #shorts #bloxburgbuild #bloxburghouse....",
       "source": "YouTube",
       "timestamp": 1767136219.0,
       "url": "https://www.youtube.com/watch?v=6w6PV64q9Xs",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "I LOVE THE VIEWS!! #roblox #bloxburg",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1767132052.0,
+      "url": "https://www.youtube.com/watch?v=ntOW7HD1hjM",
       "icon": "fa-youtube"
     },
     {
@@ -664,24 +682,6 @@
       "source": "YouTube",
       "timestamp": 1767114765.0,
       "url": "https://www.youtube.com/watch?v=afFhCl16dPk",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "This Minecraft World Was Watching Me #bloxburg #storytime #herobrine #minecrafted #minecraft",
-      "description": "I loaded into a normal Minecraft world\u2026 but something was wrong. The villagers watched. The sheep sc...",
-      "source": "YouTube",
-      "timestamp": 1767108534.0,
-      "url": "https://www.youtube.com/watch?v=q9XgCYFNcVU",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Bloxburg&#39;s 2025 - Year in Review",
-      "description": "Play Bloxburg: https://www.roblox.com/games/185655149/Welcome-to-Bloxburg \u25cb For more content, don't ...",
-      "source": "YouTube",
-      "timestamp": 1767103214.0,
-      "url": "https://www.youtube.com/watch?v=6JLOVv2sayA",
       "icon": "fa-youtube"
     },
     {
@@ -722,7 +722,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1767141537.3835077,
+    "generated_at": 1767142137.0451126,
     "mode": "memory",
     "refresh_interval": 2000
   }
