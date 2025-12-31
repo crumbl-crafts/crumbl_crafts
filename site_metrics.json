@@ -668,20 +668,20 @@
     },
     {
       "type": "trend",
-      "title": "Have Yall Seen The New Job ?? #robloxtrend #bloxburg",
-      "description": "...",
-      "source": "YouTube",
-      "timestamp": 1767119066.0,
-      "url": "https://www.youtube.com/watch?v=aVEFBaxNPck",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
       "title": "old bloxburg  #bloxburg  #roblox #edit",
       "description": "...",
       "source": "YouTube",
       "timestamp": 1767114765.0,
       "url": "https://www.youtube.com/watch?v=afFhCl16dPk",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "This Minecraft World Was Watching Me #bloxburg #storytime #herobrine #minecrafted #minecraft",
+      "description": "I loaded into a normal Minecraft world\u2026 but something was wrong. The villagers watched. The sheep sc...",
+      "source": "YouTube",
+      "timestamp": 1767108534.0,
+      "url": "https://www.youtube.com/watch?v=q9XgCYFNcVU",
       "icon": "fa-youtube"
     },
     {
@@ -722,7 +722,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1767146937.3156428,
+    "generated_at": 1767148137.0468893,
     "mode": "memory",
     "refresh_interval": 2000
   }
