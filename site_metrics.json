@@ -703,44 +703,53 @@
       "icon": "fa-youtube"
     },
     {
-      "type": "game_update",
-      "title": "New Winter Update Available!",
-      "description": "Explore new winter-themed furniture and decorations",
-      "source": "Bloxburg Official",
-      "timestamp": 1766808530.7293773,
-      "url": "https://twitter.com/BloxburgGame",
-      "icon": "fa-gamepad"
+      "type": "trend",
+      "title": "old bloxburg  #bloxburg  #roblox #edit",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1767114765.0,
+      "url": "https://www.youtube.com/watch?v=afFhCl16dPk",
+      "icon": "fa-youtube"
     },
     {
       "type": "trend",
-      "title": "Modern Mansion Builds Trending",
-      "description": "Community showcasing stunning modern architecture",
+      "title": "Bloxburg&#39;s 2025 - Year in Review",
+      "description": "Play Bloxburg: https://www.roblox.com/games/185655149/Welcome-to-Bloxburg \u25cb For more content, don't ...",
       "source": "YouTube",
-      "timestamp": 1766804930.7293797,
-      "url": "https://youtube.com/results?search_query=bloxburg+modern+mansion",
-      "icon": "fa-fire"
+      "timestamp": 1767103214.0,
+      "url": "https://www.youtube.com/watch?v=6JLOVv2sayA",
+      "icon": "fa-youtube"
     },
     {
-      "type": "tip",
-      "title": "Money Making Guide 2024",
-      "description": "Best jobs and strategies to earn cash quickly",
-      "source": "Community Guide",
-      "timestamp": 1766801330.7293808,
-      "url": "#",
-      "icon": "fa-lightbulb"
+      "type": "trend",
+      "title": "Nova atualiza\u00e7\u00e3o do Bloxburg! #bloxburg #bloxburgupdate #bloxburgnewyears #roblox",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1767098025.0,
+      "url": "https://www.youtube.com/watch?v=TqBskHo0-z4",
+      "icon": "fa-youtube"
     },
     {
-      "type": "community",
-      "title": "Weekly Build Contest",
-      "description": "Submit your best holiday-themed builds to win prizes!",
-      "source": "Crumbl Crafts",
-      "timestamp": 1766797730.729382,
-      "url": "#",
-      "icon": "fa-trophy"
+      "type": "trend",
+      "title": "CARI KERJA BUAT KEHIDUPAN KELUARGA | \ud83d\udc96 Bloxburg Family Roleplay Roblox Indonesia",
+      "description": "Poppy harus cari kerja buat kita hidup lebih baik Hai teman teman~ Keluarga Bokir disini \u2728 Jangan lu...",
+      "source": "YouTube",
+      "timestamp": 1767095551.0,
+      "url": "https://www.youtube.com/watch?v=t1EKPj1tmw0",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Alex TBM 2 di Bloxburg #bloxburg #roblox #troublemaker #troublemaker2",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1767093032.0,
+      "url": "https://www.youtube.com/watch?v=buEFx54D6rA",
+      "icon": "fa-youtube"
     }
   ],
   "meta": {
-    "generated_at": 1767163137.328514,
+    "generated_at": 1767163737.044919,
     "mode": "memory",
     "refresh_interval": 2000
   }
