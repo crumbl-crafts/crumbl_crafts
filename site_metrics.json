@@ -7,7 +7,7 @@
     "request_completion_ratio": 0.0
   },
   "server": {
-    "total_members": 344,
+    "total_members": 343,
     "joined_today": 1,
     "active_shops": 2,
     "avg_response_time": 6137.833333333333
@@ -33,6 +33,15 @@
     }
   ],
   "activityLog": [
+    {
+      "type": "member_leave",
+      "shop_name": "Server",
+      "message": "vivvny left the server",
+      "timestamp": 1767239104,
+      "thread_id": null,
+      "server_id": 1301988304279048275,
+      "url": "https://discord.com/users/805964068128555008"
+    },
     {
       "type": "member_join",
       "shop_name": "Server",
@@ -668,20 +677,20 @@
     },
     {
       "type": "trend",
+      "title": "byeee 2025",
+      "description": "ignore tags: #fyp\u30b7 #flipaclip #flowers #robloxedit #roblox #mm2 #christmasmusic #christmas #katseye ...",
+      "source": "YouTube",
+      "timestamp": 1767197026.0,
+      "url": "https://www.youtube.com/watch?v=9vnDqXHUO-A",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "Atualiza\u00e7\u00e3o Ano Novo- Bloxburg\u2728 Part.2  #roblox #bloxburg #viral #atualiza\u00e7\u00e3o  #eventos",
       "description": "Espero muito que gostem !! Sempre feito com amor e carinho para voc\u00eas! E n\u00e3o esquece do like em? Um ...",
       "source": "YouTube",
       "timestamp": 1767185158.0,
       "url": "https://www.youtube.com/watch?v=uTAK3I_W1_o",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Bloxburg news report\ud83d\udc80. #roblox #bloxburg",
-      "description": "Bloxburg news report  . #roblox #bloxburg....",
-      "source": "YouTube",
-      "timestamp": 1767175285.0,
-      "url": "https://www.youtube.com/watch?v=l3JBNDC2J6E",
       "icon": "fa-youtube"
     },
     {
@@ -722,7 +731,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1767238737.3950996,
+    "generated_at": 1767239107.4198127,
     "mode": "memory",
     "refresh_interval": 2000
   }
