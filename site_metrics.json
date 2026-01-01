@@ -704,6 +704,15 @@
   "news": [
     {
       "type": "trend",
+      "title": "Happy new year \ud83c\udf86#2026# free fire",
+      "description": "...",
+      "source": "YouTube",
+      "timestamp": 1767230207.0,
+      "url": "https://www.youtube.com/watch?v=wzFB4KMGzC4",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
       "title": "OUR FAMILY NEW YEARS EVE PARTY! *WE MISSED THE COUNTDOWN* Roblox Bloxburg Voiced RP Roleplay",
       "description": "Description: \u2661\ufe0e. \u25dd \u2b50\ufe0fUSE STARCODE 'PEACH' WHEN BUYING ROBUX OR PREMIUM!\u2b50\ufe0f \u029a hey everyone!   Today it...",
       "source": "YouTube",
@@ -736,15 +745,6 @@
       "source": "YouTube",
       "timestamp": 1767197026.0,
       "url": "https://www.youtube.com/watch?v=9vnDqXHUO-A",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
-      "title": "Atualiza\u00e7\u00e3o Ano Novo- Bloxburg\u2728 Part.2  #roblox #bloxburg #viral #atualiza\u00e7\u00e3o  #eventos",
-      "description": "Espero muito que gostem !! Sempre feito com amor e carinho para voc\u00eas! E n\u00e3o esquece do like em? Um ...",
-      "source": "YouTube",
-      "timestamp": 1767185158.0,
-      "url": "https://www.youtube.com/watch?v=uTAK3I_W1_o",
       "icon": "fa-youtube"
     },
     {
@@ -785,7 +785,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1767262137.0498927,
+    "generated_at": 1767263337.0548327,
     "mode": "memory",
     "refresh_interval": 2000
   }
