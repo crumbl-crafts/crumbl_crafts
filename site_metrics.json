@@ -677,20 +677,20 @@
     },
     {
       "type": "trend",
-      "title": "\u3010roblox bloxburg\u3011New Year&#39;s Eve in bloxburg",
-      "description": "roblox#bloxburg#\u96f6\u54c1\u5fb7....",
-      "source": "YouTube",
-      "timestamp": 1767200468.0,
-      "url": "https://www.youtube.com/watch?v=FhoZKsuhZZg",
-      "icon": "fa-youtube"
-    },
-    {
-      "type": "trend",
       "title": "Atualiza\u00e7\u00e3o Ano Novo- Bloxburg\u2728 Part.2  #roblox #bloxburg #viral #atualiza\u00e7\u00e3o  #eventos",
       "description": "Espero muito que gostem !! Sempre feito com amor e carinho para voc\u00eas! E n\u00e3o esquece do like em? Um ...",
       "source": "YouTube",
       "timestamp": 1767185158.0,
       "url": "https://www.youtube.com/watch?v=uTAK3I_W1_o",
+      "icon": "fa-youtube"
+    },
+    {
+      "type": "trend",
+      "title": "Bloxburg news report\ud83d\udc80. #roblox #bloxburg",
+      "description": "Bloxburg news report  . #roblox #bloxburg....",
+      "source": "YouTube",
+      "timestamp": 1767175285.0,
+      "url": "https://www.youtube.com/watch?v=l3JBNDC2J6E",
       "icon": "fa-youtube"
     },
     {
@@ -731,7 +731,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1767233337.3427706,
+    "generated_at": 1767234537.0474167,
     "mode": "memory",
     "refresh_interval": 2000
   }
