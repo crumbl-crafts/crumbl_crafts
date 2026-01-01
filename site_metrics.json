@@ -7,8 +7,8 @@
     "request_completion_ratio": 0.0
   },
   "server": {
-    "total_members": 343,
-    "joined_today": 3,
+    "total_members": 344,
+    "joined_today": 4,
     "active_shops": 2,
     "avg_response_time": 6137.833333333333
   },
@@ -33,6 +33,15 @@
     }
   ],
   "activityLog": [
+    {
+      "type": "member_join",
+      "shop_name": "Server",
+      "message": "iluvtoyko joined the server",
+      "timestamp": 1767258556,
+      "thread_id": null,
+      "server_id": 1301988304279048275,
+      "url": "https://discord.com/users/1277784372833157183"
+    },
     {
       "type": "member_leave",
       "shop_name": "Server",
@@ -767,7 +776,7 @@
     }
   ],
   "meta": {
-    "generated_at": 1767258537.048343,
+    "generated_at": 1767258559.0123718,
     "mode": "memory",
     "refresh_interval": 2000
   }
