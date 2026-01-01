@@ -410,7 +410,7 @@
       position: fixed;
       background: linear-gradient(145deg, rgba(30, 30, 60, 0.95), rgba(40, 40, 80, 0.95));
       border: 2px solid var(--primary);
-      border-radius: 20px;
+      border-radius: 24px 24px 24px 8px;
       /* slightly smaller padding so small messages don't look empty */
       padding: 14px 16px;
       /* allow width to size to content but clamp with max/min */
@@ -464,7 +464,6 @@
       border-radius: 24px 24px 8px 24px;
     }
 
-    /* Classic CSS tail using pseudo-elements so it visually attaches to the bubble */
     .speech-bubble::before {
       content: '';
       position: absolute;
@@ -472,11 +471,21 @@
       height: 0;
       border-left: 15px solid transparent;
       border-right: 15px solid transparent;
-      border-top: 15px solid var(--primary);
+      border-top: 15px solid;
+      border-top-color: var(--primary);
       bottom: -15px;
       left: 50%;
       transform: translateX(-50%);
       filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.3));
+    }
+
+    .speech-bubble.below-mascot::before {
+      border-top: none;
+      border-bottom: 15px solid;
+      border-bottom-color: var(--primary);
+      bottom: auto;
+      top: -15px;
+      filter: drop-shadow(0 -5px 5px rgba(0, 0, 0, 0.3));
     }
 
     .speech-bubble::after {
@@ -493,56 +502,11 @@
       z-index: 2;
     }
 
-    .speech-bubble.left-side::before {
-      border-left: 15px solid var(--primary);
-      border-top: 15px solid transparent;
-      border-bottom: 15px solid transparent;
-      right: -15px;
-      left: auto;
-      top: 50%;
-      bottom: auto;
-      transform: translateY(-50%);
-    }
-    .speech-bubble.left-side::after {
-      border-left: 12px solid rgba(40, 40, 80, 0.95);
-      right: -12px;
-      left: auto;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 2;
-    }
-
-    .speech-bubble.right-side::before {
-      border-right: 15px solid var(--primary);
-      border-top: 15px solid transparent;
-      border-bottom: 15px solid transparent;
-      left: -15px;
-      top: 50%;
-      bottom: auto;
-      transform: translateY(-50%);
-    }
-    .speech-bubble.right-side::after {
-      border-right: 12px solid rgba(40, 40, 80, 0.95);
-      left: -12px;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 2;
-    }
-
-    .speech-bubble.below-mascot::before {
-      border-top: none;
-      border-bottom: 15px solid var(--primary);
-      bottom: auto;
-      top: -15px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
     .speech-bubble.below-mascot::after {
       border-top: none;
-      border-bottom: 12px solid rgba(40,40,80,0.95);
+      border-bottom: 12px solid rgba(40, 40, 80, 0.95);
+      bottom: auto;
       top: -12px;
-      left: 50%;
-      transform: translateX(-50%);
     }
 
     .speech-bubble.show {
@@ -1048,16 +1012,6 @@
           if (this.speechBubble) {
             this.speechBubble.style.pointerEvents = this.speechBubble.style.pointerEvents || 'auto';
           }
-          // ensure content container exists so text updates don't remove UI chrome
-          try {
-            if (this.speechBubble && !this.speechBubble.querySelector('.bubble-content')) {
-              const content = document.createElement('div');
-              content.className = 'bubble-content';
-              this.speechBubble.appendChild(content);
-            }
-          } catch (err) {
-            console.warn('Could not create bubble content:', err);
-          }
         } catch (err) {
           console.warn('Could not reparent speechBubble:', err);
         }
@@ -1067,9 +1021,13 @@
         this.isExplaining = false;
         this.isTyping = false;
         this._typingCancelled = false;
+        this._typingToken = 0;
         this.isIdle = true;
         this.idleTimeout = null;
         this.hideTimeout = null;
+        this.messageTimeout = null;
+        this._idleInterval = null;
+        this._showMessageLock = false;
         
         // MOOD-BASED IDLE DIALOGUES - Dynamic Personality System
         this.moodDialogues = {
@@ -1186,7 +1144,7 @@
 
         if (buildingBtn) {
           buildingBtn.addEventListener('mouseenter', () => {
-            this.showMessage("This button takes you straight to the Building Department! That's where the magic happens! 🏗️", 7000, true);
+            this.showMessage("This button takes you straight to the Building Department! That's where the magic happens! 🏗️", 7000);
           });
 
           // Click on building button — avoid throwing if element missing
@@ -1220,6 +1178,7 @@
             "Yes, I'm real! Well, as real as a cartoon can be! 🤖"
           ];
           const randomDialogue = clickDialogues[Math.floor(Math.random() * clickDialogues.length)];
+          // Always show the message, even if one is in progress
           this.showMessage(randomDialogue, 6000);
         });
       }
@@ -1235,9 +1194,9 @@
         const message = card.getAttribute('data-message');
         
         if (!card.classList.contains('disabled')) {
-          this.showMessage(message, 10000, true);
+          this.showMessage(message, 10000);
         } else {
-          this.showMessage(message, 9000, true);
+          this.showMessage(message, 9000);
         }
         
         // Add hover glow effect
@@ -1383,101 +1342,96 @@
       }
       
       showRandomIdleDialogue() {
-        if (!this.isIdle || this.isWalking || this.isExplaining || this.currentTarget) return;
-        
+        // Only show idle dialogue if not currently typing or showing a message
+        if (!this.isIdle || this.isWalking || this.isExplaining || this.currentTarget || this.isTyping || this._showMessageLock) return;
+
         // Select random mood
         const moods = Object.keys(this.moodDialogues);
         const randomMood = moods[Math.floor(Math.random() * moods.length)];
         this.currentMood = randomMood;
-        
+
         // Get random dialogue from that mood
         const moodDialogues = this.moodDialogues[randomMood];
         const randomDialogue = moodDialogues[Math.floor(Math.random() * moodDialogues.length)];
-        
+
         // Mood-specific delivery
         this.showMessageWithMood(randomDialogue, randomMood);
       }
       
-      showMessage(text, duration = 8000, instant = false) {
+      showMessage(text, duration = 8000, typingSpeedOverride = null) {
+        // Only allow one active message at a time; cancel and replace.
+        if (this._showMessageLock) this.hideMessage(true);
+        this._showMessageLock = true;
+
         // defensive: ensure bubble element exists
         if (!this.speechBubble) this.speechBubble = document.getElementById('speechBubble');
-        if (!this.speechBubble) return;
+        if (!this.speechBubble) {
+          this._showMessageLock = false;
+          return;
+        }
 
-          // prefer content-sized width for mood messages as well
-          try {
-            this.speechBubble.style.width = 'auto';
-            this.speechBubble.style.minWidth = this.speechBubble.style.minWidth || '140px';
-            this.speechBubble.style.maxWidth = this.speechBubble.style.maxWidth || '320px';
-            this.speechBubble.style.padding = this.speechBubble.style.padding || '14px 16px';
-          } catch (e) {}
+        // prefer content-sized width for mood messages as well
+        try {
+          this.speechBubble.style.width = 'auto';
+          this.speechBubble.style.minWidth = this.speechBubble.style.minWidth || '140px';
+          this.speechBubble.style.maxWidth = this.speechBubble.style.maxWidth || '320px';
+          this.speechBubble.style.padding = this.speechBubble.style.padding || '14px 16px';
+        } catch (e) {}
 
-          // prefer content-sized width for short messages so we don't waste space
-          try {
-            this.speechBubble.style.width = 'auto';
-            this.speechBubble.style.minWidth = this.speechBubble.style.minWidth || '140px';
-            this.speechBubble.style.maxWidth = this.speechBubble.style.maxWidth || '320px';
-            this.speechBubble.style.padding = this.speechBubble.style.padding || '14px 16px';
-          } catch (e) {
-            // ignore styling errors
-          }
-
-        this.speechBubble.classList.add('show');
-        // force visible and interactive while speaking
+        // prepare bubble hidden but measurable so we can position before reveal
         this.speechBubble.style.display = 'block';
         this.speechBubble.style.pointerEvents = 'auto';
-        this.speechBubble.style.opacity = '1';
-        this.speechBubble.style.transform = 'translateY(0) scale(1)';
+        // Keep hidden initially; let CSS .speech-bubble.show control opacity/transform.
+        this.speechBubble.style.opacity = '';
+        this.speechBubble.style.transform = '';
+        this.speechBubble.style.visibility = 'hidden';
 
         // debug aid
         try { console.log('Mascot showMessage:', text.slice(0,120)); } catch (e) {}
 
-        // Cancel any ongoing typing
-        this._typingCancelled = true;
-        this.isTyping = false;
-        
-        // ensure content container
-        let contentEl = this.speechBubble.querySelector('.bubble-content');
-        if (!contentEl) {
-          contentEl = document.createElement('div');
-          contentEl.className = 'bubble-content';
-          this.speechBubble.appendChild(contentEl);
-        }
+        // SPECIAL DELIVERY: Vary typing speed and effects based on dialogue
+        const isQuestion = text.includes('?');
+        const isExcited = text.includes('!') && text.length < 50;
+        const isLong = text.length > 80;
 
-        if (instant) {
-          // Show text instantly without typing animation
-          contentEl.innerHTML = `<span class="typing-text">${text}</span>`;
-          const typingElement = contentEl.querySelector('.typing-text');
-          if (typingElement) {
-            typingElement.style.animation = 'none';
-            typingElement.style.borderRight = 'none';
-          }
-        } else {
-          // SPECIAL DELIVERY: Vary typing speed and effects based on dialogue
-          const isQuestion = text.includes('?');
-          const isExcited = text.includes('!') && text.length < 50;
-          const isLong = text.length > 80;
-          
-          let typingSpeed = 30; // default
+        let typingSpeed = (typeof typingSpeedOverride === 'number') ? typingSpeedOverride : 30; // default
+        if (typeof typingSpeedOverride !== 'number') {
           if (isQuestion) typingSpeed = 20; // faster for questions
           else if (isLong) typingSpeed = 40; // slower for long messages
           else if (isExcited) typingSpeed = 25; // medium for excited
-          
-          // Random variation
-          typingSpeed += Math.random() * 10 - 5;
-          
-          // Special effects for exciting dialogues
-          if (isExcited && Math.random() < 0.3) {
-            setTimeout(() => this.createSparkleEffect(), 500);
-          }
-          
-          this.typeText(text, typingSpeed, contentEl);
+        }
+
+        // Random variation
+        typingSpeed += Math.random() * 10 - 5;
+        
+        // Special effects for exciting dialogues
+        if (isExcited && Math.random() < 0.3) {
+          setTimeout(() => this.createSparkleEffect(), 500);
         }
         
+        this.typeText(text, Math.max(8, typingSpeed));
+
         // position after we've inserted content so sizes are correct
-        // run twice (immediate + next tick) to handle layout
         this.adjustSpeechBubblePosition();
         setTimeout(() => this.adjustSpeechBubblePosition(), 30);
-        
+
+        // reveal after positioned and start a short-lived watcher to keep the bubble clear of the mascot
+        setTimeout(() => {
+          try {
+            this.speechBubble.style.visibility = '';
+            // ensure inline styles don't override the .show class
+            this.speechBubble.style.opacity = '';
+            this.speechBubble.style.transform = '';
+          } catch (e) {}
+          this.speechBubble.classList.add('show');
+          // small repeated reflows
+          setTimeout(() => this.adjustSpeechBubblePosition(), 120);
+          setTimeout(() => this.adjustSpeechBubblePosition(), 350);
+          try { this._clearPositionWatcher(); } catch (e) {}
+          this._positionInterval = setInterval(() => this.adjustSpeechBubblePosition(), 150);
+          this._positionIntervalTimeout = setTimeout(() => { try { this._clearPositionWatcher(); } catch(e){} }, 2000);
+        }, 40);
+
         clearTimeout(this.messageTimeout);
         this.messageTimeout = setTimeout(() => {
           this.hideMessage();
@@ -1485,58 +1439,44 @@
       }
       
       showMessageWithMood(text, mood) {
-        if (!this.speechBubble) this.speechBubble = document.getElementById('speechBubble');
-        if (!this.speechBubble) return;
-
-        this.speechBubble.classList.add('show');
-        this.speechBubble.style.display = 'block';
-        this.speechBubble.style.pointerEvents = 'auto';
-        this.speechBubble.style.opacity = '1';
-        this.speechBubble.style.transform = 'translateY(0) scale(1)';
-        
-        // MOOD-SPECIFIC DELIVERY STYLES
+        // Mood-specific delivery styles (compute timing/effects, but render via showMessage)
         let typingSpeed = 30;
         let duration = 8000;
         let specialEffect = false;
-        
-        switch(mood) {
+
+        switch (mood) {
           case 'bored':
-            typingSpeed = 45; // slow and drawn out
-            duration = 6000; // shorter, like losing interest
+            typingSpeed = 45;
+            duration = 6000;
             break;
           case 'excited':
-            typingSpeed = 20; // fast and energetic
-            duration = 10000; // longer to show enthusiasm
-            specialEffect = Math.random() < 0.6; // more likely sparkles
+            typingSpeed = 20;
+            duration = 10000;
+            specialEffect = Math.random() < 0.6;
             break;
           case 'thoughtful':
-            typingSpeed = 40; // deliberate pace
-            duration = 12000; // longer for reflection
+            typingSpeed = 40;
+            duration = 12000;
             break;
           case 'playful':
-            typingSpeed = 25; // bouncy rhythm
+            typingSpeed = 25;
             duration = 9000;
-            specialEffect = Math.random() < 0.4; // occasional sparkles
+            specialEffect = Math.random() < 0.4;
             break;
           case 'curious':
-            typingSpeed = 22; // inquisitive pace
-            duration = 11000; // longer for questions
+            typingSpeed = 22;
+            duration = 11000;
             break;
           case 'hungry':
-            typingSpeed = 35; // slightly slower, like savoring
+            typingSpeed = 35;
             duration = 9500;
             break;
         }
-        
-        // Add random variation
+
+        // Random variation
         typingSpeed += Math.random() * 8 - 4;
         duration += Math.random() * 2000 - 1000;
-        
-        // Apply special effects
-        if (specialEffect) {
-          setTimeout(() => this.createSparkleEffect(), 300);
-        }
-        
+
         // Mood-based mascot animation
         if (mood === 'excited') {
           this.mascotImage.classList.add('explaining');
@@ -1545,22 +1485,18 @@
           this.mascotImage.style.filter = 'brightness(0.8) grayscale(0.2)';
           setTimeout(() => this.mascotImage.style.filter = '', duration);
         }
-        
-        this.typeText(text, typingSpeed);
-        
-        this.adjustSpeechBubblePosition();
-        setTimeout(() => this.adjustSpeechBubblePosition(), 30);
-        
-        clearTimeout(this.messageTimeout);
-        this.messageTimeout = setTimeout(() => {
-          this.hideMessage();
-        }, duration);
+
+        if (specialEffect) setTimeout(() => this.createSparkleEffect(), 300);
+
+        // Render using the normal message pipeline, with mood-specific typing speed.
+        this.showMessage(text, duration, typingSpeed);
       }
       
-      hideMessage() {
+      hideMessage(immediate = false) {
         if (!this.speechBubble) return;
-        // cancel any in-progress typing
+        // cancel any in-progress typing (invalidate prior scheduled timeouts)
         this._typingCancelled = true;
+        this._typingToken++;
 
         // start hide animation and disable interactions
         this.speechBubble.classList.remove('show');
@@ -1570,39 +1506,52 @@
 
         // clear scheduled hide timer
         try { clearTimeout(this.messageTimeout); } catch (e) {}
+        try { this._clearPositionWatcher(); } catch (e) {}
 
         // after transition, clear content and remove from flow
-        setTimeout(() => {
+        if (immediate) {
           try {
             if (this.speechBubble) {
-              const content = this.speechBubble.querySelector('.bubble-content');
-              if (content) content.innerHTML = '';
+              this.speechBubble.innerHTML = '';
               this.speechBubble.style.display = 'none';
             }
           } catch (e) {}
           this.isTyping = false;
-        }, 350);
+          this._showMessageLock = false;
+        } else {
+          setTimeout(() => {
+            try {
+              if (this.speechBubble) {
+                this.speechBubble.innerHTML = '';
+                this.speechBubble.style.display = 'none';
+              }
+            } catch (e) {}
+            this.isTyping = false;
+            this._showMessageLock = false;
+          }, 350);
+        }
       }
       
-      typeText(text, speed = 30, container = null) {
-        if (this.isTyping) return;
+      typeText(text, speed = 30, onDone = null) {
+        if (!this.speechBubble) return;
 
+        // Invalidate any previous typing loop.
+        const token = ++this._typingToken;
         this._typingCancelled = false;
         this.isTyping = true;
-        const target = container || this.speechBubble;
-        // clear only the content container
-        if (container) container.innerHTML = '';
-        else if (this.speechBubble) this.speechBubble.querySelectorAll('.bubble-content').forEach(c=>c.innerHTML='');
 
+        this.speechBubble.innerHTML = '';
         const typingElement = document.createElement('span');
         typingElement.className = 'typing-text';
-        target.appendChild(typingElement);
+        this.speechBubble.appendChild(typingElement);
 
         let i = 0;
 
         const typeWriter = () => {
+          if (token !== this._typingToken) return;
           if (this._typingCancelled) {
             this.isTyping = false;
+            if (onDone) onDone();
             return;
           }
 
@@ -1613,10 +1562,12 @@
           } else {
             this.isTyping = false;
             setTimeout(() => {
+              if (token !== this._typingToken) return;
               try {
                 typingElement.style.animation = 'none';
                 typingElement.style.borderRight = 'none';
               } catch (e) {}
+              if (onDone) onDone();
             }, 1500);
           }
         };
@@ -1625,58 +1576,78 @@
       }
       
       adjustSpeechBubblePosition() {
-        const mascotRect = this.mascotWrapper.getBoundingClientRect();
+        // Use mascot image bounds (more accurate than wrapper)
+        const mascotRect = (this.mascotImage && this.mascotImage.getBoundingClientRect) ? this.mascotImage.getBoundingClientRect() : this.mascotWrapper.getBoundingClientRect();
         const bubble = this.speechBubble;
+        if (!bubble) return;
         const bubbleWidth = (bubble && bubble.offsetWidth) ? bubble.offsetWidth : 300;
         const bubbleHeight = (bubble && bubble.offsetHeight) ? bubble.offsetHeight : 150;
-        const margin = 20;
-        
+        // margin proportional to mascot size to reliably avoid overlap
+        const margin = Math.max(18, Math.min(120, Math.round(mascotRect.width * 0.6)));
+
         // Reset classes
-        bubble.classList.remove('right-side', 'below-mascot', 'left-side');
-        
-        // Prefer positioning to the left of the mascot
-        let bubbleLeft = mascotRect.left - bubbleWidth - margin;
-        let bubbleTop = mascotRect.top - bubbleHeight / 2; // Center vertically on mascot
-        let positionClass = 'left-side';
-        
-        // Check if fits on left
-        if (bubbleLeft < margin) {
-          // Try right side
-          bubbleLeft = mascotRect.right + margin;
-          positionClass = 'right-side';
-          if (bubbleLeft + bubbleWidth > window.innerWidth - margin) {
-            // Doesn't fit right either, position above
-            bubbleLeft = mascotRect.left + mascotRect.width / 2 - bubbleWidth / 2;
-            bubbleTop = mascotRect.top - bubbleHeight - margin;
-            positionClass = 'above';
-            if (bubbleTop < margin) {
-              // Position below
-              bubbleTop = mascotRect.bottom + margin;
-              positionClass = 'below-mascot';
-            }
+        bubble.classList.remove('right-side', 'below-mascot', 'left-side', 'above');
+
+        // Helper to detect overlap
+        const rectsOverlap = (a, b) => !(a.right <= b.left || a.left >= b.right || a.bottom <= b.top || a.top >= b.bottom);
+
+        // Candidate placements (prefer left, right, above, below)
+        const candidates = [
+          { left: mascotRect.left - bubbleWidth - margin, top: mascotRect.top + (mascotRect.height - bubbleHeight) / 2, cls: 'left-side' },
+          { left: mascotRect.right + margin, top: mascotRect.top + (mascotRect.height - bubbleHeight) / 2, cls: 'right-side' },
+          { left: mascotRect.left + (mascotRect.width - bubbleWidth) / 2, top: mascotRect.top - bubbleHeight - margin, cls: 'above' },
+          { left: mascotRect.left + (mascotRect.width - bubbleWidth) / 2, top: mascotRect.bottom + margin, cls: 'below-mascot' }
+        ];
+
+        const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+
+        let chosen = null;
+        let bestOverlap = Infinity;
+
+        for (const c of candidates) {
+          const left = clamp(c.left, margin, window.innerWidth - bubbleWidth - margin);
+          const top = clamp(c.top, margin, window.innerHeight - bubbleHeight - margin);
+          const rect = { left, top, right: left + bubbleWidth, bottom: top + bubbleHeight };
+
+          if (!rectsOverlap(rect, mascotRect)) {
+            chosen = { left, top, cls: c.cls };
+            break;
+          }
+
+          const overlapX = Math.max(0, Math.min(rect.right, mascotRect.right) - Math.max(rect.left, mascotRect.left));
+          const overlapY = Math.max(0, Math.min(rect.bottom, mascotRect.bottom) - Math.max(rect.top, mascotRect.top));
+          const area = overlapX * overlapY;
+          if (area < bestOverlap) {
+            bestOverlap = area;
+            chosen = { left, top, cls: c.cls };
           }
         }
-        
-        // Ensure doesn't go off screen
-        if (bubbleLeft < margin) bubbleLeft = margin;
-        if (bubbleLeft + bubbleWidth > window.innerWidth - margin) bubbleLeft = window.innerWidth - bubbleWidth - margin;
-        if (bubbleTop < margin) bubbleTop = margin;
-        if (bubbleTop + bubbleHeight > window.innerHeight - margin) bubbleTop = window.innerHeight - bubbleHeight - margin;
-        
-        // Apply positions
-        bubble.style.left = `${bubbleLeft}px`;
-        bubble.style.top = `${bubbleTop}px`;
-        
-        // Add position class for tail
-        if (positionClass === 'below-mascot') {
-          bubble.classList.add('below-mascot');
-        } else if (positionClass === 'right-side') {
-          bubble.classList.add('right-side');
-        } else if (positionClass === 'left-side') {
-          bubble.classList.add('left-side');
+
+        if (!chosen) {
+          chosen = { left: clamp(mascotRect.left, margin, window.innerWidth - bubbleWidth - margin), top: clamp(mascotRect.top - bubbleHeight - margin, margin, window.innerHeight - bubbleHeight - margin), cls: 'above' };
         }
 
-        // Old dynamic tail positioning removed; tail is handled with CSS pseudo-elements
+        bubble.style.left = `${chosen.left}px`;
+        bubble.style.top = `${chosen.top}px`;
+        bubble.classList.add(chosen.cls);
+
+        // If overlap still exists, nudge away along the smaller overlap axis
+        try {
+          const bRect = { left: chosen.left, top: chosen.top, right: chosen.left + bubbleWidth, bottom: chosen.top + bubbleHeight };
+          if (rectsOverlap(bRect, mascotRect)) {
+            const overlapX = Math.max(0, Math.min(bRect.right, mascotRect.right) - Math.max(bRect.left, mascotRect.left));
+            const overlapY = Math.max(0, Math.min(bRect.bottom, mascotRect.bottom) - Math.max(bRect.top, mascotRect.top));
+            if (overlapX > overlapY) {
+              const shift = overlapY + margin;
+              if (bRect.top < mascotRect.top) bubble.style.top = `${Math.max(margin, chosen.top - shift)}px`;
+              else bubble.style.top = `${Math.min(window.innerHeight - bubbleHeight - margin, chosen.top + shift)}px`;
+            } else {
+              const shift = overlapX + margin;
+              if (bRect.left < mascotRect.left) bubble.style.left = `${Math.max(margin, chosen.left - shift)}px`;
+              else bubble.style.left = `${Math.min(window.innerWidth - bubbleWidth - margin, chosen.left + shift)}px`;
+            }
+          }
+        } catch (e) {}
       }
       
       createParticles() {
@@ -1689,6 +1660,11 @@
           particle.style.animationDuration = `${15 + Math.random() * 15}s`;
           this.particlesContainer.appendChild(particle);
         }
+      }
+
+      _clearPositionWatcher() {
+        try { if (this._positionInterval) { clearInterval(this._positionInterval); this._positionInterval = null; } } catch(e) {}
+        try { if (this._positionIntervalTimeout) { clearTimeout(this._positionIntervalTimeout); this._positionIntervalTimeout = null; } } catch(e) {}
       }
       
       createSparkleEffect() {
@@ -1756,16 +1732,40 @@
       }
       
       startIdleBehavior() {
-        // Show random idle dialogues every 8-15 seconds
-        setInterval(() => {
-          this.showRandomIdleDialogue();
-        }, 8000 + Math.random() * 7000);
+        // Show random idle dialogues at a new random time each cycle (not a fixed interval)
+        try {
+          if (this._idleInterval) {
+            clearInterval(this._idleInterval);
+            this._idleInterval = null;
+          }
+        } catch (e) {}
+        try {
+          if (this._idleTimer) {
+            clearTimeout(this._idleTimer);
+            this._idleTimer = null;
+          }
+        } catch (e) {}
+
+        const scheduleNext = () => {
+          const delayMs = 8000 + Math.random() * 7000;
+          this._idleTimer = setTimeout(() => {
+            try {
+              this.showRandomIdleDialogue();
+            } finally {
+              scheduleNext();
+            }
+          }, delayMs);
+        };
+
+        scheduleNext();
       }
     }
     
     // Initialize premium mascot
     document.addEventListener('DOMContentLoaded', () => {
-      const mascot = new PremiumMascot();
+      // Prevent duplicate instances (which cause duplicate timers/listeners and dialogue spam)
+      if (window.__premiumMascotInstance) return;
+      window.__premiumMascotInstance = new PremiumMascot();
       
       // Add premium hover effects
       document.querySelectorAll('.premium-card').forEach(card => {
