@@ -105,7 +105,7 @@
             will-change: transform, opacity;
         }
         /* Content containment for scroll performance */
-        .activity-list, .chat-messages, .builders-grid, .news-list {
+        .activity-list, .builders-grid, .news-list {
             contain: layout style paint;
             content-visibility: auto;
         }
@@ -928,14 +928,14 @@
             color: var(--warning); 
         }
         .activity-feed-container { 
-            flex: 0 0 40%;
+            flex: 1 1 auto;
             display: flex; 
             flex-direction: column;
             min-height: 0;
-            max-height: 40%;
+            max-height: 100%;
             overflow: visible;
             position: relative;
-            margin-bottom: 16px;
+            margin-bottom: 0;
         }
         .feed-header {
             display: flex;
@@ -2658,10 +2658,6 @@
         // Current user state
         let currentUser = null;
 
-        // Live Chat is intentionally disabled on the homepage to reduce payload and runtime work.
-        // (Chat code may still exist for other pages/experiments, but it won't initialize here.)
-        const CHAT_ENABLED = false;
-        
         // Username validation
         function validateUsername(username) {
             // Remove spaces
@@ -2674,89 +2670,9 @@
             return username;
         }
 
-        // Chat System with Firebase (disabled on this page)
-        let chatMessagesRef = CHAT_ENABLED ? ref(database, 'chat/general/messages') : null;
-        // `chatMessages` may be queried before DOM ready; use a mutable reference and resolve when initializing
-        let chatMessages = CHAT_ENABLED ? document.getElementById('chatMessages') : null;
-        const chatInput = CHAT_ENABLED ? document.getElementById('chatInput') : null;
-        const chatSendBtn = CHAT_ENABLED ? document.getElementById('chatSendBtn') : null;
-
+        // Chat is disabled on the homepage for performance.
+        const CHAT_ENABLED = false;
         if (CHAT_ENABLED) {
-        
-        // Infinite scroll state for loading older messages
-        let isLoadingOlderMessages = false;
-        let oldestMessageTimestamp = null;
-        let hasMoreMessages = true;
-
-        // Generate random user ID if not exists
-        let userId = localStorage.getItem('chatUserId');
-        if (!userId) {
-            userId = 'User_' + Math.random().toString(36).substr(2, 6);
-            localStorage.setItem('chatUserId', userId);
-        }
-
-        // Advanced chat state
-        let replyingTo = null;
-        const TENOR_API_KEY = 'AIzaSyAyimkuYQYF_FXVALexPuGQctUWRURdCF0'; // Free Tenor API key
-        
-        // Send message function
-        function sendMessage() {
-            const text = chatInput.value.trim();
-            if (!text) return;
-            
-            // Require sign-in
-            if (!currentUser) {
-                alert('Please sign in to chat.');
-                openAuthModal();
-                return;
-            }
-            // Check cooldown
-            const cooldownCheck = canSendMessage();
-            if (!cooldownCheck.allowed) {
-                alert(`Please wait ${cooldownCheck.secondsLeft} seconds before sending another message in this channel.`);
-                return;
-            }
-
-            // Admin command handling (only for moderators)
-            if (text.startsWith('/')) {
-                handleCommand(text);
-                chatInput.value = '';
-                return;
-            }
-
-            const messageData = {
-                author: userId, // fallback legacy username
-                authorId: currentUser.uid,
-                authorDisplayName: currentUser.displayName || currentUser.email,
-                text: text,
-                timestamp: serverTimestamp()
-            };
-            
-            // Add reply info if replying
-            if (replyingTo) {
-                messageData.replyTo = {
-                    author: replyingTo.author,
-                    text: replyingTo.text.substring(0, 50)
-                };
-            }
-
-            // Check if user is banned
-            if (isUserBanned(userId)) {
-                alert('You are banned from chat and cannot post.');
-                return;
-            }
-
-            const newRef = push(chatMessagesRef, messageData);
-            // Update spam tracker
-            trackSpam(userId);
-            return newRef;
-            
-            // Update last message time
-            lastMessageTime[currentChannel] = Date.now();
-
-            chatInput.value = '';
-            cancelReply();
-        }
 
         // New message tracking with optimization
         let lastSeenMessageTime = Date.now();
@@ -2790,55 +2706,10 @@
             };
         }
 
-        function computeWindowSize() {
-            if (!chatMessages) return VIRTUAL_CONFIG.minWindow;
-            const clientH = chatMessages.clientHeight || 400;
-            const visible = Math.max(Math.ceil(clientH / VIRTUAL_CONFIG.avgHeight) + (VIRTUAL_CONFIG.overscan * 2), VIRTUAL_CONFIG.minWindow);
-            return visible;
-        }
-
-        function getMessageHeightByIndex(idx) {
-            const m = allMessages[idx];
-            if (!m || !m.id) return VIRTUAL_CONFIG.avgHeight;
-            const h = messageHeights.get(m.id);
-            return h || VIRTUAL_CONFIG.avgHeight;
-        }
-
-        function computeTopHeight(startIndex) {
-            // compute using known heights, fallback to average for unknowns
-            let sum = 0;
-            for (let i = 0; i < startIndex; i++) {
-                sum += getMessageHeightByIndex(i);
-            }
-            return sum;
-        }
-
-        function recycleVisibleNodes(notDesired) {
-            // notDesired is a Set of indices to evict
-            for (const idxStr in visibleNodes) {
-                const idx = parseInt(idxStr);
-                if (notDesired.has(idx)) {
-                    const nd = visibleNodes[idx];
-                    if (nd && nd.parentNode) nd.parentNode.removeChild(nd);
-                    // limit pool size
-                    if (nodePool.length < POOL_MAX) {
-                        nodePool.push(nd);
-                    }
-                    delete visibleNodes[idx];
-                }
-            }
-        }
-
-        function createOrUpdateNodeForIndex(idx) {
-            const message = allMessages[idx];
-            if (!message) return null;
+        function getOrCreateVisibleNode(idx, message) {
             let el = visibleNodes[idx];
-            if (el) return el;
-            // Reuse from pool if possible
-            if (nodePool.length > 0) {
-                el = nodePool.pop();
-                // Update content
-                try { updateMessageElement(el, message); } catch(e) { el = createMessageElement(message); }
+            if (el) {
+                updateMessageElement(el, message);
             } else {
                 el = createMessageElement(message);
             }
@@ -4089,7 +3960,6 @@
         // (Initialization handled by initializeChatAfterAuth)
 
         }
-
         // ==================== AUTHENTICATION SYSTEM ====================
         
         const usersRef = ref(database, 'users');
